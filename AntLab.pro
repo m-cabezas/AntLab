@@ -9,11 +9,23 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    anthill.cpp \
+    egg.cpp \
+    foodspawner.cpp \
+    larva.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    obstacle.cpp \
+    worker.cpp
 
 HEADERS += \
-    mainwindow.h
+    anthill.h \
+    egg.h \
+    foodspawner.h \
+    larva.h \
+    mainwindow.h \
+    obstacle.h \
+    worker.h
 
 FORMS += \
     mainwindow.ui
