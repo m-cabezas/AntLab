@@ -1,8 +1,9 @@
 #ifndef ANTHILL_H
 #define ANTHILL_H
 
+#include "obstacle.h"
 
-class Anthill
+class Anthill : public Obstacle
 {
 public:
     Anthill();

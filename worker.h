@@ -1,11 +1,15 @@
 #ifndef WORKER_H
 #define WORKER_H
 
+#include "larva.h"
+#include "util.h"
 
-class Worker
+class Worker : public Larva
 {
 public:
     Worker();
+    Worker(string name);
+    ~Worker();
 };
 
 #endif // WORKER_H

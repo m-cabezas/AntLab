@@ -25,14 +25,16 @@ void Environment::doRound()
 
 }
 
-Anthill Environment::createAnthill()
+Anthill& Environment::createAnthill()
 {
-    return NULL;
+    Anthill * anthill = new Anthill;
+    return *anthill;
 }
 
-FoodSpawner Environment::createFoodSpawner()
+FoodSpawner& Environment::createFoodSpawner()
 {
-    return NULL;
+    FoodSpawner* foodSpawner = new FoodSpawner;
+    return *foodSpawner;
 }
 
 

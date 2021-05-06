@@ -18,7 +18,6 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     obstacle.cpp \
-    queen.cpp \
     warrior.cpp \
     worker.cpp
 
@@ -31,7 +30,6 @@ HEADERS += \
     larva.h \
     mainwindow.h \
     obstacle.h \
-    queen.h \
     warrior.h \
     worker.h
 

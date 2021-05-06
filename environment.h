@@ -5,8 +5,9 @@
 #include <vector>
 
 #include "anthill.h"
-#include "foodSpawner.h"
+#include "foodspawner.h"
 #include "obstacle.h"
+#include "warrior.h"
 
 using namespace std;
 
@@ -14,6 +15,7 @@ class Environment
 {
 
 public:
+    //Methods
     Environment();
     ~Environment();
 
@@ -22,11 +24,16 @@ public:
     void doRound();
 
 private:
-    pair <int, int> dimension;
-    vector<vector<bool>> board;
+    //Attibuts
+    pair <int, int> _dimension;
+    vector<vector<bool>> _board;
+    vector<Warrior> _warriors;
+    vector<Obstacle> _obstacles;
+    vector<FoodSpawner> _foodSpawners;
 
-    Anthill createAnthill();
-    FoodSpawner createFoodSpawner();
+    //Methods
+    Anthill& createAnthill();
+    FoodSpawner& createFoodSpawner();
     Obstacle createObstacle();
     void initWarriors();
 

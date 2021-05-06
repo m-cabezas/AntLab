@@ -1,14 +1,21 @@
 #ifndef FOODSPAWNER_H
 #define FOODSPAWNER_H
-#include <iostream>
 
-class FoodSpawner
+#include <iostream>
+#include "obstacle.h"
+
+class FoodSpawner : public Obstacle
 {
 private:
-    int maxQuantity;
-    int currentQuantity;
+    //Attributs
+    int _maxQuantity;
+    int _currentQuantity;
+
+    //Methods
     int RandomFood();
+
 public:
+    //Methods
     FoodSpawner();
     void DoRound();
 };

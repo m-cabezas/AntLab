@@ -5,13 +5,14 @@
 #include <string>
 #include <iostream>
 #include "environment.h"
-
-static std::map<string, int> CONFIG;
+#include "util.h"
 
 class Game
 {
 
 public:
+
+    //Methods
     Game();
     ~Game();
 
@@ -19,7 +20,10 @@ public:
 
 
 private:
-    Environment environment;
+    //Attributs
+    Environment _environment;
+
+    //Methods
     void newRound();
 };
 
