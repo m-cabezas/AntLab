@@ -19,6 +19,7 @@ SOURCES += \
     mainwindow.cpp \
     obstacle.cpp \
     queen.cpp \
+    util.cpp \
     warrior.cpp \
     worker.cpp
 

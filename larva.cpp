@@ -5,14 +5,12 @@ Larva::Larva()
 
 }
 
-Larva::Larva(string name, int age) :
+Larva::Larva(CONFIG &config, string name)
 {
     _name = name;
-    _currentAge = age;
-//    _currentAge = CONFIG["ageLarva"];
-//    _maxHealth = CONFIG["lifeLarva"];
-//    _foodCons = CONFIG["consLarva"];
-    _currentAge  = CONFIG::ageWorker;
+    _currentAge = config.ageLarva;
+    _maxHealth = config.lifeLarva;
+    _foodCons = config.consLarva;
 }
 
 Larva::~Larva()

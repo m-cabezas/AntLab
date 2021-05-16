@@ -32,7 +32,6 @@ HEADERS += \
     mainwindow.h \
     obstacle.h \
     queen.h \
-    util.h \
     warrior.h \
     worker.h
 

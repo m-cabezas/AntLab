@@ -13,10 +13,10 @@ int main(int argc, char *argv[])
     Game *game = new Game;
     game->initGame();
     Worker worker("worker");
-    Larva larva("larva");
+//    Larva larva("larva",5);
 
 //    cout << "Worker : " << worker.getCurrentAge() << endl;
-    cout << "Larva : " << larva.getCurrentAge() << endl;
+//    cout << "Larva : " << larva.getCurrentAge() << endl;
 
     QApplication a(argc, argv);
     MainWindow w;

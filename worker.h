@@ -8,7 +8,7 @@ class Worker : public Larva
 {
 public:
     Worker();
-    Worker(string name);
+    Worker(CONFIG config, string name);
     ~Worker();
 };
 

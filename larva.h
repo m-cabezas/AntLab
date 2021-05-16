@@ -9,7 +9,7 @@ class Larva : public Egg
 public:
 
     Larva();
-    Larva(string name = "truc", int age = 5);
+    Larva(CONFIG &config, string name);
     ~Larva();
 
     //Methods
@@ -23,6 +23,8 @@ public:
 protected:
     //Attributs
     int _foodCons;
+    int _currentHealth;
+    int _maxHealth;
 
 };
 

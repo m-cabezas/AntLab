@@ -2,6 +2,7 @@
 #define EGG_H
 
 #include <iostream>
+#include "util.h"
 
 using namespace std;
 
@@ -18,8 +19,6 @@ private:
 protected:
     //Attributs
     string _name;
-    int _maxHealth;
-    int _currentHealth;
     int _currentAge;
 };
 

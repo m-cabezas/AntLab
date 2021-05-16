@@ -11,15 +11,18 @@ class Game
 {
 
 public:
-
     //Methods
     Game();
     ~Game();
 
     void initGame();
+    CONFIG getConfig();
 
 
 private:
+
+
+    CONFIG _config;
     //Attributs
     Environment _environment;
 

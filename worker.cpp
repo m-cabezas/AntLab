@@ -5,7 +5,7 @@ Worker::Worker()
 
 }
 
-Worker::Worker(string name) {
+Worker::Worker(CONFIG config, string name) {
     _name = name;
 //    cout << "Init Worker '" << name << "' with age : " << CONFIG["ageWorker"] << endl;
 //    _currentAge = CONFIG["ageWorker"];

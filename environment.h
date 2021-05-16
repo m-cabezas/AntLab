@@ -8,6 +8,7 @@
 #include "foodspawner.h"
 #include "obstacle.h"
 #include "warrior.h"
+#include "util.h"
 
 using namespace std;
 
@@ -16,20 +17,21 @@ class Environment
 
 public:
     //Methods
-    Environment();
+    Environment(CONFIG &config);
     ~Environment();
 
     void initEnv();
     void addWorker(string name);
     void doRound();
+    bool checkPosition(int x, int y);
 
 private:
     //Attibuts
     pair <int, int> _dimension;
-    vector<vector<bool>> _board;
-    vector<Warrior> _warriors;
-    vector<Obstacle> _obstacles;
-    vector<FoodSpawner> _foodSpawners;
+    vector<vector<bool>> _grid;
+    vector<Warrior *> _warriors;
+    vector<Obstacle *> _obstacles;
+    vector<FoodSpawner *> _foodSpawners;
 
     //Methods
     Anthill& createAnthill();
