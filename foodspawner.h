@@ -17,6 +17,7 @@ private:
 public:
     //Methods
     FoodSpawner();
+    ~FoodSpawner();
     void DoRound();
 };
 

@@ -6,13 +6,12 @@
 #include "worker.h"
 #include "anthill.h"
 
-
 class Warrior : public Worker
 {
 public:
     //Methods
     Warrior();
-    Warrior(CONFIG &config, Environment &environment, Anthill &anthill);
+    Warrior(CONFIG &config, string name, Anthill &anthill);
     ~Warrior();
 
     void explore();
@@ -30,7 +29,6 @@ private:
     pair<int,int> _prevPos;
     CONFIG _config;
     Anthill _anthill;
-    Environment _environment;
 
 };
 

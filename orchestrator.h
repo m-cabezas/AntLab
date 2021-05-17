@@ -1,5 +1,5 @@
-#ifndef ENVIRONMENT_H
-#define ENVIRONMENT_H
+#ifndef ORCHESTRATOR_H
+#define ORCHESTRATOR_H
 
 #include <iostream>
 #include <vector>
@@ -13,14 +13,14 @@
 
 using namespace std;
 
-class Environment
+class Orchestrator
 {
 
 public:
     //Methods
-    Environment();
-    Environment(CONFIG &config);
-    ~Environment();
+    Orchestrator();
+    Orchestrator(CONFIG &config);
+    ~Orchestrator();
 
     void initEnv();
     void addWorker(string name);
@@ -29,19 +29,21 @@ public:
 
 private:
     //Attibuts
+    CONFIG _config;
     pair <int, int> _dimension;
     vector<vector<bool>> _grid;
     vector<Warrior *> _warriors;
     vector<Obstacle *> _obstacles;
     vector<FoodSpawner *> _foodSpawners;
+    vector<Anthill *> _anthills;
 
     //Methods
     Anthill& createAnthill();
     FoodSpawner& createFoodSpawner();
     Obstacle createObstacle();
     void initWarriors();
-    void createWarrior();
+    void createWarrior(Anthill &anthill);
 
 };
 
-#endif // ENVIRONMENT_H
+#endif // ORCHESTRATOR_H

@@ -4,7 +4,7 @@
 #include <map>
 #include <string>
 #include <iostream>
-#include "environment.h"
+#include "orchestrator.h"
 #include "util.h"
 
 class Game
@@ -21,10 +21,9 @@ public:
 
 private:
 
-
-    CONFIG _config;
     //Attributs
-    Environment _environment;
+    CONFIG _config;
+    Orchestrator _orchestrator;
 
     //Methods
     void newRound();

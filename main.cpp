@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
     Game *game = new Game;
     game->initGame();
-    Worker worker("worker");
+//    Worker worker("worker");
 //    Larva larva("larva",5);
 
 //    cout << "Worker : " << worker.getCurrentAge() << endl;

@@ -2,7 +2,9 @@
 
 Game::Game()
 {
-
+    Orchestrator *orchestrator = new Orchestrator(_config);
+    _orchestrator = *orchestrator;
+    Game::initGame();
 }
 
 Game::~Game()
@@ -31,7 +33,6 @@ void Game::initGame()
             15,
     };
     cout << "Init Game" << _config.ageLarva <<  endl;
-
 }
 
 /**
