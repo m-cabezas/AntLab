@@ -36,11 +36,15 @@ private:
     vector<Anthill *> _anthills;
 
     //Methods
-    Anthill& createAnthill();
-    FoodSpawner& createFoodSpawner();
-    Obstacle createObstacle();
-    void initWarriors(int nbWarriorInit, Anthill &anthill);
+    void createAnthill(pair<int,int> position);
+    void createFoodSpawner(pair<int,int> position);
+    void initFoodSpawners(int nbFoodSpawnerInit);
+    void createObstacle(pair <int,int> position);
+    void initObstacles(int nbObstacleInit);
     void createWarrior(Anthill &anthill);
+    void initWarriors(int nbWarriorInit, Anthill &anthill);
+
+    vector<pair <int, int>> getFreePositions();
     bool checkPosition(int x, int y);
 
 };

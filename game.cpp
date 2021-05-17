@@ -2,9 +2,9 @@
 
 Game::Game()
 {
+    Game::initGame();
     Orchestrator *orchestrator = new Orchestrator(_config);
     _orchestrator = *orchestrator;
-    Game::initGame();
 }
 
 Game::~Game()
@@ -13,13 +13,14 @@ Game::~Game()
 }
 
 /**
- * Request the user to give default config and then create an environment
+ * Request the user to give default config and then create an orchestrator
  */
 void Game::initGame()
 {    
     _config = {
             100,    // maxFood
             50,     // maxPopAnthill
+            100,    // maxFoodFoodSpawner
             5,      // ageLarva
             10,     //ageWorker
             15,     //ageWarrior
@@ -36,10 +37,11 @@ void Game::initGame()
             3,      //nbWorkerInit
             5,      //nbWarriorInit
             10,     //nbFoodSpawnerInit
+            20      //nbObstacleInit
     };
 
     cout << "Init Game" << _config.ageLarva <<  endl;
-    Orchestrator::initOrch();
+    _orchestrator.initOrch(_config);
 }
 
 /**
