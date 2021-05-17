@@ -10,16 +10,19 @@
 
 class Anthill : public Obstacle
 {
-public:
+public: 
+    //Attributs
 
-    Anthill(CONFIG &config, Environment &environment);
-    ~Anthill();
 
     //Methods
+    Anthill(CONFIG &config, Environment &environment);
+    ~Anthill();
     void initAnthill();
     void spawnEgg();
     void doRound();
-    void growUp();
+    void growUpEgg(Egg egg);
+    void growUpLarva(Larva larva);
+    void growUpWorker(Worker worker);
 
 private:
     //Attibuts
@@ -31,11 +34,11 @@ private:
     vector<Larva *> _larvas;
     vector<Worker *> _workers;
 
-
     //Methods
     void createEgg();
     void createLarva();
     void createWorker();
+
 
 };
 

@@ -8,6 +8,7 @@ Anthill::Anthill(CONFIG &config, Environment &environment): _environment(config)
     _maxFood = config.maxFood;
 }
 
+
 Anthill::~Anthill()
 {
     _eggs.erase(_eggs.begin(), _eggs.end());
@@ -16,9 +17,13 @@ Anthill::~Anthill()
 }
 
 //PUBLIC
+
+
 void Anthill::initAnthill()
 {
-
+    Anthill::createEgg();
+    Anthill::createLarva();
+    Anthill::createWorker();
 }
 
 void Anthill::spawnEgg()
@@ -31,7 +36,19 @@ void Anthill::doRound()
 
 }
 
-void Anthill::growUp()
+void Anthill::growUpEgg(Egg egg)
+{
+    Anthill::createLarva();
+    egg.~Egg();
+}
+
+void Anthill::growUpLarva(Larva larva)
+{
+    Anthill::createWorker();
+    larva.~Larva();
+}
+
+void Anthill::growUpWorker(Worker worker)
 {
 
 }

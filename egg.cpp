@@ -13,5 +13,4 @@ Egg::Egg(string name)
 
 Egg::~Egg()
 {
-
 }

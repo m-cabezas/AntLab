@@ -38,6 +38,7 @@ private:
     FoodSpawner& createFoodSpawner();
     Obstacle createObstacle();
     void initWarriors();
+    void createWarrior();
 
 };
 

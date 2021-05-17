@@ -48,4 +48,22 @@ FoodSpawner& Environment::createFoodSpawner()
     return *foodSpawner;
 }
 
+Obstacle createObstacle()
+{
+
+};
+
+void initWarriors()
+{
+
+};
+
+void createWarrior()
+{
+    string name = "warrior" + to_string(_warriors.size());
+    Worker *warrior = new Warrior(_config, name);
+    _warriors.push_back(warrior);
+}
+};
+
 
