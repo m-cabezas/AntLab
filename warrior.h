@@ -2,9 +2,10 @@
 #define WARRIOR_H
 
 
+#include "environment.h"
 #include "worker.h"
 #include "anthill.h"
-#include "environment.h"
+
 
 class Warrior : public Worker
 {

@@ -1,5 +1,10 @@
 #include "environment.h"
 
+Environment::Environment()
+{
+
+}
+
 Environment::Environment(CONFIG &config)
 {
 

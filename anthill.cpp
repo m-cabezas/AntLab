@@ -1,6 +1,6 @@
 #include "anthill.h"
 
-Anthill::Anthill(CONFIG &config, Environment &environment): _environment(config)
+Anthill::Anthill(CONFIG &config, Environment &environment)
 {
     _environment = environment;
     _config = config;

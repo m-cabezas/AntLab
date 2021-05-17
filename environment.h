@@ -4,11 +4,12 @@
 #include <iostream>
 #include <vector>
 
-#include "anthill.h"
+
 #include "foodspawner.h"
 #include "obstacle.h"
 #include "warrior.h"
 #include "util.h"
+#include "anthill.h"
 
 using namespace std;
 
@@ -17,6 +18,7 @@ class Environment
 
 public:
     //Methods
+    Environment();
     Environment(CONFIG &config);
     ~Environment();
 
