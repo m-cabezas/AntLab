@@ -10,7 +10,7 @@ Orchestrator::~Orchestrator()
 
 }
 
-void Orchestrator::initEnv()
+void Orchestrator::initOrch()
 {
 
 }

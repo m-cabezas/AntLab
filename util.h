@@ -15,6 +15,11 @@ struct CONFIG {
     int consWarrior;
     int consQueen;
     int capacityWarrior;
+    int nbEggInit;
+    int nbLarvaInit;
+    int nbWorkerInit;
+    int nbWarriorInit;
+    int nbFoodSpawnerInit;
 };
 
 #endif // UTIL_H

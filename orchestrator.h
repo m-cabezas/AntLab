@@ -22,10 +22,9 @@ public:
     Orchestrator(CONFIG &config);
     ~Orchestrator();
 
-    void initEnv();
+    void initOrch();
     void addWorker(string name);
-    void doRound();
-    bool checkPosition(int x, int y);
+    void doRound();    
 
 private:
     //Attibuts
@@ -43,6 +42,7 @@ private:
     Obstacle createObstacle();
     void initWarriors();
     void createWarrior(Anthill &anthill);
+    bool checkPosition(int x, int y);
 
 };
 

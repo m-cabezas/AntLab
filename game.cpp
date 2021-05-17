@@ -18,20 +18,26 @@ Game::~Game()
 void Game::initGame()
 {    
     _config = {
-            100,
-            50,
-            5,
-            10,
-            15,
-            10,
-            10,
-            15,
-            1,
-            2,
-            3,
-            4,
-            15,
+            100,    // maxFood
+            50,     // maxPopAnthill
+            5,      // ageLarva
+            10,     //ageWorker
+            15,     //ageWarrior
+            10,     //lifeLarva
+            10,     //lifeWorker
+            15,     //lifeQueen
+            1,      //consLarva
+            2,      //consWorker
+            3,      //consWarrior
+            4,      //consQueen
+            15,     //capacityWarrior
+            4,      //nbEggInit
+            3,      //nbLarvaInit
+            3,      //nbWorkerInit
+            5,      //nbWarriorInit
+            10,     //nbFoodSpawnerInit
     };
+
     cout << "Init Game" << _config.ageLarva <<  endl;
 }
 
