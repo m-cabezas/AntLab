@@ -1,9 +1,9 @@
 #ifndef ANTHILL_H
 #define ANTHILL_H
 
+#include <vector>
 #include "obstacle.h"
 #include "util.h"
-#include "environment.h"
 #include "larva.h"
 #include "worker.h"
 #include "egg.h"
@@ -15,19 +15,19 @@ public:
 
 
     //Methods
-    Anthill(CONFIG &config, Environment &environment);
+    Anthill();
+    Anthill(CONFIG &config);
     ~Anthill();
     void initAnthill();
     void spawnEgg();
     void doRound();
-    void growUpEgg(Egg egg);
-    void growUpLarva(Larva larva);
-    void growUpWorker(Worker worker);
+    void growUpToLarva(Egg egg);
+    void growUpToWorker(Larva larva);
+    void growUpToWarrior(Worker worker);
 
 private:
     //Attibuts
     CONFIG _config;
-    Environment _environment;
     int _maxPop;
     int _maxFood;
     vector<Egg *> _eggs;

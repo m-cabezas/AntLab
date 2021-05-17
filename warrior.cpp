@@ -5,9 +5,10 @@ Warrior::Warrior()
 
 }
 
-Warrior::Warrior(CONFIG &config, Environment &environment, Anthill &anthill)
+Warrior::Warrior(CONFIG &config, string name, Anthill &anthill)
 {
     _config = config;
+    _name = name;
     _anthill = anthill;
     _foodCapacity = config.capacityWarrior;
     _currentFood = 0;
@@ -17,7 +18,6 @@ Warrior::Warrior(CONFIG &config, Environment &environment, Anthill &anthill)
     _position.second = _anthill.getPosition().second;
     _prevPos.first = _anthill.getPosition().first-1;
     _prevPos.second = _anthill.getPosition().second;
-    _environment = environment;
 }
 
 Warrior::~Warrior()
@@ -45,7 +45,7 @@ void Warrior::returnToAnthill()
     //If the Ant is on the right X
     if(posX == anthillX-1){
         if(posY > anthillY) {
-            if(_environment.checkPosition(posX,posY-1)
+            if(_orchestrator.checkPosition(posX,posY-1)
             {
                _prevPos.first = posX;
                _prevPos.second = posY;
@@ -55,7 +55,7 @@ void Warrior::returnToAnthill()
                 //@TODO
             }
         } else if(posY < anthillY) {
-            if(_environment.checkPosition(posX,posY+1)){
+            if(_orchestrator.checkPosition(posX,posY+1)){
                 _prevPos.first = posX;
                 _prevPos.second = posY;
                 _position.first = posX;
@@ -67,7 +67,7 @@ void Warrior::returnToAnthill()
     } else if(posY == anthillY){
         // If the Ant is on the right Y
         if(posX > anthillX) {
-            if(_environment.checkPosition(posX-1,posY)
+            if(_orchestrator.checkPosition(posX-1,posY)
             {
                _prevPos.first = posX;
                _prevPos.second = posY;
@@ -77,7 +77,7 @@ void Warrior::returnToAnthill()
                 //@TODO
             }
         } else if(posX < anthillX) {
-            if(_environment.checkPosition(posX+1,posY)){
+            if(_orchestrator.checkPosition(posX+1,posY)){
                 _prevPos.first = posX;
                 _prevPos.second = posY;
                 _position.first = posX+1;

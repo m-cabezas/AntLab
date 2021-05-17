@@ -11,7 +11,7 @@ CONFIG += c++11
 SOURCES += \
     anthill.cpp \
     egg.cpp \
-    environment.cpp \
+    orchestrator.cpp \
     foodspawner.cpp \
     game.cpp \
     larva.cpp \
@@ -25,7 +25,7 @@ SOURCES += \
 HEADERS += \
     anthill.h \
     egg.h \
-    environment.h \
+    orchestrator.h \
     foodspawner.h \
     game.h \
     larva.h \

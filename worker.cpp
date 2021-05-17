@@ -5,12 +5,12 @@ Worker::Worker()
 
 }
 
-Worker::Worker(CONFIG config, string name) {
+Worker::Worker(CONFIG &config, string name) {
     _name = name;
 //    cout << "Init Worker '" << name << "' with age : " << CONFIG["ageWorker"] << endl;
-//    _currentAge = CONFIG["ageWorker"];
-//    _maxHealth = CONFIG["lifeWorker"];
-//    _foodCons = CONFIG["consWorker"];
+    _currentAge = config.ageWorker;
+    _maxHealth = config.lifeWorker;
+    _foodCons = config.consWorker;
 }
 
 Worker::~Worker()

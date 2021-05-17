@@ -1,8 +1,12 @@
 #include "anthill.h"
 
-Anthill::Anthill(CONFIG &config, Environment &environment): _environment(config)
+Anthill::Anthill()
 {
-    _environment = environment;
+
+}
+
+Anthill::Anthill(CONFIG &config)
+{
     _config = config;
     _maxPop = config.maxPopAnthill;
     _maxFood = config.maxFood;
@@ -36,19 +40,19 @@ void Anthill::doRound()
 
 }
 
-void Anthill::growUpEgg(Egg egg)
+void Anthill::growUpToLarva(Egg egg)
 {
     Anthill::createLarva();
     egg.~Egg();
 }
 
-void Anthill::growUpLarva(Larva larva)
+void Anthill::growUpToWorker(Larva larva)
 {
     Anthill::createWorker();
     larva.~Larva();
 }
 
-void Anthill::growUpWorker(Worker worker)
+void Anthill::growUpToWarrior(Worker worker)
 {
 
 }
