@@ -39,6 +39,7 @@ void Game::initGame()
     };
 
     cout << "Init Game" << _config.ageLarva <<  endl;
+    Orchestrator::initOrch();
 }
 
 /**

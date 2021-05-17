@@ -15,11 +15,6 @@ void Orchestrator::initOrch()
 
 }
 
-void Orchestrator::addWorker(string name)
-{
-
-}
-
 void Orchestrator::doRound()
 {
 
