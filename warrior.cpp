@@ -25,12 +25,17 @@ Warrior::~Warrior()
 
 }
 
+pair<int,int> Warrior::getPosition()
+{
+    return _position;
+}
+
 void Warrior::explore()
 {
 
 }
 
-void Warrior::returnToAnthill()
+void Warrior::returnToAnthill(vector<pair<int,int>> forbiddenPositions)
 {
     cout << "Warrior " << _name << " returns to Anthill" << endl;
     int posX = _position.first;
@@ -45,49 +50,120 @@ void Warrior::returnToAnthill()
     //If the Ant is on the right X
     if(posX == anthillX-1){
         if(posY > anthillY) {
-            if(_orchestrator.checkPosition(posX,posY-1)
+            if(checkPosition(forbiddenPositions, posX,posY-1))
             {
                _prevPos.first = posX;
                _prevPos.second = posY;
                _position.first = posX;
                _position.second = posY-1;
             } else {
-                //@TODO
+                pair<int,int> newPosition = getRandomPos(forbiddenPositions, _prevPos.first, _prevPos.second, _position.first, _position.second);
+                _prevPos.first = posX;
+                _prevPos.second = posY;
+                _position.first = newPosition.first;
+                _position.second = newPosition.second;
             }
         } else if(posY < anthillY) {
-            if(_orchestrator.checkPosition(posX,posY+1)){
+            if(checkPosition(forbiddenPositions, posX,posY+1)){
                 _prevPos.first = posX;
                 _prevPos.second = posY;
                 _position.first = posX;
                 _position.second = posY+1;
             }else {
-                //@TODO
+                pair<int,int> newPosition = getRandomPos(forbiddenPositions, _prevPos.first, _prevPos.second, _position.first, _position.second);
+                _prevPos.first = posX;
+                _prevPos.second = posY;
+                _position.first = newPosition.first;
+                _position.second = newPosition.second;
             }
         }
     } else if(posY == anthillY){
         // If the Ant is on the right Y
         if(posX > anthillX) {
-            if(_orchestrator.checkPosition(posX-1,posY)
+            if(checkPosition(forbiddenPositions, posX-1,posY))
             {
                _prevPos.first = posX;
                _prevPos.second = posY;
                _position.first = posX-1;
                _position.second = posY;
             } else {
-                //@TODO
+                pair<int,int> newPosition = getRandomPos(forbiddenPositions, _prevPos.first, _prevPos.second, _position.first, _position.second);
+                _prevPos.first = posX;
+                _prevPos.second = posY;
+                _position.first = newPosition.first;
+                _position.second = newPosition.second;
             }
         } else if(posX < anthillX) {
-            if(_orchestrator.checkPosition(posX+1,posY)){
+            if(checkPosition(forbiddenPositions, posX+1,posY)){
                 _prevPos.first = posX;
                 _prevPos.second = posY;
                 _position.first = posX+1;
                 _position.second = posY;
             }else {
-                //@TODO
+                pair<int,int> newPosition = getRandomPos(forbiddenPositions, _prevPos.first, _prevPos.second, _position.first, _position.second);
+                _prevPos.first = posX;
+                _prevPos.second = posY;
+                _position.first = newPosition.first;
+                _position.second = newPosition.second;
             }
         }
     } else {
-               //@TODO
+        // If the Ant is not on any axes of the anthill, it tries to get closer starting with the X axe
+        if(posX > anthillX) {
+            if(checkPosition(forbiddenPositions, posX-1,posY))
+            {
+               _prevPos.first = posX;
+               _prevPos.second = posY;
+               _position.first = posX-1;
+               _position.second = posY;
+            } else {
+                pair<int,int> newPosition = getRandomPos(forbiddenPositions, _prevPos.first, _prevPos.second, _position.first, _position.second);
+                _prevPos.first = posX;
+                _prevPos.second = posY;
+                _position.first = newPosition.first;
+                _position.second = newPosition.second;
+            }
+        } else if(posX < anthillX) {
+            if(checkPosition(forbiddenPositions, posX+1,posY)){
+                _prevPos.first = posX;
+                _prevPos.second = posY;
+                _position.first = posX+1;
+                _position.second = posY;
+            }else {
+                pair<int,int> newPosition = getRandomPos(forbiddenPositions, _prevPos.first, _prevPos.second, _position.first, _position.second);
+                _prevPos.first = posX;
+                _prevPos.second = posY;
+                _position.first = newPosition.first;
+                _position.second = newPosition.second;
+            }
+        }else if(posY > anthillY) {
+            if(checkPosition(forbiddenPositions, posX,posY-1))
+            {
+               _prevPos.first = posX;
+               _prevPos.second = posY;
+               _position.first = posX;
+               _position.second = posY-1;
+            } else {
+                pair<int,int> newPosition = getRandomPos(forbiddenPositions, _prevPos.first, _prevPos.second, _position.first, _position.second);
+                _prevPos.first = posX;
+                _prevPos.second = posY;
+                _position.first = newPosition.first;
+                _position.second = newPosition.second;
+            }
+        } else if(posY < anthillY) {
+            if(checkPosition(forbiddenPositions, posX,posY+1)){
+                _prevPos.first = posX;
+                _prevPos.second = posY;
+                _position.first = posX;
+                _position.second = posY+1;
+            }else {
+                pair<int,int> newPosition = getRandomPos(forbiddenPositions, _prevPos.first, _prevPos.second, _position.first, _position.second);
+                _prevPos.first = posX;
+                _prevPos.second = posY;
+                _position.first = newPosition.first;
+                _position.second = newPosition.second;
+            }
+        }
     }
 }
 
@@ -105,4 +181,82 @@ void Warrior::attack()
 void Warrior::giveFood()
 {
 
+}
+
+/**
+ * @brief Warrior::getRandomPos Gives a random position considering the previous position of the ant, the current position and the forbidden
+ * @param forbiddenPositions
+ * @param prevX
+ * @param prevY
+ * @param posX
+ * @param posY
+ * @return a proposition of available position
+ */
+pair<int,int> Warrior::getRandomPos(vector<pair<int, int>> forbiddenPositions, int prevX, int prevY, int posX, int posY)
+{
+    //List of candidates
+    pair<int, int> up;
+    up.first = posX;
+    up.second = posY-1;
+    pair<int, int> down;
+    down.first = posX;
+    down.second = posY+1;
+    pair<int, int>  left;
+    left.first = posX-1;
+    left.second = posY;
+    pair<int, int> right;
+    right.first = posX+1;
+    right.second = posY;
+
+    vector<pair<int,int>> candidates;
+    candidates.push_back(up);
+    candidates.push_back(down);
+    candidates.push_back(left);
+    candidates.push_back(right);
+
+    //Iterating threw the candidates
+    vector<pair<int,int>> availableCandidates;
+    for(unsigned int i = 0; i < candidates.size(); i++)
+    {
+        if(checkPosition(forbiddenPositions, candidates[i].first, candidates[i].second) && candidates[i].first != prevX && candidates[i].second != prevY)
+        {
+            pair<int,int> available;
+            available.first = candidates[i].first;
+            available.second = candidates[i].second;
+            availableCandidates.push_back(available);
+        }
+    }
+
+    pair<int, int> result;
+    if(availableCandidates.size() >  0){
+        int random = rand () % availableCandidates.size() + 0;
+        result.first = availableCandidates[random].first;
+        result.second = availableCandidates[random].second;
+    } else {
+        result.first = prevX;
+        result.second = prevY;
+    }
+
+
+
+    return result;
+}
+
+/**
+ * @brief Warrior::checkPosition Iterate through the forbidden positions to check if the given X and Y are available
+ * @param forbiddenPositions list of impossible move for the ant
+ * @param posX the X coordinate you want to check
+ * @param posY the Y coordinate you want to check
+ * @return true if the position is available, false if not
+ */
+bool Warrior::checkPosition(vector<pair<int, int>> forbiddenPositions, int posX, int posY)
+{
+    for(unsigned int i= 0 ; i < forbiddenPositions.size(); i++)
+    {
+        if (forbiddenPositions[i].first == posX && forbiddenPositions[i].second == posY)
+        {
+            return false;
+        }
+    }
+    return true;
 }
