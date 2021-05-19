@@ -23,7 +23,7 @@ private:
 
     //Attributs
     CONFIG _config;
-    Orchestrator _orchestrator;
+    Orchestrator * _orchestrator;
 
     //Methods
     void newRound();

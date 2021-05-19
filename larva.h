@@ -17,8 +17,8 @@ public:
     void heal(int foodNumber);
     void starve();
     //Getters
-    int getCurrentAge();
-    int getCurrentHealth();
+    int getCurrentAge() const;
+    int getCurrentHealth() const;
 
 protected:
     //Attributs

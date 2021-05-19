@@ -12,7 +12,7 @@ public:
     Warrior(CONFIG &config, string name, Anthill &anthill);
     ~Warrior();
 
-    pair<int,int> getPosition();
+    const pair<int,int> getPosition();
     void explore();
     void returnToAnthill(vector<pair<int,int>> forbiddenPositions);
     void takeFood();

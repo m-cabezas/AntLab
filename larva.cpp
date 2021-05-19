@@ -39,13 +39,13 @@ void Larva::starve(){
 }
 
 // GETTERS
-
-int Larva::getCurrentAge()
+int Larva::getCurrentAge() const
 {
     return _currentAge;
 }
 
-int Larva::getCurrentHealth(){
+int Larva::getCurrentHealth() const
+{
     return _currentHealth;
 }
 

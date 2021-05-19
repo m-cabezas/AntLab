@@ -13,7 +13,7 @@ public:
     Obstacle(pair <int,int> position, int width, int height);
     ~Obstacle();
     //Methods
-    virtual pair<int,int> getPosition();
+    virtual const pair<int,int> getPosition();
 
 protected:
     //Attributs

@@ -1,14 +1,14 @@
 #include "game.h"
 
 Game::Game()
-{
+{    
+    _orchestrator = new Orchestrator(_config);
     Game::initGame();
-    Orchestrator *orchestrator = new Orchestrator(_config);
-    _orchestrator = *orchestrator;
 }
 
 Game::~Game()
 {
+    delete _orchestrator;
 
 }
 
@@ -40,8 +40,9 @@ void Game::initGame()
             20      //nbObstacleInit
     };
 
-    cout << "Init Game" << _config.ageLarva <<  endl;
-    _orchestrator.initOrch(_config);
+    cout << "Init Game" << endl;
+    _orchestrator->initOrch(_config);
+    cout << "End Game" << endl;
 }
 
 /**

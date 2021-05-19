@@ -17,6 +17,6 @@ Obstacle::~Obstacle()
 
 }
 
-pair<int,int> Obstacle::getPosition(){
+const pair<int,int> Obstacle::getPosition(){
     return position;
 }

@@ -19,10 +19,10 @@ class Orchestrator
 public:
     //Methods
     Orchestrator();
-    Orchestrator(CONFIG &config);
+    Orchestrator(CONFIG config);
     ~Orchestrator();
 
-    void initOrch(CONFIG &config);
+    void initOrch(CONFIG config);
     void doRound();
 
 private:

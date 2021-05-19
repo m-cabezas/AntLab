@@ -25,7 +25,7 @@ Warrior::~Warrior()
 
 }
 
-pair<int,int> Warrior::getPosition()
+const pair<int,int> Warrior::getPosition()
 {
     return _position;
 }

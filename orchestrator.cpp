@@ -1,8 +1,20 @@
 #include "orchestrator.h"
 
-Orchestrator::Orchestrator(CONFIG &config)
+Orchestrator::Orchestrator()
+{
+
+}
+Orchestrator::Orchestrator(CONFIG config)
 {
     _config = config;
+    _dimension = pair<int, int>(100,50);
+    // Initializing the grid
+    _grid.resize(_dimension.first);
+    for (unsigned int i = 0; i < _grid.size(); i++)
+    {
+        _grid.at(i).resize(_dimension.second);
+    }
+
 }
 
 Orchestrator::~Orchestrator()
@@ -10,9 +22,10 @@ Orchestrator::~Orchestrator()
 
 }
 
-void Orchestrator::initOrch(CONFIG &config)
+void Orchestrator::initOrch(CONFIG config)
 {
-    _config = config;
+    cout << "\t- Init Orchestrator : Environment of size x=" << _dimension.first << " y="<<_dimension.second << endl;
+    _config = config;    
     pair <int,int> anthillPosition (_dimension.first/2,_dimension.second/2);
     createAnthill(anthillPosition);
     initFoodSpawners(_config.nbFoodSpawnerInit);
@@ -26,6 +39,7 @@ void Orchestrator::doRound()
 
 void Orchestrator::createAnthill(pair <int,int> position)
 {
+    cout << "\t\t* Creating Anthill at : x=" << position.first << " y=" << position.second  << endl;
     Anthill *anthill = new Anthill(_config, _config.maxPopAnthill, _config.maxFoodAnthill, position, 1, 1);
     _anthills.push_back(anthill);
 }
@@ -38,6 +52,7 @@ void Orchestrator::createFoodSpawner(pair <int,int> position)
 
 void Orchestrator::initFoodSpawners(int nbFoodSpawnerInit)
 {
+    cout << "\t\t* Creating FoodSpawners" << endl;
     for (int i = 0;i < nbFoodSpawnerInit;i++) {
         pair <int,int> foodSpawnerPosition = getFreePositions().at(rand() % getFreePositions().size() + 0);
         createFoodSpawner(foodSpawnerPosition);
@@ -52,13 +67,14 @@ void Orchestrator::createObstacle(pair <int,int> position)
 
 void Orchestrator::initObstacles(int nbObstacleInit)
 {
+    cout << "\t\t* Creating obstacles" << endl;
     for (int i = 0;i < nbObstacleInit;i++) {
         pair <int,int> obstaclePosition = getFreePositions().at(rand() % getFreePositions().size() + 0);
         createObstacle(obstaclePosition);
     }
 }
 
-void Orchestrator::initWarriors()
+void Orchestrator::initWarriors(int nbWarriorInit, Anthill &anthill)
 {
 
 }
@@ -76,7 +92,7 @@ vector<pair <int, int>> Orchestrator::getFreePositions()
 
     for (int x = 0;x < _dimension.first;x++) {
         for (int y = 0;y < _dimension.second;y++) {
-            if (_grid.at(x).at(y) == 0) {
+            if (_grid.at(x).at(y) == false) {
                 pair <int,int> freePosition (x,y);
                 freePositions.push_back(freePosition);
             }

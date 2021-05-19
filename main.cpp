@@ -10,8 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-    Game *game = new Game;
-    game->initGame();
+       new Game();
 //    Worker worker("worker");
 //    Larva larva("larva",5);
 
