@@ -17,6 +17,7 @@ private:
 public:
     //Methods
     FoodSpawner();
+    FoodSpawner(int maxQuantity, pair<int,int> position, int width, int height);
     ~FoodSpawner();
     void DoRound();
 };

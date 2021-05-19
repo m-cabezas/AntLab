@@ -5,13 +5,15 @@ Anthill::Anthill()
 
 }
 
-Anthill::Anthill(CONFIG &config)
+Anthill::Anthill(CONFIG &config, int maxPop, int maxFood, pair<int,int> position, int width, int height)
 {
     _config = config;
-    _maxPop = config.maxPopAnthill;
-    _maxFood = config.maxFood;
+    _maxPop = maxPop;
+    _maxFood = maxFood;
+    this->position = position;
+    this->width = width;
+    this->height = height;
 }
-
 
 Anthill::~Anthill()
 {
@@ -21,8 +23,6 @@ Anthill::~Anthill()
 }
 
 //PUBLIC
-
-
 void Anthill::initAnthill()
 {
     Anthill::createEgg();
@@ -56,7 +56,6 @@ void Anthill::growUpToWarrior(Worker worker)
 {
 
 }
-
 
 //PRIVATE
 void Anthill::createEgg()

@@ -16,7 +16,7 @@ public:
 
     //Methods
     Anthill();
-    Anthill(CONFIG &config);
+    Anthill(CONFIG &config, int maxPop, int maxFood, pair<int,int> position, int width, int height);
     ~Anthill();
     void initAnthill();
     void spawnEgg();

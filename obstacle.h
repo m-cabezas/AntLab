@@ -10,13 +10,14 @@ class Obstacle
 {
 public:
     Obstacle();
+    Obstacle(pair <int,int> position, int width, int height);
     ~Obstacle();
     //Methods
     virtual pair<int,int> getPosition();
 
 protected:
     //Attributs
-    pair<int,int> position;
+    pair <int,int> position;
     int width;
     int height;
 };

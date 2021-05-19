@@ -2,8 +2,9 @@
 #define UTIL_H
 
 struct CONFIG {
-    int maxFood ;
+    int maxFoodAnthill;
     int maxPopAnthill;
+    int maxFoodFoodSpawner;
     int ageLarva;
     int ageWorker;
     int ageWarrior;
@@ -20,6 +21,7 @@ struct CONFIG {
     int nbWorkerInit;
     int nbWarriorInit;
     int nbFoodSpawnerInit;
+    int nbObstacleInit;
 };
 
 #endif // UTIL_H
