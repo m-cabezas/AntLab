@@ -71,6 +71,7 @@ void Orchestrator::initObstacles(int nbObstacleInit)
     for (int i = 0;i < nbObstacleInit;i++) {
         pair <int,int> obstaclePosition = getFreePositions().at(rand() % getFreePositions().size() + 0);
         createObstacle(obstaclePosition);
+        setCaseTaken(obstaclePosition.first, obstaclePosition.second, true);
     }
 }
 
@@ -111,4 +112,9 @@ bool Orchestrator::checkPosition(int x, int y)
         return false;
     }
 
+}
+
+void Orchestrator::setCaseTaken(int x, int y, bool taken)
+{
+    _grid.at(x).at(y) = taken;
 }

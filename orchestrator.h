@@ -43,6 +43,7 @@ private:
     void initObstacles(int nbObstacleInit);
     void createWarrior(Anthill &anthill);
     void initWarriors(int nbWarriorInit, Anthill &anthill);
+    void setCaseTaken(int x, int y, bool taken);
 
     vector<pair <int, int>> getFreePositions();
     bool checkPosition(int x, int y);

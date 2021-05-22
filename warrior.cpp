@@ -30,9 +30,13 @@ const pair<int,int> Warrior::getPosition()
     return _position;
 }
 
-void Warrior::explore()
+void Warrior::explore(vector<pair<int,int>> forbiddenPositions)
 {
-
+    cout << "Warrior " << _name << " is exploring" << endl;
+    pair<int,int> newPosition =  getRandomPos(forbiddenPositions, _prevPos.first, _prevPos.second, _position.first, _position.second);
+    _position.first = newPosition.first;
+    _position.second = newPosition.second;
+    cout << "\t=> Warrior is going to : x=" <<  _position.first << " y=" << _position.second << endl;
 }
 
 void Warrior::returnToAnthill(vector<pair<int,int>> forbiddenPositions)
@@ -45,7 +49,7 @@ void Warrior::returnToAnthill(vector<pair<int,int>> forbiddenPositions)
     //If the Ant is already at the anthill, we do nothing
     if(posX == anthillX-1 && posY == anthillY)
     {
-        return;
+        return ;
     }
     //If the Ant is on the right X
     if(posX == anthillX-1){
@@ -163,8 +167,9 @@ void Warrior::returnToAnthill(vector<pair<int,int>> forbiddenPositions)
                 _position.first = newPosition.first;
                 _position.second = newPosition.second;
             }
-        }
+        }        
     }
+    cout << "\t=> Warrior is going to : x=" <<  _position.first << " y=" << _position.second << endl;
 }
 
 
@@ -232,9 +237,14 @@ pair<int,int> Warrior::getRandomPos(vector<pair<int, int>> forbiddenPositions, i
         int random = rand () % availableCandidates.size() + 0;
         result.first = availableCandidates[random].first;
         result.second = availableCandidates[random].second;
-    } else {
+    } else if(checkPosition(forbiddenPositions, prevX, prevY)){
+        //If there are no more available candidates, the ant tries to go back
         result.first = prevX;
         result.second = prevY;
+    } else {
+        //If the ant can't go back, it stays at the same position
+        result.first = posX;
+        result.second = posY;
     }
 
 

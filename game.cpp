@@ -1,22 +1,7 @@
 #include "game.h"
 
 Game::Game()
-{    
-    _orchestrator = new Orchestrator(_config);
-    Game::initGame();
-}
-
-Game::~Game()
 {
-    delete _orchestrator;
-
-}
-
-/**
- * Request the user to give default config and then create an orchestrator
- */
-void Game::initGame()
-{    
     _config = {
             100,    // maxFood
             50,     // maxPopAnthill
@@ -39,7 +24,21 @@ void Game::initGame()
             10,     //nbFoodSpawnerInit
             20      //nbObstacleInit
     };
+    _orchestrator = new Orchestrator(_config);
+    Game::initGame();
+}
 
+Game::~Game()
+{
+    delete _orchestrator;
+
+}
+
+/**
+ * Init the orchestrator and launch the game
+ */
+void Game::initGame()
+{        
     cout << "Init Game" << endl;
     _orchestrator->initOrch(_config);
     cout << "End Game" << endl;
