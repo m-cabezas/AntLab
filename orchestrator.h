@@ -41,7 +41,7 @@ private:
     void initFoodSpawners(int nbFoodSpawnerInit);
     void createObstacle(pair <int,int> position);
     void initObstacles(int nbObstacleInit);
-    void createWarrior(Anthill &anthill);
+    void createWarrior(pair <int,int> position, Anthill &anthill);
     void initWarriors(int nbWarriorInit, Anthill &anthill);
     void setCaseTaken(int x, int y, bool taken);
 

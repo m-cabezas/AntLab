@@ -9,7 +9,7 @@ class Warrior : public Worker
 public:
     //Methods
     Warrior();
-    Warrior(CONFIG &config, string name, Anthill &anthill);
+    Warrior(int capacityWarrior, pair<int,int> position, string name, Anthill &anthill);
     ~Warrior();
 
     const pair<int,int> getPosition();
@@ -26,7 +26,6 @@ private:
     int _mode;
     pair<int,int> _position;
     pair<int,int> _prevPos;
-    CONFIG _config;
     Anthill _anthill;
 
     //Methods

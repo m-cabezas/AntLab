@@ -5,19 +5,16 @@ Warrior::Warrior()
 
 }
 
-Warrior::Warrior(CONFIG &config, string name, Anthill &anthill)
+Warrior::Warrior(int capacityWarrior, pair<int,int> position, string name, Anthill &anthill)
 {
-    _config = config;
     _name = name;
     _anthill = anthill;
-    _foodCapacity = config.capacityWarrior;
+    _foodCapacity = capacityWarrior;
     _currentFood = 0;
     _mode = 0;
     //Init Ant position with the anthill position -1 on X
-    _position.first = _anthill.getPosition().first-1;
-    _position.second = _anthill.getPosition().second;
-    _prevPos.first = _anthill.getPosition().first-1;
-    _prevPos.second = _anthill.getPosition().second;
+    _position = position;
+    _prevPos = position;
 }
 
 Warrior::~Warrior()

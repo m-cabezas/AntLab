@@ -42,12 +42,15 @@ void Orchestrator::createAnthill(pair <int,int> position)
     cout << "\t\t* Creating Anthill at : x=" << position.first << " y=" << position.second  << endl;
     Anthill *anthill = new Anthill(_config, _config.maxPopAnthill, _config.maxFoodAnthill, position, 1, 1);
     _anthills.push_back(anthill);
+    setCaseTaken(position.first, position.second, true);
 }
 
 void Orchestrator::createFoodSpawner(pair <int,int> position)
 {
+    cout << "\t\t* Creating FoodSpawner at : x=" << position.first << " y=" << position.second  << endl;
     FoodSpawner *foodSpawner = new FoodSpawner(_config.maxFoodFoodSpawner, position, 1, 1);
     _foodSpawners.push_back(foodSpawner);
+    setCaseTaken(position.first, position.second, true);
 }
 
 void Orchestrator::initFoodSpawners(int nbFoodSpawnerInit)
@@ -61,8 +64,10 @@ void Orchestrator::initFoodSpawners(int nbFoodSpawnerInit)
 
 void Orchestrator::createObstacle(pair <int,int> position)
 {
+    cout << "\t\t* Creating Obstacle at : x=" << position.first << " y=" << position.second  << endl;
     Obstacle *obstacle = new Obstacle(position, 1, 1);
     _obstacles.push_back(obstacle);
+    setCaseTaken(position.first, position.second, true);
 }
 
 void Orchestrator::initObstacles(int nbObstacleInit)
@@ -71,20 +76,43 @@ void Orchestrator::initObstacles(int nbObstacleInit)
     for (int i = 0;i < nbObstacleInit;i++) {
         pair <int,int> obstaclePosition = getFreePositions().at(rand() % getFreePositions().size() + 0);
         createObstacle(obstaclePosition);
-        setCaseTaken(obstaclePosition.first, obstaclePosition.second, true);
     }
 }
 
 void Orchestrator::initWarriors(int nbWarriorInit, Anthill &anthill)
 {
-
+    cout << "\t\t* Creating warriors" << endl;
+    for (int i = 0;i < nbWarriorInit;i++) {
+        vector<pair <int,int>> warriorsFreePositions;
+        vector<pair <int,int>> freePositions = getFreePositions();
+        pair <int,int> anthillPosition = anthill.getPosition();
+        vector<pair <int,int>> nearbyPositions{pair <int,int> (anthillPosition.first-1, anthillPosition.second), pair <int,int> (anthillPosition.first-1, anthillPosition.second-1), pair <int,int> (anthillPosition.first-1, anthillPosition.second+1), pair <int,int> (anthillPosition.first+1, anthillPosition.second), pair <int,int> (anthillPosition.first+1, anthillPosition.second-1), pair <int,int> (anthillPosition.first+1, anthillPosition.second+1), pair <int,int> (anthillPosition.first, anthillPosition.second-1), pair <int,int> (anthillPosition.first, anthillPosition.second+1)};
+        for (int x = 0;x < int(freePositions.size());x++) {
+            pair <int,int> freePosition = freePositions.at(x);
+            for (int y = 0;y < int(nearbyPositions.size());y++) {
+                pair <int,int> nearbyPosition = nearbyPositions.at(y);
+                if (freePosition == nearbyPosition) {
+                    warriorsFreePositions.push_back(freePosition);
+                }
+            }
+        }
+        if (!warriorsFreePositions.empty()) {
+            pair <int,int> warriorPosition = warriorsFreePositions.at(rand() % warriorsFreePositions.size() + 0);
+            createWarrior(warriorPosition, anthill);
+        }
+        else {
+            cout << "\t\t* Unable to create warrior, no more positions available" << endl;
+        }
+    }
 }
 
-void Orchestrator::createWarrior(Anthill &anthill)
+void Orchestrator::createWarrior(pair <int,int> position, Anthill &anthill)
 {
+    cout << "\t\t* Creating Warrior at : x=" << position.first << " y=" << position.second  << endl;
     string name = "warrior" + to_string(_warriors.size());
-    Warrior *warrior = new Warrior(_config, name, anthill);
+    Warrior *warrior = new Warrior(_config.capacityWarrior, position, name, anthill);
     _warriors.push_back(warrior);
+    setCaseTaken(position.first, position.second, true);
 }
 
 vector<pair <int, int>> Orchestrator::getFreePositions()
