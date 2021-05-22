@@ -13,7 +13,7 @@ public:
     ~Warrior();
 
     const pair<int,int> getPosition();
-    void explore();
+    void explore(vector<pair<int,int>> forbiddenPositions);
     void returnToAnthill(vector<pair<int,int>> forbiddenPositions);
     void takeFood();
     void attack();
