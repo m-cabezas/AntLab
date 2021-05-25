@@ -30,7 +30,9 @@ const pair<int,int> Warrior::getPosition()
 void Warrior::explore(vector<pair<int,int>> forbiddenPositions)
 {
     cout << "Warrior " << _name << " is exploring" << endl;
-    pair<int,int> newPosition =  getRandomPos(forbiddenPositions, _prevPos.first, _prevPos.second, _position.first, _position.second);
+    pair<int,int> newPosition = getRandomPos(forbiddenPositions, _prevPos.first, _prevPos.second, _position.first, _position.second);
+    _prevPos.first = _position.first;
+    _prevPos.second = _position.second;
     _position.first = newPosition.first;
     _position.second = newPosition.second;
     cout << "\t=> Warrior is going to : x=" <<  _position.first << " y=" << _position.second << endl;
@@ -220,8 +222,9 @@ pair<int,int> Warrior::getRandomPos(vector<pair<int, int>> forbiddenPositions, i
     vector<pair<int,int>> availableCandidates;
     for(unsigned int i = 0; i < candidates.size(); i++)
     {
+//        cout << "checking x = " << candidates[i].first << " y = " << candidates[i].second << endl;
         if(checkPosition(forbiddenPositions, candidates[i].first, candidates[i].second) && candidates[i].first != prevX && candidates[i].second != prevY)
-        {
+        {            
             pair<int,int> available;
             available.first = candidates[i].first;
             available.second = candidates[i].second;
@@ -235,7 +238,7 @@ pair<int,int> Warrior::getRandomPos(vector<pair<int, int>> forbiddenPositions, i
         result.first = availableCandidates[random].first;
         result.second = availableCandidates[random].second;
     } else if(checkPosition(forbiddenPositions, prevX, prevY)){
-        //If there are no more available candidates, the ant tries to go back
+        //If there are no more available candidates, the ant tries to go back  
         result.first = prevX;
         result.second = prevY;
     } else {
@@ -260,6 +263,7 @@ bool Warrior::checkPosition(vector<pair<int, int>> forbiddenPositions, int posX,
 {
     for(unsigned int i= 0 ; i < forbiddenPositions.size(); i++)
     {
+//        cout << "forbidden x= " << forbiddenPositions[i].first << " y= " << forbiddenPositions[i].second << endl;
         if (forbiddenPositions[i].first == posX && forbiddenPositions[i].second == posY)
         {
             return false;

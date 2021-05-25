@@ -41,6 +41,7 @@ void Game::initGame()
 {        
     cout << "Init Game" << endl;
     _orchestrator->initOrch(_config);
+    _orchestrator->doRound();
     cout << "End Game" << endl;
 }
 

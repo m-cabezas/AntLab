@@ -30,11 +30,17 @@ void Orchestrator::initOrch(CONFIG config)
     createAnthill(anthillPosition);
     initFoodSpawners(_config.nbFoodSpawnerInit);
     initObstacles(_config.nbObstacleInit);
+    initWarriors(_config.nbWarriorInit, *_anthills[0]);
 }
 
 void Orchestrator::doRound()
 {
 
+    for(unsigned int i = 0 ; i < _warriors.size(); i++)
+    {
+        pair<int,int> postion = _warriors[i]->getPosition();
+        _warriors[i]->explore(getForbidenPositions(postion.first, postion.second));
+    }
 }
 
 void Orchestrator::createAnthill(pair <int,int> position)
@@ -121,7 +127,7 @@ vector<pair <int, int>> Orchestrator::getFreePositions()
 
     for (int x = 0;x < _dimension.first;x++) {
         for (int y = 0;y < _dimension.second;y++) {
-            if (_grid.at(x).at(y) == false) {
+            if (checkPosition(x,y) == false) {
                 pair <int,int> freePosition (x,y);
                 freePositions.push_back(freePosition);
             }
@@ -129,6 +135,37 @@ vector<pair <int, int>> Orchestrator::getFreePositions()
     }
 
     return freePositions;
+}
+
+vector<pair<int,int>> Orchestrator::getForbidenPositions(int x, int y)
+{
+    vector<pair<int,int>> forbiddenPositions;
+    if(!checkPosition(x-1,y))
+    {
+        pair<int,int> forbidden(x-1,y);
+        forbiddenPositions.push_back(forbidden);
+    }
+    if(!checkPosition(x+1,y))
+    {
+        pair<int,int> forbidden(x+1,y);
+        forbiddenPositions.push_back(forbidden);
+    }
+    if(!checkPosition(x,y-1))
+    {
+        pair<int,int> forbidden(x,y-1);
+        forbiddenPositions.push_back(forbidden);
+    }
+    if(!checkPosition(x,y+1))
+    {
+        pair<int,int> forbidden(x,y+1);
+        forbiddenPositions.push_back(forbidden);
+    }
+    return forbiddenPositions;
+}
+
+FoodSpawner Orchestrator::checkFoodNearby(int x, int y)
+{
+
 }
 
 bool Orchestrator::checkPosition(int x, int y)
@@ -144,5 +181,8 @@ bool Orchestrator::checkPosition(int x, int y)
 
 void Orchestrator::setCaseTaken(int x, int y, bool taken)
 {
-    _grid.at(x).at(y) = taken;
+    if((x < _dimension.first && x >= 0) && (y < _dimension.second && y >= 0))
+    {
+        _grid.at(x).at(y) = taken;
+    }
 }

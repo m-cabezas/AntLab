@@ -46,6 +46,8 @@ private:
     void setCaseTaken(int x, int y, bool taken);
 
     vector<pair <int, int>> getFreePositions();
+    vector<pair <int, int>> getForbidenPositions(int x, int y);
+    FoodSpawner checkFoodNearby(int x, int y);
     bool checkPosition(int x, int y);
 
 };
