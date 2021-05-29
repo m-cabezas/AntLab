@@ -5,7 +5,11 @@
 #include <QtCore>
 #include <QtGui>
 #include <QPushButton>
+#include <QLabel>
 #include <QGridLayout>
+#include <utility>
+
+using namespace std;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,8 +22,10 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void InitializeGrid(pair<int,int> dimensions);
 
 private:
+    QGridLayout * _gridLayout;
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H

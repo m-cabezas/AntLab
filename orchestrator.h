@@ -1,4 +1,4 @@
-#ifndef ORCHESTRATOR_H
+vector<pair <int,int>> getWarriorsFreePositions(Anthill &anthill);#ifndef ORCHESTRATOR_H
 #define ORCHESTRATOR_H
 
 #include <iostream>
@@ -49,7 +49,8 @@ private:
     vector<pair <int, int>> getFreePositions();
     vector<pair <int, int>> getForbidenPositions(int x, int y);
     FoodSpawner* checkFoodNearby(int x, int y);
-    bool isCaseTaken(int x, int y);
+    bool checkPosition(int x, int y);
+    vector<pair <int,int>> getWarriorsFreePositions(Anthill &anthill);
 
 };
 

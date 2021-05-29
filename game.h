@@ -17,7 +17,6 @@ public:
     void initGame();
     CONFIG getConfig();
 
-
 private:
 
     //Attributs

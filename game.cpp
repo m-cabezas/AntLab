@@ -32,7 +32,6 @@ Game::Game()
 Game::~Game()
 {
     delete _orchestrator;
-
 }
 
 /**

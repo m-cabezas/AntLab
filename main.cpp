@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
     MainWindow w;
     new Game();
     w.show();
+    new Game();
 
     return a.exec();
 }
