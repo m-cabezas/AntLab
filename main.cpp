@@ -1,5 +1,4 @@
 #include "mainwindow.h"
-#include "game.h"
 #include "larva.h"
 #include "worker.h"
 

@@ -21,6 +21,7 @@ public:
     Orchestrator();
     Orchestrator(CONFIG config);
     ~Orchestrator();
+    pair<int, int> getDimension() const;
 
     void initOrch(CONFIG config);
     void doRound();
