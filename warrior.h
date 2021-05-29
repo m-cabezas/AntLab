@@ -13,11 +13,12 @@ public:
     ~Warrior();
 
     const pair<int,int> getPosition();
+    const pair<int, int> getPrevPos();
     void explore(vector<pair<int,int>> forbiddenPositions);
     void returnToAnthill(vector<pair<int,int>> forbiddenPositions);
     int takeFood(int availableQuantity);
     void attack();
-    int giveFood();
+    void giveFood();
     int getMode() const;
 
 private:
@@ -27,7 +28,7 @@ private:
     int _mode;
     pair<int,int> _position;
     pair<int,int> _prevPos;
-    Anthill _anthill;
+    Anthill* _anthill;
 
     //Methods
     bool checkPosition(vector<pair<int,int>> forbiddenPositions, int posX, int posY);

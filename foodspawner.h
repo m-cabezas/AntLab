@@ -20,7 +20,7 @@ private:
     int _currentQuantity;
 
     //Methods
-    int RandomFood();
+    void randomFood();
 
 };
 

@@ -44,7 +44,10 @@ void Orchestrator::initOrch(CONFIG config)
 void Orchestrator::doRound()
 {
     //Iterating through the foodSpawners
-
+    for(unsigned int i = 0 ; i < _foodSpawners.size(); i++)
+    {
+        _foodSpawners[i]->doRound();
+    }
 
     // Iterating through the warriors
     for(unsigned int i = 0 ; i < _warriors.size(); i++)
@@ -64,7 +67,11 @@ void Orchestrator::doRound()
         }else if(mode == 2) {
             _warriors[i]->returnToAnthill(getForbidenPositions(warriorPos.first, warriorPos.second));
         }
-
+        // Updating the grid with the new position
+        pair<int,int> prevPos = _warriors[i]->getPrevPos();
+        setCaseTaken(prevPos.first, prevPos.second, false);
+        warriorPos = _warriors[i]->getPosition();
+        setCaseTaken(warriorPos.first, warriorPos.second, true);
     }
 }
 

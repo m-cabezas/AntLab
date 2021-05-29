@@ -22,7 +22,11 @@ FoodSpawner::~FoodSpawner()
 
 void FoodSpawner::doRound()
 {
-
+    int spawnProb = rand() % 10;
+    if (spawnProb == 1)
+    {
+        randomFood();
+    }
 }
 
 int FoodSpawner::getCurrentQuantity() const
@@ -36,7 +40,12 @@ void FoodSpawner::decreaseQuantity(int quantity)
 }
 
 //PRIVATE
-int FoodSpawner::RandomFood()
+void FoodSpawner::randomFood()
 {
-    return 0;
+    _currentQuantity += rand() % 10 + 0;
+    if (_currentQuantity > _maxQuantity)
+    {
+        _currentQuantity = _maxQuantity;
+    }
+
 }

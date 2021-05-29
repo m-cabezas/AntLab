@@ -8,7 +8,7 @@ Warrior::Warrior()
 Warrior::Warrior(int capacityWarrior, pair<int,int> position, string name, Anthill &anthill)
 {
     _name = name;
-    _anthill = anthill;
+    _anthill = &anthill;
     _foodCapacity = capacityWarrior;
     _currentFood = 0;
     _mode = 0;
@@ -44,8 +44,8 @@ void Warrior::returnToAnthill(vector<pair<int,int>> forbiddenPositions)
     cout << "Warrior " << _name << " returns to Anthill" << endl;        
     int posX = _position.first;
     int posY = _position.second;
-    int anthillX = _anthill.getPosition().first;
-    int anthillY = _anthill.getPosition().second;
+    int anthillX = _anthill->getPosition().first;
+    int anthillY = _anthill->getPosition().second;
     //If the Ant is already at the anthill, it gives it food to it
     if(isNextTo(posX, posY, anthillX, anthillY))
     {
@@ -207,10 +207,10 @@ void Warrior::attack()
 
 }
 
-int Warrior::giveFood()
+void Warrior::giveFood()
 {
     cout << "Warrior " << _name << " gives " << _currentFood << " to its anthill" << endl;
-    _anthill.addFood(_currentFood);
+    _anthill->addFood(_currentFood);
     _currentFood = 0;
     _mode = 1;
 }
@@ -326,4 +326,8 @@ bool Warrior::isNextTo(int antX, int antY, int objX, int objY)
         return true;
     }
     return false;
+}
+
+pair<int,int> const Warrior::getPrevPos() {
+    return _prevPos;
 }

@@ -10,6 +10,7 @@ Anthill::Anthill(CONFIG &config, int maxPop, int maxFood, pair<int,int> position
     _config = config;
     _maxPop = maxPop;
     _maxFood = maxFood;
+    _currentFood = 0;
     this->position = position;
     this->width = width;
     this->height = height;
@@ -64,7 +65,7 @@ void Anthill::addFood(int foodQuantity)
     {
         _currentFood = _maxFood;
     }
-    cout << "Anthill recived food! " << endl;
+    cout << "Anthill recived "<< foodQuantity <<" of food! ----------------------------------" << endl;
     cout << "\t * New Food quantity : " << _currentFood <<"/" << _maxFood << endl;
 }
 
