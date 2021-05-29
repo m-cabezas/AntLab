@@ -20,12 +20,13 @@ Game::Game()
             4,      //nbEggInit
             3,      //nbLarvaInit
             3,      //nbWorkerInit
-            5,      //nbWarriorInit
-            10,     //nbFoodSpawnerInit
+            8,      //nbWarriorInit
+            20,     //nbFoodSpawnerInit
             20      //nbObstacleInit
     };
     _orchestrator = new Orchestrator(_config);
     Game::initGame();
+
 }
 
 Game::~Game()
@@ -41,7 +42,13 @@ void Game::initGame()
 {        
     cout << "Init Game" << endl;
     _orchestrator->initOrch(_config);
-    _orchestrator->doRound();
+    int i = 0;
+    while (i < 100)
+    {
+        newRound();
+        i++;
+    }
+
     cout << "End Game" << endl;
 }
 
@@ -52,4 +59,5 @@ void Game::initGame()
 void Game::newRound()
 {
     cout << "Game: New Round!" << endl;
+    _orchestrator->doRound();
 }

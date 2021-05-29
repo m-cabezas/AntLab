@@ -28,7 +28,7 @@ public:
 private:
     //Attibuts
     CONFIG _config;
-    pair <int, int> _dimension;
+    pair<int, int> _dimension;
     vector<vector<bool>> _grid;
     vector<Warrior *> _warriors;
     vector<Obstacle *> _obstacles;
@@ -44,11 +44,12 @@ private:
     void createWarrior(pair <int,int> position, Anthill &anthill);
     void initWarriors(int nbWarriorInit, Anthill &anthill);
     void setCaseTaken(int x, int y, bool taken);
+    bool isNextTo(int antX, int antY, int objX, int objY);
 
     vector<pair <int, int>> getFreePositions();
     vector<pair <int, int>> getForbidenPositions(int x, int y);
-    FoodSpawner checkFoodNearby(int x, int y);
-    bool checkPosition(int x, int y);
+    FoodSpawner* checkFoodNearby(int x, int y);
+    bool isCaseTaken(int x, int y);
 
 };
 

@@ -57,6 +57,17 @@ void Anthill::growUpToWarrior(Worker worker)
 
 }
 
+void Anthill::addFood(int foodQuantity)
+{
+    _currentFood += foodQuantity;
+    if (_currentFood > _maxFood)
+    {
+        _currentFood = _maxFood;
+    }
+    cout << "Anthill recived food! " << endl;
+    cout << "\t * New Food quantity : " << _currentFood <<"/" << _maxFood << endl;
+}
+
 //PRIVATE
 void Anthill::createEgg()
 {

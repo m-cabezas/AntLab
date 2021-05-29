@@ -24,12 +24,14 @@ public:
     void growUpToLarva(Egg egg);
     void growUpToWorker(Larva larva);
     void growUpToWarrior(Worker worker);
+    void addFood(int foodQuantity);
 
 private:
     //Attibuts
     CONFIG _config;
     int _maxPop;
     int _maxFood;
+    int _currentFood;
     vector<Egg *> _eggs;
     vector<Larva *> _larvas;
     vector<Worker *> _workers;

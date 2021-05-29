@@ -20,9 +20,19 @@ FoodSpawner::~FoodSpawner()
 
 }
 
-void FoodSpawner::DoRound()
+void FoodSpawner::doRound()
 {
 
+}
+
+int FoodSpawner::getCurrentQuantity() const
+{
+    return _currentQuantity;
+}
+
+void FoodSpawner::decreaseQuantity(int quantity)
+{
+    _currentQuantity -= quantity;
 }
 
 //PRIVATE

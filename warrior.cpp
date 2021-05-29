@@ -15,6 +15,7 @@ Warrior::Warrior(int capacityWarrior, pair<int,int> position, string name, Anthi
     //Init Ant position with the anthill position -1 on X
     _position = position;
     _prevPos = position;
+    _mode = 1;
 }
 
 Warrior::~Warrior()
@@ -40,15 +41,16 @@ void Warrior::explore(vector<pair<int,int>> forbiddenPositions)
 
 void Warrior::returnToAnthill(vector<pair<int,int>> forbiddenPositions)
 {
-    cout << "Warrior " << _name << " returns to Anthill" << endl;
+    cout << "Warrior " << _name << " returns to Anthill" << endl;        
     int posX = _position.first;
     int posY = _position.second;
     int anthillX = _anthill.getPosition().first;
     int anthillY = _anthill.getPosition().second;
-    //If the Ant is already at the anthill, we do nothing
-    if(posX == anthillX-1 && posY == anthillY)
+    //If the Ant is already at the anthill, it gives it food to it
+    if(isNextTo(posX, posY, anthillX, anthillY))
     {
-        return ;
+        giveFood();
+        return;
     }
     //If the Ant is on the right X
     if(posX == anthillX-1){
@@ -172,9 +174,32 @@ void Warrior::returnToAnthill(vector<pair<int,int>> forbiddenPositions)
 }
 
 
-void Warrior::takeFood()
+/**
+ * @brief Warrior::takeFood Indicates to the ant that she can take the given quantity of food
+ * @param availableQuantity quantity of food the ant can take, this does not mean that the ant will take it all
+ * @return the actual taken quantity
+ */
+int Warrior::takeFood(int availableQuantity)
 {
-
+    cout << " Warrior " << _name << " can take food ! " << endl;
+    if(availableQuantity > 0 )
+    {
+        //if the ant can take food, it has to go back to the anthill after
+        _mode = 2; // We change the ant mode
+    }
+    if (_currentFood < _foodCapacity)
+    {
+        int tmpFood = _currentFood;
+        _currentFood += availableQuantity;
+        if (_currentFood > _foodCapacity)
+        {
+            _currentFood = _foodCapacity;
+        }
+        cout << "\t*" << _name << " takes " << _currentFood - tmpFood  << endl;
+        return _currentFood - tmpFood;
+    }
+    cout << "\t*" << _name << " takes " << 0 << endl;
+    return 0;
 }
 
 void Warrior::attack()
@@ -182,9 +207,12 @@ void Warrior::attack()
 
 }
 
-void Warrior::giveFood()
+int Warrior::giveFood()
 {
-
+    cout << "Warrior " << _name << " gives " << _currentFood << " to its anthill" << endl;
+    _anthill.addFood(_currentFood);
+    _currentFood = 0;
+    _mode = 1;
 }
 
 /**
@@ -223,11 +251,11 @@ pair<int,int> Warrior::getRandomPos(vector<pair<int, int>> forbiddenPositions, i
     for(unsigned int i = 0; i < candidates.size(); i++)
     {
 //        cout << "checking x = " << candidates[i].first << " y = " << candidates[i].second << endl;
-        if(checkPosition(forbiddenPositions, candidates[i].first, candidates[i].second) && candidates[i].first != prevX && candidates[i].second != prevY)
+        if(checkPosition(forbiddenPositions, candidates[i].first, candidates[i].second) && (candidates[i].first != prevX || candidates[i].second != prevY))
         {            
             pair<int,int> available;
             available.first = candidates[i].first;
-            available.second = candidates[i].second;
+            available.second = candidates[i].second;      
             availableCandidates.push_back(available);
         }
     }
@@ -265,9 +293,37 @@ bool Warrior::checkPosition(vector<pair<int, int>> forbiddenPositions, int posX,
     {
 //        cout << "forbidden x= " << forbiddenPositions[i].first << " y= " << forbiddenPositions[i].second << endl;
         if (forbiddenPositions[i].first == posX && forbiddenPositions[i].second == posY)
-        {
+        {            
             return false;
         }
     }
     return true;
+}
+
+/**
+ * @brief Warrior::getMode
+ *  mode = 1 : Exploration mode, the ant is looking for food
+ *  mode = 2 : Return to anthill, the ant is carring food and taking it back to the anthill
+ * @return current mode
+ */
+int Warrior::getMode() const
+{
+    return _mode;
+}
+
+/**
+ * @brief Orchestrator::isNextTo tell if your ant is next to an object
+ * @param myX
+ * @param myY
+ * @param objX
+ * @param objY
+ * @return true
+ */
+bool Warrior::isNextTo(int antX, int antY, int objX, int objY)
+{
+    if ((objX == antX+1 && objY == antY) || (objX == antX-1 && objY == antY) || (objX == antX && objY == antY+1) || (objX == antX && objY == antY-1))
+    {
+        return true;
+    }
+    return false;
 }

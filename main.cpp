@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-       new Game();
+
 //    Worker worker("worker");
 //    Larva larva("larva",5);
 
@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 
     QApplication a(argc, argv);
     MainWindow w;
+    new Game();
     w.show();
 
     return a.exec();

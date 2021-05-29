@@ -15,14 +15,15 @@ public:
     const pair<int,int> getPosition();
     void explore(vector<pair<int,int>> forbiddenPositions);
     void returnToAnthill(vector<pair<int,int>> forbiddenPositions);
-    void takeFood();
+    int takeFood(int availableQuantity);
     void attack();
-    void giveFood();
+    int giveFood();
+    int getMode() const;
 
 private:
     //Attributs
-    int _foodCapacity;
-    int _currentFood;
+    int _foodCapacity; // the maximum food the ant can carry
+    int _currentFood; // The food the ant is carrying
     int _mode;
     pair<int,int> _position;
     pair<int,int> _prevPos;
@@ -31,6 +32,7 @@ private:
     //Methods
     bool checkPosition(vector<pair<int,int>> forbiddenPositions, int posX, int posY);
     pair<int,int> getRandomPos(vector<pair<int, int>> forbiddenPositions, int prevX, int prevY, int posX, int posY);
+    bool isNextTo(int antX, int antY, int objX, int objY);
 
 };
 

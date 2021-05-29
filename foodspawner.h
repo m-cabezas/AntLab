@@ -6,6 +6,14 @@
 
 class FoodSpawner : public Obstacle
 {
+public:
+    //Methods
+    FoodSpawner();
+    FoodSpawner(int maxQuantity, pair<int,int> position, int width, int height);
+    ~FoodSpawner();
+    void doRound();
+    int getCurrentQuantity() const;
+    void decreaseQuantity(int quantity);
 private:
     //Attributs
     int _maxQuantity;
@@ -14,12 +22,6 @@ private:
     //Methods
     int RandomFood();
 
-public:
-    //Methods
-    FoodSpawner();
-    FoodSpawner(int maxQuantity, pair<int,int> position, int width, int height);
-    ~FoodSpawner();
-    void DoRound();
 };
 
 #endif // FOODSPAWNER_H
