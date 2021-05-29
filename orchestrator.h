@@ -44,12 +44,14 @@ private:
     void createWarrior(pair <int,int> position, Anthill &anthill);
     void initWarriors(int nbWarriorInit, Anthill &anthill);
     void setCaseTaken(int x, int y, bool taken);
+    bool isCaseTaken(int x, int y);
     bool isNextTo(int antX, int antY, int objX, int objY);
 
     vector<pair <int, int>> getFreePositions();
     vector<pair <int, int>> getForbidenPositions(int x, int y);
     FoodSpawner* checkFoodNearby(int x, int y);
-    bool isCaseTaken(int x, int y);
+    bool checkPosition(int x, int y);
+    vector<pair <int,int>> getWarriorsFreePositions(Anthill &anthill);
 
 };
 

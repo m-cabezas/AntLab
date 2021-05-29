@@ -13,7 +13,6 @@ SOURCES += \
     egg.cpp \
     orchestrator.cpp \
     foodspawner.cpp \
-    game.cpp \
     larva.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -27,7 +26,6 @@ HEADERS += \
     egg.h \
     orchestrator.h \
     foodspawner.h \
-    game.h \
     larva.h \
     mainwindow.h \
     obstacle.h \

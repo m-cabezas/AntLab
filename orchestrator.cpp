@@ -121,22 +121,7 @@ void Orchestrator::initWarriors(int nbWarriorInit, Anthill &anthill)
 {
     cout << "\t\t* Creating warriors" << endl;
     for (int i = 0;i < nbWarriorInit;i++) {
-        vector<pair <int,int>> warriorsFreePositions;
-        vector<pair <int,int>> freePositions = getFreePositions();
-        pair <int,int> anthillPosition = anthill.getPosition();
-        vector<pair <int,int>> nearbyPositions{pair <int,int> (anthillPosition.first-1, anthillPosition.second), pair <int,int> (anthillPosition.first-1, anthillPosition.second-1),
-                    pair <int,int> (anthillPosition.first-1, anthillPosition.second+1), pair <int,int> (anthillPosition.first+1, anthillPosition.second),
-                    pair <int,int> (anthillPosition.first+1, anthillPosition.second-1), pair <int,int> (anthillPosition.first+1, anthillPosition.second+1),
-                    pair <int,int> (anthillPosition.first, anthillPosition.second-1), pair <int,int> (anthillPosition.first, anthillPosition.second+1)};
-        for (int x = 0;x < int(freePositions.size());x++) {
-            pair <int,int> freePosition = freePositions.at(x);
-            for (int y = 0;y < int(nearbyPositions.size());y++) {
-                pair <int,int> nearbyPosition = nearbyPositions.at(y);
-                if (freePosition == nearbyPosition) {
-                    warriorsFreePositions.push_back(freePosition);
-                }
-            }
-        }
+        vector<pair<int,int>> warriorsFreePositions = getWarriorsFreePositions(anthill);
         if (!warriorsFreePositions.empty()) {
             pair <int,int> warriorPosition = warriorsFreePositions.at(rand() % warriorsFreePositions.size() + 0);
             createWarrior(warriorPosition, anthill);
@@ -257,4 +242,21 @@ bool Orchestrator::isNextTo(int antX, int antY, int objX, int objY)
         return true;
     }
     return false;
+}
+
+vector<pair <int,int>> Orchestrator::getWarriorsFreePositions(Anthill &anthill) {
+    vector<pair <int,int>> warriorsFreePositions;
+    vector<pair <int,int>> freePositions = getFreePositions();
+    pair <int,int> anthillPosition = anthill.getPosition();
+    vector<pair <int,int>> nearbyPositions{pair <int,int> (anthillPosition.first-1, anthillPosition.second), pair <int,int> (anthillPosition.first-1, anthillPosition.second-1), pair <int,int> (anthillPosition.first-1, anthillPosition.second+1), pair <int,int> (anthillPosition.first+1, anthillPosition.second), pair <int,int> (anthillPosition.first+1, anthillPosition.second-1), pair <int,int> (anthillPosition.first+1, anthillPosition.second+1), pair <int,int> (anthillPosition.first, anthillPosition.second-1), pair <int,int> (anthillPosition.first, anthillPosition.second+1)};
+    for (int x = 0;x < int(freePositions.size());x++) {
+        pair <int,int> freePosition = freePositions.at(x);
+        for (int y = 0;y < int(nearbyPositions.size());y++) {
+            pair <int,int> nearbyPosition = nearbyPositions.at(y);
+            if (freePosition == nearbyPosition) {
+                warriorsFreePositions.push_back(freePosition);
+            }
+        }
+    }
+    return warriorsFreePositions;
 }
