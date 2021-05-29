@@ -1,4 +1,4 @@
-vector<pair <int,int>> getWarriorsFreePositions(Anthill &anthill);#ifndef ORCHESTRATOR_H
+#ifndef ORCHESTRATOR_H
 #define ORCHESTRATOR_H
 
 #include <iostream>
@@ -44,6 +44,7 @@ private:
     void createWarrior(pair <int,int> position, Anthill &anthill);
     void initWarriors(int nbWarriorInit, Anthill &anthill);
     void setCaseTaken(int x, int y, bool taken);
+    bool isCaseTaken(int x, int y);
     bool isNextTo(int antX, int antY, int objX, int objY);
 
     vector<pair <int, int>> getFreePositions();

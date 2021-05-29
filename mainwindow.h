@@ -8,6 +8,10 @@
 #include <QLabel>
 #include <QGridLayout>
 #include <utility>
+#include <string>
+#include <iostream>
+#include "orchestrator.h"
+#include "util.h"
 
 using namespace std;
 
@@ -23,9 +27,18 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void InitializeGrid(pair<int,int> dimensions);
+    void initGame();
+    CONFIG getConfig();
 
 private:
+
+    //Attributs
+    CONFIG _config;
+    Orchestrator * _orchestrator;
     QGridLayout * _gridLayout;
     Ui::MainWindow *ui;
+
+    //Methods
+    void newRound();
 };
 #endif // MAINWINDOW_H
