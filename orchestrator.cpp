@@ -30,6 +30,10 @@ Orchestrator::~Orchestrator()
 
 }
 
+pair<int, int> Orchestrator::getDimension() const {
+    return _dimension;
+}
+
 void Orchestrator::initOrch(CONFIG config)
 {
     cout << "\t- Init Orchestrator : Environment of size x=" << _dimension.first << " y="<<_dimension.second << endl;

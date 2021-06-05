@@ -29,9 +29,8 @@ MainWindow::MainWindow(QWidget *parent)
             20      //nbObstacleInit
     };
     _orchestrator = new Orchestrator(_config);
-    _gridLayout = new QGridLayout();
+    _gridLayout = new QGridLayout;
     MainWindow::initGame();
-
 
     // Uncomment to use QML
 //    ui->setupUi(this);
@@ -47,6 +46,7 @@ void MainWindow::initGame()
     pair<int,int> dimensions(100,50);
     initializeGrid(dimensions);
     _orchestrator->initOrch(_config);
+    initializeGrid(_orchestrator->getDimension());
     int i = 0;
     while (i < 100)
     {
@@ -67,13 +67,24 @@ void MainWindow::newRound()
     _orchestrator->doRound();
 }
 
-void MainWindow::initializeGrid(std::pair<int, int> dimensions) {
+void MainWindow::initializeGrid(pair<int, int> dimensions) {
     for (int x = 0;x < dimensions.first;x++) {
         for (int y = 0;y < dimensions.second;y++) {
             QLabel * lb = new QLabel();
+            lb->setStyleSheet("border: 1px solid black;");
             _gridLayout->addWidget(lb,y,x,1,1);
         }
     }
+    // Create a widget
+    QWidget *w = new QWidget();
+    _gridLayout->setSpacing(0);
+    // Set the grid layout as a main layout
+    w->setLayout(_gridLayout);
+    // Window title
+    w->setWindowTitle("Grid Layouts");
+    // Display
+    w->show();
+    this->setCentralWidget(w);
 }
 
 MainWindow::~MainWindow()
