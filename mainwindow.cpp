@@ -29,8 +29,9 @@ MainWindow::MainWindow(QWidget *parent)
             20      //nbObstacleInit
     };
     _orchestrator = new Orchestrator(_config);
+    _gridLayout = new QGridLayout();
     MainWindow::initGame();
-    _gridLayout = new QGridLayout;
+
 
     // Uncomment to use QML
 //    ui->setupUi(this);
@@ -43,6 +44,8 @@ MainWindow::MainWindow(QWidget *parent)
 void MainWindow::initGame()
 {
     cout << "Init Game" << endl;
+    pair<int,int> dimensions(100,50);
+    initializeGrid(dimensions);
     _orchestrator->initOrch(_config);
     int i = 0;
     while (i < 100)
@@ -64,7 +67,7 @@ void MainWindow::newRound()
     _orchestrator->doRound();
 }
 
-void MainWindow::InitializeGrid(std::pair<int, int> dimensions) {
+void MainWindow::initializeGrid(std::pair<int, int> dimensions) {
     for (int x = 0;x < dimensions.first;x++) {
         for (int y = 0;y < dimensions.second;y++) {
             QLabel * lb = new QLabel();

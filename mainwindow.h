@@ -26,7 +26,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    void InitializeGrid(pair<int,int> dimensions);
+    void initializeGrid(pair<int,int> dimensions);
     void initGame();
     CONFIG getConfig();
 
