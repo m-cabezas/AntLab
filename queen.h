@@ -1,13 +1,16 @@
 #ifndef QUEEN_H
 #define QUEEN_H
 
-#include "warrior.h"
+#include "worker.h"
 
-class Queen : public Warrior
+class Queen : public Worker
 {
 public:
+    Queen();
     Queen(CONFIG &config);
     ~Queen();
+
+private:
 
 };
 

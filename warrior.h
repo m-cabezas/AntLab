@@ -9,7 +9,7 @@ class Warrior : public Worker
 public:
     //Methods
     Warrior();
-    Warrior(int capacityWarrior, pair<int,int> position, string name, Anthill &anthill, CONFIG& config);
+    Warrior(pair<int,int> position, string name, Anthill &anthill, CONFIG& config);
     ~Warrior();
 
     const pair<int,int> getPosition();
@@ -20,6 +20,8 @@ public:
     void attack();
     void giveFood();
     int getMode() const;
+    int getCurrentFood() const;
+    void setCurrentFood(unsigned int food);
 
 private:
     //Attributs

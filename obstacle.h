@@ -17,9 +17,9 @@ public:
 
 protected:
     //Attributs
-    pair <int,int> position;
-    int width;
-    int height;
+    pair <int,int> _position;
+    int _width;
+    int _height;
 };
 
 #endif // OBSTACLE_H

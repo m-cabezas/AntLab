@@ -11,9 +11,11 @@ Anthill::Anthill(CONFIG &config, int maxPop, int maxFood, pair<int,int> position
     _maxPop = maxPop;
     _maxFood = maxFood;
     _currentFood = 0;
-    this->position = position;
-    this->width = width;
-    this->height = height;    
+    _position = position;
+    _width = width;
+    _height = height;
+    _queen = new Queen(_config);
+
 }
 
 Anthill::~Anthill()
@@ -23,7 +25,7 @@ Anthill::~Anthill()
     _workers.erase(_workers.begin(), _workers.end());
 }
 
-int Anthill::getNewWarriors()
+int Anthill::getNewWarriors() const
 {
     return _newWarriors;
 }
@@ -31,8 +33,9 @@ int Anthill::getNewWarriors()
 //PUBLIC
 void Anthill::initAnthill()
 {
-//    _queen = new Queen(_config);
     cout << "Init anthill with : " << _config.nbEggInit << " eggs, " << _config.nbLarvaInit << " larvas  and " << _config.nbWorkerInit << " workers" << endl;
+    _queenAlive = true;
+    _currentFood = 200;
     for (int i = 0;  i < _config.nbEggInit; i++){
       Anthill::createEgg();
     }
@@ -50,7 +53,6 @@ void Anthill::spawnEgg()
    int lucky =  rand() % 100;
    if (lucky == 1) {
        int newEggs = rand() % 5 + 0;
-       cout << "Today the Queen blessed us with " << newEggs <<" new eggs! Long live the Queen!" <<  endl;
        for (int i = 0; i < newEggs; i++)
        {
            createEgg();
@@ -74,11 +76,24 @@ void Anthill::doRound()
  */
 void Anthill::doRoundQueen()
 {
-//    _queen->increaseAge();
-//    _queen->starve();
-//    if(_queen->getCurrentHealth() <= 0) {
-//        delete _queen;
-//    }
+    if(_queenAlive) {
+        _queen->increaseAge();
+        _queen->starve();
+        cout << "Queen life: " << _queen->getCurrentHealth() << endl;
+        if(_queen->getCurrentHealth() <= 0) {
+            delete _queen;
+            _queenAlive = false;
+            return;
+        }
+        // If the ant is at half is life, we give food to it if possible
+        if(_queen->getCurrentHealth() <= (_config.lifeQueen/2))
+        {
+            if(_currentFood > 0 ) {
+                int heal = rand() % _currentFood + 0;
+                _queen->heal(foodCons(heal));
+            }
+        }
+    }
 }
 
 /**
@@ -143,7 +158,6 @@ void Anthill::doRoundLarvas()
             if(_currentFood > 0 ) {
                 int heal = rand() % _currentFood + 0;
                 _larvas[i]->heal(foodCons(heal));
-                _currentFood -= heal;
             }
         }
 
@@ -164,7 +178,6 @@ void Anthill::doRoundWorkers()
     vector<Worker *> newWorkers;
     for(unsigned int i = 0 ; i < _workers.size(); i++)
     {
-        cout << "workers round" << endl;
         _workers[i]->increaseAge();
         _workers[i]->starve();
         // If the ant is not dead, we add it to the new ant list
@@ -186,7 +199,6 @@ void Anthill::doRoundWorkers()
             if(_currentFood > 0 ) {
                 int heal = rand() % _currentFood + 0;
                 _workers[i]->heal(foodCons(heal));
-                _currentFood -= heal;
             }            
         }
 
@@ -253,8 +265,9 @@ void Anthill::createWorker()
 int Anthill::foodCons(int desiredFood)
 {
     int availableCons = 0;
-    if(_currentFood == 0 )
+    if(_currentFood <= 0 )
     {
+        _currentFood = 0;
         return 0;
     }
     if(desiredFood > _currentFood)
@@ -268,4 +281,9 @@ int Anthill::foodCons(int desiredFood)
     }
 
     return availableCons;
+}
+
+bool Anthill::isQueenAlive()
+{
+    return _queenAlive;
 }

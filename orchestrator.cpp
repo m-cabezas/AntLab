@@ -71,19 +71,48 @@ void Orchestrator::initOrch(CONFIG config)
     initWarriors(_config.nbWarriorInit, *_anthills[0]);
 }
 
-void Orchestrator::doRound()
+/**
+ * @brief Orchestrator::doRound the orchestrator do the round of the anthill and warriors
+ * @return 0 if ecerything is fine, 1 if the queen is dead
+ */
+int Orchestrator::doRound()
 {
+
     _anthills[0]->doRound();
+    int numberNewWarriors = _anthills[0]->getNewWarriors();
+    //creating the new warriors (workers that grown up)
+    initWarriors(numberNewWarriors, *_anthills[0]);
     //Iterating through the foodSpawners
     for(unsigned int i = 0 ; i < _foodSpawners.size(); i++)
     {
         _foodSpawners[i]->doRound();
     }
-
+    vector<Warrior *> newWarriors;
     // Iterating through the warriors
     for(unsigned int i = 0 ; i < _warriors.size(); i++)
     {
         pair<int,int> warriorPos = _warriors[i]->getPosition();
+        // Managing warrior's life
+        _warriors[i]->increaseAge();
+        _warriors[i]->starve();
+        // If the ant is not dead, we add it to the new ant list
+        if(_warriors[i]->getCurrentHealth() <= 0)
+        {
+            delete _warriors[i];
+            setCaseTaken(warriorPos.first, warriorPos.second, false);
+            continue;
+        }
+        // If the ant is at half is life, we give food to it if possible
+        if(_warriors[i]->getCurrentHealth() <= (_config.lifeLarva/2))
+        {
+            if(_warriors[i]->getCurrentFood() > 0 ) {
+                int heal = rand() % _warriors[i]->getCurrentFood() + 0;
+                _warriors[i]->heal(heal);
+                _warriors[i]->setCurrentFood(_warriors[i]->getCurrentFood()-heal);
+            }
+        }
+
+        // Managing warrior's moves
         int mode = _warriors[i]->getMode();
         if (mode == 1) {
             // If the ant is in exploration mode
@@ -103,7 +132,18 @@ void Orchestrator::doRound()
         setCaseTaken(prevPos.first, prevPos.second, false);
         warriorPos = _warriors[i]->getPosition();
         setCaseTaken(warriorPos.first, warriorPos.second, true);
+        newWarriors.push_back(_warriors[i]);
     }
+    _warriors.clear();
+    _warriors = newWarriors;
+    //Checking if the queen is alive, if not, it is the end of the game!
+    if(!_anthills[0]->isQueenAlive())
+    {
+        return 1;
+    } else {
+        return 0;
+    }
+
 }
 
 /**
@@ -179,7 +219,7 @@ void Orchestrator::createWarrior(pair <int,int> position, Anthill &anthill)
 {
     cout << "\t\t* Creating Warrior at : x=" << position.first << " y=" << position.second  << endl;
     string name = "warrior" + to_string(_warriors.size());
-    Warrior *warrior = new Warrior(_config.capacityWarrior, position, name, anthill, _config);
+    Warrior *warrior = new Warrior(position, name, anthill, _config);
     _warriors.push_back(warrior);
     setCaseTaken(position.first, position.second, true);
 }
@@ -200,6 +240,12 @@ vector<pair <int, int>> Orchestrator::getFreePositions()
     return freePositions;
 }
 
+/**
+ * @brief Orchestrator::getForbidenPositions indicates position where you cannot go next to the coordinates you give
+ * @param x
+ * @param y
+ * @return the occupied position around the given coordinates
+ */
 vector<pair<int,int>> Orchestrator::getForbidenPositions(int x, int y)
 {
     vector<pair<int,int>> forbiddenPositions;

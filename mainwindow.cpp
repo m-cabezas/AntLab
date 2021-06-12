@@ -45,21 +45,22 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     _config = {
-            100,    // maxFood
+            500,    // maxFood
             50,     // maxPopAnthill
-            100,    // maxFoodFoodSpawner
+            200,    // maxFoodFoodSpawner
             5,      // ageLarva
             10,     //ageWorker
             15,     //ageWarrior
-            10,     //lifeLarva
-            10,     //lifeWorker
-            13,     //lifeWarrior
-            15,     //lifeQueen
+            20,     //ageQueen
+            60,     //lifeLarva
+            70,     //lifeWorker
+            150,     //lifeWarrior
+            100,     //lifeQueen
             1,      //consLarva
             2,      //consWorker
             3,      //consWarrior
             4,      //consQueen
-            15,     //capacityWarrior
+            40,     //capacityWarrior
             4,      //nbEggInit
             3,      //nbLarvaInit
             3,      //nbWorkerInit
@@ -84,10 +85,15 @@ void MainWindow::initGame()
     cout << "Init Game" << endl;
     _orchestrator->initOrch(_config);
     int i = 0;
-    while (i < 20)
+    while (true)
     {
+        cout << "ROUND : " << i << endl;
     	initializeGrid();
-        newRound(i);
+        int res = _orchestrator->doRound();
+        if(res == 1) {
+            cout << "London Bridge is Down! Our beloved Queen passed away this morning..." << endl;
+            break;
+        }
         Sleep(100);
 		system("CLS");
         i++;
@@ -102,7 +108,7 @@ void MainWindow::initGame()
 void MainWindow::newRound(int roundNumber)
 {
     cout << "Game: New Round! Round " << roundNumber << endl;
-    _orchestrator->doRound();
+
 }
 
 void MainWindow::initializeGrid() {

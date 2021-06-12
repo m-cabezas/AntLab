@@ -25,7 +25,7 @@ public:
     int getMapEntity(int x, int y);
 
     void initOrch(CONFIG config);
-    void doRound();
+    int doRound();
 
 private:
     //Attibuts

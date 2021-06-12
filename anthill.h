@@ -7,7 +7,7 @@
 #include "larva.h"
 #include "worker.h"
 #include "egg.h"
-//#include "queen.h"
+#include "queen.h"
 
 class Anthill : public Obstacle
 {
@@ -19,12 +19,13 @@ public:
     Anthill();
     Anthill(CONFIG &config, int maxPop, int maxFood, pair<int,int> position, int width, int height);
     ~Anthill();
-    int getNewWarriors();
+    int getNewWarriors() const;
 
     void initAnthill();
     void spawnEgg();
     void doRound();    
     void addFood(int foodQuantity);
+    bool isQueenAlive();
 
 private:
     //Attibuts
@@ -32,7 +33,8 @@ private:
     int _maxPop;
     int _maxFood;
     int _currentFood;
-//    Queen* _queen;
+    bool _queenAlive;
+    Queen* _queen;
     vector<Egg *> _eggs;
     vector<Larva *> _larvas;
     vector<Worker *> _workers;

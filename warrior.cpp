@@ -5,11 +5,11 @@ Warrior::Warrior()
 
 }
 
-Warrior::Warrior(int capacityWarrior, pair<int,int> position, string name, Anthill &anthill, CONFIG& config)
+Warrior::Warrior(pair<int,int> position, string name, Anthill &anthill, CONFIG& config)
 {
     _name = name;
     _anthill = &anthill;
-    _foodCapacity = capacityWarrior;
+    _foodCapacity = config.capacityWarrior;
     _currentFood = 0;
     _mode = 0;
     _currentAge = config.ageWarrior;
@@ -30,6 +30,16 @@ Warrior::~Warrior()
 const pair<int,int> Warrior::getPosition()
 {
     return _position;
+}
+
+int Warrior::getCurrentFood() const
+{
+    return _currentFood;
+}
+
+void Warrior::setCurrentFood(unsigned int food)
+{
+    _currentFood = food;
 }
 
 void Warrior::explore(vector<pair<int,int>> forbiddenPositions)
@@ -335,3 +345,5 @@ bool Warrior::isNextTo(int antX, int antY, int objX, int objY)
 pair<int,int> const Warrior::getPrevPos() {
     return _prevPos;
 }
+
+

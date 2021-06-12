@@ -7,9 +7,9 @@ Obstacle::Obstacle()
 
 Obstacle::Obstacle(pair <int,int> position, int width, int height)
 {
-    this->position = position;
-    this->width = width;
-    this->height = height;
+    _position = position;
+    _width = width;
+    _height = height;
 }
 
 Obstacle::~Obstacle()
@@ -18,5 +18,5 @@ Obstacle::~Obstacle()
 }
 
 const pair<int,int> Obstacle::getPosition(){
-    return position;
+    return _position;
 }

@@ -10,9 +10,9 @@ FoodSpawner::FoodSpawner(int maxQuantity, pair<int,int> position, int width, int
 {
     _maxQuantity = maxQuantity;
     _currentQuantity = rand() % maxQuantity + 0;
-    this->position = position;
-    this->width = width;
-    this->height = height;
+    _position = position;
+    _width = width;
+    _height = height;
 }
 
 FoodSpawner::~FoodSpawner()
