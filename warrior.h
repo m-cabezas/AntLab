@@ -1,6 +1,9 @@
 #ifndef WARRIOR_H
 #define WARRIOR_H
 
+#include <random>
+#include <chrono>
+
 #include "worker.h"
 #include "anthill.h"
 
@@ -9,7 +12,7 @@ class Warrior : public Worker
 public:
     //Methods
     Warrior();
-    Warrior(pair<int,int> position, string name, Anthill &anthill, CONFIG& config);
+    Warrior(pair<int,int> position, string name, Anthill* anthill, CONFIG& config);
     ~Warrior();
 
     const pair<int,int> getPosition();

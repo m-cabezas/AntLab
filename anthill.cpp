@@ -30,6 +30,15 @@ int Anthill::getNewWarriors() const
     return _newWarriors;
 }
 
+/**
+ * Gives the current population within the anthill
+ * @return total population
+ */
+int Anthill::getPopulation() const
+{
+    return _eggs.size() + _larvas.size() + _workers.size();
+}
+
 //PUBLIC
 void Anthill::initAnthill()
 {
@@ -48,11 +57,13 @@ void Anthill::initAnthill()
 }
 
 void Anthill::spawnEgg()
-{
-    cout << "spawn " << endl;
-   int lucky =  rand() % 100;
+{    
+   default_random_engine re(std::chrono::system_clock::now().time_since_epoch().count());
+   uniform_int_distribution<int> distrib{0,6};
+   int lucky =  distrib(re);
    if (lucky == 1) {
-       int newEggs = rand() % 5 + 0;
+       uniform_int_distribution<int> distrib{0,10};
+       int newEggs = distrib(re);
        for (int i = 0; i < newEggs; i++)
        {
            createEgg();
@@ -61,13 +72,16 @@ void Anthill::spawnEgg()
 }
 
 void Anthill::doRound()
-{
+{    
     _newWarriors = 0;
     doRoundQueen();
     doRoundEggs();
     doRoundLarvas();
     doRoundWorkers();
-    spawnEgg();
+    cout << "Available food in anthill: "  << _currentFood << endl;
+    cout << "Eggs number: "  << _eggs.size() << endl;
+    cout << "Larvas number: "  << _larvas.size() << endl;
+    cout << "Worker number: "  << _workers.size() << endl;
 }
 
 //PRIVATE
@@ -79,7 +93,7 @@ void Anthill::doRoundQueen()
     if(_queenAlive) {
         _queen->increaseAge();
         _queen->starve();
-        cout << "Queen life: " << _queen->getCurrentHealth() << endl;
+
         if(_queen->getCurrentHealth() <= 0) {
             delete _queen;
             _queenAlive = false;
@@ -109,14 +123,10 @@ void Anthill::doRoundEggs()
         // If the ant has to grow, we add its index to the growing list and we go to the next ant
         if(_eggs[i]->getCurrentAge() == _config.ageLarva)
         {
-            //cout << "grow "<<_eggs[i]->getName() << " i = " << i << endl;
-//            growingEggs.push_back(i);
             growUpToLarva(_eggs[i]);
-//            _eggs.erase(_eggs.begin()+i);
         } else {
             newEggs.push_back(_eggs[i]);
         }
-        //cout << _eggs[i]->getName() << endl;
     }
 
     _eggs.clear();
@@ -146,9 +156,7 @@ void Anthill::doRoundLarvas()
         // If the ant has to grow, we add its index to the growing list and we go to the next ant
         if(_larvas[i]->getCurrentAge() == _config.ageWorker)
         {
-//            growingLarvas.push_back(i);
             growUpToWorker(_larvas[i]);
-//            _larvas.erase(_larvas.begin()+i);
         } else {
             newLarvas.push_back(_larvas[i]);
         }
@@ -164,10 +172,6 @@ void Anthill::doRoundLarvas()
     }
     _larvas.clear();
     _larvas = newLarvas;
-            //    for(unsigned int i = 0 ; i < growingLarvas.size(); i++) {
-//        growUpToWorker(_larvas[growingLarvas[i]]);
-//        _larvas.erase(_larvas.begin()+growingLarvas[i]);
-//    }
 }
 
 /**

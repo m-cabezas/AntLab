@@ -8,6 +8,8 @@
 #include "worker.h"
 #include "egg.h"
 #include "queen.h"
+#include <random>
+#include <chrono>
 
 class Anthill : public Obstacle
 {
@@ -20,8 +22,8 @@ public:
     Anthill(CONFIG &config, int maxPop, int maxFood, pair<int,int> position, int width, int height);
     ~Anthill();
     int getNewWarriors() const;
+    int getPopulation() const;
 
-    int getNewWarriors();
     void initAnthill();
     void spawnEgg();
     void doRound();    

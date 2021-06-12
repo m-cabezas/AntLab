@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <vector>
+#include <random>
+#include <chrono>
 
 
 #include "foodspawner.h"
@@ -46,8 +48,8 @@ private:
     void initFoodSpawners(int nbFoodSpawnerInit);
     void createObstacle(pair <int,int> position);
     void initObstacles(int nbObstacleInit);
-    void createWarrior(pair <int,int> position, Anthill &anthill);
-    void initWarriors(int nbWarriorInit, Anthill &anthill);
+    void createWarrior(pair <int,int> position, Anthill* anthill);
+    void initWarriors(int nbWarriorInit, Anthill* anthill);
     void setCaseTaken(int x, int y, bool taken);
     bool isCaseTaken(int x, int y);
     bool isNextTo(int antX, int antY, int objX, int objY);

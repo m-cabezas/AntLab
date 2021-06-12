@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     _config = {
             500,    // maxFood
-            50,     // maxPopAnthill
+            20,     // maxPopAnthill
             200,    // maxFoodFoodSpawner
             5,      // ageLarva
             10,     //ageWorker
@@ -28,8 +28,8 @@ MainWindow::MainWindow(QWidget *parent)
             3,      //nbLarvaInit
             3,      //nbWorkerInit
             8,      //nbWarriorInit
-            20,     //nbFoodSpawnerInit
-            20      //nbObstacleInit
+            30,     //nbFoodSpawnerInit
+            50      //nbObstacleInit
     };
     _orchestrator = new Orchestrator(_config);
     _gridLayout = new QGridLayout;
@@ -57,9 +57,10 @@ void MainWindow::initGame()
             cout << "London Bridge is Down! Our beloved Queen passed away this morning..." << endl;
             break;
         }
-        Sleep(100);
+        Sleep(200);
 		system("CLS");
         i++;
+        cout << "_________________________________________________________________________________________________________________________________________" << endl;
     }
     cout << "End Game" << endl;
 }

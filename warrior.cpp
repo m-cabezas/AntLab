@@ -5,10 +5,10 @@ Warrior::Warrior()
 
 }
 
-Warrior::Warrior(pair<int,int> position, string name, Anthill &anthill, CONFIG& config)
+Warrior::Warrior(pair<int,int> position, string name, Anthill* anthill, CONFIG& config)
 {
     _name = name;
-    _anthill = &anthill;
+    _anthill = anthill;
     _foodCapacity = config.capacityWarrior;
     _currentFood = 0;
     _mode = 0;
@@ -283,9 +283,14 @@ pair<int,int> Warrior::getRandomPos(vector<pair<int, int>> forbiddenPositions, i
 
     pair<int, int> result;
     if(availableCandidates.size() >  0){
+        default_random_engine re(std::chrono::system_clock::now().time_since_epoch().count());
+
+        uniform_int_distribution<int> distrib{0,1};
+//        cout << "old  = " << posX << " | " << posY << endl;
         int random = rand () % availableCandidates.size() + 0;
         result.first = availableCandidates[random].first;
         result.second = availableCandidates[random].second;
+//        cout << "new  = " << result.first << " | " << result.second << endl<< "----------------------" << endl;
     } else if(checkPosition(forbiddenPositions, prevX, prevY)){
         //If there are no more available candidates, the ant tries to go back  
         result.first = prevX;

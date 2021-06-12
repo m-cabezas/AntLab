@@ -78,7 +78,7 @@ void Orchestrator::initOrch(CONFIG config)
     createAnthill(anthillPosition, true);
     initFoodSpawners(_config.nbFoodSpawnerInit);
     initObstacles(_config.nbObstacleInit);
-    initWarriors(_config.nbWarriorInit, *_anthills[0]);
+    initWarriors(_config.nbWarriorInit, _anthills[0]);
 }
 
 /**
@@ -87,11 +87,18 @@ void Orchestrator::initOrch(CONFIG config)
  */
 int Orchestrator::doRound()
 {
-
+    // Anthill
     _anthills[0]->doRound();
     int numberNewWarriors = _anthills[0]->getNewWarriors();
+    // If the population is under the max population, we give the option to the anthill to make new eggs
+    if(_anthills[0]->getPopulation() + _warriors.size() < _config.maxPopAnthill)
+    {
+        _anthills[0]->spawnEgg();
+    }
+
+    //Warriors
     //creating the new warriors (workers that grown up)
-    initWarriors(numberNewWarriors, *_anthills[0]);
+    initWarriors(numberNewWarriors, _anthills[0]);
     //Iterating through the foodSpawners
     for(unsigned int i = 0 ; i < _foodSpawners.size(); i++)
     {
@@ -115,7 +122,7 @@ int Orchestrator::doRound()
         // If the ant is at half is life, we give food to it if possible
         if(_warriors[i]->getCurrentHealth() <= (_config.lifeLarva/2))
         {
-            if(_warriors[i]->getCurrentFood() > 0 ) {
+            if(_warriors[i]->getCurrentFood() > 0 ) {               
                 int heal = rand() % _warriors[i]->getCurrentFood() + 0;
                 _warriors[i]->heal(heal);
                 _warriors[i]->setCurrentFood(_warriors[i]->getCurrentFood()-heal);
@@ -146,13 +153,14 @@ int Orchestrator::doRound()
     }
     _warriors.clear();
     _warriors = newWarriors;
+    cout << "Warrior number: "  << _warriors.size() << endl;
     //Checking if the queen is alive, if not, it is the end of the game!
     if(!_anthills[0]->isQueenAlive())
     {
         return 1;
     } else {
         return 0;
-    }
+    }    
 
 }
 
@@ -179,7 +187,7 @@ void Orchestrator::createAnthill(pair <int,int> position, bool init)
  * @param position
  */
 void Orchestrator::createFoodSpawner(pair <int,int> position)
-{
+{    
     cout << "\t\t* Creating FoodSpawner at : x=" << position.first << " y=" << position.second  << endl;
     FoodSpawner *foodSpawner = new FoodSpawner(_config.maxFoodFoodSpawner, position, 1, 1);
     _foodSpawners.push_back(foodSpawner);
@@ -193,9 +201,12 @@ void Orchestrator::createFoodSpawner(pair <int,int> position)
  */
 void Orchestrator::initFoodSpawners(int nbFoodSpawnerInit)
 {
+    default_random_engine re(std::chrono::system_clock::now().time_since_epoch().count());
     cout << "\t\t* Creating FoodSpawners" << endl;
     for (int i = 0;i < nbFoodSpawnerInit;i++) {
-        pair <int,int> foodSpawnerPosition = getFreePositions().at(rand() % getFreePositions().size() + 0);
+        int born = getFreePositions().size();
+        uniform_int_distribution<int> distrib{0,born};
+        pair <int,int> foodSpawnerPosition = getFreePositions().at(distrib(re));
         createFoodSpawner(foodSpawnerPosition);
     }
 }
@@ -220,8 +231,11 @@ void Orchestrator::createObstacle(pair <int,int> position)
 void Orchestrator::initObstacles(int nbObstacleInit)
 {
     cout << "\t\t* Creating obstacles" << endl;
+    default_random_engine re(std::chrono::system_clock::now().time_since_epoch().count());
     for (int i = 0;i < nbObstacleInit;i++) {
-        pair <int,int> obstaclePosition = getFreePositions().at(rand() % getFreePositions().size() + 0);
+        int born = getFreePositions().size();
+        uniform_int_distribution<int> distrib{0,born};
+        pair <int,int> obstaclePosition = getFreePositions().at(distrib(re));
         createObstacle(obstaclePosition);
     }
 }
@@ -231,11 +245,11 @@ void Orchestrator::initObstacles(int nbObstacleInit)
  * @param nbWarriorInit
  * @param anthill
  */
-void Orchestrator::initWarriors(int nbWarriorInit, Anthill &anthill)
+void Orchestrator::initWarriors(int nbWarriorInit, Anthill* anthill)
 {
-    cout << "\t\t* Creating warriors" << endl;
+
     for (int i = 0;i < nbWarriorInit;i++) {
-        vector<pair<int,int>> warriorsFreePositions = getWarriorsFreePositions(anthill);
+        vector<pair<int,int>> warriorsFreePositions = getWarriorsFreePositions(*anthill);
         if (!warriorsFreePositions.empty()) {
             pair <int,int> warriorPosition = warriorsFreePositions.at(rand() % warriorsFreePositions.size() + 0);
             createWarrior(warriorPosition, anthill);
@@ -251,7 +265,7 @@ void Orchestrator::initWarriors(int nbWarriorInit, Anthill &anthill)
  * @param position
  * @param anthill
  */
-void Orchestrator::createWarrior(pair <int,int> position, Anthill &anthill)
+void Orchestrator::createWarrior(pair <int,int> position, Anthill* anthill)
 {
     //cout << "\t\t* Creating Warrior at : x=" << position.first << " y=" << position.second  << endl;
     string name = "warrior" + to_string(_warriors.size());
@@ -286,7 +300,7 @@ vector<pair <int, int>> Orchestrator::getFreePositions()
  * @param y
  * @return the occupied position around the given coordinates
  */
-vector<pair<int,int>> Orchestrator::getForbidenPositions(int x, int y)
+vector<pair<int,int>> Orchestrator::getForbiddenPositions(int x, int y)
 {
     vector<pair<int,int>> forbiddenPositions;
     if(isCaseTaken(x-1,y))
