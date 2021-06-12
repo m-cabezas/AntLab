@@ -25,15 +25,16 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+    //Methods
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
     void initializeGrid();
     void initGame();
     CONFIG getConfig();
 
 private:
-
-    //Attributs
+    //Attributes
     CONFIG _config;
     Orchestrator * _orchestrator;
     QGridLayout * _gridLayout;

@@ -10,5 +10,5 @@ Queen::Queen(CONFIG& config)
 
 Queen::~Queen()
 {
-    cout << "London Bridge is Down! Our beloved Queen passed away this morning... She was " << _currentAge << " years old." << endl;
+    //cout << "London Bridge is Down! Our beloved Queen passed away this morning... She was " << _currentAge << " years old." << endl;
 }

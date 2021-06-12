@@ -21,14 +21,14 @@ public:
     Orchestrator();
     Orchestrator(CONFIG config);
     ~Orchestrator();
+
     pair<int, int> getDimension() const;
     int getMapEntity(int x, int y);
-
     void initOrch(CONFIG config);
     void doRound();
 
 private:
-    //Attibuts
+    //Attributes
     CONFIG _config;
     pair<int, int> _dimension;
     vector<vector<bool>> _grid;
@@ -53,7 +53,7 @@ private:
     bool isNextTo(int antX, int antY, int objX, int objY);
 
     vector<pair <int, int>> getFreePositions();
-    vector<pair <int, int>> getForbidenPositions(int x, int y);
+    vector<pair <int, int>> getForbiddenPositions(int x, int y);
     FoodSpawner* checkFoodNearby(int x, int y);
     bool checkPosition(int x, int y);
     vector<pair <int,int>> getWarriorsFreePositions(Anthill &anthill);

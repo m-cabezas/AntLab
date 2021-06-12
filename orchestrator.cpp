@@ -43,6 +43,12 @@ pair<int, int> Orchestrator::getDimension() const {
     return _dimension;
 }
 
+/**
+ * @brief Orchestrator::getMapEntity return an int mapped to an object moving on the map
+ * @param x
+ * @param y
+ * @return
+ */
 int Orchestrator::getMapEntity(int x, int y) {
     if (_grid.at(x).at(y) == false) {
         return 1;
@@ -60,6 +66,10 @@ int Orchestrator::getMapEntity(int x, int y) {
     return 5;
 }
 
+/**
+ * @brief Orchestrator::initOrch initialize entities on the map at first round
+ * @param config
+ */
 void Orchestrator::initOrch(CONFIG config)
 {
     cout << "\t- Init Orchestrator : Environment of size x=" << _dimension.first << " y="<<_dimension.second << endl;
@@ -71,6 +81,9 @@ void Orchestrator::initOrch(CONFIG config)
     initWarriors(_config.nbWarriorInit, *_anthills[0]);
 }
 
+/**
+ * @brief Orchestrator::doRound() integrate all actions that are done in a round by the entities
+ */
 void Orchestrator::doRound()
 {
     _anthills[0]->doRound();
@@ -93,10 +106,10 @@ void Orchestrator::doRound()
                 int takenQuantity = _warriors[i]->takeFood(foodSpawner->getCurrentQuantity());
                 foodSpawner->decreaseQuantity(takenQuantity);
             } else {
-               _warriors[i]->explore(getForbidenPositions(warriorPos.first, warriorPos.second));
+               _warriors[i]->explore(getForbiddenPositions(warriorPos.first, warriorPos.second));
             }
         }else if(mode == 2) {
-            _warriors[i]->returnToAnthill(getForbidenPositions(warriorPos.first, warriorPos.second));
+            _warriors[i]->returnToAnthill(getForbiddenPositions(warriorPos.first, warriorPos.second));
         }
         // Updating the grid with the new position
         pair<int,int> prevPos = _warriors[i]->getPrevPos();
@@ -124,6 +137,10 @@ void Orchestrator::createAnthill(pair <int,int> position, bool init)
     _anthillsGrid.at(position.first).at(position.second) = true;
 }
 
+/**
+ * @brief Orchestrator::createFoodSpawner create a food spawner and add it to the orchestrator's food spawner list
+ * @param position
+ */
 void Orchestrator::createFoodSpawner(pair <int,int> position)
 {
     cout << "\t\t* Creating FoodSpawner at : x=" << position.first << " y=" << position.second  << endl;
@@ -133,6 +150,10 @@ void Orchestrator::createFoodSpawner(pair <int,int> position)
     _foodSpawnersGrid.at(position.first).at(position.second) = true;
 }
 
+/**
+ * @brief Orchestrator::initFoodSpawners create multiple food spawners at initialization round
+ * @param nbFoodSpawnerInit
+ */
 void Orchestrator::initFoodSpawners(int nbFoodSpawnerInit)
 {
     cout << "\t\t* Creating FoodSpawners" << endl;
@@ -142,6 +163,10 @@ void Orchestrator::initFoodSpawners(int nbFoodSpawnerInit)
     }
 }
 
+/**
+ * @brief Orchestrator::createObstacle create an obstacle and add it to the orchestrator's obstacle list
+ * @param position
+ */
 void Orchestrator::createObstacle(pair <int,int> position)
 {
     cout << "\t\t* Creating Obstacle at : x=" << position.first << " y=" << position.second  << endl;
@@ -151,6 +176,10 @@ void Orchestrator::createObstacle(pair <int,int> position)
     _obstaclesGrid.at(position.first).at(position.second) = true;
 }
 
+/**
+ * @brief Orchestrator::initObstacles create multiple food spawners at initialization round
+ * @param nbObstacleInit
+ */
 void Orchestrator::initObstacles(int nbObstacleInit)
 {
     cout << "\t\t* Creating obstacles" << endl;
@@ -160,6 +189,11 @@ void Orchestrator::initObstacles(int nbObstacleInit)
     }
 }
 
+/**
+ * @brief Orchestrator::initWarriors create multiple warriors at initialization round
+ * @param nbWarriorInit
+ * @param anthill
+ */
 void Orchestrator::initWarriors(int nbWarriorInit, Anthill &anthill)
 {
     cout << "\t\t* Creating warriors" << endl;
@@ -175,15 +209,24 @@ void Orchestrator::initWarriors(int nbWarriorInit, Anthill &anthill)
     }
 }
 
+/**
+ * @brief Orchestrator::createWarrior create a warrior and add it to the orchestrator's warrior list
+ * @param position
+ * @param anthill
+ */
 void Orchestrator::createWarrior(pair <int,int> position, Anthill &anthill)
 {
-    cout << "\t\t* Creating Warrior at : x=" << position.first << " y=" << position.second  << endl;
+    //cout << "\t\t* Creating Warrior at : x=" << position.first << " y=" << position.second  << endl;
     string name = "warrior" + to_string(_warriors.size());
     Warrior *warrior = new Warrior(_config.capacityWarrior, position, name, anthill, _config);
     _warriors.push_back(warrior);
     setCaseTaken(position.first, position.second, true);
 }
 
+/**
+ * @brief Orchestrator::getFreePositions return all empty positions on the map
+ * @return return all empty positions on the map as vector<pair <int, int>>
+ */
 vector<pair <int, int>> Orchestrator::getFreePositions()
 {
     vector<pair <int, int>> freePositions;
@@ -200,7 +243,13 @@ vector<pair <int, int>> Orchestrator::getFreePositions()
     return freePositions;
 }
 
-vector<pair<int,int>> Orchestrator::getForbidenPositions(int x, int y)
+/**
+ * @brief Orchestrator::getForbiddenPositions return the positions around the given coordinates
+ * @param x
+ * @param y
+ * @return
+ */
+vector<pair<int,int>> Orchestrator::getForbiddenPositions(int x, int y)
 {
     vector<pair<int,int>> forbiddenPositions;
     if(isCaseTaken(x-1,y))
@@ -262,6 +311,12 @@ bool Orchestrator::isCaseTaken(int x, int y)
 
 }
 
+/**
+ * @brief Orchestrator::setCaseTaken set the location on the map to "taken"
+ * @param x
+ * @param y
+ * @param taken : boolean value of the taken location on the map
+ */
 void Orchestrator::setCaseTaken(int x, int y, bool taken)
 {
     if((x < _dimension.first && x >= 0) && (y < _dimension.second && y >= 0))
@@ -287,6 +342,11 @@ bool Orchestrator::isNextTo(int antX, int antY, int objX, int objY)
     return false;
 }
 
+/**
+ * @brief Orchestrator::getWarriorsFreePositions get all warriors available position to spawn around the anthill
+ * @param anthill
+ * @return all warriors free positions as vector<pair <int,int>>
+ */
 vector<pair <int,int>> Orchestrator::getWarriorsFreePositions(Anthill &anthill) {
     vector<pair <int,int>> warriorsFreePositions;
     vector<pair <int,int>> freePositions = getFreePositions();

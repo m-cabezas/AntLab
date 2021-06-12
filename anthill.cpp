@@ -50,7 +50,7 @@ void Anthill::spawnEgg()
    int lucky =  rand() % 100;
    if (lucky == 1) {
        int newEggs = rand() % 5 + 0;
-       cout << "Today the Queen blessed us with " << newEggs <<" new eggs! Long live the Queen!" <<  endl;
+       //cout << "Today the Queen blessed us with " << newEggs <<" new eggs! Long live the Queen!" <<  endl;
        for (int i = 0; i < newEggs; i++)
        {
            createEgg();
@@ -94,19 +94,19 @@ void Anthill::doRoundEggs()
         // If the ant has to grow, we add its index to the growing list and we go to the next ant
         if(_eggs[i]->getCurrentAge() == _config.ageLarva)
         {
-            cout << "grow "<<_eggs[i]->getName() << " i = " << i << endl;
+            //cout << "grow "<<_eggs[i]->getName() << " i = " << i << endl;
 //            growingEggs.push_back(i);
             growUpToLarva(_eggs[i]);
 //            _eggs.erase(_eggs.begin()+i);
         } else {
             newEggs.push_back(_eggs[i]);
         }
-        cout << _eggs[i]->getName() << endl;
+        //cout << _eggs[i]->getName() << endl;
     }
 
     _eggs.clear();
     _eggs = newEggs;
-    cout << "end eggs" << endl;
+    //cout << "end eggs" << endl;
 }
 
 /**
@@ -164,7 +164,7 @@ void Anthill::doRoundWorkers()
     vector<Worker *> newWorkers;
     for(unsigned int i = 0 ; i < _workers.size(); i++)
     {
-        cout << "workers round" << endl;
+        //cout << "workers round" << endl;
         _workers[i]->increaseAge();
         _workers[i]->starve();
         // If the ant is not dead, we add it to the new ant list
@@ -198,7 +198,7 @@ void Anthill::doRoundWorkers()
 void Anthill::growUpToLarva(Egg* egg)
 {
     Anthill::createLarva();
-    cout << "Egg " << egg->getName() << " is becoming a larva! We're so proud of it!" << endl;
+    //cout << "Egg " << egg->getName() << " is becoming a larva! We're so proud of it!" << endl;
     delete egg;
 
 }
@@ -206,14 +206,14 @@ void Anthill::growUpToLarva(Egg* egg)
 void Anthill::growUpToWorker(Larva* larva)
 {
     Anthill::createWorker();
-    cout << "Larva " << larva->getName() << " is becoming a worker! We're so proud of it!" << endl;
+    //cout << "Larva " << larva->getName() << " is becoming a worker! We're so proud of it!" << endl;
     delete larva;
 }
 
 void Anthill::growUpToWarrior(Worker* worker)
 {
     _newWarriors += 1;
-    cout << "Warrior " << worker->getName() << " is becoming a warrior! We're so proud of it!" << endl;
+    //cout << "Warrior " << worker->getName() << " is becoming a warrior! We're so proud of it!" << endl;
     delete worker;
 }
 
@@ -224,8 +224,8 @@ void Anthill::addFood(int foodQuantity)
     {
         _currentFood = _maxFood;
     }
-    cout << "Anthill recived "<< foodQuantity <<" of food! ----------------------------------" << endl;
-    cout << "\t * New Food quantity : " << _currentFood <<"/" << _maxFood << endl;
+    //cout << "Anthill recived "<< foodQuantity <<" of food! ----------------------------------" << endl;
+    //cout << "\t * New Food quantity : " << _currentFood <<"/" << _maxFood << endl;
 }
 
 //PRIVATE

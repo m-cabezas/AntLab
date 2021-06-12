@@ -12,22 +12,22 @@
 class Anthill : public Obstacle
 {
 public: 
-    //Attributs
+    //Attributes
 
 
     //Methods
     Anthill();
     Anthill(CONFIG &config, int maxPop, int maxFood, pair<int,int> position, int width, int height);
     ~Anthill();
-    int getNewWarriors();
 
+    int getNewWarriors();
     void initAnthill();
     void spawnEgg();
     void doRound();    
     void addFood(int foodQuantity);
 
 private:
-    //Attibuts
+    //Attributes
     CONFIG _config;
     int _maxPop;
     int _maxFood;

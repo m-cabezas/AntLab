@@ -9,6 +9,7 @@ using namespace std;
 class Egg
 {
 public:
+    //Methods
     Egg();
     Egg(string name);
     ~Egg();
@@ -16,12 +17,10 @@ public:
     void increaseAge();
     int getCurrentAge() const;
     string getName() const;
-
 private:
 
-
 protected:
-    //Attributs
+    //Attributes
     string _name;
     int _currentAge;
 };

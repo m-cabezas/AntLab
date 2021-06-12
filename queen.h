@@ -6,6 +6,7 @@
 class Queen : public Warrior
 {
 public:
+    //Methods
     Queen(CONFIG &config);
     ~Queen();
 
