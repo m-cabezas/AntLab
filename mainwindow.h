@@ -27,7 +27,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    void initializeGrid(pair<int,int> dimensions);
+    void initializeGrid();
     void initGame();
     CONFIG getConfig();
 
@@ -41,5 +41,7 @@ private:
 
     //Methods
     void newRound(int roundNumber);
+    void doRounds();
+    void ClearScreen();
 };
 #endif // MAINWINDOW_H

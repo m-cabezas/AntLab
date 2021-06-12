@@ -10,14 +10,23 @@ Orchestrator::Orchestrator(CONFIG config)
     _dimension = pair<int, int>(100,50);
     // Initializing the grid
     _grid.resize(_dimension.first);
+    _obstaclesGrid.resize(_dimension.first);
+    _foodSpawnersGrid.resize(_dimension.first);
+    _anthillsGrid.resize(_dimension.first);
     for (unsigned int i = 0; i < _grid.size(); i++)
     {
         _grid.at(i).resize(_dimension.second);
+        _obstaclesGrid.at(i).resize(_dimension.second);
+        _foodSpawnersGrid.at(i).resize(_dimension.second);
+        _anthillsGrid.at(i).resize(_dimension.second);
     }
     // Initializing grid at false
     for (int x = 0;x < _dimension.first;x++) {
         for (int y = 0;y < _dimension.second;y++) {
             _grid.at(x).at(y) = false;
+            _obstaclesGrid.at(x).at(y) = false;
+            _foodSpawnersGrid.at(x).at(y) = false;
+            _anthillsGrid.at(x).at(y) = false;
         }
     }
 
@@ -32,6 +41,23 @@ Orchestrator::~Orchestrator()
 
 pair<int, int> Orchestrator::getDimension() const {
     return _dimension;
+}
+
+int Orchestrator::getMapEntity(int x, int y) {
+    if (_grid.at(x).at(y) == false) {
+        return 1;
+    }
+    if (_foodSpawnersGrid.at(x).at(y) == true) {
+        return 3;
+    }
+    if (_anthillsGrid.at(x).at(y) == true) {
+        return 4;
+    }
+    if (_obstaclesGrid.at(x).at(y) == true) {
+        return 2;
+    }
+    //return code for warriors : 5
+    return 5;
 }
 
 void Orchestrator::initOrch(CONFIG config)
@@ -95,6 +121,7 @@ void Orchestrator::createAnthill(pair <int,int> position, bool init)
     }
     _anthills.push_back(anthill);
     setCaseTaken(position.first, position.second, true);
+    _anthillsGrid.at(position.first).at(position.second) = true;
 }
 
 void Orchestrator::createFoodSpawner(pair <int,int> position)
@@ -103,6 +130,7 @@ void Orchestrator::createFoodSpawner(pair <int,int> position)
     FoodSpawner *foodSpawner = new FoodSpawner(_config.maxFoodFoodSpawner, position, 1, 1);
     _foodSpawners.push_back(foodSpawner);
     setCaseTaken(position.first, position.second, true);
+    _foodSpawnersGrid.at(position.first).at(position.second) = true;
 }
 
 void Orchestrator::initFoodSpawners(int nbFoodSpawnerInit)
@@ -120,6 +148,7 @@ void Orchestrator::createObstacle(pair <int,int> position)
     Obstacle *obstacle = new Obstacle(position, 1, 1);
     _obstacles.push_back(obstacle);
     setCaseTaken(position.first, position.second, true);
+    _obstaclesGrid.at(position.first).at(position.second) = true;
 }
 
 void Orchestrator::initObstacles(int nbObstacleInit)

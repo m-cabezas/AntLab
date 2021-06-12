@@ -22,6 +22,7 @@ public:
     Orchestrator(CONFIG config);
     ~Orchestrator();
     pair<int, int> getDimension() const;
+    int getMapEntity(int x, int y);
 
     void initOrch(CONFIG config);
     void doRound();
@@ -31,6 +32,9 @@ private:
     CONFIG _config;
     pair<int, int> _dimension;
     vector<vector<bool>> _grid;
+    vector<vector<bool>> _obstaclesGrid;
+    vector<vector<bool>> _foodSpawnersGrid;
+    vector<vector<bool>> _anthillsGrid;
     vector<Warrior *> _warriors;
     vector<Obstacle *> _obstacles;
     vector<FoodSpawner *> _foodSpawners;
