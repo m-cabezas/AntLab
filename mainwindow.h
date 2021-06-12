@@ -12,6 +12,7 @@
 #include <iostream>
 #include "orchestrator.h"
 #include "util.h"
+#include <windows.h>
 
 using namespace std;
 
@@ -39,6 +40,6 @@ private:
     Ui::MainWindow *ui;
 
     //Methods
-    void newRound();
+    void newRound(int roundNumber);
 };
 #endif // MAINWINDOW_H

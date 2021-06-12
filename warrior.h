@@ -9,7 +9,7 @@ class Warrior : public Worker
 public:
     //Methods
     Warrior();
-    Warrior(int capacityWarrior, pair<int,int> position, string name, Anthill &anthill);
+    Warrior(int capacityWarrior, pair<int,int> position, string name, Anthill &anthill, CONFIG& config);
     ~Warrior();
 
     const pair<int,int> getPosition();

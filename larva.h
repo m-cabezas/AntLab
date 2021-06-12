@@ -12,12 +12,10 @@ public:
     Larva(CONFIG &config, string name);
     ~Larva();
 
-    //Methods
-    void increaseAge();
+    //Methods    
     void heal(int foodNumber);
     void starve();
-    //Getters
-    int getCurrentAge() const;
+    //Getters    
     int getCurrentHealth() const;
 
 protected:

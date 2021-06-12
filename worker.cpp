@@ -11,9 +11,10 @@ Worker::Worker(CONFIG &config, string name) {
     _currentAge = config.ageWorker;
     _maxHealth = config.lifeWorker;
     _foodCons = config.consWorker;
+    _currentHealth = config.lifeWorker;
 }
 
 Worker::~Worker()
 {
-
+    cout << "Oh no ! Worker " << _name << " died unexpectidely ! :-(" << endl;
 }

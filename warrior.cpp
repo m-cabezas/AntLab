@@ -5,22 +5,26 @@ Warrior::Warrior()
 
 }
 
-Warrior::Warrior(int capacityWarrior, pair<int,int> position, string name, Anthill &anthill)
+Warrior::Warrior(int capacityWarrior, pair<int,int> position, string name, Anthill &anthill, CONFIG& config)
 {
     _name = name;
     _anthill = &anthill;
     _foodCapacity = capacityWarrior;
     _currentFood = 0;
     _mode = 0;
+    _currentAge = config.ageWarrior;
+    _foodCons = config.consWarrior;
     //Init Ant position with the anthill position -1 on X
     _position = position;
     _prevPos = position;
     _mode = 1;
+    _maxHealth = config.lifeWarrior;
+    _currentHealth = config.lifeWarrior;
 }
 
 Warrior::~Warrior()
 {
-
+    cout << "Oh no ! Warrior " << _name << " left us for another world ! :-(" << endl;
 }
 
 const pair<int,int> Warrior::getPosition()

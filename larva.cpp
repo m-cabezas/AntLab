@@ -11,16 +11,12 @@ Larva::Larva(CONFIG &config, string name)
     _currentAge = config.ageLarva;
     _maxHealth = config.lifeLarva;
     _foodCons = config.consLarva;
+    _currentHealth = config.lifeLarva;
 }
 
 Larva::~Larva()
 {
-
-}
-
-void Larva::increaseAge()
-{
-    _currentAge++;
+    cout << "Oh no ! Larva " << _name << " died ! :-(" << endl;
 }
 
 void Larva::heal(int foodNumber)
@@ -36,14 +32,12 @@ void Larva::heal(int foodNumber)
  */
 void Larva::starve(){
     _currentHealth -= _foodCons;
+    if(_currentHealth < 0) {
+        _currentHealth = 0;
+    }
 }
 
 // GETTERS
-int Larva::getCurrentAge() const
-{
-    return _currentAge;
-}
-
 int Larva::getCurrentHealth() const
 {
     return _currentHealth;

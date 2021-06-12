@@ -37,7 +37,7 @@ private:
     vector<Anthill *> _anthills;
 
     //Methods
-    void createAnthill(pair<int,int> position);
+    void createAnthill(pair<int,int> position, bool init);
     void createFoodSpawner(pair<int,int> position);
     void initFoodSpawners(int nbFoodSpawnerInit);
     void createObstacle(pair <int,int> position);

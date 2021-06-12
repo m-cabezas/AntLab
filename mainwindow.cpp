@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
             15,     //ageWarrior
             10,     //lifeLarva
             10,     //lifeWorker
+            13,     //lifeWarrior
             15,     //lifeQueen
             1,      //consLarva
             2,      //consWorker
@@ -43,17 +44,15 @@ MainWindow::MainWindow(QWidget *parent)
 void MainWindow::initGame()
 {
     cout << "Init Game" << endl;
-    pair<int,int> dimensions(100,50);
-    initializeGrid(dimensions);
     _orchestrator->initOrch(_config);
     initializeGrid(_orchestrator->getDimension());
     int i = 0;
-    while (i < 100)
+    while (i < 20)
     {
-        newRound();
+        newRound(i);
+        Sleep(100);
         i++;
     }
-
     cout << "End Game" << endl;
 }
 
@@ -61,9 +60,9 @@ void MainWindow::initGame()
  * @brief MainWindow::newRound
  * Init new round
  */
-void MainWindow::newRound()
+void MainWindow::newRound(int roundNumber)
 {
-    cout << "Game: New Round!" << endl;
+    cout << "Game: New Round! Round " << roundNumber << endl;
     _orchestrator->doRound();
 }
 

@@ -39,7 +39,7 @@ void Orchestrator::initOrch(CONFIG config)
     cout << "\t- Init Orchestrator : Environment of size x=" << _dimension.first << " y="<<_dimension.second << endl;
     _config = config;    
     pair <int,int> anthillPosition (_dimension.first/2,_dimension.second/2);
-    createAnthill(anthillPosition);
+    createAnthill(anthillPosition, true);
     initFoodSpawners(_config.nbFoodSpawnerInit);
     initObstacles(_config.nbObstacleInit);
     initWarriors(_config.nbWarriorInit, *_anthills[0]);
@@ -47,6 +47,7 @@ void Orchestrator::initOrch(CONFIG config)
 
 void Orchestrator::doRound()
 {
+    _anthills[0]->doRound();
     //Iterating through the foodSpawners
     for(unsigned int i = 0 ; i < _foodSpawners.size(); i++)
     {
@@ -79,10 +80,19 @@ void Orchestrator::doRound()
     }
 }
 
-void Orchestrator::createAnthill(pair <int,int> position)
+/**
+ * @brief Orchestrator::createAnthill create an anthil and add it to the orchestrator's anthill list
+ * @param position
+ * @param init boolean that indicates if the new anthill need to be initialized with eggs, larvas and workers
+ */
+void Orchestrator::createAnthill(pair <int,int> position, bool init)
 {
     cout << "\t\t* Creating Anthill at : x=" << position.first << " y=" << position.second  << endl;
     Anthill *anthill = new Anthill(_config, _config.maxPopAnthill, _config.maxFoodAnthill, position, 1, 1);
+    if(init)
+    {
+        anthill->initAnthill();
+    }
     _anthills.push_back(anthill);
     setCaseTaken(position.first, position.second, true);
 }
@@ -140,7 +150,7 @@ void Orchestrator::createWarrior(pair <int,int> position, Anthill &anthill)
 {
     cout << "\t\t* Creating Warrior at : x=" << position.first << " y=" << position.second  << endl;
     string name = "warrior" + to_string(_warriors.size());
-    Warrior *warrior = new Warrior(_config.capacityWarrior, position, name, anthill);
+    Warrior *warrior = new Warrior(_config.capacityWarrior, position, name, anthill, _config);
     _warriors.push_back(warrior);
     setCaseTaken(position.first, position.second, true);
 }

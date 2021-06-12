@@ -13,6 +13,10 @@ public:
     Egg(string name);
     ~Egg();
 
+    void increaseAge();
+    int getCurrentAge() const;
+    string getName() const;
+
 private:
 
 

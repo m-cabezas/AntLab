@@ -6,7 +6,9 @@
 class Queen : public Warrior
 {
 public:
-    Queen();
+    Queen(CONFIG &config);
+    ~Queen();
+
 };
 
 #endif // QUEEN_H
