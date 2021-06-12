@@ -16,7 +16,7 @@ Larva::Larva(CONFIG &config, string name)
 
 Larva::~Larva()
 {
-    cout << "Oh no ! Larva " << _name << " died ! :-(" << endl;
+    //cout << "Oh no ! Larva " << _name << " died ! :-(" << endl;
 }
 
 void Larva::heal(int foodNumber)

@@ -16,5 +16,5 @@ Worker::Worker(CONFIG &config, string name) {
 
 Worker::~Worker()
 {
-    cout << "Oh no ! Worker " << _name << " died unexpectidely ! :-(" << endl;
+    //cout << "Oh no ! Worker " << _name << " died unexpectidely ! :-(" << endl;
 }

@@ -7,6 +7,7 @@
 class Worker : public Larva
 {
 public:
+    //Methods
     Worker();
     Worker(CONFIG &config, string name);
     ~Worker();

@@ -12,7 +12,7 @@
 class Anthill : public Obstacle
 {
 public: 
-    //Attributs
+    //Attributes
 
 
     //Methods
@@ -21,6 +21,7 @@ public:
     ~Anthill();
     int getNewWarriors() const;
 
+    int getNewWarriors();
     void initAnthill();
     void spawnEgg();
     void doRound();    
@@ -28,7 +29,7 @@ public:
     bool isQueenAlive();
 
 private:
-    //Attibuts
+    //Attributes
     CONFIG _config;
     int _maxPop;
     int _maxFood;

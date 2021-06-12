@@ -9,10 +9,11 @@ using namespace std;
 class Obstacle
 {
 public:
+    //Methods
     Obstacle();
     Obstacle(pair <int,int> position, int width, int height);
     ~Obstacle();
-    //Methods
+
     virtual const pair<int,int> getPosition();
 
 protected:

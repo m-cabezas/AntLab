@@ -14,7 +14,7 @@ Egg::Egg(string name)
 
 Egg::~Egg()
 {
-    cout << "Oh no ! Egg " << _name << " died ! :-(" << endl;
+    //cout << "Oh no ! Egg " << _name << " died ! :-(" << endl;
 }
 
 void Egg::increaseAge()

@@ -24,7 +24,7 @@ public:
     void setCurrentFood(unsigned int food);
 
 private:
-    //Attributs
+    //Attributes
     int _foodCapacity; // the maximum food the ant can carry
     int _currentFood; // The food the ant is carrying
     int _mode;

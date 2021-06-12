@@ -7,19 +7,17 @@
 class Larva : public Egg
 {
 public:
-
+    //Methods
     Larva();
     Larva(CONFIG &config, string name);
     ~Larva();
 
-    //Methods    
     void heal(int foodNumber);
     void starve();
-    //Getters    
     int getCurrentHealth() const;
 
 protected:
-    //Attributs
+    //Attributes
     int _foodCons;
     int _currentHealth;
     int _maxHealth;

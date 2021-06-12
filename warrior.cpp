@@ -24,7 +24,7 @@ Warrior::Warrior(pair<int,int> position, string name, Anthill &anthill, CONFIG& 
 
 Warrior::~Warrior()
 {
-    cout << "Oh no ! Warrior " << _name << " left us for another world ! :-(" << endl;
+    //cout << "Oh no ! Warrior " << _name << " left us for another world ! :-(" << endl;
 }
 
 const pair<int,int> Warrior::getPosition()
@@ -44,18 +44,22 @@ void Warrior::setCurrentFood(unsigned int food)
 
 void Warrior::explore(vector<pair<int,int>> forbiddenPositions)
 {
-    cout << "Warrior " << _name << " is exploring" << endl;
+    //cout << "Warrior " << _name << " is exploring" << endl;
     pair<int,int> newPosition = getRandomPos(forbiddenPositions, _prevPos.first, _prevPos.second, _position.first, _position.second);
     _prevPos.first = _position.first;
     _prevPos.second = _position.second;
     _position.first = newPosition.first;
     _position.second = newPosition.second;
-    cout << "\t=> Warrior is going to : x=" <<  _position.first << " y=" << _position.second << endl;
+    //cout << "\t=> Warrior is going to : x=" <<  _position.first << " y=" << _position.second << endl;
 }
 
+/**
+ * @brief Warrior::returnToAnthill is a moving method for warrior. It is based on the idea that the warrior know the path.
+ * @param forbiddenPositions
+ */
 void Warrior::returnToAnthill(vector<pair<int,int>> forbiddenPositions)
 {
-    cout << "Warrior " << _name << " returns to Anthill" << endl;        
+    //cout << "Warrior " << _name << " returns to Anthill" << endl;
     int posX = _position.first;
     int posY = _position.second;
     int anthillX = _anthill->getPosition().first;
@@ -184,7 +188,7 @@ void Warrior::returnToAnthill(vector<pair<int,int>> forbiddenPositions)
             }
         }        
     }
-    cout << "\t=> Warrior is going to : x=" <<  _position.first << " y=" << _position.second << endl;
+    //cout << "\t=> Warrior is going to : x=" <<  _position.first << " y=" << _position.second << endl;
 }
 
 
@@ -195,7 +199,7 @@ void Warrior::returnToAnthill(vector<pair<int,int>> forbiddenPositions)
  */
 int Warrior::takeFood(int availableQuantity)
 {
-    cout << " Warrior " << _name << " can take food ! " << endl;
+    //cout << " Warrior " << _name << " can take food ! " << endl;
     if(availableQuantity > 0 )
     {
         //if the ant can take food, it has to go back to the anthill after
@@ -209,10 +213,10 @@ int Warrior::takeFood(int availableQuantity)
         {
             _currentFood = _foodCapacity;
         }
-        cout << "\t*" << _name << " takes " << _currentFood - tmpFood  << endl;
+        //cout << "\t*" << _name << " takes " << _currentFood - tmpFood  << endl;
         return _currentFood - tmpFood;
     }
-    cout << "\t*" << _name << " takes " << 0 << endl;
+    //cout << "\t*" << _name << " takes " << 0 << endl;
     return 0;
 }
 
@@ -221,9 +225,12 @@ void Warrior::attack()
 
 }
 
+/**
+ * @brief Warrior::giveFood is an interaction method that warriors use to put food in the Anthill
+ */
 void Warrior::giveFood()
 {
-    cout << "Warrior " << _name << " gives " << _currentFood << " to its anthill" << endl;
+    //cout << "Warrior " << _name << " gives " << _currentFood << " to its anthill" << endl;
     _anthill->addFood(_currentFood);
     _currentFood = 0;
     _mode = 1;
@@ -342,6 +349,10 @@ bool Warrior::isNextTo(int antX, int antY, int objX, int objY)
     return false;
 }
 
+/**
+ * @brief Warrior::getPrevPos return the position at the round n-1 of the warrior
+ * @return
+ */
 pair<int,int> const Warrior::getPrevPos() {
     return _prevPos;
 }

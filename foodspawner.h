@@ -11,11 +11,12 @@ public:
     FoodSpawner();
     FoodSpawner(int maxQuantity, pair<int,int> position, int width, int height);
     ~FoodSpawner();
+
     void doRound();
     int getCurrentQuantity() const;
     void decreaseQuantity(int quantity);
 private:
-    //Attributs
+    //Attributes
     int _maxQuantity;
     int _currentQuantity;
 
