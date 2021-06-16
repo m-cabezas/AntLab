@@ -25,7 +25,7 @@ private:
     Orchestrator * _orchestrator;
 
     //Methods
-    void newRound(int roundNumber);
+    bool newRound(int roundNumber);
     void doRounds();
 };
 #endif // GAME_H

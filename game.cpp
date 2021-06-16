@@ -42,17 +42,10 @@ void Game::initGame()
     int i = 0;
     while (true)
     {
-        cout << "ROUND : " << i << endl;
-    	initializeGrid();
-        int res = _orchestrator->doRound();
-        if(res == 1) {
-            cout << "London Bridge is Down! Our beloved Queen passed away this morning..." << endl;
+        if(!newRound(i)) {
             break;
         }
-        Sleep(200);
-		system("CLS");
         i++;
-        cout << "_________________________________________________________________________________________________________________________________________" << endl;
     }
     cout << "End Game" << endl;
 }
@@ -61,10 +54,19 @@ void Game::initGame()
  * @brief MainWindow::newRound
  * Init new round
  */
-void Game::newRound(int roundNumber)
+bool Game::newRound(int roundNumber)
 {
-    cout << "Game: New Round! Round " << roundNumber << endl;
-
+    cout << "ROUND : " << roundNumber << endl;
+    initializeGrid();
+    int res = _orchestrator->doRound();
+    if(res == 1) {
+        cout << "London Bridge is Down! Our beloved Queen passed away this morning..." << endl;
+        return false;
+    }
+    Sleep(200);
+    system("CLS");
+    cout << "_________________________________________________________________________________________________________________________________________" << endl;
+    return true;
 }
 
 /**
