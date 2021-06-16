@@ -1,164 +1,197 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
-  <compounddef id="class_egg" kind="class" language="C++" prot="public">
-    <compoundname>Egg</compoundname>
-    <derivedcompoundref refid="class_larva" prot="public" virt="non-virtual">Larva</derivedcompoundref>
-      <sectiondef kind="protected-attrib">
-      <memberdef kind="variable" id="class_egg_1a57ca36eb21771f70b66b52f3273c1479" prot="protected" static="no" mutable="no">
-        <type>string</type>
-        <definition>string Egg::_name</definition>
-        <argsstring></argsstring>
-        <name>_name</name>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.9.1" xml:lang="en-US">
+    <compounddef id="class_egg" kind="class" language="C++" prot="public">
+        <compoundname>Egg</compoundname>
+        <derivedcompoundref refid="class_larva" prot="public" virt="non-virtual">Larva</derivedcompoundref>
+        <sectiondef kind="protected-attrib">
+            <memberdef kind="variable" id="class_egg_1a57ca36eb21771f70b66b52f3273c1479" prot="protected" static="no"
+                       mutable="no">
+                <type>string</type>
+                <definition>string Egg::_name</definition>
+                <argsstring></argsstring>
+                <name>_name</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="egg.h" line="24" column="12" bodyfile="egg.h" bodystart="24" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="class_egg_1a5943a93f9bb3c8e785ae5ca491776440" prot="protected" static="no"
+                       mutable="no">
+                <type>int</type>
+                <definition>int Egg::_currentAge</definition>
+                <argsstring></argsstring>
+                <name>_currentAge</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="egg.h" line="25" column="9" bodyfile="egg.h" bodystart="25" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="class_egg_1a7bc49a621a55e7236415ad5da41d3b54" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>Egg::Egg</definition>
+                <argsstring>()</argsstring>
+                <name>Egg</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="egg.h" line="13" column="5" bodyfile="egg.cpp" bodystart="3" bodyend="7"/>
+            </memberdef>
+            <memberdef kind="function" id="class_egg_1a90ffc2d1e1f8bc43e871e47e1d1f80aa" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>Egg::Egg</definition>
+                <argsstring>(string name)</argsstring>
+                <name>Egg</name>
+                <param>
+                    <type>string</type>
+                    <declname>name</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="egg.h" line="14" column="5" bodyfile="egg.cpp" bodystart="9" bodyend="13"/>
+            </memberdef>
+            <memberdef kind="function" id="class_egg_1a0eb6ce527494b7f97f362b6eb6b7f11d" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>Egg::~Egg</definition>
+                <argsstring>()</argsstring>
+                <name>~Egg</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="egg.h" line="15" column="5" bodyfile="egg.cpp" bodystart="15" bodyend="18"/>
+            </memberdef>
+            <memberdef kind="function" id="class_egg_1a6d90db3b102903ce9e53f07a16c7403d" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Egg::increaseAge</definition>
+                <argsstring>()</argsstring>
+                <name>increaseAge</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="egg.h" line="17" column="10" bodyfile="egg.cpp" bodystart="20" bodyend="23"/>
+            </memberdef>
+            <memberdef kind="function" id="class_egg_1a56270a17b03c82f769bb97bbbabd91f5" prot="public" static="no"
+                       const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>int</type>
+                <definition>int Egg::getCurrentAge</definition>
+                <argsstring>() const</argsstring>
+                <name>getCurrentAge</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="egg.h" line="18" column="9" bodyfile="egg.cpp" bodystart="25" bodyend="28"/>
+            </memberdef>
+            <memberdef kind="function" id="class_egg_1ad6892cf4ac2739b9e8346db7a541ce1f" prot="public" static="no"
+                       const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>string</type>
+                <definition>string Egg::getName</definition>
+                <argsstring>() const</argsstring>
+                <name>getName</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="egg.h" line="19" column="12" bodyfile="egg.cpp" bodystart="30" bodyend="33"/>
+            </memberdef>
+        </sectiondef>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="egg.h" line="24" column="12" bodyfile="egg.h" bodystart="24" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_egg_1a5943a93f9bb3c8e785ae5ca491776440" prot="protected" static="no" mutable="no">
-        <type>int</type>
-        <definition>int Egg::_currentAge</definition>
-        <argsstring></argsstring>
-        <name>_currentAge</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="egg.h" line="25" column="9" bodyfile="egg.h" bodystart="25" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_egg_1a7bc49a621a55e7236415ad5da41d3b54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Egg::Egg</definition>
-        <argsstring>()</argsstring>
-        <name>Egg</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="egg.h" line="13" column="5" bodyfile="egg.cpp" bodystart="3" bodyend="7"/>
-      </memberdef>
-      <memberdef kind="function" id="class_egg_1a90ffc2d1e1f8bc43e871e47e1d1f80aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Egg::Egg</definition>
-        <argsstring>(string name)</argsstring>
-        <name>Egg</name>
-        <param>
-          <type>string</type>
-          <declname>name</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="egg.h" line="14" column="5" bodyfile="egg.cpp" bodystart="9" bodyend="13"/>
-      </memberdef>
-      <memberdef kind="function" id="class_egg_1a0eb6ce527494b7f97f362b6eb6b7f11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Egg::~Egg</definition>
-        <argsstring>()</argsstring>
-        <name>~Egg</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="egg.h" line="15" column="5" bodyfile="egg.cpp" bodystart="15" bodyend="18"/>
-      </memberdef>
-      <memberdef kind="function" id="class_egg_1a6d90db3b102903ce9e53f07a16c7403d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Egg::increaseAge</definition>
-        <argsstring>()</argsstring>
-        <name>increaseAge</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="egg.h" line="17" column="10" bodyfile="egg.cpp" bodystart="20" bodyend="23"/>
-      </memberdef>
-      <memberdef kind="function" id="class_egg_1a56270a17b03c82f769bb97bbbabd91f5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int Egg::getCurrentAge</definition>
-        <argsstring>() const</argsstring>
-        <name>getCurrentAge</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="egg.h" line="18" column="9" bodyfile="egg.cpp" bodystart="25" bodyend="28"/>
-      </memberdef>
-      <memberdef kind="function" id="class_egg_1ad6892cf4ac2739b9e8346db7a541ce1f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>string</type>
-        <definition>string Egg::getName</definition>
-        <argsstring>() const</argsstring>
-        <name>getName</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="egg.h" line="19" column="12" bodyfile="egg.cpp" bodystart="30" bodyend="33"/>
-      </memberdef>
-      </sectiondef>
-    <briefdescription>
-    </briefdescription>
-    <detaileddescription>
-    </detaileddescription>
-    <inheritancegraph>
-      <node id="1">
-        <label>Egg</label>
-        <link refid="class_egg"/>
-      </node>
-      <node id="4">
-        <label>Warrior</label>
-        <link refid="class_warrior"/>
-        <childnode refid="3" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>Queen</label>
-        <link refid="class_queen"/>
-        <childnode refid="4" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>Worker</label>
-        <link refid="class_worker"/>
-        <childnode refid="2" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>Larva</label>
-        <link refid="class_larva"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <location file="egg.h" line="9" column="1" bodyfile="egg.h" bodystart="10" bodyend="26"/>
-    <listofallmembers>
-      <member refid="class_egg_1a5943a93f9bb3c8e785ae5ca491776440" prot="protected" virt="non-virtual"><scope>Egg</scope><name>_currentAge</name></member>
-      <member refid="class_egg_1a57ca36eb21771f70b66b52f3273c1479" prot="protected" virt="non-virtual"><scope>Egg</scope><name>_name</name></member>
-      <member refid="class_egg_1a7bc49a621a55e7236415ad5da41d3b54" prot="public" virt="non-virtual"><scope>Egg</scope><name>Egg</name></member>
-      <member refid="class_egg_1a90ffc2d1e1f8bc43e871e47e1d1f80aa" prot="public" virt="non-virtual"><scope>Egg</scope><name>Egg</name></member>
-      <member refid="class_egg_1a56270a17b03c82f769bb97bbbabd91f5" prot="public" virt="non-virtual"><scope>Egg</scope><name>getCurrentAge</name></member>
-      <member refid="class_egg_1ad6892cf4ac2739b9e8346db7a541ce1f" prot="public" virt="non-virtual"><scope>Egg</scope><name>getName</name></member>
-      <member refid="class_egg_1a6d90db3b102903ce9e53f07a16c7403d" prot="public" virt="non-virtual"><scope>Egg</scope><name>increaseAge</name></member>
-      <member refid="class_egg_1a0eb6ce527494b7f97f362b6eb6b7f11d" prot="public" virt="non-virtual"><scope>Egg</scope><name>~Egg</name></member>
-    </listofallmembers>
-  </compounddef>
+        <inheritancegraph>
+            <node id="1">
+                <label>Egg</label>
+                <link refid="class_egg"/>
+            </node>
+            <node id="4">
+                <label>Warrior</label>
+                <link refid="class_warrior"/>
+                <childnode refid="3" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="5">
+                <label>Queen</label>
+                <link refid="class_queen"/>
+                <childnode refid="4" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="3">
+                <label>Worker</label>
+                <link refid="class_worker"/>
+                <childnode refid="2" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="2">
+                <label>Larva</label>
+                <link refid="class_larva"/>
+                <childnode refid="1" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <location file="egg.h" line="9" column="1" bodyfile="egg.h" bodystart="10" bodyend="26"/>
+        <listofallmembers>
+            <member refid="class_egg_1a5943a93f9bb3c8e785ae5ca491776440" prot="protected" virt="non-virtual">
+                <scope>Egg</scope>
+                <name>_currentAge</name>
+            </member>
+            <member refid="class_egg_1a57ca36eb21771f70b66b52f3273c1479" prot="protected" virt="non-virtual">
+                <scope>Egg</scope>
+                <name>_name</name>
+            </member>
+            <member refid="class_egg_1a7bc49a621a55e7236415ad5da41d3b54" prot="public" virt="non-virtual">
+                <scope>Egg</scope>
+                <name>Egg</name>
+            </member>
+            <member refid="class_egg_1a90ffc2d1e1f8bc43e871e47e1d1f80aa" prot="public" virt="non-virtual">
+                <scope>Egg</scope>
+                <name>Egg</name>
+            </member>
+            <member refid="class_egg_1a56270a17b03c82f769bb97bbbabd91f5" prot="public" virt="non-virtual">
+                <scope>Egg</scope>
+                <name>getCurrentAge</name>
+            </member>
+            <member refid="class_egg_1ad6892cf4ac2739b9e8346db7a541ce1f" prot="public" virt="non-virtual">
+                <scope>Egg</scope>
+                <name>getName</name>
+            </member>
+            <member refid="class_egg_1a6d90db3b102903ce9e53f07a16c7403d" prot="public" virt="non-virtual">
+                <scope>Egg</scope>
+                <name>increaseAge</name>
+            </member>
+            <member refid="class_egg_1a0eb6ce527494b7f97f362b6eb6b7f11d" prot="public" virt="non-virtual">
+                <scope>Egg</scope>
+                <name>~Egg</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
 </doxygen>

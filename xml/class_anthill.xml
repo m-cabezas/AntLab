@@ -1,477 +1,627 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
-  <compounddef id="class_anthill" kind="class" language="C++" prot="public">
-    <compoundname>Anthill</compoundname>
-    <basecompoundref refid="class_obstacle" prot="public" virt="non-virtual">Obstacle</basecompoundref>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_anthill_1a5ce3eeda78bd506d69605907d921872f" prot="private" static="no" mutable="no">
-        <type><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref></type>
-        <definition>CONFIG Anthill::_config</definition>
-        <argsstring></argsstring>
-        <name>_config</name>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.9.1" xml:lang="en-US">
+    <compounddef id="class_anthill" kind="class" language="C++" prot="public">
+        <compoundname>Anthill</compoundname>
+        <basecompoundref refid="class_obstacle" prot="public" virt="non-virtual">Obstacle</basecompoundref>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable" id="class_anthill_1a5ce3eeda78bd506d69605907d921872f" prot="private" static="no"
+                       mutable="no">
+                <type>
+                    <ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref>
+                </type>
+                <definition>CONFIG Anthill::_config</definition>
+                <argsstring></argsstring>
+                <name>_config</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="31" column="12" bodyfile="anthill.h" bodystart="31" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="class_anthill_1a1c85bf4b9dc60899ae1dd37121e786bd" prot="private" static="no"
+                       mutable="no">
+                <type>int</type>
+                <definition>int Anthill::_maxPop</definition>
+                <argsstring></argsstring>
+                <name>_maxPop</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="32" column="9" bodyfile="anthill.h" bodystart="32" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="class_anthill_1a0236d40219d628649e35b55e9ad1681e" prot="private" static="no"
+                       mutable="no">
+                <type>int</type>
+                <definition>int Anthill::_maxFood</definition>
+                <argsstring></argsstring>
+                <name>_maxFood</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="33" column="9" bodyfile="anthill.h" bodystart="33" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="class_anthill_1a5aae123ca7c7ad1b6c84e3fc9e3368a6" prot="private" static="no"
+                       mutable="no">
+                <type>int</type>
+                <definition>int Anthill::_currentFood</definition>
+                <argsstring></argsstring>
+                <name>_currentFood</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="34" column="9" bodyfile="anthill.h" bodystart="34" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="class_anthill_1a679c378ae33e2483b73f4e873ed0878c" prot="private" static="no"
+                       mutable="no">
+                <type>vector&lt; <ref refid="class_egg" kindref="compound">Egg</ref> * &gt;
+                </type>
+                <definition>vector&lt;Egg *&gt; Anthill::_eggs</definition>
+                <argsstring></argsstring>
+                <name>_eggs</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="36" column="12" bodyfile="anthill.h" bodystart="36" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="class_anthill_1afc8cc3ccd45701fe26fa35b4f8696f04" prot="private" static="no"
+                       mutable="no">
+                <type>vector&lt; <ref refid="class_larva" kindref="compound">Larva</ref> * &gt;
+                </type>
+                <definition>vector&lt;Larva *&gt; Anthill::_larvas</definition>
+                <argsstring></argsstring>
+                <name>_larvas</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="37" column="12" bodyfile="anthill.h" bodystart="37" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="class_anthill_1a92cfa9df16dcac810eb7410712164bed" prot="private" static="no"
+                       mutable="no">
+                <type>vector&lt; <ref refid="class_worker" kindref="compound">Worker</ref> * &gt;
+                </type>
+                <definition>vector&lt;Worker *&gt; Anthill::_workers</definition>
+                <argsstring></argsstring>
+                <name>_workers</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="38" column="12" bodyfile="anthill.h" bodystart="38" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="class_anthill_1abf85b8dbefb90401102290d1239e5caf" prot="private" static="no"
+                       mutable="no">
+                <type>int</type>
+                <definition>int Anthill::_newWarriors</definition>
+                <argsstring></argsstring>
+                <name>_newWarriors</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="39" column="9" bodyfile="anthill.h" bodystart="39" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="class_anthill_1a2b5eb754c236e4add4ba4077fb134782" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>Anthill::Anthill</definition>
+                <argsstring>()</argsstring>
+                <name>Anthill</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="19" column="5" bodyfile="anthill.cpp" bodystart="3" bodyend="6"/>
+            </memberdef>
+            <memberdef kind="function" id="class_anthill_1a6c39fdc3e19ce0369e890bb543f9bf0a" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>Anthill::Anthill</definition>
+                <argsstring>(CONFIG &amp;config, int maxPop, int maxFood, pair&lt; int, int &gt; position, int width,
+                    int height)
+                </argsstring>
+                <name>Anthill</name>
+                <param>
+                    <type>
+                        <ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref> &amp;
+                    </type>
+                    <declname>config</declname>
+                </param>
+                <param>
+                    <type>int</type>
+                    <declname>maxPop</declname>
+                </param>
+                <param>
+                    <type>int</type>
+                    <declname>maxFood</declname>
+                </param>
+                <param>
+                    <type>pair&lt; int, int &gt;</type>
+                    <declname>position</declname>
+                </param>
+                <param>
+                    <type>int</type>
+                    <declname>width</declname>
+                </param>
+                <param>
+                    <type>int</type>
+                    <declname>height</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="20" column="5" bodyfile="anthill.cpp" bodystart="8" bodyend="17"/>
+            </memberdef>
+            <memberdef kind="function" id="class_anthill_1a0a8a9aa35526e2c65e4520a990a18e18" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>Anthill::~Anthill</definition>
+                <argsstring>()</argsstring>
+                <name>~Anthill</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="21" column="5" bodyfile="anthill.cpp" bodystart="19" bodyend="24"/>
+            </memberdef>
+            <memberdef kind="function" id="class_anthill_1aaffa2c1457ca56411574289456a77359" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>int</type>
+                <definition>int Anthill::getNewWarriors</definition>
+                <argsstring>()</argsstring>
+                <name>getNewWarriors</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="23" column="9" bodyfile="anthill.cpp" bodystart="26" bodyend="29"/>
+            </memberdef>
+            <memberdef kind="function" id="class_anthill_1a7ff7e41269324d61bc60360a6fb59a79" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Anthill::initAnthill</definition>
+                <argsstring>()</argsstring>
+                <name>initAnthill</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="24" column="10" bodyfile="anthill.cpp" bodystart="32" bodyend="45"/>
+            </memberdef>
+            <memberdef kind="function" id="class_anthill_1aca5a12987317ef7e9780b231aad1c153" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Anthill::spawnEgg</definition>
+                <argsstring>()</argsstring>
+                <name>spawnEgg</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="25" column="10" bodyfile="anthill.cpp" bodystart="47" bodyend="59"/>
+            </memberdef>
+            <memberdef kind="function" id="class_anthill_1a68a8d3b051e9a67dc0d61873e608e80a" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Anthill::doRound</definition>
+                <argsstring>()</argsstring>
+                <name>doRound</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="26" column="10" bodyfile="anthill.cpp" bodystart="61" bodyend="69"/>
+            </memberdef>
+            <memberdef kind="function" id="class_anthill_1af2bd0764ae0640aedd72ee10c1a60418" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Anthill::addFood</definition>
+                <argsstring>(int foodQuantity)</argsstring>
+                <name>addFood</name>
+                <param>
+                    <type>int</type>
+                    <declname>foodQuantity</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="27" column="10" bodyfile="anthill.cpp" bodystart="220" bodyend="229"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-func">
+            <memberdef kind="function" id="class_anthill_1a37f3181a47613e31ec78bbfd70daffd7" prot="private" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Anthill::doRoundQueen</definition>
+                <argsstring>()</argsstring>
+                <name>doRoundQueen</name>
+                <briefdescription>
+                    <para>Anthill::doRoundQueen Manage the <ref refid="class_queen" kindref="compound">Queen</ref>&apos;s
+                        round.
+                    </para>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="42" column="10" bodyfile="anthill.cpp" bodystart="75" bodyend="82"/>
+            </memberdef>
+            <memberdef kind="function" id="class_anthill_1a006c4f2759a3cb5cb2b51771adcc3042" prot="private" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Anthill::doRoundEggs</definition>
+                <argsstring>()</argsstring>
+                <name>doRoundEggs</name>
+                <briefdescription>
+                    <para>Anthill::doRoundEggs Manage eggs age for a round.</para>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="43" column="10" bodyfile="anthill.cpp" bodystart="87" bodyend="110"/>
+            </memberdef>
+            <memberdef kind="function" id="class_anthill_1a10dc28d387e14883c2f2f73b60b50271" prot="private" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Anthill::doRoundLarvas</definition>
+                <argsstring>()</argsstring>
+                <name>doRoundLarvas</name>
+                <briefdescription>
+                    <para>Anthill::doRoundLarvas Manage larvas round.</para>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="44" column="10" bodyfile="anthill.cpp" bodystart="115" bodyend="157"/>
+            </memberdef>
+            <memberdef kind="function" id="class_anthill_1a03505a5a65d3d9cac82bdfb83db625cc" prot="private" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Anthill::doRoundWorkers</definition>
+                <argsstring>()</argsstring>
+                <name>doRoundWorkers</name>
+                <briefdescription>
+                    <para>Anthill::doRoundWorkers manage workers round.</para>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="45" column="10" bodyfile="anthill.cpp" bodystart="162" bodyend="196"/>
+            </memberdef>
+            <memberdef kind="function" id="class_anthill_1a102fd88e130c745e9fff50b38ae6f4e6" prot="private" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Anthill::growUpToLarva</definition>
+                <argsstring>(Egg *egg)</argsstring>
+                <name>growUpToLarva</name>
+                <param>
+                    <type>
+                        <ref refid="class_egg" kindref="compound">Egg</ref>
+                        *
+                    </type>
+                    <declname>egg</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="46" column="10" bodyfile="anthill.cpp" bodystart="198" bodyend="204"/>
+            </memberdef>
+            <memberdef kind="function" id="class_anthill_1af6f59868ae7db300e5c650ea0cea2a1f" prot="private" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Anthill::growUpToWorker</definition>
+                <argsstring>(Larva *larva)</argsstring>
+                <name>growUpToWorker</name>
+                <param>
+                    <type>
+                        <ref refid="class_larva" kindref="compound">Larva</ref>
+                        *
+                    </type>
+                    <declname>larva</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="47" column="10" bodyfile="anthill.cpp" bodystart="206" bodyend="211"/>
+            </memberdef>
+            <memberdef kind="function" id="class_anthill_1a3b1854805b88fac7d7d33096e3fc5577" prot="private" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Anthill::growUpToWarrior</definition>
+                <argsstring>(Worker *worker)</argsstring>
+                <name>growUpToWarrior</name>
+                <param>
+                    <type>
+                        <ref refid="class_worker" kindref="compound">Worker</ref>
+                        *
+                    </type>
+                    <declname>worker</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="48" column="10" bodyfile="anthill.cpp" bodystart="213" bodyend="218"/>
+            </memberdef>
+            <memberdef kind="function" id="class_anthill_1adfea94fd7fa75d08f8c657d97fecdfb8" prot="private" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Anthill::createEgg</definition>
+                <argsstring>()</argsstring>
+                <name>createEgg</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="49" column="10" bodyfile="anthill.cpp" bodystart="232" bodyend="237"/>
+            </memberdef>
+            <memberdef kind="function" id="class_anthill_1a80a0ca8f374d92072891f67fb8441966" prot="private" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Anthill::createLarva</definition>
+                <argsstring>()</argsstring>
+                <name>createLarva</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="50" column="10" bodyfile="anthill.cpp" bodystart="239" bodyend="244"/>
+            </memberdef>
+            <memberdef kind="function" id="class_anthill_1a3f398643ba67c9710e54b1675fc3e1c4" prot="private" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Anthill::createWorker</definition>
+                <argsstring>()</argsstring>
+                <name>createWorker</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="51" column="10" bodyfile="anthill.cpp" bodystart="246" bodyend="251"/>
+            </memberdef>
+            <memberdef kind="function" id="class_anthill_1a559f93071aa74542e86a8f891778eff0" prot="private" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>int</type>
+                <definition>int Anthill::foodCons</definition>
+                <argsstring>(int desiredFood)</argsstring>
+                <name>foodCons</name>
+                <param>
+                    <type>int</type>
+                    <declname>desiredFood</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="anthill.h" line="52" column="9" bodyfile="anthill.cpp" bodystart="253" bodyend="271"/>
+            </memberdef>
+        </sectiondef>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="31" column="12" bodyfile="anthill.h" bodystart="31" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_anthill_1a1c85bf4b9dc60899ae1dd37121e786bd" prot="private" static="no" mutable="no">
-        <type>int</type>
-        <definition>int Anthill::_maxPop</definition>
-        <argsstring></argsstring>
-        <name>_maxPop</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="32" column="9" bodyfile="anthill.h" bodystart="32" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_anthill_1a0236d40219d628649e35b55e9ad1681e" prot="private" static="no" mutable="no">
-        <type>int</type>
-        <definition>int Anthill::_maxFood</definition>
-        <argsstring></argsstring>
-        <name>_maxFood</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="33" column="9" bodyfile="anthill.h" bodystart="33" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_anthill_1a5aae123ca7c7ad1b6c84e3fc9e3368a6" prot="private" static="no" mutable="no">
-        <type>int</type>
-        <definition>int Anthill::_currentFood</definition>
-        <argsstring></argsstring>
-        <name>_currentFood</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="34" column="9" bodyfile="anthill.h" bodystart="34" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_anthill_1a679c378ae33e2483b73f4e873ed0878c" prot="private" static="no" mutable="no">
-        <type>vector&lt; <ref refid="class_egg" kindref="compound">Egg</ref> * &gt;</type>
-        <definition>vector&lt;Egg *&gt; Anthill::_eggs</definition>
-        <argsstring></argsstring>
-        <name>_eggs</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="36" column="12" bodyfile="anthill.h" bodystart="36" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_anthill_1afc8cc3ccd45701fe26fa35b4f8696f04" prot="private" static="no" mutable="no">
-        <type>vector&lt; <ref refid="class_larva" kindref="compound">Larva</ref> * &gt;</type>
-        <definition>vector&lt;Larva *&gt; Anthill::_larvas</definition>
-        <argsstring></argsstring>
-        <name>_larvas</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="37" column="12" bodyfile="anthill.h" bodystart="37" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_anthill_1a92cfa9df16dcac810eb7410712164bed" prot="private" static="no" mutable="no">
-        <type>vector&lt; <ref refid="class_worker" kindref="compound">Worker</ref> * &gt;</type>
-        <definition>vector&lt;Worker *&gt; Anthill::_workers</definition>
-        <argsstring></argsstring>
-        <name>_workers</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="38" column="12" bodyfile="anthill.h" bodystart="38" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_anthill_1abf85b8dbefb90401102290d1239e5caf" prot="private" static="no" mutable="no">
-        <type>int</type>
-        <definition>int Anthill::_newWarriors</definition>
-        <argsstring></argsstring>
-        <name>_newWarriors</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="39" column="9" bodyfile="anthill.h" bodystart="39" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_anthill_1a2b5eb754c236e4add4ba4077fb134782" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Anthill::Anthill</definition>
-        <argsstring>()</argsstring>
-        <name>Anthill</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="19" column="5" bodyfile="anthill.cpp" bodystart="3" bodyend="6"/>
-      </memberdef>
-      <memberdef kind="function" id="class_anthill_1a6c39fdc3e19ce0369e890bb543f9bf0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Anthill::Anthill</definition>
-        <argsstring>(CONFIG &amp;config, int maxPop, int maxFood, pair&lt; int, int &gt; position, int width, int height)</argsstring>
-        <name>Anthill</name>
-        <param>
-          <type><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref> &amp;</type>
-          <declname>config</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>maxPop</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>maxFood</declname>
-        </param>
-        <param>
-          <type>pair&lt; int, int &gt;</type>
-          <declname>position</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>width</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>height</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="20" column="5" bodyfile="anthill.cpp" bodystart="8" bodyend="17"/>
-      </memberdef>
-      <memberdef kind="function" id="class_anthill_1a0a8a9aa35526e2c65e4520a990a18e18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Anthill::~Anthill</definition>
-        <argsstring>()</argsstring>
-        <name>~Anthill</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="21" column="5" bodyfile="anthill.cpp" bodystart="19" bodyend="24"/>
-      </memberdef>
-      <memberdef kind="function" id="class_anthill_1aaffa2c1457ca56411574289456a77359" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int Anthill::getNewWarriors</definition>
-        <argsstring>()</argsstring>
-        <name>getNewWarriors</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="23" column="9" bodyfile="anthill.cpp" bodystart="26" bodyend="29"/>
-      </memberdef>
-      <memberdef kind="function" id="class_anthill_1a7ff7e41269324d61bc60360a6fb59a79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Anthill::initAnthill</definition>
-        <argsstring>()</argsstring>
-        <name>initAnthill</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="24" column="10" bodyfile="anthill.cpp" bodystart="32" bodyend="45"/>
-      </memberdef>
-      <memberdef kind="function" id="class_anthill_1aca5a12987317ef7e9780b231aad1c153" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Anthill::spawnEgg</definition>
-        <argsstring>()</argsstring>
-        <name>spawnEgg</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="25" column="10" bodyfile="anthill.cpp" bodystart="47" bodyend="59"/>
-      </memberdef>
-      <memberdef kind="function" id="class_anthill_1a68a8d3b051e9a67dc0d61873e608e80a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Anthill::doRound</definition>
-        <argsstring>()</argsstring>
-        <name>doRound</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="26" column="10" bodyfile="anthill.cpp" bodystart="61" bodyend="69"/>
-      </memberdef>
-      <memberdef kind="function" id="class_anthill_1af2bd0764ae0640aedd72ee10c1a60418" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Anthill::addFood</definition>
-        <argsstring>(int foodQuantity)</argsstring>
-        <name>addFood</name>
-        <param>
-          <type>int</type>
-          <declname>foodQuantity</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="27" column="10" bodyfile="anthill.cpp" bodystart="220" bodyend="229"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-func">
-      <memberdef kind="function" id="class_anthill_1a37f3181a47613e31ec78bbfd70daffd7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Anthill::doRoundQueen</definition>
-        <argsstring>()</argsstring>
-        <name>doRoundQueen</name>
-        <briefdescription>
-<para>Anthill::doRoundQueen Manage the <ref refid="class_queen" kindref="compound">Queen</ref>&apos;s round. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="42" column="10" bodyfile="anthill.cpp" bodystart="75" bodyend="82"/>
-      </memberdef>
-      <memberdef kind="function" id="class_anthill_1a006c4f2759a3cb5cb2b51771adcc3042" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Anthill::doRoundEggs</definition>
-        <argsstring>()</argsstring>
-        <name>doRoundEggs</name>
-        <briefdescription>
-<para>Anthill::doRoundEggs Manage eggs age for a round. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="43" column="10" bodyfile="anthill.cpp" bodystart="87" bodyend="110"/>
-      </memberdef>
-      <memberdef kind="function" id="class_anthill_1a10dc28d387e14883c2f2f73b60b50271" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Anthill::doRoundLarvas</definition>
-        <argsstring>()</argsstring>
-        <name>doRoundLarvas</name>
-        <briefdescription>
-<para>Anthill::doRoundLarvas Manage larvas round. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="44" column="10" bodyfile="anthill.cpp" bodystart="115" bodyend="157"/>
-      </memberdef>
-      <memberdef kind="function" id="class_anthill_1a03505a5a65d3d9cac82bdfb83db625cc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Anthill::doRoundWorkers</definition>
-        <argsstring>()</argsstring>
-        <name>doRoundWorkers</name>
-        <briefdescription>
-<para>Anthill::doRoundWorkers manage workers round. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="45" column="10" bodyfile="anthill.cpp" bodystart="162" bodyend="196"/>
-      </memberdef>
-      <memberdef kind="function" id="class_anthill_1a102fd88e130c745e9fff50b38ae6f4e6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Anthill::growUpToLarva</definition>
-        <argsstring>(Egg *egg)</argsstring>
-        <name>growUpToLarva</name>
-        <param>
-          <type><ref refid="class_egg" kindref="compound">Egg</ref> *</type>
-          <declname>egg</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="46" column="10" bodyfile="anthill.cpp" bodystart="198" bodyend="204"/>
-      </memberdef>
-      <memberdef kind="function" id="class_anthill_1af6f59868ae7db300e5c650ea0cea2a1f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Anthill::growUpToWorker</definition>
-        <argsstring>(Larva *larva)</argsstring>
-        <name>growUpToWorker</name>
-        <param>
-          <type><ref refid="class_larva" kindref="compound">Larva</ref> *</type>
-          <declname>larva</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="47" column="10" bodyfile="anthill.cpp" bodystart="206" bodyend="211"/>
-      </memberdef>
-      <memberdef kind="function" id="class_anthill_1a3b1854805b88fac7d7d33096e3fc5577" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Anthill::growUpToWarrior</definition>
-        <argsstring>(Worker *worker)</argsstring>
-        <name>growUpToWarrior</name>
-        <param>
-          <type><ref refid="class_worker" kindref="compound">Worker</ref> *</type>
-          <declname>worker</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="48" column="10" bodyfile="anthill.cpp" bodystart="213" bodyend="218"/>
-      </memberdef>
-      <memberdef kind="function" id="class_anthill_1adfea94fd7fa75d08f8c657d97fecdfb8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Anthill::createEgg</definition>
-        <argsstring>()</argsstring>
-        <name>createEgg</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="49" column="10" bodyfile="anthill.cpp" bodystart="232" bodyend="237"/>
-      </memberdef>
-      <memberdef kind="function" id="class_anthill_1a80a0ca8f374d92072891f67fb8441966" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Anthill::createLarva</definition>
-        <argsstring>()</argsstring>
-        <name>createLarva</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="50" column="10" bodyfile="anthill.cpp" bodystart="239" bodyend="244"/>
-      </memberdef>
-      <memberdef kind="function" id="class_anthill_1a3f398643ba67c9710e54b1675fc3e1c4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Anthill::createWorker</definition>
-        <argsstring>()</argsstring>
-        <name>createWorker</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="51" column="10" bodyfile="anthill.cpp" bodystart="246" bodyend="251"/>
-      </memberdef>
-      <memberdef kind="function" id="class_anthill_1a559f93071aa74542e86a8f891778eff0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int Anthill::foodCons</definition>
-        <argsstring>(int desiredFood)</argsstring>
-        <name>foodCons</name>
-        <param>
-          <type>int</type>
-          <declname>desiredFood</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="anthill.h" line="52" column="9" bodyfile="anthill.cpp" bodystart="253" bodyend="271"/>
-      </memberdef>
-      </sectiondef>
-    <briefdescription>
-    </briefdescription>
-    <detaileddescription>
-    </detaileddescription>
-    <inheritancegraph>
-      <node id="1">
-        <label>Anthill</label>
-        <link refid="class_anthill"/>
-        <childnode refid="2" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>Obstacle</label>
-        <link refid="class_obstacle"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="1">
-        <label>Anthill</label>
-        <link refid="class_anthill"/>
-        <childnode refid="2" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>Obstacle</label>
-        <link refid="class_obstacle"/>
-      </node>
-    </collaborationgraph>
-    <location file="anthill.h" line="12" column="1" bodyfile="anthill.h" bodystart="13" bodyend="55"/>
-    <listofallmembers>
-      <member refid="class_anthill_1a5ce3eeda78bd506d69605907d921872f" prot="private" virt="non-virtual"><scope>Anthill</scope><name>_config</name></member>
-      <member refid="class_anthill_1a5aae123ca7c7ad1b6c84e3fc9e3368a6" prot="private" virt="non-virtual"><scope>Anthill</scope><name>_currentFood</name></member>
-      <member refid="class_anthill_1a679c378ae33e2483b73f4e873ed0878c" prot="private" virt="non-virtual"><scope>Anthill</scope><name>_eggs</name></member>
-      <member refid="class_anthill_1afc8cc3ccd45701fe26fa35b4f8696f04" prot="private" virt="non-virtual"><scope>Anthill</scope><name>_larvas</name></member>
-      <member refid="class_anthill_1a0236d40219d628649e35b55e9ad1681e" prot="private" virt="non-virtual"><scope>Anthill</scope><name>_maxFood</name></member>
-      <member refid="class_anthill_1a1c85bf4b9dc60899ae1dd37121e786bd" prot="private" virt="non-virtual"><scope>Anthill</scope><name>_maxPop</name></member>
-      <member refid="class_anthill_1abf85b8dbefb90401102290d1239e5caf" prot="private" virt="non-virtual"><scope>Anthill</scope><name>_newWarriors</name></member>
-      <member refid="class_anthill_1a92cfa9df16dcac810eb7410712164bed" prot="private" virt="non-virtual"><scope>Anthill</scope><name>_workers</name></member>
-      <member refid="class_anthill_1af2bd0764ae0640aedd72ee10c1a60418" prot="public" virt="non-virtual"><scope>Anthill</scope><name>addFood</name></member>
-      <member refid="class_anthill_1a2b5eb754c236e4add4ba4077fb134782" prot="public" virt="non-virtual"><scope>Anthill</scope><name>Anthill</name></member>
-      <member refid="class_anthill_1a6c39fdc3e19ce0369e890bb543f9bf0a" prot="public" virt="non-virtual"><scope>Anthill</scope><name>Anthill</name></member>
-      <member refid="class_anthill_1adfea94fd7fa75d08f8c657d97fecdfb8" prot="private" virt="non-virtual"><scope>Anthill</scope><name>createEgg</name></member>
-      <member refid="class_anthill_1a80a0ca8f374d92072891f67fb8441966" prot="private" virt="non-virtual"><scope>Anthill</scope><name>createLarva</name></member>
-      <member refid="class_anthill_1a3f398643ba67c9710e54b1675fc3e1c4" prot="private" virt="non-virtual"><scope>Anthill</scope><name>createWorker</name></member>
-      <member refid="class_anthill_1a68a8d3b051e9a67dc0d61873e608e80a" prot="public" virt="non-virtual"><scope>Anthill</scope><name>doRound</name></member>
-      <member refid="class_anthill_1a006c4f2759a3cb5cb2b51771adcc3042" prot="private" virt="non-virtual"><scope>Anthill</scope><name>doRoundEggs</name></member>
-      <member refid="class_anthill_1a10dc28d387e14883c2f2f73b60b50271" prot="private" virt="non-virtual"><scope>Anthill</scope><name>doRoundLarvas</name></member>
-      <member refid="class_anthill_1a37f3181a47613e31ec78bbfd70daffd7" prot="private" virt="non-virtual"><scope>Anthill</scope><name>doRoundQueen</name></member>
-      <member refid="class_anthill_1a03505a5a65d3d9cac82bdfb83db625cc" prot="private" virt="non-virtual"><scope>Anthill</scope><name>doRoundWorkers</name></member>
-      <member refid="class_anthill_1a559f93071aa74542e86a8f891778eff0" prot="private" virt="non-virtual"><scope>Anthill</scope><name>foodCons</name></member>
-      <member refid="class_anthill_1aaffa2c1457ca56411574289456a77359" prot="public" virt="non-virtual"><scope>Anthill</scope><name>getNewWarriors</name></member>
-      <member refid="class_obstacle_1a1d5d0250c1154662ebd2b8ee4a8de7e1" prot="public" virt="virtual"><scope>Anthill</scope><name>getPosition</name></member>
-      <member refid="class_anthill_1a102fd88e130c745e9fff50b38ae6f4e6" prot="private" virt="non-virtual"><scope>Anthill</scope><name>growUpToLarva</name></member>
-      <member refid="class_anthill_1a3b1854805b88fac7d7d33096e3fc5577" prot="private" virt="non-virtual"><scope>Anthill</scope><name>growUpToWarrior</name></member>
-      <member refid="class_anthill_1af6f59868ae7db300e5c650ea0cea2a1f" prot="private" virt="non-virtual"><scope>Anthill</scope><name>growUpToWorker</name></member>
-      <member refid="class_obstacle_1ad02a40c256d57a90c65e8bc8b4bdb156" prot="protected" virt="non-virtual"><scope>Anthill</scope><name>height</name></member>
-      <member refid="class_anthill_1a7ff7e41269324d61bc60360a6fb59a79" prot="public" virt="non-virtual"><scope>Anthill</scope><name>initAnthill</name></member>
-      <member refid="class_obstacle_1a8f734072321fa06a7b7dae2d5f50f352" prot="public" virt="non-virtual"><scope>Anthill</scope><name>Obstacle</name></member>
-      <member refid="class_obstacle_1ae21c8a847bc1d69fac749f694e2d996c" prot="public" virt="non-virtual"><scope>Anthill</scope><name>Obstacle</name></member>
-      <member refid="class_obstacle_1a8d106b884920860c54d611db01bae4d0" prot="protected" virt="non-virtual"><scope>Anthill</scope><name>position</name></member>
-      <member refid="class_anthill_1aca5a12987317ef7e9780b231aad1c153" prot="public" virt="non-virtual"><scope>Anthill</scope><name>spawnEgg</name></member>
-      <member refid="class_obstacle_1a4e5aa724fcb93a5e6b709ef73794bd9c" prot="protected" virt="non-virtual"><scope>Anthill</scope><name>width</name></member>
-      <member refid="class_anthill_1a0a8a9aa35526e2c65e4520a990a18e18" prot="public" virt="non-virtual"><scope>Anthill</scope><name>~Anthill</name></member>
-      <member refid="class_obstacle_1af2f9cc9c6cff75dca0974fd5ac4f71a9" prot="public" virt="non-virtual"><scope>Anthill</scope><name>~Obstacle</name></member>
-    </listofallmembers>
-  </compounddef>
+        <inheritancegraph>
+            <node id="1">
+                <label>Anthill</label>
+                <link refid="class_anthill"/>
+                <childnode refid="2" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="2">
+                <label>Obstacle</label>
+                <link refid="class_obstacle"/>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="1">
+                <label>Anthill</label>
+                <link refid="class_anthill"/>
+                <childnode refid="2" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="2">
+                <label>Obstacle</label>
+                <link refid="class_obstacle"/>
+            </node>
+        </collaborationgraph>
+        <location file="anthill.h" line="12" column="1" bodyfile="anthill.h" bodystart="13" bodyend="55"/>
+        <listofallmembers>
+            <member refid="class_anthill_1a5ce3eeda78bd506d69605907d921872f" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>_config</name>
+            </member>
+            <member refid="class_anthill_1a5aae123ca7c7ad1b6c84e3fc9e3368a6" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>_currentFood</name>
+            </member>
+            <member refid="class_anthill_1a679c378ae33e2483b73f4e873ed0878c" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>_eggs</name>
+            </member>
+            <member refid="class_anthill_1afc8cc3ccd45701fe26fa35b4f8696f04" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>_larvas</name>
+            </member>
+            <member refid="class_anthill_1a0236d40219d628649e35b55e9ad1681e" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>_maxFood</name>
+            </member>
+            <member refid="class_anthill_1a1c85bf4b9dc60899ae1dd37121e786bd" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>_maxPop</name>
+            </member>
+            <member refid="class_anthill_1abf85b8dbefb90401102290d1239e5caf" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>_newWarriors</name>
+            </member>
+            <member refid="class_anthill_1a92cfa9df16dcac810eb7410712164bed" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>_workers</name>
+            </member>
+            <member refid="class_anthill_1af2bd0764ae0640aedd72ee10c1a60418" prot="public" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>addFood</name>
+            </member>
+            <member refid="class_anthill_1a2b5eb754c236e4add4ba4077fb134782" prot="public" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>Anthill</name>
+            </member>
+            <member refid="class_anthill_1a6c39fdc3e19ce0369e890bb543f9bf0a" prot="public" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>Anthill</name>
+            </member>
+            <member refid="class_anthill_1adfea94fd7fa75d08f8c657d97fecdfb8" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>createEgg</name>
+            </member>
+            <member refid="class_anthill_1a80a0ca8f374d92072891f67fb8441966" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>createLarva</name>
+            </member>
+            <member refid="class_anthill_1a3f398643ba67c9710e54b1675fc3e1c4" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>createWorker</name>
+            </member>
+            <member refid="class_anthill_1a68a8d3b051e9a67dc0d61873e608e80a" prot="public" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>doRound</name>
+            </member>
+            <member refid="class_anthill_1a006c4f2759a3cb5cb2b51771adcc3042" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>doRoundEggs</name>
+            </member>
+            <member refid="class_anthill_1a10dc28d387e14883c2f2f73b60b50271" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>doRoundLarvas</name>
+            </member>
+            <member refid="class_anthill_1a37f3181a47613e31ec78bbfd70daffd7" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>doRoundQueen</name>
+            </member>
+            <member refid="class_anthill_1a03505a5a65d3d9cac82bdfb83db625cc" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>doRoundWorkers</name>
+            </member>
+            <member refid="class_anthill_1a559f93071aa74542e86a8f891778eff0" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>foodCons</name>
+            </member>
+            <member refid="class_anthill_1aaffa2c1457ca56411574289456a77359" prot="public" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>getNewWarriors</name>
+            </member>
+            <member refid="class_obstacle_1a1d5d0250c1154662ebd2b8ee4a8de7e1" prot="public" virt="virtual">
+                <scope>Anthill</scope>
+                <name>getPosition</name>
+            </member>
+            <member refid="class_anthill_1a102fd88e130c745e9fff50b38ae6f4e6" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>growUpToLarva</name>
+            </member>
+            <member refid="class_anthill_1a3b1854805b88fac7d7d33096e3fc5577" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>growUpToWarrior</name>
+            </member>
+            <member refid="class_anthill_1af6f59868ae7db300e5c650ea0cea2a1f" prot="private" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>growUpToWorker</name>
+            </member>
+            <member refid="class_obstacle_1ad02a40c256d57a90c65e8bc8b4bdb156" prot="protected" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>height</name>
+            </member>
+            <member refid="class_anthill_1a7ff7e41269324d61bc60360a6fb59a79" prot="public" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>initAnthill</name>
+            </member>
+            <member refid="class_obstacle_1a8f734072321fa06a7b7dae2d5f50f352" prot="public" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>Obstacle</name>
+            </member>
+            <member refid="class_obstacle_1ae21c8a847bc1d69fac749f694e2d996c" prot="public" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>Obstacle</name>
+            </member>
+            <member refid="class_obstacle_1a8d106b884920860c54d611db01bae4d0" prot="protected" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>position</name>
+            </member>
+            <member refid="class_anthill_1aca5a12987317ef7e9780b231aad1c153" prot="public" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>spawnEgg</name>
+            </member>
+            <member refid="class_obstacle_1a4e5aa724fcb93a5e6b709ef73794bd9c" prot="protected" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>width</name>
+            </member>
+            <member refid="class_anthill_1a0a8a9aa35526e2c65e4520a990a18e18" prot="public" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>~Anthill</name>
+            </member>
+            <member refid="class_obstacle_1af2f9cc9c6cff75dca0974fd5ac4f71a9" prot="public" virt="non-virtual">
+                <scope>Anthill</scope>
+                <name>~Obstacle</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
 </doxygen>

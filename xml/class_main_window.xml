@@ -1,222 +1,295 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
-  <compounddef id="class_main_window" kind="class" language="C++" prot="public">
-    <compoundname>MainWindow</compoundname>
-    <basecompoundref prot="public" virt="non-virtual">QMainWindow</basecompoundref>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_main_window_1a6594d59e6ddbb76a06702b9ff7d05fd7" prot="private" static="no" mutable="no">
-        <type><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref></type>
-        <definition>CONFIG MainWindow::_config</definition>
-        <argsstring></argsstring>
-        <name>_config</name>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.9.1" xml:lang="en-US">
+    <compounddef id="class_main_window" kind="class" language="C++" prot="public">
+        <compoundname>MainWindow</compoundname>
+        <basecompoundref prot="public" virt="non-virtual">QMainWindow</basecompoundref>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable" id="class_main_window_1a6594d59e6ddbb76a06702b9ff7d05fd7" prot="private"
+                       static="no" mutable="no">
+                <type>
+                    <ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref>
+                </type>
+                <definition>CONFIG MainWindow::_config</definition>
+                <argsstring></argsstring>
+                <name>_config</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="mainwindow.h" line="38" column="12" bodyfile="mainwindow.h" bodystart="38"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="class_main_window_1aa9d6dfb4aaa0ff90c32c068c6e0fe28d" prot="private"
+                       static="no" mutable="no">
+                <type>
+                    <ref refid="class_orchestrator" kindref="compound">Orchestrator</ref>
+                    *
+                </type>
+                <definition>Orchestrator* MainWindow::_orchestrator</definition>
+                <argsstring></argsstring>
+                <name>_orchestrator</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="mainwindow.h" line="39" column="19" bodyfile="mainwindow.h" bodystart="39"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="class_main_window_1a61f35abe5ad8e7c325ee4b5056f0c4d2" prot="private"
+                       static="no" mutable="no">
+                <type>QGridLayout *</type>
+                <definition>QGridLayout* MainWindow::_gridLayout</definition>
+                <argsstring></argsstring>
+                <name>_gridLayout</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="mainwindow.h" line="40" column="18" bodyfile="mainwindow.h" bodystart="40"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="class_main_window_1a35466a70ed47252a0191168126a352a5" prot="private"
+                       static="no" mutable="no">
+                <type>Ui::MainWindow *</type>
+                <definition>Ui::MainWindow* MainWindow::ui</definition>
+                <argsstring></argsstring>
+                <name>ui</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="mainwindow.h" line="41" column="20" bodyfile="mainwindow.h" bodystart="41"
+                          bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="class_main_window_1a996c5a2b6f77944776856f08ec30858d" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>MainWindow::MainWindow</definition>
+                <argsstring>(QWidget *parent=nullptr)</argsstring>
+                <name>MainWindow</name>
+                <param>
+                    <type>QWidget *</type>
+                    <declname>parent</declname>
+                    <defval>nullptr</defval>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="mainwindow.h" line="29" column="5" bodyfile="mainwindow.cpp" bodystart="6"
+                          bodyend="40"/>
+            </memberdef>
+            <memberdef kind="function" id="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>MainWindow::~MainWindow</definition>
+                <argsstring>()</argsstring>
+                <name>~MainWindow</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="mainwindow.h" line="30" column="5" bodyfile="mainwindow.cpp" bodystart="111"
+                          bodyend="115"/>
+            </memberdef>
+            <memberdef kind="function" id="class_main_window_1a12bf72ccae3700805645f893c5e50cb9" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void MainWindow::initializeGrid</definition>
+                <argsstring>()</argsstring>
+                <name>initializeGrid</name>
+                <briefdescription>
+                    <para>
+                        <ref refid="class_main_window_1a12bf72ccae3700805645f893c5e50cb9" kindref="member">
+                            MainWindow::initializeGrid
+                        </ref>
+                        display an process the console UI.
+                    </para>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="mainwindow.h" line="32" column="10" bodyfile="mainwindow.cpp" bodystart="74"
+                          bodyend="109"/>
+            </memberdef>
+            <memberdef kind="function" id="class_main_window_1aa846305d4ae16b22996019890a79e009" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void MainWindow::initGame</definition>
+                <argsstring>()</argsstring>
+                <name>initGame</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                    <para>Init the orchestrator and launch the <ref refid="class_main_window" kindref="compound">
+                        MainWindow
+                    </ref>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="mainwindow.h" line="33" column="10" bodyfile="mainwindow.cpp" bodystart="45"
+                          bodyend="59"/>
+            </memberdef>
+            <memberdef kind="function" id="class_main_window_1ae6cce4b45e870937e4bc727d92bfdf1d" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>
+                    <ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref>
+                </type>
+                <definition>CONFIG MainWindow::getConfig</definition>
+                <argsstring>()</argsstring>
+                <name>getConfig</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="mainwindow.h" line="34" column="12"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-func">
+            <memberdef kind="function" id="class_main_window_1a6ed5fdfbeb557a3711c62158bec0bb88" prot="private"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void MainWindow::newRound</definition>
+                <argsstring>(int roundNumber)</argsstring>
+                <name>newRound</name>
+                <param>
+                    <type>int</type>
+                    <declname>roundNumber</declname>
+                </param>
+                <briefdescription>
+                    <para>MainWindow::newRound Init new round.</para>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="mainwindow.h" line="44" column="10" bodyfile="mainwindow.cpp" bodystart="65"
+                          bodyend="69"/>
+            </memberdef>
+            <memberdef kind="function" id="class_main_window_1a5dbee332efc54336e946646ceae4a2a8" prot="private"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void MainWindow::doRounds</definition>
+                <argsstring>()</argsstring>
+                <name>doRounds</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="mainwindow.h" line="45" column="10"/>
+            </memberdef>
+            <memberdef kind="function" id="class_main_window_1af85ccd50d002845d3a65fe6c6865e90a" prot="private"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void MainWindow::ClearScreen</definition>
+                <argsstring>()</argsstring>
+                <name>ClearScreen</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="mainwindow.h" line="46" column="10"/>
+            </memberdef>
+        </sectiondef>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="mainwindow.h" line="38" column="12" bodyfile="mainwindow.h" bodystart="38" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_main_window_1aa9d6dfb4aaa0ff90c32c068c6e0fe28d" prot="private" static="no" mutable="no">
-        <type><ref refid="class_orchestrator" kindref="compound">Orchestrator</ref> *</type>
-        <definition>Orchestrator* MainWindow::_orchestrator</definition>
-        <argsstring></argsstring>
-        <name>_orchestrator</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="mainwindow.h" line="39" column="19" bodyfile="mainwindow.h" bodystart="39" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_main_window_1a61f35abe5ad8e7c325ee4b5056f0c4d2" prot="private" static="no" mutable="no">
-        <type>QGridLayout *</type>
-        <definition>QGridLayout* MainWindow::_gridLayout</definition>
-        <argsstring></argsstring>
-        <name>_gridLayout</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="mainwindow.h" line="40" column="18" bodyfile="mainwindow.h" bodystart="40" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_main_window_1a35466a70ed47252a0191168126a352a5" prot="private" static="no" mutable="no">
-        <type>Ui::MainWindow *</type>
-        <definition>Ui::MainWindow* MainWindow::ui</definition>
-        <argsstring></argsstring>
-        <name>ui</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="mainwindow.h" line="41" column="20" bodyfile="mainwindow.h" bodystart="41" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_main_window_1a996c5a2b6f77944776856f08ec30858d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>MainWindow::MainWindow</definition>
-        <argsstring>(QWidget *parent=nullptr)</argsstring>
-        <name>MainWindow</name>
-        <param>
-          <type>QWidget *</type>
-          <declname>parent</declname>
-          <defval>nullptr</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="mainwindow.h" line="29" column="5" bodyfile="mainwindow.cpp" bodystart="6" bodyend="40"/>
-      </memberdef>
-      <memberdef kind="function" id="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>MainWindow::~MainWindow</definition>
-        <argsstring>()</argsstring>
-        <name>~MainWindow</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="mainwindow.h" line="30" column="5" bodyfile="mainwindow.cpp" bodystart="111" bodyend="115"/>
-      </memberdef>
-      <memberdef kind="function" id="class_main_window_1a12bf72ccae3700805645f893c5e50cb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void MainWindow::initializeGrid</definition>
-        <argsstring>()</argsstring>
-        <name>initializeGrid</name>
-        <briefdescription>
-<para><ref refid="class_main_window_1a12bf72ccae3700805645f893c5e50cb9" kindref="member">MainWindow::initializeGrid</ref> display an process the console UI. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="mainwindow.h" line="32" column="10" bodyfile="mainwindow.cpp" bodystart="74" bodyend="109"/>
-      </memberdef>
-      <memberdef kind="function" id="class_main_window_1aa846305d4ae16b22996019890a79e009" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void MainWindow::initGame</definition>
-        <argsstring>()</argsstring>
-        <name>initGame</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para>Init the orchestrator and launch the <ref refid="class_main_window" kindref="compound">MainWindow</ref> </para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="mainwindow.h" line="33" column="10" bodyfile="mainwindow.cpp" bodystart="45" bodyend="59"/>
-      </memberdef>
-      <memberdef kind="function" id="class_main_window_1ae6cce4b45e870937e4bc727d92bfdf1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref></type>
-        <definition>CONFIG MainWindow::getConfig</definition>
-        <argsstring>()</argsstring>
-        <name>getConfig</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="mainwindow.h" line="34" column="12"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-func">
-      <memberdef kind="function" id="class_main_window_1a6ed5fdfbeb557a3711c62158bec0bb88" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void MainWindow::newRound</definition>
-        <argsstring>(int roundNumber)</argsstring>
-        <name>newRound</name>
-        <param>
-          <type>int</type>
-          <declname>roundNumber</declname>
-        </param>
-        <briefdescription>
-<para>MainWindow::newRound Init new round. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="mainwindow.h" line="44" column="10" bodyfile="mainwindow.cpp" bodystart="65" bodyend="69"/>
-      </memberdef>
-      <memberdef kind="function" id="class_main_window_1a5dbee332efc54336e946646ceae4a2a8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void MainWindow::doRounds</definition>
-        <argsstring>()</argsstring>
-        <name>doRounds</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="mainwindow.h" line="45" column="10"/>
-      </memberdef>
-      <memberdef kind="function" id="class_main_window_1af85ccd50d002845d3a65fe6c6865e90a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void MainWindow::ClearScreen</definition>
-        <argsstring>()</argsstring>
-        <name>ClearScreen</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="mainwindow.h" line="46" column="10"/>
-      </memberdef>
-      </sectiondef>
-    <briefdescription>
-    </briefdescription>
-    <detaileddescription>
-    </detaileddescription>
-    <inheritancegraph>
-      <node id="2">
-        <label>QMainWindow</label>
-      </node>
-      <node id="1">
-        <label>MainWindow</label>
-        <link refid="class_main_window"/>
-        <childnode refid="2" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="2">
-        <label>QMainWindow</label>
-      </node>
-      <node id="1">
-        <label>MainWindow</label>
-        <link refid="class_main_window"/>
-        <childnode refid="2" relation="public-inheritance">
-        </childnode>
-      </node>
-    </collaborationgraph>
-    <location file="mainwindow.h" line="23" column="1" bodyfile="mainwindow.h" bodystart="24" bodyend="47"/>
-    <listofallmembers>
-      <member refid="class_main_window_1a6594d59e6ddbb76a06702b9ff7d05fd7" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>_config</name></member>
-      <member refid="class_main_window_1a61f35abe5ad8e7c325ee4b5056f0c4d2" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>_gridLayout</name></member>
-      <member refid="class_main_window_1aa9d6dfb4aaa0ff90c32c068c6e0fe28d" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>_orchestrator</name></member>
-      <member refid="class_main_window_1af85ccd50d002845d3a65fe6c6865e90a" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>ClearScreen</name></member>
-      <member refid="class_main_window_1a5dbee332efc54336e946646ceae4a2a8" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>doRounds</name></member>
-      <member refid="class_main_window_1ae6cce4b45e870937e4bc727d92bfdf1d" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>getConfig</name></member>
-      <member refid="class_main_window_1aa846305d4ae16b22996019890a79e009" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>initGame</name></member>
-      <member refid="class_main_window_1a12bf72ccae3700805645f893c5e50cb9" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>initializeGrid</name></member>
-      <member refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>MainWindow</name></member>
-      <member refid="class_main_window_1a6ed5fdfbeb557a3711c62158bec0bb88" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>newRound</name></member>
-      <member refid="class_main_window_1a35466a70ed47252a0191168126a352a5" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>ui</name></member>
-      <member refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>~MainWindow</name></member>
-    </listofallmembers>
-  </compounddef>
+        <inheritancegraph>
+            <node id="2">
+                <label>QMainWindow</label>
+            </node>
+            <node id="1">
+                <label>MainWindow</label>
+                <link refid="class_main_window"/>
+                <childnode refid="2" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="2">
+                <label>QMainWindow</label>
+            </node>
+            <node id="1">
+                <label>MainWindow</label>
+                <link refid="class_main_window"/>
+                <childnode refid="2" relation="public-inheritance">
+                </childnode>
+            </node>
+        </collaborationgraph>
+        <location file="mainwindow.h" line="23" column="1" bodyfile="mainwindow.h" bodystart="24" bodyend="47"/>
+        <listofallmembers>
+            <member refid="class_main_window_1a6594d59e6ddbb76a06702b9ff7d05fd7" prot="private" virt="non-virtual">
+                <scope>MainWindow</scope>
+                <name>_config</name>
+            </member>
+            <member refid="class_main_window_1a61f35abe5ad8e7c325ee4b5056f0c4d2" prot="private" virt="non-virtual">
+                <scope>MainWindow</scope>
+                <name>_gridLayout</name>
+            </member>
+            <member refid="class_main_window_1aa9d6dfb4aaa0ff90c32c068c6e0fe28d" prot="private" virt="non-virtual">
+                <scope>MainWindow</scope>
+                <name>_orchestrator</name>
+            </member>
+            <member refid="class_main_window_1af85ccd50d002845d3a65fe6c6865e90a" prot="private" virt="non-virtual">
+                <scope>MainWindow</scope>
+                <name>ClearScreen</name>
+            </member>
+            <member refid="class_main_window_1a5dbee332efc54336e946646ceae4a2a8" prot="private" virt="non-virtual">
+                <scope>MainWindow</scope>
+                <name>doRounds</name>
+            </member>
+            <member refid="class_main_window_1ae6cce4b45e870937e4bc727d92bfdf1d" prot="public" virt="non-virtual">
+                <scope>MainWindow</scope>
+                <name>getConfig</name>
+            </member>
+            <member refid="class_main_window_1aa846305d4ae16b22996019890a79e009" prot="public" virt="non-virtual">
+                <scope>MainWindow</scope>
+                <name>initGame</name>
+            </member>
+            <member refid="class_main_window_1a12bf72ccae3700805645f893c5e50cb9" prot="public" virt="non-virtual">
+                <scope>MainWindow</scope>
+                <name>initializeGrid</name>
+            </member>
+            <member refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" prot="public" virt="non-virtual">
+                <scope>MainWindow</scope>
+                <name>MainWindow</name>
+            </member>
+            <member refid="class_main_window_1a6ed5fdfbeb557a3711c62158bec0bb88" prot="private" virt="non-virtual">
+                <scope>MainWindow</scope>
+                <name>newRound</name>
+            </member>
+            <member refid="class_main_window_1a35466a70ed47252a0191168126a352a5" prot="private" virt="non-virtual">
+                <scope>MainWindow</scope>
+                <name>ui</name>
+            </member>
+            <member refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" prot="public" virt="non-virtual">
+                <scope>MainWindow</scope>
+                <name>~MainWindow</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
 </doxygen>

@@ -305,6 +305,10 @@ int Anthill::foodCons(int desiredFood) {
     return availableCons;
 }
 
+/**
+ * @brief method used to know if queen is still alive
+ * @return
+ */
 bool Anthill::isQueenAlive() {
     return _queenAlive;
 }

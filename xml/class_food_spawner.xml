@@ -1,197 +1,264 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
-  <compounddef id="class_food_spawner" kind="class" language="C++" prot="public">
-    <compoundname>FoodSpawner</compoundname>
-    <basecompoundref refid="class_obstacle" prot="public" virt="non-virtual">Obstacle</basecompoundref>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_food_spawner_1a96e64dd82678a9015e0f471364a7bdfc" prot="private" static="no" mutable="no">
-        <type>int</type>
-        <definition>int FoodSpawner::_maxQuantity</definition>
-        <argsstring></argsstring>
-        <name>_maxQuantity</name>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.9.1" xml:lang="en-US">
+    <compounddef id="class_food_spawner" kind="class" language="C++" prot="public">
+        <compoundname>FoodSpawner</compoundname>
+        <basecompoundref refid="class_obstacle" prot="public" virt="non-virtual">Obstacle</basecompoundref>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable" id="class_food_spawner_1a96e64dd82678a9015e0f471364a7bdfc" prot="private"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int FoodSpawner::_maxQuantity</definition>
+                <argsstring></argsstring>
+                <name>_maxQuantity</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="foodspawner.h" line="20" column="9" bodyfile="foodspawner.h" bodystart="20"
+                          bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="class_food_spawner_1a48c03ec6ccdcea768f4413a47481e5fe" prot="private"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int FoodSpawner::_currentQuantity</definition>
+                <argsstring></argsstring>
+                <name>_currentQuantity</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="foodspawner.h" line="21" column="9" bodyfile="foodspawner.h" bodystart="21"
+                          bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="class_food_spawner_1a6e15c0426be75c74718d0b9aea4f418c" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>FoodSpawner::FoodSpawner</definition>
+                <argsstring>()</argsstring>
+                <name>FoodSpawner</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="foodspawner.h" line="11" column="5" bodyfile="foodspawner.cpp" bodystart="4"
+                          bodyend="7"/>
+            </memberdef>
+            <memberdef kind="function" id="class_food_spawner_1aa2477bc549a8680fa37f4e92c7d542f5" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>FoodSpawner::FoodSpawner</definition>
+                <argsstring>(int maxQuantity, pair&lt; int, int &gt; position, int width, int height)</argsstring>
+                <name>FoodSpawner</name>
+                <param>
+                    <type>int</type>
+                    <declname>maxQuantity</declname>
+                </param>
+                <param>
+                    <type>pair&lt; int, int &gt;</type>
+                    <declname>position</declname>
+                </param>
+                <param>
+                    <type>int</type>
+                    <declname>width</declname>
+                </param>
+                <param>
+                    <type>int</type>
+                    <declname>height</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="foodspawner.h" line="12" column="5" bodyfile="foodspawner.cpp" bodystart="9"
+                          bodyend="16"/>
+            </memberdef>
+            <memberdef kind="function" id="class_food_spawner_1a14ddfc1f560fb57b80689be1bb61db06" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>FoodSpawner::~FoodSpawner</definition>
+                <argsstring>()</argsstring>
+                <name>~FoodSpawner</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="foodspawner.h" line="13" column="5" bodyfile="foodspawner.cpp" bodystart="18"
+                          bodyend="21"/>
+            </memberdef>
+            <memberdef kind="function" id="class_food_spawner_1a97adce43c478029bb484d1582636fe22" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void FoodSpawner::doRound</definition>
+                <argsstring>()</argsstring>
+                <name>doRound</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="foodspawner.h" line="15" column="10" bodyfile="foodspawner.cpp" bodystart="23"
+                          bodyend="30"/>
+            </memberdef>
+            <memberdef kind="function" id="class_food_spawner_1a9e9ba67a74657330082dfc4c515f55ad" prot="public"
+                       static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>int</type>
+                <definition>int FoodSpawner::getCurrentQuantity</definition>
+                <argsstring>() const</argsstring>
+                <name>getCurrentQuantity</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="foodspawner.h" line="16" column="9" bodyfile="foodspawner.cpp" bodystart="32"
+                          bodyend="35"/>
+            </memberdef>
+            <memberdef kind="function" id="class_food_spawner_1a116b7945c47c92732c3e2d9c44da3faa" prot="public"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void FoodSpawner::decreaseQuantity</definition>
+                <argsstring>(int quantity)</argsstring>
+                <name>decreaseQuantity</name>
+                <param>
+                    <type>int</type>
+                    <declname>quantity</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="foodspawner.h" line="17" column="10" bodyfile="foodspawner.cpp" bodystart="37"
+                          bodyend="40"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-func">
+            <memberdef kind="function" id="class_food_spawner_1a75674ca9013d335dab893fe406e40d94" prot="private"
+                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void FoodSpawner::randomFood</definition>
+                <argsstring>()</argsstring>
+                <name>randomFood</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="foodspawner.h" line="24" column="10" bodyfile="foodspawner.cpp" bodystart="43"
+                          bodyend="51"/>
+            </memberdef>
+        </sectiondef>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="foodspawner.h" line="20" column="9" bodyfile="foodspawner.h" bodystart="20" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_food_spawner_1a48c03ec6ccdcea768f4413a47481e5fe" prot="private" static="no" mutable="no">
-        <type>int</type>
-        <definition>int FoodSpawner::_currentQuantity</definition>
-        <argsstring></argsstring>
-        <name>_currentQuantity</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="foodspawner.h" line="21" column="9" bodyfile="foodspawner.h" bodystart="21" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_food_spawner_1a6e15c0426be75c74718d0b9aea4f418c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>FoodSpawner::FoodSpawner</definition>
-        <argsstring>()</argsstring>
-        <name>FoodSpawner</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="foodspawner.h" line="11" column="5" bodyfile="foodspawner.cpp" bodystart="4" bodyend="7"/>
-      </memberdef>
-      <memberdef kind="function" id="class_food_spawner_1aa2477bc549a8680fa37f4e92c7d542f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>FoodSpawner::FoodSpawner</definition>
-        <argsstring>(int maxQuantity, pair&lt; int, int &gt; position, int width, int height)</argsstring>
-        <name>FoodSpawner</name>
-        <param>
-          <type>int</type>
-          <declname>maxQuantity</declname>
-        </param>
-        <param>
-          <type>pair&lt; int, int &gt;</type>
-          <declname>position</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>width</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>height</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="foodspawner.h" line="12" column="5" bodyfile="foodspawner.cpp" bodystart="9" bodyend="16"/>
-      </memberdef>
-      <memberdef kind="function" id="class_food_spawner_1a14ddfc1f560fb57b80689be1bb61db06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>FoodSpawner::~FoodSpawner</definition>
-        <argsstring>()</argsstring>
-        <name>~FoodSpawner</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="foodspawner.h" line="13" column="5" bodyfile="foodspawner.cpp" bodystart="18" bodyend="21"/>
-      </memberdef>
-      <memberdef kind="function" id="class_food_spawner_1a97adce43c478029bb484d1582636fe22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void FoodSpawner::doRound</definition>
-        <argsstring>()</argsstring>
-        <name>doRound</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="foodspawner.h" line="15" column="10" bodyfile="foodspawner.cpp" bodystart="23" bodyend="30"/>
-      </memberdef>
-      <memberdef kind="function" id="class_food_spawner_1a9e9ba67a74657330082dfc4c515f55ad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int FoodSpawner::getCurrentQuantity</definition>
-        <argsstring>() const</argsstring>
-        <name>getCurrentQuantity</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="foodspawner.h" line="16" column="9" bodyfile="foodspawner.cpp" bodystart="32" bodyend="35"/>
-      </memberdef>
-      <memberdef kind="function" id="class_food_spawner_1a116b7945c47c92732c3e2d9c44da3faa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void FoodSpawner::decreaseQuantity</definition>
-        <argsstring>(int quantity)</argsstring>
-        <name>decreaseQuantity</name>
-        <param>
-          <type>int</type>
-          <declname>quantity</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="foodspawner.h" line="17" column="10" bodyfile="foodspawner.cpp" bodystart="37" bodyend="40"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-func">
-      <memberdef kind="function" id="class_food_spawner_1a75674ca9013d335dab893fe406e40d94" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void FoodSpawner::randomFood</definition>
-        <argsstring>()</argsstring>
-        <name>randomFood</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="foodspawner.h" line="24" column="10" bodyfile="foodspawner.cpp" bodystart="43" bodyend="51"/>
-      </memberdef>
-      </sectiondef>
-    <briefdescription>
-    </briefdescription>
-    <detaileddescription>
-    </detaileddescription>
-    <inheritancegraph>
-      <node id="2">
-        <label>Obstacle</label>
-        <link refid="class_obstacle"/>
-      </node>
-      <node id="1">
-        <label>FoodSpawner</label>
-        <link refid="class_food_spawner"/>
-        <childnode refid="2" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="2">
-        <label>Obstacle</label>
-        <link refid="class_obstacle"/>
-      </node>
-      <node id="1">
-        <label>FoodSpawner</label>
-        <link refid="class_food_spawner"/>
-        <childnode refid="2" relation="public-inheritance">
-        </childnode>
-      </node>
-    </collaborationgraph>
-    <location file="foodspawner.h" line="7" column="1" bodyfile="foodspawner.h" bodystart="8" bodyend="26"/>
-    <listofallmembers>
-      <member refid="class_food_spawner_1a48c03ec6ccdcea768f4413a47481e5fe" prot="private" virt="non-virtual"><scope>FoodSpawner</scope><name>_currentQuantity</name></member>
-      <member refid="class_food_spawner_1a96e64dd82678a9015e0f471364a7bdfc" prot="private" virt="non-virtual"><scope>FoodSpawner</scope><name>_maxQuantity</name></member>
-      <member refid="class_food_spawner_1a116b7945c47c92732c3e2d9c44da3faa" prot="public" virt="non-virtual"><scope>FoodSpawner</scope><name>decreaseQuantity</name></member>
-      <member refid="class_food_spawner_1a97adce43c478029bb484d1582636fe22" prot="public" virt="non-virtual"><scope>FoodSpawner</scope><name>doRound</name></member>
-      <member refid="class_food_spawner_1a6e15c0426be75c74718d0b9aea4f418c" prot="public" virt="non-virtual"><scope>FoodSpawner</scope><name>FoodSpawner</name></member>
-      <member refid="class_food_spawner_1aa2477bc549a8680fa37f4e92c7d542f5" prot="public" virt="non-virtual"><scope>FoodSpawner</scope><name>FoodSpawner</name></member>
-      <member refid="class_food_spawner_1a9e9ba67a74657330082dfc4c515f55ad" prot="public" virt="non-virtual"><scope>FoodSpawner</scope><name>getCurrentQuantity</name></member>
-      <member refid="class_obstacle_1a1d5d0250c1154662ebd2b8ee4a8de7e1" prot="public" virt="virtual"><scope>FoodSpawner</scope><name>getPosition</name></member>
-      <member refid="class_obstacle_1ad02a40c256d57a90c65e8bc8b4bdb156" prot="protected" virt="non-virtual"><scope>FoodSpawner</scope><name>height</name></member>
-      <member refid="class_obstacle_1a8f734072321fa06a7b7dae2d5f50f352" prot="public" virt="non-virtual"><scope>FoodSpawner</scope><name>Obstacle</name></member>
-      <member refid="class_obstacle_1ae21c8a847bc1d69fac749f694e2d996c" prot="public" virt="non-virtual"><scope>FoodSpawner</scope><name>Obstacle</name></member>
-      <member refid="class_obstacle_1a8d106b884920860c54d611db01bae4d0" prot="protected" virt="non-virtual"><scope>FoodSpawner</scope><name>position</name></member>
-      <member refid="class_food_spawner_1a75674ca9013d335dab893fe406e40d94" prot="private" virt="non-virtual"><scope>FoodSpawner</scope><name>randomFood</name></member>
-      <member refid="class_obstacle_1a4e5aa724fcb93a5e6b709ef73794bd9c" prot="protected" virt="non-virtual"><scope>FoodSpawner</scope><name>width</name></member>
-      <member refid="class_food_spawner_1a14ddfc1f560fb57b80689be1bb61db06" prot="public" virt="non-virtual"><scope>FoodSpawner</scope><name>~FoodSpawner</name></member>
-      <member refid="class_obstacle_1af2f9cc9c6cff75dca0974fd5ac4f71a9" prot="public" virt="non-virtual"><scope>FoodSpawner</scope><name>~Obstacle</name></member>
-    </listofallmembers>
-  </compounddef>
+        <inheritancegraph>
+            <node id="2">
+                <label>Obstacle</label>
+                <link refid="class_obstacle"/>
+            </node>
+            <node id="1">
+                <label>FoodSpawner</label>
+                <link refid="class_food_spawner"/>
+                <childnode refid="2" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="2">
+                <label>Obstacle</label>
+                <link refid="class_obstacle"/>
+            </node>
+            <node id="1">
+                <label>FoodSpawner</label>
+                <link refid="class_food_spawner"/>
+                <childnode refid="2" relation="public-inheritance">
+                </childnode>
+            </node>
+        </collaborationgraph>
+        <location file="foodspawner.h" line="7" column="1" bodyfile="foodspawner.h" bodystart="8" bodyend="26"/>
+        <listofallmembers>
+            <member refid="class_food_spawner_1a48c03ec6ccdcea768f4413a47481e5fe" prot="private" virt="non-virtual">
+                <scope>FoodSpawner</scope>
+                <name>_currentQuantity</name>
+            </member>
+            <member refid="class_food_spawner_1a96e64dd82678a9015e0f471364a7bdfc" prot="private" virt="non-virtual">
+                <scope>FoodSpawner</scope>
+                <name>_maxQuantity</name>
+            </member>
+            <member refid="class_food_spawner_1a116b7945c47c92732c3e2d9c44da3faa" prot="public" virt="non-virtual">
+                <scope>FoodSpawner</scope>
+                <name>decreaseQuantity</name>
+            </member>
+            <member refid="class_food_spawner_1a97adce43c478029bb484d1582636fe22" prot="public" virt="non-virtual">
+                <scope>FoodSpawner</scope>
+                <name>doRound</name>
+            </member>
+            <member refid="class_food_spawner_1a6e15c0426be75c74718d0b9aea4f418c" prot="public" virt="non-virtual">
+                <scope>FoodSpawner</scope>
+                <name>FoodSpawner</name>
+            </member>
+            <member refid="class_food_spawner_1aa2477bc549a8680fa37f4e92c7d542f5" prot="public" virt="non-virtual">
+                <scope>FoodSpawner</scope>
+                <name>FoodSpawner</name>
+            </member>
+            <member refid="class_food_spawner_1a9e9ba67a74657330082dfc4c515f55ad" prot="public" virt="non-virtual">
+                <scope>FoodSpawner</scope>
+                <name>getCurrentQuantity</name>
+            </member>
+            <member refid="class_obstacle_1a1d5d0250c1154662ebd2b8ee4a8de7e1" prot="public" virt="virtual">
+                <scope>FoodSpawner</scope>
+                <name>getPosition</name>
+            </member>
+            <member refid="class_obstacle_1ad02a40c256d57a90c65e8bc8b4bdb156" prot="protected" virt="non-virtual">
+                <scope>FoodSpawner</scope>
+                <name>height</name>
+            </member>
+            <member refid="class_obstacle_1a8f734072321fa06a7b7dae2d5f50f352" prot="public" virt="non-virtual">
+                <scope>FoodSpawner</scope>
+                <name>Obstacle</name>
+            </member>
+            <member refid="class_obstacle_1ae21c8a847bc1d69fac749f694e2d996c" prot="public" virt="non-virtual">
+                <scope>FoodSpawner</scope>
+                <name>Obstacle</name>
+            </member>
+            <member refid="class_obstacle_1a8d106b884920860c54d611db01bae4d0" prot="protected" virt="non-virtual">
+                <scope>FoodSpawner</scope>
+                <name>position</name>
+            </member>
+            <member refid="class_food_spawner_1a75674ca9013d335dab893fe406e40d94" prot="private" virt="non-virtual">
+                <scope>FoodSpawner</scope>
+                <name>randomFood</name>
+            </member>
+            <member refid="class_obstacle_1a4e5aa724fcb93a5e6b709ef73794bd9c" prot="protected" virt="non-virtual">
+                <scope>FoodSpawner</scope>
+                <name>width</name>
+            </member>
+            <member refid="class_food_spawner_1a14ddfc1f560fb57b80689be1bb61db06" prot="public" virt="non-virtual">
+                <scope>FoodSpawner</scope>
+                <name>~FoodSpawner</name>
+            </member>
+            <member refid="class_obstacle_1af2f9cc9c6cff75dca0974fd5ac4f71a9" prot="public" virt="non-virtual">
+                <scope>FoodSpawner</scope>
+                <name>~Obstacle</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
 </doxygen>

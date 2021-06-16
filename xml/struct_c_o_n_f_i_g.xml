@@ -1,309 +1,394 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
-  <compounddef id="struct_c_o_n_f_i_g" kind="struct" language="C++" prot="public">
-    <compoundname>CONFIG</compoundname>
-      <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a527ab3c6fe268dd7c0e1803ee22e0682" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::maxFoodAnthill</definition>
-        <argsstring></argsstring>
-        <name>maxFoodAnthill</name>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.9.1" xml:lang="en-US">
+    <compounddef id="struct_c_o_n_f_i_g" kind="struct" language="C++" prot="public">
+        <compoundname>CONFIG</compoundname>
+        <sectiondef kind="public-attrib">
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a527ab3c6fe268dd7c0e1803ee22e0682" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::maxFoodAnthill</definition>
+                <argsstring></argsstring>
+                <name>maxFoodAnthill</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="5" column="9" bodyfile="util.h" bodystart="5" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a704acb3fe6efe85dc5075424533842e6" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::maxPopAnthill</definition>
+                <argsstring></argsstring>
+                <name>maxPopAnthill</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="6" column="9" bodyfile="util.h" bodystart="6" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a6df8a3b0c298ca6b2b0c73c5a2a126cb" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::maxFoodFoodSpawner</definition>
+                <argsstring></argsstring>
+                <name>maxFoodFoodSpawner</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="7" column="9" bodyfile="util.h" bodystart="7" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1adaef13114c96052ed48fd5b1c2f71751" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::ageLarva</definition>
+                <argsstring></argsstring>
+                <name>ageLarva</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="8" column="9" bodyfile="util.h" bodystart="8" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a9eb6b9b497433bc08aa3cb17cba8e653" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::ageWorker</definition>
+                <argsstring></argsstring>
+                <name>ageWorker</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="9" column="9" bodyfile="util.h" bodystart="9" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1aa20147d7048b5a3644ff7de40e5b4a0d" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::ageWarrior</definition>
+                <argsstring></argsstring>
+                <name>ageWarrior</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="10" column="9" bodyfile="util.h" bodystart="10" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1ac5af4472e37f58a99db6462c6ab26489" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::lifeLarva</definition>
+                <argsstring></argsstring>
+                <name>lifeLarva</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="11" column="9" bodyfile="util.h" bodystart="11" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a72e3026441b3df4b5f461b4ba51b23e0" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::lifeWorker</definition>
+                <argsstring></argsstring>
+                <name>lifeWorker</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="12" column="9" bodyfile="util.h" bodystart="12" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a27d0d01c0518a75e6daf724a9082ea55" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::lifeWarrior</definition>
+                <argsstring></argsstring>
+                <name>lifeWarrior</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="13" column="9" bodyfile="util.h" bodystart="13" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a89904d8c21627914cdfba6033fbc12d4" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::lifeQueen</definition>
+                <argsstring></argsstring>
+                <name>lifeQueen</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="14" column="9" bodyfile="util.h" bodystart="14" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1ada673c2db73701869694de2b07fb222c" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::consLarva</definition>
+                <argsstring></argsstring>
+                <name>consLarva</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="15" column="9" bodyfile="util.h" bodystart="15" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1abeee70e52cf8ce8250ef72ae9e806404" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::consWorker</definition>
+                <argsstring></argsstring>
+                <name>consWorker</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="16" column="9" bodyfile="util.h" bodystart="16" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a96e3802a32bfb974ae8d18a3e842d0d2" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::consWarrior</definition>
+                <argsstring></argsstring>
+                <name>consWarrior</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="17" column="9" bodyfile="util.h" bodystart="17" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a30855c029f6a6a8be2b2614959a8a0dd" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::consQueen</definition>
+                <argsstring></argsstring>
+                <name>consQueen</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="18" column="9" bodyfile="util.h" bodystart="18" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a6b6d30a3e7aa692793b58d2c89d747d5" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::capacityWarrior</definition>
+                <argsstring></argsstring>
+                <name>capacityWarrior</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="19" column="9" bodyfile="util.h" bodystart="19" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a99da682bf00d782ebbbf4f1ae4ddcfc0" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::nbEggInit</definition>
+                <argsstring></argsstring>
+                <name>nbEggInit</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="20" column="9" bodyfile="util.h" bodystart="20" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1aca4cfa9612eb0b92b3c56190845be748" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::nbLarvaInit</definition>
+                <argsstring></argsstring>
+                <name>nbLarvaInit</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="21" column="9" bodyfile="util.h" bodystart="21" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a891377a6a98538ce720b7299157d9745" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::nbWorkerInit</definition>
+                <argsstring></argsstring>
+                <name>nbWorkerInit</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="22" column="9" bodyfile="util.h" bodystart="22" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a069f96fca189a5c1178066e3721d2c02" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::nbWarriorInit</definition>
+                <argsstring></argsstring>
+                <name>nbWarriorInit</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="23" column="9" bodyfile="util.h" bodystart="23" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1ab9a646c799040629529a30bb043289a6" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::nbFoodSpawnerInit</definition>
+                <argsstring></argsstring>
+                <name>nbFoodSpawnerInit</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="24" column="9" bodyfile="util.h" bodystart="24" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a06a1ad0fae0bf278e6dd505e9ed7b16b" prot="public"
+                       static="no" mutable="no">
+                <type>int</type>
+                <definition>int CONFIG::nbObstacleInit</definition>
+                <argsstring></argsstring>
+                <name>nbObstacleInit</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="util.h" line="25" column="9" bodyfile="util.h" bodystart="25" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="5" column="9" bodyfile="util.h" bodystart="5" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a704acb3fe6efe85dc5075424533842e6" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::maxPopAnthill</definition>
-        <argsstring></argsstring>
-        <name>maxPopAnthill</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="6" column="9" bodyfile="util.h" bodystart="6" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a6df8a3b0c298ca6b2b0c73c5a2a126cb" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::maxFoodFoodSpawner</definition>
-        <argsstring></argsstring>
-        <name>maxFoodFoodSpawner</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="7" column="9" bodyfile="util.h" bodystart="7" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1adaef13114c96052ed48fd5b1c2f71751" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::ageLarva</definition>
-        <argsstring></argsstring>
-        <name>ageLarva</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="8" column="9" bodyfile="util.h" bodystart="8" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a9eb6b9b497433bc08aa3cb17cba8e653" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::ageWorker</definition>
-        <argsstring></argsstring>
-        <name>ageWorker</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="9" column="9" bodyfile="util.h" bodystart="9" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1aa20147d7048b5a3644ff7de40e5b4a0d" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::ageWarrior</definition>
-        <argsstring></argsstring>
-        <name>ageWarrior</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="10" column="9" bodyfile="util.h" bodystart="10" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1ac5af4472e37f58a99db6462c6ab26489" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::lifeLarva</definition>
-        <argsstring></argsstring>
-        <name>lifeLarva</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="11" column="9" bodyfile="util.h" bodystart="11" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a72e3026441b3df4b5f461b4ba51b23e0" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::lifeWorker</definition>
-        <argsstring></argsstring>
-        <name>lifeWorker</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="12" column="9" bodyfile="util.h" bodystart="12" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a27d0d01c0518a75e6daf724a9082ea55" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::lifeWarrior</definition>
-        <argsstring></argsstring>
-        <name>lifeWarrior</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="13" column="9" bodyfile="util.h" bodystart="13" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a89904d8c21627914cdfba6033fbc12d4" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::lifeQueen</definition>
-        <argsstring></argsstring>
-        <name>lifeQueen</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="14" column="9" bodyfile="util.h" bodystart="14" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1ada673c2db73701869694de2b07fb222c" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::consLarva</definition>
-        <argsstring></argsstring>
-        <name>consLarva</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="15" column="9" bodyfile="util.h" bodystart="15" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1abeee70e52cf8ce8250ef72ae9e806404" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::consWorker</definition>
-        <argsstring></argsstring>
-        <name>consWorker</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="16" column="9" bodyfile="util.h" bodystart="16" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a96e3802a32bfb974ae8d18a3e842d0d2" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::consWarrior</definition>
-        <argsstring></argsstring>
-        <name>consWarrior</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="17" column="9" bodyfile="util.h" bodystart="17" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a30855c029f6a6a8be2b2614959a8a0dd" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::consQueen</definition>
-        <argsstring></argsstring>
-        <name>consQueen</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="18" column="9" bodyfile="util.h" bodystart="18" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a6b6d30a3e7aa692793b58d2c89d747d5" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::capacityWarrior</definition>
-        <argsstring></argsstring>
-        <name>capacityWarrior</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="19" column="9" bodyfile="util.h" bodystart="19" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a99da682bf00d782ebbbf4f1ae4ddcfc0" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::nbEggInit</definition>
-        <argsstring></argsstring>
-        <name>nbEggInit</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="20" column="9" bodyfile="util.h" bodystart="20" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1aca4cfa9612eb0b92b3c56190845be748" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::nbLarvaInit</definition>
-        <argsstring></argsstring>
-        <name>nbLarvaInit</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="21" column="9" bodyfile="util.h" bodystart="21" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a891377a6a98538ce720b7299157d9745" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::nbWorkerInit</definition>
-        <argsstring></argsstring>
-        <name>nbWorkerInit</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="22" column="9" bodyfile="util.h" bodystart="22" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a069f96fca189a5c1178066e3721d2c02" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::nbWarriorInit</definition>
-        <argsstring></argsstring>
-        <name>nbWarriorInit</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="23" column="9" bodyfile="util.h" bodystart="23" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1ab9a646c799040629529a30bb043289a6" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::nbFoodSpawnerInit</definition>
-        <argsstring></argsstring>
-        <name>nbFoodSpawnerInit</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="24" column="9" bodyfile="util.h" bodystart="24" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a06a1ad0fae0bf278e6dd505e9ed7b16b" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int CONFIG::nbObstacleInit</definition>
-        <argsstring></argsstring>
-        <name>nbObstacleInit</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="util.h" line="25" column="9" bodyfile="util.h" bodystart="25" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-    <briefdescription>
-    </briefdescription>
-    <detaileddescription>
-    </detaileddescription>
-    <location file="util.h" line="4" column="1" bodyfile="util.h" bodystart="4" bodyend="26"/>
-    <listofallmembers>
-      <member refid="struct_c_o_n_f_i_g_1adaef13114c96052ed48fd5b1c2f71751" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>ageLarva</name></member>
-      <member refid="struct_c_o_n_f_i_g_1aa20147d7048b5a3644ff7de40e5b4a0d" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>ageWarrior</name></member>
-      <member refid="struct_c_o_n_f_i_g_1a9eb6b9b497433bc08aa3cb17cba8e653" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>ageWorker</name></member>
-      <member refid="struct_c_o_n_f_i_g_1a6b6d30a3e7aa692793b58d2c89d747d5" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>capacityWarrior</name></member>
-      <member refid="struct_c_o_n_f_i_g_1ada673c2db73701869694de2b07fb222c" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>consLarva</name></member>
-      <member refid="struct_c_o_n_f_i_g_1a30855c029f6a6a8be2b2614959a8a0dd" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>consQueen</name></member>
-      <member refid="struct_c_o_n_f_i_g_1a96e3802a32bfb974ae8d18a3e842d0d2" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>consWarrior</name></member>
-      <member refid="struct_c_o_n_f_i_g_1abeee70e52cf8ce8250ef72ae9e806404" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>consWorker</name></member>
-      <member refid="struct_c_o_n_f_i_g_1ac5af4472e37f58a99db6462c6ab26489" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>lifeLarva</name></member>
-      <member refid="struct_c_o_n_f_i_g_1a89904d8c21627914cdfba6033fbc12d4" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>lifeQueen</name></member>
-      <member refid="struct_c_o_n_f_i_g_1a27d0d01c0518a75e6daf724a9082ea55" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>lifeWarrior</name></member>
-      <member refid="struct_c_o_n_f_i_g_1a72e3026441b3df4b5f461b4ba51b23e0" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>lifeWorker</name></member>
-      <member refid="struct_c_o_n_f_i_g_1a527ab3c6fe268dd7c0e1803ee22e0682" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>maxFoodAnthill</name></member>
-      <member refid="struct_c_o_n_f_i_g_1a6df8a3b0c298ca6b2b0c73c5a2a126cb" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>maxFoodFoodSpawner</name></member>
-      <member refid="struct_c_o_n_f_i_g_1a704acb3fe6efe85dc5075424533842e6" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>maxPopAnthill</name></member>
-      <member refid="struct_c_o_n_f_i_g_1a99da682bf00d782ebbbf4f1ae4ddcfc0" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>nbEggInit</name></member>
-      <member refid="struct_c_o_n_f_i_g_1ab9a646c799040629529a30bb043289a6" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>nbFoodSpawnerInit</name></member>
-      <member refid="struct_c_o_n_f_i_g_1aca4cfa9612eb0b92b3c56190845be748" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>nbLarvaInit</name></member>
-      <member refid="struct_c_o_n_f_i_g_1a06a1ad0fae0bf278e6dd505e9ed7b16b" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>nbObstacleInit</name></member>
-      <member refid="struct_c_o_n_f_i_g_1a069f96fca189a5c1178066e3721d2c02" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>nbWarriorInit</name></member>
-      <member refid="struct_c_o_n_f_i_g_1a891377a6a98538ce720b7299157d9745" prot="public" virt="non-virtual"><scope>CONFIG</scope><name>nbWorkerInit</name></member>
-    </listofallmembers>
-  </compounddef>
+        <location file="util.h" line="4" column="1" bodyfile="util.h" bodystart="4" bodyend="26"/>
+        <listofallmembers>
+            <member refid="struct_c_o_n_f_i_g_1adaef13114c96052ed48fd5b1c2f71751" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>ageLarva</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1aa20147d7048b5a3644ff7de40e5b4a0d" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>ageWarrior</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1a9eb6b9b497433bc08aa3cb17cba8e653" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>ageWorker</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1a6b6d30a3e7aa692793b58d2c89d747d5" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>capacityWarrior</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1ada673c2db73701869694de2b07fb222c" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>consLarva</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1a30855c029f6a6a8be2b2614959a8a0dd" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>consQueen</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1a96e3802a32bfb974ae8d18a3e842d0d2" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>consWarrior</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1abeee70e52cf8ce8250ef72ae9e806404" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>consWorker</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1ac5af4472e37f58a99db6462c6ab26489" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>lifeLarva</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1a89904d8c21627914cdfba6033fbc12d4" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>lifeQueen</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1a27d0d01c0518a75e6daf724a9082ea55" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>lifeWarrior</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1a72e3026441b3df4b5f461b4ba51b23e0" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>lifeWorker</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1a527ab3c6fe268dd7c0e1803ee22e0682" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>maxFoodAnthill</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1a6df8a3b0c298ca6b2b0c73c5a2a126cb" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>maxFoodFoodSpawner</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1a704acb3fe6efe85dc5075424533842e6" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>maxPopAnthill</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1a99da682bf00d782ebbbf4f1ae4ddcfc0" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>nbEggInit</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1ab9a646c799040629529a30bb043289a6" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>nbFoodSpawnerInit</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1aca4cfa9612eb0b92b3c56190845be748" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>nbLarvaInit</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1a06a1ad0fae0bf278e6dd505e9ed7b16b" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>nbObstacleInit</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1a069f96fca189a5c1178066e3721d2c02" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>nbWarriorInit</name>
+            </member>
+            <member refid="struct_c_o_n_f_i_g_1a891377a6a98538ce720b7299157d9745" prot="public" virt="non-virtual">
+                <scope>CONFIG</scope>
+                <name>nbWorkerInit</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
 </doxygen>

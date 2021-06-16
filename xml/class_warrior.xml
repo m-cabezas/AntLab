@@ -1,610 +1,821 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
-  <compounddef id="class_warrior" kind="class" language="C++" prot="public">
-    <compoundname>Warrior</compoundname>
-    <basecompoundref refid="class_worker" prot="public" virt="non-virtual">Worker</basecompoundref>
-    <derivedcompoundref refid="class_queen" prot="public" virt="non-virtual">Queen</derivedcompoundref>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_warrior_1ad9757eeba69475bbf211040c24e84c63" prot="private" static="no" mutable="no">
-        <type>int</type>
-        <definition>int Warrior::_foodCapacity</definition>
-        <argsstring></argsstring>
-        <name>_foodCapacity</name>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
+         version="1.9.1" xml:lang="en-US">
+    <compounddef id="class_warrior" kind="class" language="C++" prot="public">
+        <compoundname>Warrior</compoundname>
+        <basecompoundref refid="class_worker" prot="public" virt="non-virtual">Worker</basecompoundref>
+        <derivedcompoundref refid="class_queen" prot="public" virt="non-virtual">Queen</derivedcompoundref>
+        <sectiondef kind="private-attrib">
+            <memberdef kind="variable" id="class_warrior_1ad9757eeba69475bbf211040c24e84c63" prot="private" static="no"
+                       mutable="no">
+                <type>int</type>
+                <definition>int Warrior::_foodCapacity</definition>
+                <argsstring></argsstring>
+                <name>_foodCapacity</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="26" column="9" bodyfile="warrior.h" bodystart="26" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="class_warrior_1a44b63505023fc315f976b3876e2f9b61" prot="private" static="no"
+                       mutable="no">
+                <type>int</type>
+                <definition>int Warrior::_currentFood</definition>
+                <argsstring></argsstring>
+                <name>_currentFood</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="27" column="9" bodyfile="warrior.h" bodystart="27" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="class_warrior_1ae1897ab85118e334f8cf2f2f797c114e" prot="private" static="no"
+                       mutable="no">
+                <type>int</type>
+                <definition>int Warrior::_mode</definition>
+                <argsstring></argsstring>
+                <name>_mode</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="28" column="9" bodyfile="warrior.h" bodystart="28" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="class_warrior_1a413a9ee17a99732ddb9d66b4d0278037" prot="private" static="no"
+                       mutable="no">
+                <type>pair&lt; int, int &gt;</type>
+                <definition>pair&lt;int,int&gt; Warrior::_position</definition>
+                <argsstring></argsstring>
+                <name>_position</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="29" column="10" bodyfile="warrior.h" bodystart="29" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="class_warrior_1a38f575ef18bbd71ce20bd12f457db8b4" prot="private" static="no"
+                       mutable="no">
+                <type>pair&lt; int, int &gt;</type>
+                <definition>pair&lt;int,int&gt; Warrior::_prevPos</definition>
+                <argsstring></argsstring>
+                <name>_prevPos</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="30" column="10" bodyfile="warrior.h" bodystart="30" bodyend="-1"/>
+            </memberdef>
+            <memberdef kind="variable" id="class_warrior_1a5bc5947cf97abb73144cd19a40942238" prot="private" static="no"
+                       mutable="no">
+                <type>
+                    <ref refid="class_anthill" kindref="compound">Anthill</ref>
+                    *
+                </type>
+                <definition>Anthill* Warrior::_anthill</definition>
+                <argsstring></argsstring>
+                <name>_anthill</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="31" column="13" bodyfile="warrior.h" bodystart="31" bodyend="-1"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="class_warrior_1a514c253a8e9c3f845f11f344804335d4" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>Warrior::Warrior</definition>
+                <argsstring>()</argsstring>
+                <name>Warrior</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="11" column="5" bodyfile="warrior.cpp" bodystart="3" bodyend="6"/>
+            </memberdef>
+            <memberdef kind="function" id="class_warrior_1ae3e885067a57ca24a89ff083e2d8dfb6" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>Warrior::Warrior</definition>
+                <argsstring>(int capacityWarrior, pair&lt; int, int &gt; position, string name, Anthill &amp;anthill,
+                    CONFIG &amp;config)
+                </argsstring>
+                <name>Warrior</name>
+                <param>
+                    <type>int</type>
+                    <declname>capacityWarrior</declname>
+                </param>
+                <param>
+                    <type>pair&lt; int, int &gt;</type>
+                    <declname>position</declname>
+                </param>
+                <param>
+                    <type>string</type>
+                    <declname>name</declname>
+                </param>
+                <param>
+                    <type>
+                        <ref refid="class_anthill" kindref="compound">Anthill</ref> &amp;
+                    </type>
+                    <declname>anthill</declname>
+                </param>
+                <param>
+                    <type>
+                        <ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref> &amp;
+                    </type>
+                    <declname>config</declname>
+                </param>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="12" column="5" bodyfile="warrior.cpp" bodystart="8" bodyend="23"/>
+            </memberdef>
+            <memberdef kind="function" id="class_warrior_1aab6dc963d8e8e13517e5a9e5fa74aaaa" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type></type>
+                <definition>Warrior::~Warrior</definition>
+                <argsstring>()</argsstring>
+                <name>~Warrior</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="13" column="5" bodyfile="warrior.cpp" bodystart="25" bodyend="28"/>
+            </memberdef>
+            <memberdef kind="function" id="class_warrior_1ad3f4db2c2df1559c6cb1bbd56fbba2e9" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>const pair&lt; int, int &gt;</type>
+                <definition>const pair&lt; int, int &gt; Warrior::getPosition</definition>
+                <argsstring>()</argsstring>
+                <name>getPosition</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="15" column="16" bodyfile="warrior.cpp" bodystart="30" bodyend="33"/>
+            </memberdef>
+            <memberdef kind="function" id="class_warrior_1ae20cc62958d7e76559213d5ef6740242" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>const pair&lt; int, int &gt;</type>
+                <definition>pair&lt; int, int &gt; const Warrior::getPrevPos</definition>
+                <argsstring>()</argsstring>
+                <name>getPrevPos</name>
+                <briefdescription>
+                    <para>
+                        <ref refid="class_warrior_1ae20cc62958d7e76559213d5ef6740242" kindref="member">
+                            Warrior::getPrevPos
+                        </ref>
+                        return the position at the round n-1 of the warrior.
+                    </para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>
+                        <simplesect kind="return">
+                            <para></para>
+                        </simplesect>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="16" column="16" bodyfile="warrior.cpp" bodystart="350" bodyend="352"/>
+            </memberdef>
+            <memberdef kind="function" id="class_warrior_1a3346c2a6bd3aff2e6ce00ccaf8689285" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Warrior::explore</definition>
+                <argsstring>(vector&lt; pair&lt; int, int &gt;&gt; forbiddenPositions)</argsstring>
+                <name>explore</name>
+                <param>
+                    <type>vector&lt; pair&lt; int, int &gt;&gt;</type>
+                    <declname>forbiddenPositions</declname>
+                </param>
+                <briefdescription>
+                    <para>
+                        <ref refid="class_warrior_1a3346c2a6bd3aff2e6ce00ccaf8689285" kindref="member">
+                            Warrior::explore
+                        </ref>
+                        is a moving method for warrior. It is based on random moves.
+                    </para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>
+                        <parameterlist kind="param">
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>forbiddenPositions</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para></para>
+                                </parameterdescription>
+                            </parameteritem>
+                        </parameterlist>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="17" column="10" bodyfile="warrior.cpp" bodystart="39" bodyend="48"/>
+            </memberdef>
+            <memberdef kind="function" id="class_warrior_1a36fabf05ac60a23af9d7f7fb940cfc9d" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Warrior::returnToAnthill</definition>
+                <argsstring>(vector&lt; pair&lt; int, int &gt;&gt; forbiddenPositions)</argsstring>
+                <name>returnToAnthill</name>
+                <param>
+                    <type>vector&lt; pair&lt; int, int &gt;&gt;</type>
+                    <declname>forbiddenPositions</declname>
+                </param>
+                <briefdescription>
+                    <para>
+                        <ref refid="class_warrior_1a36fabf05ac60a23af9d7f7fb940cfc9d" kindref="member">
+                            Warrior::returnToAnthill
+                        </ref>
+                        is a moving method for warrior. It is based on the idea that the warrior know the path.
+                    </para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>
+                        <parameterlist kind="param">
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>forbiddenPositions</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para></para>
+                                </parameterdescription>
+                            </parameteritem>
+                        </parameterlist>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="18" column="10" bodyfile="warrior.cpp" bodystart="54" bodyend="186"/>
+            </memberdef>
+            <memberdef kind="function" id="class_warrior_1a8660e68f16b482e46cb838f627fc94c0" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>int</type>
+                <definition>int Warrior::takeFood</definition>
+                <argsstring>(int availableQuantity)</argsstring>
+                <name>takeFood</name>
+                <param>
+                    <type>int</type>
+                    <declname>availableQuantity</declname>
+                </param>
+                <briefdescription>
+                    <para>
+                        <ref refid="class_warrior_1a8660e68f16b482e46cb838f627fc94c0" kindref="member">
+                            Warrior::takeFood
+                        </ref>
+                        Indicates to the ant that she can take the given quantity of food.
+                    </para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>
+                        <parameterlist kind="param">
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>availableQuantity</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>quantity of food the ant can take, this does not mean that the ant will take
+                                        it all
+                                    </para>
+                                </parameterdescription>
+                            </parameteritem>
+                        </parameterlist>
+                        <simplesect kind="return">
+                            <para>the actual taken quantity</para>
+                        </simplesect>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="19" column="9" bodyfile="warrior.cpp" bodystart="194" bodyend="215"/>
+            </memberdef>
+            <memberdef kind="function" id="class_warrior_1aa3620b12e2a5e0c0edc5ce5a2cb43d02" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Warrior::attack</definition>
+                <argsstring>()</argsstring>
+                <name>attack</name>
+                <briefdescription>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="20" column="10" bodyfile="warrior.cpp" bodystart="217" bodyend="220"/>
+            </memberdef>
+            <memberdef kind="function" id="class_warrior_1aa48d40a851d3a3790eb1b980e50fd255" prot="public" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>void</type>
+                <definition>void Warrior::giveFood</definition>
+                <argsstring>()</argsstring>
+                <name>giveFood</name>
+                <briefdescription>
+                    <para>
+                        <ref refid="class_warrior_1aa48d40a851d3a3790eb1b980e50fd255" kindref="member">
+                            Warrior::giveFood
+                        </ref>
+                        is an interaction method that warriors use to put food in the <ref refid="class_anthill"
+                                                                                           kindref="compound">
+                        Anthill</ref>.
+                    </para>
+                </briefdescription>
+                <detaileddescription>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="21" column="10" bodyfile="warrior.cpp" bodystart="225" bodyend="231"/>
+            </memberdef>
+            <memberdef kind="function" id="class_warrior_1a780a0b83407f54b3436b1b4be5c144ed" prot="public" static="no"
+                       const="yes" explicit="no" inline="no" virt="non-virtual">
+                <type>int</type>
+                <definition>int Warrior::getMode</definition>
+                <argsstring>() const</argsstring>
+                <name>getMode</name>
+                <briefdescription>
+                    <para>
+                        <ref refid="class_warrior_1a780a0b83407f54b3436b1b4be5c144ed" kindref="member">
+                            Warrior::getMode
+                        </ref>
+                        mode = 1 : Exploration mode, the ant is looking for food mode = 2 : Return to anthill, the ant
+                        is carring food and taking it back to the anthill.
+                    </para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>
+                        <simplesect kind="return">
+                            <para>current mode</para>
+                        </simplesect>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="22" column="9" bodyfile="warrior.cpp" bodystart="324" bodyend="327"/>
+            </memberdef>
+        </sectiondef>
+        <sectiondef kind="private-func">
+            <memberdef kind="function" id="class_warrior_1ab125312bf657eb9c7e9c4e713bbbafcd" prot="private" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool Warrior::checkPosition</definition>
+                <argsstring>(vector&lt; pair&lt; int, int &gt;&gt; forbiddenPositions, int posX, int posY)</argsstring>
+                <name>checkPosition</name>
+                <param>
+                    <type>vector&lt; pair&lt; int, int &gt;&gt;</type>
+                    <declname>forbiddenPositions</declname>
+                </param>
+                <param>
+                    <type>int</type>
+                    <declname>posX</declname>
+                </param>
+                <param>
+                    <type>int</type>
+                    <declname>posY</declname>
+                </param>
+                <briefdescription>
+                    <para>Warrior::checkPosition Iterate through the forbidden positions to check if the given X and Y
+                        are available.
+                    </para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>
+                        <parameterlist kind="param">
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>forbiddenPositions</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>list of impossible move for the ant</para>
+                                </parameterdescription>
+                            </parameteritem>
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>posX</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>the X coordinate you want to check</para>
+                                </parameterdescription>
+                            </parameteritem>
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>posY</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>the Y coordinate you want to check</para>
+                                </parameterdescription>
+                            </parameteritem>
+                        </parameterlist>
+                        <simplesect kind="return">
+                            <para>true if the position is available, false if not</para>
+                        </simplesect>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="34" column="10" bodyfile="warrior.cpp" bodystart="305" bodyend="316"/>
+            </memberdef>
+            <memberdef kind="function" id="class_warrior_1addb38f2991fb13a6d6919539ff0b5dcf" prot="private" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>pair&lt; int, int &gt;</type>
+                <definition>pair&lt; int, int &gt; Warrior::getRandomPos</definition>
+                <argsstring>(vector&lt; pair&lt; int, int &gt;&gt; forbiddenPositions, int prevX, int prevY, int posX,
+                    int posY)
+                </argsstring>
+                <name>getRandomPos</name>
+                <param>
+                    <type>vector&lt; pair&lt; int, int &gt;&gt;</type>
+                    <declname>forbiddenPositions</declname>
+                </param>
+                <param>
+                    <type>int</type>
+                    <declname>prevX</declname>
+                </param>
+                <param>
+                    <type>int</type>
+                    <declname>prevY</declname>
+                </param>
+                <param>
+                    <type>int</type>
+                    <declname>posX</declname>
+                </param>
+                <param>
+                    <type>int</type>
+                    <declname>posY</declname>
+                </param>
+                <briefdescription>
+                    <para>Warrior::getRandomPos Gives a random position considering the previous position of the ant,
+                        the current position and the forbidden.
+                    </para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>
+                        <parameterlist kind="param">
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>forbiddenPositions</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para></para>
+                                </parameterdescription>
+                            </parameteritem>
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>prevX</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para></para>
+                                </parameterdescription>
+                            </parameteritem>
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>prevY</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para></para>
+                                </parameterdescription>
+                            </parameteritem>
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>posX</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para></para>
+                                </parameterdescription>
+                            </parameteritem>
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>posY</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para></para>
+                                </parameterdescription>
+                            </parameteritem>
+                        </parameterlist>
+                        <simplesect kind="return">
+                            <para>a proposition of available position</para>
+                        </simplesect>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="35" column="10" bodyfile="warrior.cpp" bodystart="242" bodyend="296"/>
+            </memberdef>
+            <memberdef kind="function" id="class_warrior_1a9fa41656c1f5e79d32799eb6df913ad6" prot="private" static="no"
+                       const="no" explicit="no" inline="no" virt="non-virtual">
+                <type>bool</type>
+                <definition>bool Warrior::isNextTo</definition>
+                <argsstring>(int antX, int antY, int objX, int objY)</argsstring>
+                <name>isNextTo</name>
+                <param>
+                    <type>int</type>
+                    <declname>antX</declname>
+                </param>
+                <param>
+                    <type>int</type>
+                    <declname>antY</declname>
+                </param>
+                <param>
+                    <type>int</type>
+                    <declname>objX</declname>
+                </param>
+                <param>
+                    <type>int</type>
+                    <declname>objY</declname>
+                </param>
+                <briefdescription>
+                    <para>Orchestrator::isNextTo tell if your ant is next to an object.</para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>
+                        <parameterlist kind="param">
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>myX</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para></para>
+                                </parameterdescription>
+                            </parameteritem>
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>myY</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para></para>
+                                </parameterdescription>
+                            </parameteritem>
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>objX</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para></para>
+                                </parameterdescription>
+                            </parameteritem>
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>objY</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para></para>
+                                </parameterdescription>
+                            </parameteritem>
+                        </parameterlist>
+                        <simplesect kind="return">
+                            <para>true</para>
+                        </simplesect>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+                </inbodydescription>
+                <location file="warrior.h" line="36" column="10" bodyfile="warrior.cpp" bodystart="337" bodyend="344"/>
+            </memberdef>
+        </sectiondef>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="26" column="9" bodyfile="warrior.h" bodystart="26" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_warrior_1a44b63505023fc315f976b3876e2f9b61" prot="private" static="no" mutable="no">
-        <type>int</type>
-        <definition>int Warrior::_currentFood</definition>
-        <argsstring></argsstring>
-        <name>_currentFood</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="27" column="9" bodyfile="warrior.h" bodystart="27" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_warrior_1ae1897ab85118e334f8cf2f2f797c114e" prot="private" static="no" mutable="no">
-        <type>int</type>
-        <definition>int Warrior::_mode</definition>
-        <argsstring></argsstring>
-        <name>_mode</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="28" column="9" bodyfile="warrior.h" bodystart="28" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_warrior_1a413a9ee17a99732ddb9d66b4d0278037" prot="private" static="no" mutable="no">
-        <type>pair&lt; int, int &gt;</type>
-        <definition>pair&lt;int,int&gt; Warrior::_position</definition>
-        <argsstring></argsstring>
-        <name>_position</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="29" column="10" bodyfile="warrior.h" bodystart="29" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_warrior_1a38f575ef18bbd71ce20bd12f457db8b4" prot="private" static="no" mutable="no">
-        <type>pair&lt; int, int &gt;</type>
-        <definition>pair&lt;int,int&gt; Warrior::_prevPos</definition>
-        <argsstring></argsstring>
-        <name>_prevPos</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="30" column="10" bodyfile="warrior.h" bodystart="30" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_warrior_1a5bc5947cf97abb73144cd19a40942238" prot="private" static="no" mutable="no">
-        <type><ref refid="class_anthill" kindref="compound">Anthill</ref> *</type>
-        <definition>Anthill* Warrior::_anthill</definition>
-        <argsstring></argsstring>
-        <name>_anthill</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="31" column="13" bodyfile="warrior.h" bodystart="31" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_warrior_1a514c253a8e9c3f845f11f344804335d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Warrior::Warrior</definition>
-        <argsstring>()</argsstring>
-        <name>Warrior</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="11" column="5" bodyfile="warrior.cpp" bodystart="3" bodyend="6"/>
-      </memberdef>
-      <memberdef kind="function" id="class_warrior_1ae3e885067a57ca24a89ff083e2d8dfb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Warrior::Warrior</definition>
-        <argsstring>(int capacityWarrior, pair&lt; int, int &gt; position, string name, Anthill &amp;anthill, CONFIG &amp;config)</argsstring>
-        <name>Warrior</name>
-        <param>
-          <type>int</type>
-          <declname>capacityWarrior</declname>
-        </param>
-        <param>
-          <type>pair&lt; int, int &gt;</type>
-          <declname>position</declname>
-        </param>
-        <param>
-          <type>string</type>
-          <declname>name</declname>
-        </param>
-        <param>
-          <type><ref refid="class_anthill" kindref="compound">Anthill</ref> &amp;</type>
-          <declname>anthill</declname>
-        </param>
-        <param>
-          <type><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref> &amp;</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="12" column="5" bodyfile="warrior.cpp" bodystart="8" bodyend="23"/>
-      </memberdef>
-      <memberdef kind="function" id="class_warrior_1aab6dc963d8e8e13517e5a9e5fa74aaaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Warrior::~Warrior</definition>
-        <argsstring>()</argsstring>
-        <name>~Warrior</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="13" column="5" bodyfile="warrior.cpp" bodystart="25" bodyend="28"/>
-      </memberdef>
-      <memberdef kind="function" id="class_warrior_1ad3f4db2c2df1559c6cb1bbd56fbba2e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const pair&lt; int, int &gt;</type>
-        <definition>const pair&lt; int, int &gt; Warrior::getPosition</definition>
-        <argsstring>()</argsstring>
-        <name>getPosition</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="15" column="16" bodyfile="warrior.cpp" bodystart="30" bodyend="33"/>
-      </memberdef>
-      <memberdef kind="function" id="class_warrior_1ae20cc62958d7e76559213d5ef6740242" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const pair&lt; int, int &gt;</type>
-        <definition>pair&lt; int, int &gt; const Warrior::getPrevPos</definition>
-        <argsstring>()</argsstring>
-        <name>getPrevPos</name>
-        <briefdescription>
-<para><ref refid="class_warrior_1ae20cc62958d7e76559213d5ef6740242" kindref="member">Warrior::getPrevPos</ref> return the position at the round n-1 of the warrior. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para></para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="16" column="16" bodyfile="warrior.cpp" bodystart="350" bodyend="352"/>
-      </memberdef>
-      <memberdef kind="function" id="class_warrior_1a3346c2a6bd3aff2e6ce00ccaf8689285" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Warrior::explore</definition>
-        <argsstring>(vector&lt; pair&lt; int, int &gt;&gt; forbiddenPositions)</argsstring>
-        <name>explore</name>
-        <param>
-          <type>vector&lt; pair&lt; int, int &gt;&gt;</type>
-          <declname>forbiddenPositions</declname>
-        </param>
-        <briefdescription>
-<para><ref refid="class_warrior_1a3346c2a6bd3aff2e6ce00ccaf8689285" kindref="member">Warrior::explore</ref> is a moving method for warrior. It is based on random moves. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>forbiddenPositions</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="17" column="10" bodyfile="warrior.cpp" bodystart="39" bodyend="48"/>
-      </memberdef>
-      <memberdef kind="function" id="class_warrior_1a36fabf05ac60a23af9d7f7fb940cfc9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Warrior::returnToAnthill</definition>
-        <argsstring>(vector&lt; pair&lt; int, int &gt;&gt; forbiddenPositions)</argsstring>
-        <name>returnToAnthill</name>
-        <param>
-          <type>vector&lt; pair&lt; int, int &gt;&gt;</type>
-          <declname>forbiddenPositions</declname>
-        </param>
-        <briefdescription>
-<para><ref refid="class_warrior_1a36fabf05ac60a23af9d7f7fb940cfc9d" kindref="member">Warrior::returnToAnthill</ref> is a moving method for warrior. It is based on the idea that the warrior know the path. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>forbiddenPositions</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="18" column="10" bodyfile="warrior.cpp" bodystart="54" bodyend="186"/>
-      </memberdef>
-      <memberdef kind="function" id="class_warrior_1a8660e68f16b482e46cb838f627fc94c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int Warrior::takeFood</definition>
-        <argsstring>(int availableQuantity)</argsstring>
-        <name>takeFood</name>
-        <param>
-          <type>int</type>
-          <declname>availableQuantity</declname>
-        </param>
-        <briefdescription>
-<para><ref refid="class_warrior_1a8660e68f16b482e46cb838f627fc94c0" kindref="member">Warrior::takeFood</ref> Indicates to the ant that she can take the given quantity of food. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>availableQuantity</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>quantity of food the ant can take, this does not mean that the ant will take it all </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>the actual taken quantity </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="19" column="9" bodyfile="warrior.cpp" bodystart="194" bodyend="215"/>
-      </memberdef>
-      <memberdef kind="function" id="class_warrior_1aa3620b12e2a5e0c0edc5ce5a2cb43d02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Warrior::attack</definition>
-        <argsstring>()</argsstring>
-        <name>attack</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="20" column="10" bodyfile="warrior.cpp" bodystart="217" bodyend="220"/>
-      </memberdef>
-      <memberdef kind="function" id="class_warrior_1aa48d40a851d3a3790eb1b980e50fd255" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Warrior::giveFood</definition>
-        <argsstring>()</argsstring>
-        <name>giveFood</name>
-        <briefdescription>
-<para><ref refid="class_warrior_1aa48d40a851d3a3790eb1b980e50fd255" kindref="member">Warrior::giveFood</ref> is an interaction method that warriors use to put food in the <ref refid="class_anthill" kindref="compound">Anthill</ref>. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="21" column="10" bodyfile="warrior.cpp" bodystart="225" bodyend="231"/>
-      </memberdef>
-      <memberdef kind="function" id="class_warrior_1a780a0b83407f54b3436b1b4be5c144ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int Warrior::getMode</definition>
-        <argsstring>() const</argsstring>
-        <name>getMode</name>
-        <briefdescription>
-<para><ref refid="class_warrior_1a780a0b83407f54b3436b1b4be5c144ed" kindref="member">Warrior::getMode</ref> mode = 1 : Exploration mode, the ant is looking for food mode = 2 : Return to anthill, the ant is carring food and taking it back to the anthill. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>current mode </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="22" column="9" bodyfile="warrior.cpp" bodystart="324" bodyend="327"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-func">
-      <memberdef kind="function" id="class_warrior_1ab125312bf657eb9c7e9c4e713bbbafcd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Warrior::checkPosition</definition>
-        <argsstring>(vector&lt; pair&lt; int, int &gt;&gt; forbiddenPositions, int posX, int posY)</argsstring>
-        <name>checkPosition</name>
-        <param>
-          <type>vector&lt; pair&lt; int, int &gt;&gt;</type>
-          <declname>forbiddenPositions</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>posX</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>posY</declname>
-        </param>
-        <briefdescription>
-<para>Warrior::checkPosition Iterate through the forbidden positions to check if the given X and Y are available. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>forbiddenPositions</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>list of impossible move for the ant </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>posX</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>the X coordinate you want to check </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>posY</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>the Y coordinate you want to check </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>true if the position is available, false if not </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="34" column="10" bodyfile="warrior.cpp" bodystart="305" bodyend="316"/>
-      </memberdef>
-      <memberdef kind="function" id="class_warrior_1addb38f2991fb13a6d6919539ff0b5dcf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>pair&lt; int, int &gt;</type>
-        <definition>pair&lt; int, int &gt; Warrior::getRandomPos</definition>
-        <argsstring>(vector&lt; pair&lt; int, int &gt;&gt; forbiddenPositions, int prevX, int prevY, int posX, int posY)</argsstring>
-        <name>getRandomPos</name>
-        <param>
-          <type>vector&lt; pair&lt; int, int &gt;&gt;</type>
-          <declname>forbiddenPositions</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>prevX</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>prevY</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>posX</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>posY</declname>
-        </param>
-        <briefdescription>
-<para>Warrior::getRandomPos Gives a random position considering the previous position of the ant, the current position and the forbidden. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>forbiddenPositions</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>prevX</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>prevY</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>posX</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>posY</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>a proposition of available position </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="35" column="10" bodyfile="warrior.cpp" bodystart="242" bodyend="296"/>
-      </memberdef>
-      <memberdef kind="function" id="class_warrior_1a9fa41656c1f5e79d32799eb6df913ad6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Warrior::isNextTo</definition>
-        <argsstring>(int antX, int antY, int objX, int objY)</argsstring>
-        <name>isNextTo</name>
-        <param>
-          <type>int</type>
-          <declname>antX</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>antY</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>objX</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>objY</declname>
-        </param>
-        <briefdescription>
-<para>Orchestrator::isNextTo tell if your ant is next to an object. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>myX</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>myY</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>objX</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>objY</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>true </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="36" column="10" bodyfile="warrior.cpp" bodystart="337" bodyend="344"/>
-      </memberdef>
-      </sectiondef>
-    <briefdescription>
-    </briefdescription>
-    <detaileddescription>
-    </detaileddescription>
-    <inheritancegraph>
-      <node id="4">
-        <label>Egg</label>
-        <link refid="class_egg"/>
-      </node>
-      <node id="1">
-        <label>Warrior</label>
-        <link refid="class_warrior"/>
-        <childnode refid="2" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>Queen</label>
-        <link refid="class_queen"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>Worker</label>
-        <link refid="class_worker"/>
-        <childnode refid="3" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>Larva</label>
-        <link refid="class_larva"/>
-        <childnode refid="4" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="4">
-        <label>Egg</label>
-        <link refid="class_egg"/>
-      </node>
-      <node id="1">
-        <label>Warrior</label>
-        <link refid="class_warrior"/>
-        <childnode refid="2" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>Worker</label>
-        <link refid="class_worker"/>
-        <childnode refid="3" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>Larva</label>
-        <link refid="class_larva"/>
-        <childnode refid="4" relation="public-inheritance">
-        </childnode>
-      </node>
-    </collaborationgraph>
-    <location file="warrior.h" line="7" column="1" bodyfile="warrior.h" bodystart="8" bodyend="38"/>
-    <listofallmembers>
-      <member refid="class_warrior_1a5bc5947cf97abb73144cd19a40942238" prot="private" virt="non-virtual"><scope>Warrior</scope><name>_anthill</name></member>
-      <member refid="class_egg_1a5943a93f9bb3c8e785ae5ca491776440" prot="protected" virt="non-virtual"><scope>Warrior</scope><name>_currentAge</name></member>
-      <member refid="class_warrior_1a44b63505023fc315f976b3876e2f9b61" prot="private" virt="non-virtual"><scope>Warrior</scope><name>_currentFood</name></member>
-      <member refid="class_larva_1a6c110f254d97b23fface50ba929dc316" prot="protected" virt="non-virtual"><scope>Warrior</scope><name>_currentHealth</name></member>
-      <member refid="class_warrior_1ad9757eeba69475bbf211040c24e84c63" prot="private" virt="non-virtual"><scope>Warrior</scope><name>_foodCapacity</name></member>
-      <member refid="class_larva_1aff0c81a8dda39bbb4ab10553d7c47c69" prot="protected" virt="non-virtual"><scope>Warrior</scope><name>_foodCons</name></member>
-      <member refid="class_larva_1a8c51a31397bcc72b39b5b79e5d5dfc98" prot="protected" virt="non-virtual"><scope>Warrior</scope><name>_maxHealth</name></member>
-      <member refid="class_warrior_1ae1897ab85118e334f8cf2f2f797c114e" prot="private" virt="non-virtual"><scope>Warrior</scope><name>_mode</name></member>
-      <member refid="class_egg_1a57ca36eb21771f70b66b52f3273c1479" prot="protected" virt="non-virtual"><scope>Warrior</scope><name>_name</name></member>
-      <member refid="class_warrior_1a413a9ee17a99732ddb9d66b4d0278037" prot="private" virt="non-virtual"><scope>Warrior</scope><name>_position</name></member>
-      <member refid="class_warrior_1a38f575ef18bbd71ce20bd12f457db8b4" prot="private" virt="non-virtual"><scope>Warrior</scope><name>_prevPos</name></member>
-      <member refid="class_warrior_1aa3620b12e2a5e0c0edc5ce5a2cb43d02" prot="public" virt="non-virtual"><scope>Warrior</scope><name>attack</name></member>
-      <member refid="class_warrior_1ab125312bf657eb9c7e9c4e713bbbafcd" prot="private" virt="non-virtual"><scope>Warrior</scope><name>checkPosition</name></member>
-      <member refid="class_egg_1a7bc49a621a55e7236415ad5da41d3b54" prot="public" virt="non-virtual"><scope>Warrior</scope><name>Egg</name></member>
-      <member refid="class_egg_1a90ffc2d1e1f8bc43e871e47e1d1f80aa" prot="public" virt="non-virtual"><scope>Warrior</scope><name>Egg</name></member>
-      <member refid="class_warrior_1a3346c2a6bd3aff2e6ce00ccaf8689285" prot="public" virt="non-virtual"><scope>Warrior</scope><name>explore</name></member>
-      <member refid="class_egg_1a56270a17b03c82f769bb97bbbabd91f5" prot="public" virt="non-virtual"><scope>Warrior</scope><name>getCurrentAge</name></member>
-      <member refid="class_larva_1aa02ca1d9e4b69832742214094e48cbd0" prot="public" virt="non-virtual"><scope>Warrior</scope><name>getCurrentHealth</name></member>
-      <member refid="class_warrior_1a780a0b83407f54b3436b1b4be5c144ed" prot="public" virt="non-virtual"><scope>Warrior</scope><name>getMode</name></member>
-      <member refid="class_egg_1ad6892cf4ac2739b9e8346db7a541ce1f" prot="public" virt="non-virtual"><scope>Warrior</scope><name>getName</name></member>
-      <member refid="class_warrior_1ad3f4db2c2df1559c6cb1bbd56fbba2e9" prot="public" virt="non-virtual"><scope>Warrior</scope><name>getPosition</name></member>
-      <member refid="class_warrior_1ae20cc62958d7e76559213d5ef6740242" prot="public" virt="non-virtual"><scope>Warrior</scope><name>getPrevPos</name></member>
-      <member refid="class_warrior_1addb38f2991fb13a6d6919539ff0b5dcf" prot="private" virt="non-virtual"><scope>Warrior</scope><name>getRandomPos</name></member>
-      <member refid="class_warrior_1aa48d40a851d3a3790eb1b980e50fd255" prot="public" virt="non-virtual"><scope>Warrior</scope><name>giveFood</name></member>
-      <member refid="class_larva_1adbe862633e03ac3ec06230353b222767" prot="public" virt="non-virtual"><scope>Warrior</scope><name>heal</name></member>
-      <member refid="class_egg_1a6d90db3b102903ce9e53f07a16c7403d" prot="public" virt="non-virtual"><scope>Warrior</scope><name>increaseAge</name></member>
-      <member refid="class_warrior_1a9fa41656c1f5e79d32799eb6df913ad6" prot="private" virt="non-virtual"><scope>Warrior</scope><name>isNextTo</name></member>
-      <member refid="class_larva_1a4b111b5a13f5d3b1fb7121ac79824fe4" prot="public" virt="non-virtual"><scope>Warrior</scope><name>Larva</name></member>
-      <member refid="class_larva_1a34766742688547c5295f578da74ac080" prot="public" virt="non-virtual"><scope>Warrior</scope><name>Larva</name></member>
-      <member refid="class_warrior_1a36fabf05ac60a23af9d7f7fb940cfc9d" prot="public" virt="non-virtual"><scope>Warrior</scope><name>returnToAnthill</name></member>
-      <member refid="class_larva_1aa98638a241743fe9b0eab9267593e143" prot="public" virt="non-virtual"><scope>Warrior</scope><name>starve</name></member>
-      <member refid="class_warrior_1a8660e68f16b482e46cb838f627fc94c0" prot="public" virt="non-virtual"><scope>Warrior</scope><name>takeFood</name></member>
-      <member refid="class_warrior_1a514c253a8e9c3f845f11f344804335d4" prot="public" virt="non-virtual"><scope>Warrior</scope><name>Warrior</name></member>
-      <member refid="class_warrior_1ae3e885067a57ca24a89ff083e2d8dfb6" prot="public" virt="non-virtual"><scope>Warrior</scope><name>Warrior</name></member>
-      <member refid="class_worker_1a3754817df06ffe220f7f0d903c78ccac" prot="public" virt="non-virtual"><scope>Warrior</scope><name>Worker</name></member>
-      <member refid="class_worker_1a73f65e41a97e6f995fad96aabca5b05d" prot="public" virt="non-virtual"><scope>Warrior</scope><name>Worker</name></member>
-      <member refid="class_egg_1a0eb6ce527494b7f97f362b6eb6b7f11d" prot="public" virt="non-virtual"><scope>Warrior</scope><name>~Egg</name></member>
-      <member refid="class_larva_1a1f7555c8d84576eda0d3dbfc8bb88c2f" prot="public" virt="non-virtual"><scope>Warrior</scope><name>~Larva</name></member>
-      <member refid="class_warrior_1aab6dc963d8e8e13517e5a9e5fa74aaaa" prot="public" virt="non-virtual"><scope>Warrior</scope><name>~Warrior</name></member>
-      <member refid="class_worker_1aa8e4543ef1e93fd9d884269ba30c5bfe" prot="public" virt="non-virtual"><scope>Warrior</scope><name>~Worker</name></member>
-    </listofallmembers>
-  </compounddef>
+        <inheritancegraph>
+            <node id="4">
+                <label>Egg</label>
+                <link refid="class_egg"/>
+            </node>
+            <node id="1">
+                <label>Warrior</label>
+                <link refid="class_warrior"/>
+                <childnode refid="2" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="5">
+                <label>Queen</label>
+                <link refid="class_queen"/>
+                <childnode refid="1" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="2">
+                <label>Worker</label>
+                <link refid="class_worker"/>
+                <childnode refid="3" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="3">
+                <label>Larva</label>
+                <link refid="class_larva"/>
+                <childnode refid="4" relation="public-inheritance">
+                </childnode>
+            </node>
+        </inheritancegraph>
+        <collaborationgraph>
+            <node id="4">
+                <label>Egg</label>
+                <link refid="class_egg"/>
+            </node>
+            <node id="1">
+                <label>Warrior</label>
+                <link refid="class_warrior"/>
+                <childnode refid="2" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="2">
+                <label>Worker</label>
+                <link refid="class_worker"/>
+                <childnode refid="3" relation="public-inheritance">
+                </childnode>
+            </node>
+            <node id="3">
+                <label>Larva</label>
+                <link refid="class_larva"/>
+                <childnode refid="4" relation="public-inheritance">
+                </childnode>
+            </node>
+        </collaborationgraph>
+        <location file="warrior.h" line="7" column="1" bodyfile="warrior.h" bodystart="8" bodyend="38"/>
+        <listofallmembers>
+            <member refid="class_warrior_1a5bc5947cf97abb73144cd19a40942238" prot="private" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>_anthill</name>
+            </member>
+            <member refid="class_egg_1a5943a93f9bb3c8e785ae5ca491776440" prot="protected" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>_currentAge</name>
+            </member>
+            <member refid="class_warrior_1a44b63505023fc315f976b3876e2f9b61" prot="private" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>_currentFood</name>
+            </member>
+            <member refid="class_larva_1a6c110f254d97b23fface50ba929dc316" prot="protected" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>_currentHealth</name>
+            </member>
+            <member refid="class_warrior_1ad9757eeba69475bbf211040c24e84c63" prot="private" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>_foodCapacity</name>
+            </member>
+            <member refid="class_larva_1aff0c81a8dda39bbb4ab10553d7c47c69" prot="protected" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>_foodCons</name>
+            </member>
+            <member refid="class_larva_1a8c51a31397bcc72b39b5b79e5d5dfc98" prot="protected" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>_maxHealth</name>
+            </member>
+            <member refid="class_warrior_1ae1897ab85118e334f8cf2f2f797c114e" prot="private" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>_mode</name>
+            </member>
+            <member refid="class_egg_1a57ca36eb21771f70b66b52f3273c1479" prot="protected" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>_name</name>
+            </member>
+            <member refid="class_warrior_1a413a9ee17a99732ddb9d66b4d0278037" prot="private" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>_position</name>
+            </member>
+            <member refid="class_warrior_1a38f575ef18bbd71ce20bd12f457db8b4" prot="private" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>_prevPos</name>
+            </member>
+            <member refid="class_warrior_1aa3620b12e2a5e0c0edc5ce5a2cb43d02" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>attack</name>
+            </member>
+            <member refid="class_warrior_1ab125312bf657eb9c7e9c4e713bbbafcd" prot="private" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>checkPosition</name>
+            </member>
+            <member refid="class_egg_1a7bc49a621a55e7236415ad5da41d3b54" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>Egg</name>
+            </member>
+            <member refid="class_egg_1a90ffc2d1e1f8bc43e871e47e1d1f80aa" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>Egg</name>
+            </member>
+            <member refid="class_warrior_1a3346c2a6bd3aff2e6ce00ccaf8689285" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>explore</name>
+            </member>
+            <member refid="class_egg_1a56270a17b03c82f769bb97bbbabd91f5" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>getCurrentAge</name>
+            </member>
+            <member refid="class_larva_1aa02ca1d9e4b69832742214094e48cbd0" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>getCurrentHealth</name>
+            </member>
+            <member refid="class_warrior_1a780a0b83407f54b3436b1b4be5c144ed" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>getMode</name>
+            </member>
+            <member refid="class_egg_1ad6892cf4ac2739b9e8346db7a541ce1f" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>getName</name>
+            </member>
+            <member refid="class_warrior_1ad3f4db2c2df1559c6cb1bbd56fbba2e9" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>getPosition</name>
+            </member>
+            <member refid="class_warrior_1ae20cc62958d7e76559213d5ef6740242" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>getPrevPos</name>
+            </member>
+            <member refid="class_warrior_1addb38f2991fb13a6d6919539ff0b5dcf" prot="private" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>getRandomPos</name>
+            </member>
+            <member refid="class_warrior_1aa48d40a851d3a3790eb1b980e50fd255" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>giveFood</name>
+            </member>
+            <member refid="class_larva_1adbe862633e03ac3ec06230353b222767" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>heal</name>
+            </member>
+            <member refid="class_egg_1a6d90db3b102903ce9e53f07a16c7403d" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>increaseAge</name>
+            </member>
+            <member refid="class_warrior_1a9fa41656c1f5e79d32799eb6df913ad6" prot="private" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>isNextTo</name>
+            </member>
+            <member refid="class_larva_1a4b111b5a13f5d3b1fb7121ac79824fe4" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>Larva</name>
+            </member>
+            <member refid="class_larva_1a34766742688547c5295f578da74ac080" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>Larva</name>
+            </member>
+            <member refid="class_warrior_1a36fabf05ac60a23af9d7f7fb940cfc9d" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>returnToAnthill</name>
+            </member>
+            <member refid="class_larva_1aa98638a241743fe9b0eab9267593e143" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>starve</name>
+            </member>
+            <member refid="class_warrior_1a8660e68f16b482e46cb838f627fc94c0" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>takeFood</name>
+            </member>
+            <member refid="class_warrior_1a514c253a8e9c3f845f11f344804335d4" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>Warrior</name>
+            </member>
+            <member refid="class_warrior_1ae3e885067a57ca24a89ff083e2d8dfb6" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>Warrior</name>
+            </member>
+            <member refid="class_worker_1a3754817df06ffe220f7f0d903c78ccac" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>Worker</name>
+            </member>
+            <member refid="class_worker_1a73f65e41a97e6f995fad96aabca5b05d" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>Worker</name>
+            </member>
+            <member refid="class_egg_1a0eb6ce527494b7f97f362b6eb6b7f11d" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>~Egg</name>
+            </member>
+            <member refid="class_larva_1a1f7555c8d84576eda0d3dbfc8bb88c2f" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>~Larva</name>
+            </member>
+            <member refid="class_warrior_1aab6dc963d8e8e13517e5a9e5fa74aaaa" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>~Warrior</name>
+            </member>
+            <member refid="class_worker_1aa8e4543ef1e93fd9d884269ba30c5bfe" prot="public" virt="non-virtual">
+                <scope>Warrior</scope>
+                <name>~Worker</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
 </doxygen>

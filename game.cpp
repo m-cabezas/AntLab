@@ -2,6 +2,9 @@
 
 #include <windows.h>
 
+/***
+ * @brief default constructor of game
+ */
 Game::Game()
 {
     _config = {
