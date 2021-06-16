@@ -1,5 +1,8 @@
 #include "warrior.h"
 
+/***
+ * @brief defautl constructor of warrior
+ */
 Warrior::Warrior()
 {
 
@@ -22,11 +25,18 @@ Warrior::Warrior(pair<int,int> position, string name, Anthill* anthill, CONFIG& 
     _currentHealth = config.lifeWarrior;
 }
 
+/***
+ * @brief default destructor of warrior
+ */
 Warrior::~Warrior()
 {
     //cout << "Oh no ! Warrior " << _name << " left us for another world ! :-(" << endl;
 }
 
+/***
+ * @brief method used to access the position of the current warrior
+ * @return
+ */
 const pair<int,int> Warrior::getPosition()
 {
     return _position;
@@ -42,6 +52,10 @@ void Warrior::setCurrentFood(unsigned int food)
     _currentFood = food;
 }
 
+/**
+ * @brief moving method for warrior based on random moves
+ * @param forbiddenPositions
+ */
 void Warrior::explore(vector<pair<int,int>> forbiddenPositions)
 {
     //cout << "Warrior " << _name << " is exploring" << endl;
@@ -54,7 +68,7 @@ void Warrior::explore(vector<pair<int,int>> forbiddenPositions)
 }
 
 /**
- * @brief Warrior::returnToAnthill is a moving method for warrior. It is based on the idea that the warrior know the path.
+ * @brief moving method for warrior based on the idea that the warrior know the path
  * @param forbiddenPositions
  */
 void Warrior::returnToAnthill(vector<pair<int,int>> forbiddenPositions)
@@ -193,7 +207,7 @@ void Warrior::returnToAnthill(vector<pair<int,int>> forbiddenPositions)
 
 
 /**
- * @brief Warrior::takeFood Indicates to the ant that she can take the given quantity of food
+ * @brief indicates to the ant that she can take the given quantity of food
  * @param availableQuantity quantity of food the ant can take, this does not mean that the ant will take it all
  * @return the actual taken quantity
  */
@@ -226,7 +240,7 @@ void Warrior::attack()
 }
 
 /**
- * @brief Warrior::giveFood is an interaction method that warriors use to put food in the Anthill
+ * @brief interaction method that warriors use to put food in the Anthill
  */
 void Warrior::giveFood()
 {
@@ -237,7 +251,7 @@ void Warrior::giveFood()
 }
 
 /**
- * @brief Warrior::getRandomPos Gives a random position considering the previous position of the ant, the current position and the forbidden
+ * @brief gives a random position considering the previous position of the ant, the current position and the forbidden
  * @param forbiddenPositions
  * @param prevX
  * @param prevY
@@ -303,7 +317,7 @@ pair<int,int> Warrior::getRandomPos(vector<pair<int, int>> forbiddenPositions, i
 }
 
 /**
- * @brief Warrior::checkPosition Iterate through the forbidden positions to check if the given X and Y are available
+ * @brief iterate through the forbidden positions to check if the given X and Y are available
  * @param forbiddenPositions list of impossible move for the ant
  * @param posX the X coordinate you want to check
  * @param posY the Y coordinate you want to check
@@ -322,7 +336,7 @@ bool Warrior::checkPosition(vector<pair<int, int>> forbiddenPositions, int posX,
 }
 
 /**
- * @brief Warrior::getMode
+ * @brief method used to access the movement mode of the warrior
  *  mode = 1 : Exploration mode, the ant is looking for food
  *  mode = 2 : Return to anthill, the ant is carring food and taking it back to the anthill
  * @return current mode
@@ -333,7 +347,7 @@ int Warrior::getMode() const
 }
 
 /**
- * @brief Orchestrator::isNextTo tell if your ant is next to an object
+ * @brief methods used to tell if your ant is next to an object
  * @param myX
  * @param myY
  * @param objX
@@ -350,8 +364,8 @@ bool Warrior::isNextTo(int antX, int antY, int objX, int objY)
 }
 
 /**
- * @brief Warrior::getPrevPos return the position at the round n-1 of the warrior
- * @return
+ * @brief return the position at the round n-1 of the warrior
+ * @return return the previous position as pair<int,int>
  */
 pair<int,int> const Warrior::getPrevPos() {
     return _prevPos;

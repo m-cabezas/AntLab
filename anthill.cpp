@@ -1,10 +1,22 @@
 #include "anthill.h"
 
+/***
+ * @brief default constructor of anthill
+ */
 Anthill::Anthill()
 {
 
 }
 
+/**
+ * @brief main constructor of Anthill
+ * @param config
+ * @param maxPop
+ * @param maxFood
+ * @param position
+ * @param width
+ * @param height
+ */
 Anthill::Anthill(CONFIG &config, int maxPop, int maxFood, pair<int,int> position, int width, int height)
 {
     _config = config;
@@ -18,6 +30,9 @@ Anthill::Anthill(CONFIG &config, int maxPop, int maxFood, pair<int,int> position
 
 }
 
+/***
+ * @brief destructor of anthill
+ */
 Anthill::~Anthill()
 {
     _eggs.erase(_eggs.begin(), _eggs.end());
@@ -25,6 +40,10 @@ Anthill::~Anthill()
     _workers.erase(_workers.begin(), _workers.end());
 }
 
+/***
+ * @brief get all warriors that just evolved from workers
+ * @return return warriors created by orchestrator
+ */
 int Anthill::getNewWarriors() const
 {
     return _newWarriors;
@@ -40,6 +59,9 @@ int Anthill::getPopulation() const
 }
 
 //PUBLIC
+/***
+ * @brief create eggs, larvas, workers at first round
+ */
 void Anthill::initAnthill()
 {
     cout << "Init anthill with : " << _config.nbEggInit << " eggs, " << _config.nbLarvaInit << " larvas  and " << _config.nbWorkerInit << " workers" << endl;
@@ -56,6 +78,9 @@ void Anthill::initAnthill()
     }
 }
 
+/***
+ * @brief method used to spawn eggs in the anthill, between 0 and 5 eggs are created
+ */
 void Anthill::spawnEgg()
 {    
    default_random_engine re(std::chrono::system_clock::now().time_since_epoch().count());
@@ -71,6 +96,9 @@ void Anthill::spawnEgg()
    }
 }
 
+/***
+ * @brief contain all Anthill actions for a round
+ */
 void Anthill::doRound()
 {    
     _newWarriors = 0;
@@ -86,7 +114,7 @@ void Anthill::doRound()
 
 //PRIVATE
 /**
- * @brief Anthill::doRoundQueen Manage the Queen's round
+ * @brief manage the Queen's round
  */
 void Anthill::doRoundQueen()
 {
@@ -111,7 +139,7 @@ void Anthill::doRoundQueen()
 }
 
 /**
- * @brief Anthill::doRoundEggs Manage eggs age for a round
+ * @brief manage eggs age for a round
  */
 void Anthill::doRoundEggs()
 {
@@ -135,7 +163,7 @@ void Anthill::doRoundEggs()
 }
 
 /**
- * @brief Anthill::doRoundLarvas Manage larvas round
+ * @brief manage larvas round
  */
 void Anthill::doRoundLarvas()
 {
@@ -173,7 +201,7 @@ void Anthill::doRoundLarvas()
 }
 
 /**
- * @brief Anthill::doRoundWorkers manage workers round
+ * @brief manage workers round
  */
 void Anthill::doRoundWorkers()
 {
@@ -209,6 +237,10 @@ void Anthill::doRoundWorkers()
     _workers = newWorkers;
 }
 
+/***
+ * @brief method used by the anthill to grow egg to larva
+ * @param egg
+ */
 void Anthill::growUpToLarva(Egg* egg)
 {
     Anthill::createLarva();
@@ -217,6 +249,10 @@ void Anthill::growUpToLarva(Egg* egg)
 
 }
 
+/***
+ * @brief method used by the anthill to grow larva to worker
+ * @param larva
+ */
 void Anthill::growUpToWorker(Larva* larva)
 {
     Anthill::createWorker();
@@ -224,6 +260,10 @@ void Anthill::growUpToWorker(Larva* larva)
     delete larva;
 }
 
+/***
+ * @brief method used by the anthill to grow worker to warrior
+ * @param worker
+ */
 void Anthill::growUpToWarrior(Worker* worker)
 {
     _newWarriors += 1;
@@ -231,6 +271,10 @@ void Anthill::growUpToWarrior(Worker* worker)
     delete worker;
 }
 
+/***
+ * @brief method used by anthill that is called by the warrior to increase food quantity via la méthode giveFood
+ * @param foodQuantity
+ */
 void Anthill::addFood(int foodQuantity)
 {
     _currentFood += foodQuantity;
@@ -243,6 +287,9 @@ void Anthill::addFood(int foodQuantity)
 }
 
 //PRIVATE
+/***
+ * @brief method used by the anthill to create one egg
+ */
 void Anthill::createEgg()
 {
     string name = "egg" + to_string(_eggs.size());
@@ -250,6 +297,9 @@ void Anthill::createEgg()
     _eggs.push_back(egg);
 }
 
+/***
+ * @brief method used by the anthill to create one larva
+ */
 void Anthill::createLarva()
 {
     string name = "larva" + to_string(_larvas.size());
@@ -257,6 +307,9 @@ void Anthill::createLarva()
     _larvas.push_back(larva);
 }
 
+/***
+ * @brief method used by the anthill to create one worker
+ */
 void Anthill::createWorker()
 {
     string name = "worker" + to_string(_workers.size());
@@ -264,6 +317,11 @@ void Anthill::createWorker()
     _workers.push_back(worker);
 }
 
+/***
+ * @brief method used by the anthill to manage food consumed by the warriors
+ * @param desiredFood
+ * @return available food quantity that can be consumed as an int
+ */
 int Anthill::foodCons(int desiredFood)
 {
     int availableCons = 0;

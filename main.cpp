@@ -6,7 +6,12 @@
 #include <map>
 #include <string>
 
-
+/***
+ * @brief main program method
+ * @param argc
+ * @param argv
+ * @return
+ */
 int main(int argc, char *argv[])
 {
     Game w;

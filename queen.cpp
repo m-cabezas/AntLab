@@ -4,6 +4,11 @@ Queen::Queen()
 {
 
 }
+
+/***
+ * @brief main constructor of queen
+ * @param config
+ */
 Queen::Queen(CONFIG& config)
 {
     _currentAge = config.ageWarrior;
@@ -13,6 +18,9 @@ Queen::Queen(CONFIG& config)
     _name = "Queen";
 }
 
+/***
+ * @brief default destructor of queen
+ */
 Queen::~Queen()
 {
     //cout << "London Bridge is Down! Our beloved Queen passed away this morning... She was " << _currentAge << " years old." << endl;

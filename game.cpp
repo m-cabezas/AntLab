@@ -50,9 +50,9 @@ void Game::initGame()
     cout << "End Game" << endl;
 }
 
-/**
- * @brief MainWindow::newRound
- * Init new round
+/***
+ * @brief Init a new round
+ * @param roundNumber
  */
 bool Game::newRound(int roundNumber)
 {
@@ -70,7 +70,7 @@ bool Game::newRound(int roundNumber)
 }
 
 /**
- * @brief MainWindow::initializeGrid display an process the console UI
+ * @brief display an process the console UI
  */
 void Game::initializeGrid() {
     pair<int,int> dimensions = _orchestrator->getDimension();
@@ -109,6 +109,9 @@ void Game::initializeGrid() {
     cout << *display << endl;
 }
 
+/***
+ * @brief Game default destructor
+ */
 Game::~Game()
 {
     delete _orchestrator;

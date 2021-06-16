@@ -1,9 +1,17 @@
 #include "orchestrator.h"
 
+/***
+ * @brief default constructor of orchestrator
+ */
 Orchestrator::Orchestrator()
 {
 
 }
+
+/***
+ * @brief main constructor of orchestrator
+ * @param config
+ */
 Orchestrator::Orchestrator(CONFIG config)
 {
     _config = config;
@@ -29,22 +37,26 @@ Orchestrator::Orchestrator(CONFIG config)
             _anthillsGrid.at(x).at(y) = false;
         }
     }
-
-
-
 }
 
+/**
+ * @brief default destructor of orchestrator
+ */
 Orchestrator::~Orchestrator()
 {
 
 }
 
+/***
+ * @brief method used to access the dimensions of the orchestrator map
+ * @return
+ */
 pair<int, int> Orchestrator::getDimension() const {
     return _dimension;
 }
 
 /**
- * @brief Orchestrator::getMapEntity return an int mapped to an object moving on the map
+ * @brief return an int mapped to an object moving on the map
  * @param x
  * @param y
  * @return
@@ -67,7 +79,7 @@ int Orchestrator::getMapEntity(int x, int y) {
 }
 
 /**
- * @brief Orchestrator::initOrch initialize entities on the map at first round
+ * @brief initialize entities on the map at first round
  * @param config
  */
 void Orchestrator::initOrch(CONFIG config)
@@ -165,7 +177,7 @@ int Orchestrator::doRound()
 }
 
 /**
- * @brief Orchestrator::createAnthill create an anthil and add it to the orchestrator's anthill list
+ * @brief create an anthil and add it to the orchestrator's anthill list
  * @param position
  * @param init boolean that indicates if the new anthill need to be initialized with eggs, larvas and workers
  */
@@ -183,7 +195,7 @@ void Orchestrator::createAnthill(pair <int,int> position, bool init)
 }
 
 /**
- * @brief Orchestrator::createFoodSpawner create a food spawner and add it to the orchestrator's food spawner list
+ * @brief create a food spawner and add it to the orchestrator's food spawner list
  * @param position
  */
 void Orchestrator::createFoodSpawner(pair <int,int> position)
@@ -196,7 +208,7 @@ void Orchestrator::createFoodSpawner(pair <int,int> position)
 }
 
 /**
- * @brief Orchestrator::initFoodSpawners create multiple food spawners at initialization round
+ * @brief create multiple food spawners at initialization round
  * @param nbFoodSpawnerInit
  */
 void Orchestrator::initFoodSpawners(int nbFoodSpawnerInit)
@@ -212,7 +224,7 @@ void Orchestrator::initFoodSpawners(int nbFoodSpawnerInit)
 }
 
 /**
- * @brief Orchestrator::createObstacle create an obstacle and add it to the orchestrator's obstacle list
+ * @brief create an obstacle and add it to the orchestrator's obstacle list
  * @param position
  */
 void Orchestrator::createObstacle(pair <int,int> position)
@@ -225,7 +237,7 @@ void Orchestrator::createObstacle(pair <int,int> position)
 }
 
 /**
- * @brief Orchestrator::initObstacles create multiple food spawners at initialization round
+ * @brief create multiple food spawners at initialization round
  * @param nbObstacleInit
  */
 void Orchestrator::initObstacles(int nbObstacleInit)
@@ -241,7 +253,7 @@ void Orchestrator::initObstacles(int nbObstacleInit)
 }
 
 /**
- * @brief Orchestrator::initWarriors create multiple warriors at initialization round
+ * @brief create multiple warriors at initialization round
  * @param nbWarriorInit
  * @param anthill
  */
@@ -261,7 +273,7 @@ void Orchestrator::initWarriors(int nbWarriorInit, Anthill* anthill)
 }
 
 /**
- * @brief Orchestrator::createWarrior create a warrior and add it to the orchestrator's warrior list
+ * @brief create a warrior and add it to the orchestrator's warrior list
  * @param position
  * @param anthill
  */
@@ -275,7 +287,7 @@ void Orchestrator::createWarrior(pair <int,int> position, Anthill* anthill)
 }
 
 /**
- * @brief Orchestrator::getFreePositions return all empty positions on the map
+ * @brief return all empty positions on the map
  * @return return all empty positions on the map as vector<pair <int, int>>
  */
 vector<pair <int, int>> Orchestrator::getFreePositions()
@@ -327,7 +339,7 @@ vector<pair<int,int>> Orchestrator::getForbiddenPositions(int x, int y)
 }
 
 /**
- * @brief Orchestrator::checkFoodNearby
+ * @brief methods used to verify if there is food near the position
  * @param x
  * @param y
  * @return the foodspawner if there is one next to the position, 0 if not
@@ -346,7 +358,7 @@ FoodSpawner* Orchestrator::checkFoodNearby(int x, int y)
 }
 
 /**
- * @brief Orchestrator::isCaseTaken tells if the given position is available
+ * @brief tells if the given position is available
  * @param x
  * @param y
  * @return true if the position is taken, false is it's available
@@ -363,7 +375,7 @@ bool Orchestrator::isCaseTaken(int x, int y)
 }
 
 /**
- * @brief Orchestrator::setCaseTaken set the location on the map to "taken"
+ * @brief set the location on the map to "taken"
  * @param x
  * @param y
  * @param taken : boolean value of the taken location on the map
@@ -377,7 +389,7 @@ void Orchestrator::setCaseTaken(int x, int y, bool taken)
 }
 
 /**
- * @brief Orchestrator::isNextTo tell if your ant is next to an object
+ * @brief tell if your ant is next to an object
  * @param myX
  * @param myY
  * @param objX
@@ -394,7 +406,7 @@ bool Orchestrator::isNextTo(int antX, int antY, int objX, int objY)
 }
 
 /**
- * @brief Orchestrator::getWarriorsFreePositions get all warriors available position to spawn around the anthill
+ * @brief get all warriors available position to spawn around the anthill
  * @param anthill
  * @return all warriors free positions as vector<pair <int,int>>
  */
