@@ -19,8 +19,8 @@ INCLUDEPATH += .
 HEADERS += anthill.h \
            egg.h \
            foodspawner.h \
+           game.h \
            larva.h \
-           mainwindow.h \
            obstacle.h \
            orchestrator.h \
            queen.h \
@@ -31,9 +31,9 @@ FORMS += mainwindow.ui
 SOURCES += anthill.cpp \
            egg.cpp \
            foodspawner.cpp \
+           game.cpp \
            larva.cpp \
            main.cpp \
-           mainwindow.cpp \
            obstacle.cpp \
            orchestrator.cpp \
            queen.cpp \

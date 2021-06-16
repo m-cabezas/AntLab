@@ -271,7 +271,6 @@ pair<int,int> Warrior::getRandomPos(vector<pair<int, int>> forbiddenPositions, i
     vector<pair<int,int>> availableCandidates;
     for(unsigned int i = 0; i < candidates.size(); i++)
     {
-//        cout << "checking x = " << candidates[i].first << " y = " << candidates[i].second << endl;
         if(checkPosition(forbiddenPositions, candidates[i].first, candidates[i].second) && (candidates[i].first != prevX || candidates[i].second != prevY))
         {            
             pair<int,int> available;
@@ -284,13 +283,10 @@ pair<int,int> Warrior::getRandomPos(vector<pair<int, int>> forbiddenPositions, i
     pair<int, int> result;
     if(availableCandidates.size() >  0){
         default_random_engine re(std::chrono::system_clock::now().time_since_epoch().count());
-
-        uniform_int_distribution<int> distrib{0,1};
-//        cout << "old  = " << posX << " | " << posY << endl;
+        srand(time(0));
         int random = rand () % availableCandidates.size() + 0;
         result.first = availableCandidates[random].first;
         result.second = availableCandidates[random].second;
-//        cout << "new  = " << result.first << " | " << result.second << endl<< "----------------------" << endl;
     } else if(checkPosition(forbiddenPositions, prevX, prevY)){
         //If there are no more available candidates, the ant tries to go back  
         result.first = prevX;
@@ -317,7 +313,6 @@ bool Warrior::checkPosition(vector<pair<int, int>> forbiddenPositions, int posX,
 {
     for(unsigned int i= 0 ; i < forbiddenPositions.size(); i++)
     {
-//        cout << "forbidden x= " << forbiddenPositions[i].first << " y= " << forbiddenPositions[i].second << endl;
         if (forbiddenPositions[i].first == posX && forbiddenPositions[i].second == posY)
         {            
             return false;

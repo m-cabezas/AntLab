@@ -44,7 +44,7 @@ void Anthill::initAnthill()
 {
     cout << "Init anthill with : " << _config.nbEggInit << " eggs, " << _config.nbLarvaInit << " larvas  and " << _config.nbWorkerInit << " workers" << endl;
     _queenAlive = true;
-    _currentFood = 200;
+    _currentFood = _config.maxFoodAnthill;
     for (int i = 0;  i < _config.nbEggInit; i++){
       Anthill::createEgg();
     }
@@ -62,7 +62,7 @@ void Anthill::spawnEgg()
    uniform_int_distribution<int> distrib{0,6};
    int lucky =  distrib(re);
    if (lucky == 1) {
-       uniform_int_distribution<int> distrib{0,10};
+       uniform_int_distribution<int> distrib{0,9};
        int newEggs = distrib(re);
        for (int i = 0; i < newEggs; i++)
        {
@@ -141,10 +141,8 @@ void Anthill::doRoundLarvas()
 {
     // Larvas treatment
     vector<Larva *> newLarvas;
-    bool added = false;
     for(unsigned int i = 0 ; i < _larvas.size(); i++)
     {
-        added = false;
         _larvas[i]->increaseAge();
         _larvas[i]->starve();
         // If the ant is not dead, we add it to the new ant list

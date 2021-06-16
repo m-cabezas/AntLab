@@ -1,29 +1,26 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "game.h"
 
 #include <windows.h>
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+Game::Game()
 {
     _config = {
             500,    // maxFood
             20,     // maxPopAnthill
-            200,    // maxFoodFoodSpawner
+            400,    // maxFoodFoodSpawner
             5,      // ageLarva
-            10,     //ageWorker
-            15,     //ageWarrior
-            20,     //ageQueen
+            8,     //ageWorker
+            16,     //ageWarrior
+            30,     //ageQueen
             60,     //lifeLarva
             70,     //lifeWorker
-            150,     //lifeWarrior
-            100,     //lifeQueen
+            250,     //lifeWarrior
+            300,     //lifeQueen
             1,      //consLarva
             2,      //consWorker
             3,      //consWarrior
-            4,      //consQueen
-            40,     //capacityWarrior
+            5,      //consQueen
+            60,     //capacityWarrior
             4,      //nbEggInit
             3,      //nbLarvaInit
             3,      //nbWorkerInit
@@ -32,18 +29,13 @@ MainWindow::MainWindow(QWidget *parent)
             50      //nbObstacleInit
     };
     _orchestrator = new Orchestrator(_config);
-    _gridLayout = new QGridLayout;
-    MainWindow::initGame();
-
-    // Uncomment to use QML
-//    ui->setupUi(this);
-
+    Game::initGame();
 }
 
 /**
  * Init the orchestrator and launch the MainWindow
  */
-void MainWindow::initGame()
+void Game::initGame()
 {
     cout << "Init Game" << endl;
     _orchestrator->initOrch(_config);
@@ -69,7 +61,7 @@ void MainWindow::initGame()
  * @brief MainWindow::newRound
  * Init new round
  */
-void MainWindow::newRound(int roundNumber)
+void Game::newRound(int roundNumber)
 {
     cout << "Game: New Round! Round " << roundNumber << endl;
 
@@ -78,7 +70,7 @@ void MainWindow::newRound(int roundNumber)
 /**
  * @brief MainWindow::initializeGrid display an process the console UI
  */
-void MainWindow::initializeGrid() {
+void Game::initializeGrid() {
     pair<int,int> dimensions = _orchestrator->getDimension();
     string * display = new string();
     for (int i = 0;i < dimensions.first+2; i++) {
@@ -115,9 +107,8 @@ void MainWindow::initializeGrid() {
     cout << *display << endl;
 }
 
-MainWindow::~MainWindow()
+Game::~Game()
 {
     delete _orchestrator;
-    delete ui;
 }
 
