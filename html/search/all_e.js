@@ -1,5 +1,4 @@
-var searchData =
-    [
-        ['warrior_22', ['Warrior', ['../class_warrior.html', 1, '']]],
-        ['worker_23', ['Worker', ['../class_worker.html', 1, '']]]
-    ];
+var searchData=
+[
+  ['_7eorchestrator_28',['~Orchestrator',['../class_orchestrator.html#a134459a83f516ef59fb70a3451d40d0b',1,'Orchestrator']]]
+];

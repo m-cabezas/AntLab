@@ -1,363 +1,123 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.9.1" xml:lang="en-US">
-    <compounddef id="util_8h" kind="file" language="C++">
-        <compoundname>util.h</compoundname>
-        <includedby refid="anthill_8h" local="yes">anthill.h</includedby>
-        <includedby refid="egg_8h" local="yes">egg.h</includedby>
-        <includedby refid="larva_8h" local="yes">larva.h</includedby>
-        <includedby refid="mainwindow_8h" local="yes">mainwindow.h</includedby>
-        <includedby refid="orchestrator_8h" local="yes">orchestrator.h</includedby>
-        <includedby refid="worker_8h" local="yes">worker.h</includedby>
-        <invincdepgraph>
-            <node id="9">
-                <label>worker.h</label>
-                <link refid="worker_8h_source"/>
-                <childnode refid="2" relation="include">
-                </childnode>
-                <childnode refid="5" relation="include">
-                </childnode>
-            </node>
-            <node id="7">
-                <label>egg.h</label>
-                <link refid="egg_8h_source"/>
-                <childnode refid="2" relation="include">
-                </childnode>
-                <childnode refid="8" relation="include">
-                </childnode>
-            </node>
-            <node id="3">
-                <label>orchestrator.h</label>
-                <link refid="orchestrator_8h_source"/>
-                <childnode refid="4" relation="include">
-                </childnode>
-            </node>
-            <node id="5">
-                <label>warrior.h</label>
-                <link refid="warrior_8h_source"/>
-                <childnode refid="3" relation="include">
-                </childnode>
-                <childnode refid="6" relation="include">
-                </childnode>
-            </node>
-            <node id="1">
-                <label>util.h</label>
-                <link refid="util_8h"/>
-                <childnode refid="2" relation="include">
-                </childnode>
-                <childnode refid="7" relation="include">
-                </childnode>
-                <childnode refid="8" relation="include">
-                </childnode>
-                <childnode refid="4" relation="include">
-                </childnode>
-                <childnode refid="3" relation="include">
-                </childnode>
-                <childnode refid="9" relation="include">
-                </childnode>
-            </node>
-            <node id="6">
-                <label>queen.h</label>
-                <link refid="queen_8h_source"/>
-            </node>
-            <node id="2">
-                <label>anthill.h</label>
-                <link refid="anthill_8h_source"/>
-                <childnode refid="3" relation="include">
-                </childnode>
-                <childnode refid="5" relation="include">
-                </childnode>
-            </node>
-            <node id="8">
-                <label>larva.h</label>
-                <link refid="larva_8h_source"/>
-                <childnode refid="2" relation="include">
-                </childnode>
-                <childnode refid="9" relation="include">
-                </childnode>
-            </node>
-            <node id="4">
-                <label>mainwindow.h</label>
-                <link refid="mainwindow_8h_source"/>
-            </node>
-        </invincdepgraph>
-        <innerclass refid="struct_c_o_n_f_i_g" prot="public">CONFIG</innerclass>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <programlisting>
-            <codeline lineno="1">
-                <highlight class="preprocessor">#ifndef<sp/>UTIL_H
-                </highlight>
-                <highlight class="normal"></highlight>
-            </codeline>
-            <codeline lineno="2">
-                <highlight class="normal"></highlight>
-                <highlight class="preprocessor">#define<sp/>UTIL_H
-                </highlight>
-                <highlight class="normal"></highlight>
-            </codeline>
-            <codeline lineno="3">
-                <highlight class="normal"></highlight>
-            </codeline>
-            <codeline lineno="4" refid="struct_c_o_n_f_i_g" refkind="compound">
-                <highlight class="normal"></highlight>
-                <highlight class="keyword">struct
-                    <sp/>
-                </highlight>
-                <highlight class="normal">
-                    <ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref>
-                    <sp/>{
-                </highlight>
-            </codeline>
-            <codeline lineno="5">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>maxFoodAnthill;
-                </highlight>
-            </codeline>
-            <codeline lineno="6">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>maxPopAnthill;
-                </highlight>
-            </codeline>
-            <codeline lineno="7">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>maxFoodFoodSpawner;
-                </highlight>
-            </codeline>
-            <codeline lineno="8">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>ageLarva;
-                </highlight>
-            </codeline>
-            <codeline lineno="9">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>ageWorker;
-                </highlight>
-            </codeline>
-            <codeline lineno="10">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>ageWarrior;
-                </highlight>
-            </codeline>
-            <codeline lineno="11">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>lifeLarva<sp/>;
-                </highlight>
-            </codeline>
-            <codeline lineno="12">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>lifeWorker;
-                </highlight>
-            </codeline>
-            <codeline lineno="13">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>lifeWarrior;
-                </highlight>
-            </codeline>
-            <codeline lineno="14">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>lifeQueen;
-                </highlight>
-            </codeline>
-            <codeline lineno="15">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>consLarva;
-                </highlight>
-            </codeline>
-            <codeline lineno="16">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>consWorker;
-                </highlight>
-            </codeline>
-            <codeline lineno="17">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>consWarrior;
-                </highlight>
-            </codeline>
-            <codeline lineno="18">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>consQueen;
-                </highlight>
-            </codeline>
-            <codeline lineno="19">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>capacityWarrior;
-                </highlight>
-            </codeline>
-            <codeline lineno="20">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>nbEggInit;
-                </highlight>
-            </codeline>
-            <codeline lineno="21">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>nbLarvaInit;
-                </highlight>
-            </codeline>
-            <codeline lineno="22">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>nbWorkerInit;
-                </highlight>
-            </codeline>
-            <codeline lineno="23">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>nbWarriorInit;
-                </highlight>
-            </codeline>
-            <codeline lineno="24">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>nbFoodSpawnerInit;
-                </highlight>
-            </codeline>
-            <codeline lineno="25">
-                <highlight class="normal">
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                    <sp/>
-                </highlight>
-                <highlight class="keywordtype">int</highlight>
-                <highlight class="normal"><sp/>nbObstacleInit;
-                </highlight>
-            </codeline>
-            <codeline lineno="26">
-                <highlight class="normal">};</highlight>
-            </codeline>
-            <codeline lineno="27">
-                <highlight class="normal"></highlight>
-            </codeline>
-            <codeline lineno="28">
-                <highlight class="normal"></highlight>
-                <highlight class="preprocessor">#endif
-                    <sp/>
-                </highlight>
-                <highlight class="comment">//<sp/>UTIL_H
-                </highlight>
-                <highlight class="normal"></highlight>
-            </codeline>
-        </programlisting>
-        <location file="util.h"/>
-    </compounddef>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="util_8h" kind="file" language="C++">
+    <compoundname>util.h</compoundname>
+    <includedby refid="anthill_8h" local="yes">anthill.h</includedby>
+    <includedby refid="egg_8h" local="yes">egg.h</includedby>
+    <includedby refid="game_8h" local="yes">game.h</includedby>
+    <includedby refid="larva_8h" local="yes">larva.h</includedby>
+    <includedby refid="orchestrator_8h" local="yes">orchestrator.h</includedby>
+    <includedby refid="worker_8h" local="yes">worker.h</includedby>
+    <invincdepgraph>
+      <node id="8">
+        <label>worker.h</label>
+        <link refid="worker_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>egg.h</label>
+        <link refid="egg_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>orchestrator.h</label>
+        <link refid="orchestrator_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>warrior.h</label>
+        <link refid="warrior_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>util.h</label>
+        <link refid="util_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>game.h</label>
+        <link refid="game_8h_source"/>
+      </node>
+      <node id="9">
+        <label>queen.h</label>
+        <link refid="queen_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>anthill.h</label>
+        <link refid="anthill_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>larva.h</label>
+        <link refid="larva_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_c_o_n_f_i_g" prot="public">CONFIG</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>UTIL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UTIL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="struct_c_o_n_f_i_g" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxFoodAnthill;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxPopAnthill;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxFoodFoodSpawner;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ageLarva;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ageWorker;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ageWarrior;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ageQueen;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lifeLarva;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lifeWorker;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lifeWarrior;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lifeQueen;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>consLarva;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>consWorker;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>consWarrior;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>consQueen;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>capacityWarrior;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbEggInit;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbLarvaInit;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbWorkerInit;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbWarriorInit;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbFoodSpawnerInit;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbObstacleInit;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>UTIL_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="util.h"/>
+  </compounddef>
 </doxygen>

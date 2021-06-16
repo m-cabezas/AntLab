@@ -3,35 +3,62 @@
 Inheritance diagram for Warrior\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=5.000000cm]{class_warrior}
+\includegraphics[height=4.000000cm]{class_warrior}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_warrior_ae3e885067a57ca24a89ff083e2d8dfb6}\label{class_warrior_ae3e885067a57ca24a89ff083e2d8dfb6}} 
-{\bfseries Warrior} (int capacity\+Warrior, pair$<$ int, int $>$ position, string name, \mbox{\hyperlink{class_anthill}{Anthill}} \&anthill, \mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} \&config)
-\item 
+\mbox{\hyperlink{class_warrior_af271d54079a347aa6a5c6a2805daf7b5}{Warrior}} (pair$<$ int, int $>$ position, string name, \mbox{\hyperlink{class_anthill}{Anthill}} $\ast$anthill, \mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} \&config)
+\begin{DoxyCompactList}\small\item\em main constructor of warrior \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_warrior_ad3f4db2c2df1559c6cb1bbd56fbba2e9}\label{class_warrior_ad3f4db2c2df1559c6cb1bbd56fbba2e9}} 
 const pair$<$ int, int $>$ {\bfseries get\+Position} ()
 \item 
 const pair$<$ int, int $>$ \mbox{\hyperlink{class_warrior_ae20cc62958d7e76559213d5ef6740242}{get\+Prev\+Pos}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_warrior_ae20cc62958d7e76559213d5ef6740242}{Warrior\+::get\+Prev\+Pos}} return the position at the round n-\/1 of the warrior. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em return the position at the round n-\/1 of the warrior \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_warrior_a3346c2a6bd3aff2e6ce00ccaf8689285}{explore}} (vector$<$ pair$<$ int, int $>$$>$ forbidden\+Positions)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_warrior_a3346c2a6bd3aff2e6ce00ccaf8689285}{Warrior\+::explore}} is a moving method for warrior. It is based on random moves. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em moving method for warrior based on random moves \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_warrior_a36fabf05ac60a23af9d7f7fb940cfc9d}{return\+To\+Anthill}} (vector$<$ pair$<$ int, int $>$$>$ forbidden\+Positions)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_warrior_a36fabf05ac60a23af9d7f7fb940cfc9d}{Warrior\+::return\+To\+Anthill}} is a moving method for warrior. It is based on the idea that the warrior know the path. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em moving method for warrior based on the idea that the warrior know the path \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_warrior_a8660e68f16b482e46cb838f627fc94c0}{take\+Food}} (int available\+Quantity)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_warrior_a8660e68f16b482e46cb838f627fc94c0}{Warrior\+::take\+Food}} Indicates to the ant that she can take the given quantity of food. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em indicates to the ant that she can take the given quantity of food \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_warrior_aa3620b12e2a5e0c0edc5ce5a2cb43d02}\label{class_warrior_aa3620b12e2a5e0c0edc5ce5a2cb43d02}} 
 void {\bfseries attack} ()
 \item 
 \mbox{\Hypertarget{class_warrior_aa48d40a851d3a3790eb1b980e50fd255}\label{class_warrior_aa48d40a851d3a3790eb1b980e50fd255}} 
 void \mbox{\hyperlink{class_warrior_aa48d40a851d3a3790eb1b980e50fd255}{give\+Food}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_warrior_aa48d40a851d3a3790eb1b980e50fd255}{Warrior\+::give\+Food}} is an interaction method that warriors use to put food in the \mbox{\hyperlink{class_anthill}{Anthill}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em interaction method that warriors use to put food in the \mbox{\hyperlink{class_anthill}{Anthill}} \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_warrior_a780a0b83407f54b3436b1b4be5c144ed}{get\+Mode}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_warrior_a780a0b83407f54b3436b1b4be5c144ed}{Warrior\+::get\+Mode}} mode = 1 \+: Exploration mode, the ant is looking for food mode = 2 \+: Return to anthill, the ant is carring food and taking it back to the anthill. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em method used to access the movement mode of the warrior mode = 1 \+: Exploration mode, the ant is looking for food mode = 2 \+: Return to anthill, the ant is carring food and taking it back to the anthill \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_warrior_a4bc9809c4d99995f6793d47a38da1eb1}{get\+Current\+Food}} () const
+\begin{DoxyCompactList}\small\item\em method used to access food level of a warrior \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_warrior_abf1ab498912f05c443fc997a2e50974d}{set\+Current\+Food}} (unsigned int food)
+\begin{DoxyCompactList}\small\item\em method used to set the food level of a warrior \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_warrior_af271d54079a347aa6a5c6a2805daf7b5}\label{class_warrior_af271d54079a347aa6a5c6a2805daf7b5}} 
+\index{Warrior@{Warrior}!Warrior@{Warrior}}
+\index{Warrior@{Warrior}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{Warrior()}{Warrior()}}
+{\footnotesize\ttfamily Warrior\+::\+Warrior (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{position,  }\item[{string}]{name,  }\item[{\mbox{\hyperlink{class_anthill}{Anthill}} $\ast$}]{anthill,  }\item[{\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} \&}]{config }\end{DoxyParamCaption})}
+
+
+
+main constructor of warrior 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+{\em name} & \\
+\hline
+{\em anthill} & \\
+\hline
+{\em config} & \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -43,13 +70,26 @@ int \mbox{\hyperlink{class_warrior_a780a0b83407f54b3436b1b4be5c144ed}{get\+Mode}
 
 
 
-\mbox{\hyperlink{class_warrior_a3346c2a6bd3aff2e6ce00ccaf8689285}{Warrior\+::explore}} is a moving method for warrior. It is based on random moves. 
+moving method for warrior based on random moves 
 
 
 \begin{DoxyParams}{Parameters}
 {\em forbidden\+Positions} & \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_warrior_a4bc9809c4d99995f6793d47a38da1eb1}\label{class_warrior_a4bc9809c4d99995f6793d47a38da1eb1}} 
+\index{Warrior@{Warrior}!getCurrentFood@{getCurrentFood}}
+\index{getCurrentFood@{getCurrentFood}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{getCurrentFood()}{getCurrentFood()}}
+{\footnotesize\ttfamily int Warrior\+::get\+Current\+Food (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+method used to access food level of a warrior 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_warrior_a780a0b83407f54b3436b1b4be5c144ed}\label{class_warrior_a780a0b83407f54b3436b1b4be5c144ed}} 
 \index{Warrior@{Warrior}!getMode@{getMode}}
 \index{getMode@{getMode}!Warrior@{Warrior}}
@@ -58,7 +98,7 @@ int \mbox{\hyperlink{class_warrior_a780a0b83407f54b3436b1b4be5c144ed}{get\+Mode}
 
 
 
-\mbox{\hyperlink{class_warrior_a780a0b83407f54b3436b1b4be5c144ed}{Warrior\+::get\+Mode}} mode = 1 \+: Exploration mode, the ant is looking for food mode = 2 \+: Return to anthill, the ant is carring food and taking it back to the anthill. 
+method used to access the movement mode of the warrior mode = 1 \+: Exploration mode, the ant is looking for food mode = 2 \+: Return to anthill, the ant is carring food and taking it back to the anthill 
 
 \begin{DoxyReturn}{Returns}
 current mode 
@@ -71,10 +111,10 @@ current mode
 
 
 
-\mbox{\hyperlink{class_warrior_ae20cc62958d7e76559213d5ef6740242}{Warrior\+::get\+Prev\+Pos}} return the position at the round n-\/1 of the warrior. 
+return the position at the round n-\/1 of the warrior 
 
 \begin{DoxyReturn}{Returns}
-
+return the previous position as pair$<$int,int$>$ 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_warrior_a36fabf05ac60a23af9d7f7fb940cfc9d}\label{class_warrior_a36fabf05ac60a23af9d7f7fb940cfc9d}} 
 \index{Warrior@{Warrior}!returnToAnthill@{returnToAnthill}}
@@ -84,11 +124,26 @@ current mode
 
 
 
-\mbox{\hyperlink{class_warrior_a36fabf05ac60a23af9d7f7fb940cfc9d}{Warrior\+::return\+To\+Anthill}} is a moving method for warrior. It is based on the idea that the warrior know the path. 
+moving method for warrior based on the idea that the warrior know the path 
 
 
 \begin{DoxyParams}{Parameters}
 {\em forbidden\+Positions} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_warrior_abf1ab498912f05c443fc997a2e50974d}\label{class_warrior_abf1ab498912f05c443fc997a2e50974d}} 
+\index{Warrior@{Warrior}!setCurrentFood@{setCurrentFood}}
+\index{setCurrentFood@{setCurrentFood}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{setCurrentFood()}{setCurrentFood()}}
+{\footnotesize\ttfamily void Warrior\+::set\+Current\+Food (\begin{DoxyParamCaption}\item[{unsigned int}]{food }\end{DoxyParamCaption})}
+
+
+
+method used to set the food level of a warrior 
+
+
+\begin{DoxyParams}{Parameters}
+{\em food} & \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_warrior_a8660e68f16b482e46cb838f627fc94c0}\label{class_warrior_a8660e68f16b482e46cb838f627fc94c0}} 
@@ -99,7 +154,7 @@ current mode
 
 
 
-\mbox{\hyperlink{class_warrior_a8660e68f16b482e46cb838f627fc94c0}{Warrior\+::take\+Food}} Indicates to the ant that she can take the given quantity of food. 
+indicates to the ant that she can take the given quantity of food 
 
 
 \begin{DoxyParams}{Parameters}

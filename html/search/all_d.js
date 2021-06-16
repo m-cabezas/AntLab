@@ -1,4 +1,5 @@
-var searchData =
-    [
-        ['takefood_21', ['takeFood', ['../class_warrior.html#a8660e68f16b482e46cb838f627fc94c0', 1, 'Warrior']]]
-    ];
+var searchData=
+[
+  ['warrior_26',['Warrior',['../class_warrior.html',1,'Warrior'],['../class_warrior.html#af271d54079a347aa6a5c6a2805daf7b5',1,'Warrior::Warrior()']]],
+  ['worker_27',['Worker',['../class_worker.html',1,'']]]
+];

@@ -9,11 +9,12 @@ Inheritance diagram for Anthill\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_anthill_a6c39fdc3e19ce0369e890bb543f9bf0a}\label{class_anthill_a6c39fdc3e19ce0369e890bb543f9bf0a}} 
-{\bfseries Anthill} (\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} \&config, int max\+Pop, int max\+Food, pair$<$ int, int $>$ position, int width, int height)
+\mbox{\hyperlink{class_anthill_a6c39fdc3e19ce0369e890bb543f9bf0a}{Anthill}} (\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} \&config, int max\+Pop, int max\+Food, pair$<$ int, int $>$ position, int width, int height)
+\begin{DoxyCompactList}\small\item\em main constructor of \mbox{\hyperlink{class_anthill}{Anthill}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_anthill_ad7ddaced1d80e90839a7fb80760a59fa}\label{class_anthill_ad7ddaced1d80e90839a7fb80760a59fa}} 
+int {\bfseries get\+New\+Warriors} () const
 \item 
-\mbox{\Hypertarget{class_anthill_aaffa2c1457ca56411574289456a77359}\label{class_anthill_aaffa2c1457ca56411574289456a77359}} 
-int {\bfseries get\+New\+Warriors} ()
+int \mbox{\hyperlink{class_anthill_a335795a55847de8ab6da4d09875bacd5}{get\+Population}} () const
 \item 
 \mbox{\Hypertarget{class_anthill_a7ff7e41269324d61bc60360a6fb59a79}\label{class_anthill_a7ff7e41269324d61bc60360a6fb59a79}} 
 void {\bfseries init\+Anthill} ()
@@ -26,8 +27,63 @@ void {\bfseries do\+Round} ()
 \item 
 \mbox{\Hypertarget{class_anthill_af2bd0764ae0640aedd72ee10c1a60418}\label{class_anthill_af2bd0764ae0640aedd72ee10c1a60418}} 
 void {\bfseries add\+Food} (int food\+Quantity)
-\end{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_anthill_a0acbebd49855ce62b3f30218467338ea}{is\+Queen\+Alive}} ()
+\begin{DoxyCompactList}\small\item\em method used to know if queen is still alive \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_anthill_a6c39fdc3e19ce0369e890bb543f9bf0a}\label{class_anthill_a6c39fdc3e19ce0369e890bb543f9bf0a}} 
+\index{Anthill@{Anthill}!Anthill@{Anthill}}
+\index{Anthill@{Anthill}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{Anthill()}{Anthill()}}
+{\footnotesize\ttfamily Anthill\+::\+Anthill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} \&}]{config,  }\item[{int}]{max\+Pop,  }\item[{int}]{max\+Food,  }\item[{pair$<$ int, int $>$}]{position,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+main constructor of \mbox{\hyperlink{class_anthill}{Anthill}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & \\
+\hline
+{\em max\+Pop} & \\
+\hline
+{\em max\+Food} & \\
+\hline
+{\em position} & \\
+\hline
+{\em width} & \\
+\hline
+{\em height} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_anthill_a335795a55847de8ab6da4d09875bacd5}\label{class_anthill_a335795a55847de8ab6da4d09875bacd5}} 
+\index{Anthill@{Anthill}!getPopulation@{getPopulation}}
+\index{getPopulation@{getPopulation}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{getPopulation()}{getPopulation()}}
+{\footnotesize\ttfamily int Anthill\+::get\+Population (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gives the current population within the anthill \begin{DoxyReturn}{Returns}
+total population 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_anthill_a0acbebd49855ce62b3f30218467338ea}\label{class_anthill_a0acbebd49855ce62b3f30218467338ea}} 
+\index{Anthill@{Anthill}!isQueenAlive@{isQueenAlive}}
+\index{isQueenAlive@{isQueenAlive}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{isQueenAlive()}{isQueenAlive()}}
+{\footnotesize\ttfamily bool Anthill\+::is\+Queen\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+method used to know if queen is still alive 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

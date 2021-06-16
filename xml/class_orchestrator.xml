@@ -1,1109 +1,869 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.9.1" xml:lang="en-US">
-    <compounddef id="class_orchestrator" kind="class" language="C++" prot="public">
-        <compoundname>Orchestrator</compoundname>
-        <sectiondef kind="private-attrib">
-            <memberdef kind="variable" id="class_orchestrator_1a965da4741bf99096a42d1a92b87bf83f" prot="private"
-                       static="no" mutable="no">
-                <type>
-                    <ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref>
-                </type>
-                <definition>CONFIG Orchestrator::_config</definition>
-                <argsstring></argsstring>
-                <name>_config</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="32" column="12" bodyfile="orchestrator.h" bodystart="32"
-                          bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable" id="class_orchestrator_1a0ce7e3ef5d9a75129617b73bfdfecf57" prot="private"
-                       static="no" mutable="no">
-                <type>pair&lt; int, int &gt;</type>
-                <definition>pair&lt;int, int&gt; Orchestrator::_dimension</definition>
-                <argsstring></argsstring>
-                <name>_dimension</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="33" column="10" bodyfile="orchestrator.h" bodystart="33"
-                          bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable" id="class_orchestrator_1a0be9646a122a25fa69e7b1685ce5d045" prot="private"
-                       static="no" mutable="no">
-                <type>vector&lt; vector&lt; bool &gt; &gt;</type>
-                <definition>vector&lt;vector&lt;bool&gt; &gt; Orchestrator::_grid</definition>
-                <argsstring></argsstring>
-                <name>_grid</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="34" column="12" bodyfile="orchestrator.h" bodystart="34"
-                          bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable" id="class_orchestrator_1a3de65a747f1c0cb041bca1d9efdab5bb" prot="private"
-                       static="no" mutable="no">
-                <type>vector&lt; vector&lt; bool &gt; &gt;</type>
-                <definition>vector&lt;vector&lt;bool&gt; &gt; Orchestrator::_obstaclesGrid</definition>
-                <argsstring></argsstring>
-                <name>_obstaclesGrid</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="35" column="12" bodyfile="orchestrator.h" bodystart="35"
-                          bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable" id="class_orchestrator_1a2477aeaf7c2daaaa422ca10c361cacb2" prot="private"
-                       static="no" mutable="no">
-                <type>vector&lt; vector&lt; bool &gt; &gt;</type>
-                <definition>vector&lt;vector&lt;bool&gt; &gt; Orchestrator::_foodSpawnersGrid</definition>
-                <argsstring></argsstring>
-                <name>_foodSpawnersGrid</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="36" column="12" bodyfile="orchestrator.h" bodystart="36"
-                          bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable" id="class_orchestrator_1ac3e2fa909f04ba0259aa8155d4ecf596" prot="private"
-                       static="no" mutable="no">
-                <type>vector&lt; vector&lt; bool &gt; &gt;</type>
-                <definition>vector&lt;vector&lt;bool&gt; &gt; Orchestrator::_anthillsGrid</definition>
-                <argsstring></argsstring>
-                <name>_anthillsGrid</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="37" column="12" bodyfile="orchestrator.h" bodystart="37"
-                          bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable" id="class_orchestrator_1a4df763ed3b1e4a88d30167db2b60bbae" prot="private"
-                       static="no" mutable="no">
-                <type>vector&lt; <ref refid="class_warrior" kindref="compound">Warrior</ref> * &gt;
-                </type>
-                <definition>vector&lt;Warrior *&gt; Orchestrator::_warriors</definition>
-                <argsstring></argsstring>
-                <name>_warriors</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="38" column="12" bodyfile="orchestrator.h" bodystart="38"
-                          bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable" id="class_orchestrator_1aabb53161f65ca915ea3d80019b522904" prot="private"
-                       static="no" mutable="no">
-                <type>vector&lt; <ref refid="class_obstacle" kindref="compound">Obstacle</ref> * &gt;
-                </type>
-                <definition>vector&lt;Obstacle *&gt; Orchestrator::_obstacles</definition>
-                <argsstring></argsstring>
-                <name>_obstacles</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="39" column="12" bodyfile="orchestrator.h" bodystart="39"
-                          bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable" id="class_orchestrator_1a464d27075256d666248977b473be3aa8" prot="private"
-                       static="no" mutable="no">
-                <type>vector&lt; <ref refid="class_food_spawner" kindref="compound">FoodSpawner</ref> * &gt;
-                </type>
-                <definition>vector&lt;FoodSpawner *&gt; Orchestrator::_foodSpawners</definition>
-                <argsstring></argsstring>
-                <name>_foodSpawners</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="40" column="12" bodyfile="orchestrator.h" bodystart="40"
-                          bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable" id="class_orchestrator_1afa5440a71435ab53e096fa58ae724aca" prot="private"
-                       static="no" mutable="no">
-                <type>vector&lt; <ref refid="class_anthill" kindref="compound">Anthill</ref> * &gt;
-                </type>
-                <definition>vector&lt;Anthill *&gt; Orchestrator::_anthills</definition>
-                <argsstring></argsstring>
-                <name>_anthills</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="41" column="12" bodyfile="orchestrator.h" bodystart="41"
-                          bodyend="-1"/>
-            </memberdef>
-        </sectiondef>
-        <sectiondef kind="public-func">
-            <memberdef kind="function" id="class_orchestrator_1a11b00b1d6352b20cd3f06147950a3067" prot="public"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type></type>
-                <definition>Orchestrator::Orchestrator</definition>
-                <argsstring>()</argsstring>
-                <name>Orchestrator</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="21" column="5" bodyfile="orchestrator.cpp" bodystart="3"
-                          bodyend="6"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1a962cc595d5600e1eb600fe5946153c6e" prot="public"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type></type>
-                <definition>Orchestrator::Orchestrator</definition>
-                <argsstring>(CONFIG config)</argsstring>
-                <name>Orchestrator</name>
-                <param>
-                    <type>
-                        <ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref>
-                    </type>
-                    <declname>config</declname>
-                </param>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="22" column="5" bodyfile="orchestrator.cpp" bodystart="7"
-                          bodyend="35"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1a134459a83f516ef59fb70a3451d40d0b" prot="public"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type></type>
-                <definition>Orchestrator::~Orchestrator</definition>
-                <argsstring>()</argsstring>
-                <name>~Orchestrator</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="23" column="5" bodyfile="orchestrator.cpp" bodystart="37"
-                          bodyend="40"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1a5e0ce1da543b2cc6f1d4aedc9de75ff5" prot="public"
-                       static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-                <type>pair&lt; int, int &gt;</type>
-                <definition>pair&lt; int, int &gt; Orchestrator::getDimension</definition>
-                <argsstring>() const</argsstring>
-                <name>getDimension</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="25" column="10" bodyfile="orchestrator.cpp" bodystart="42"
-                          bodyend="44"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1a43534ccc11df40a762dd0305135afd6a" prot="public"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>int</type>
-                <definition>int Orchestrator::getMapEntity</definition>
-                <argsstring>(int x, int y)</argsstring>
-                <name>getMapEntity</name>
-                <param>
-                    <type>int</type>
-                    <declname>x</declname>
-                </param>
-                <param>
-                    <type>int</type>
-                    <declname>y</declname>
-                </param>
-                <briefdescription>
-                    <para>
-                        <ref refid="class_orchestrator_1a43534ccc11df40a762dd0305135afd6a" kindref="member">
-                            Orchestrator::getMapEntity
-                        </ref>
-                        return an int mapped to an object moving on the map.
-                    </para>
-                </briefdescription>
-                <detaileddescription>
-                    <para>
-                        <parameterlist kind="param">
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>x</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>y</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                        </parameterlist>
-                        <simplesect kind="return">
-                            <para></para>
-                        </simplesect>
-                    </para>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="26" column="9" bodyfile="orchestrator.cpp" bodystart="52"
-                          bodyend="67"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1a8f4d36b247fe79935c10e695c873befc" prot="public"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>void</type>
-                <definition>void Orchestrator::initOrch</definition>
-                <argsstring>(CONFIG config)</argsstring>
-                <name>initOrch</name>
-                <param>
-                    <type>
-                        <ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref>
-                    </type>
-                    <declname>config</declname>
-                </param>
-                <briefdescription>
-                    <para>
-                        <ref refid="class_orchestrator_1a8f4d36b247fe79935c10e695c873befc" kindref="member">
-                            Orchestrator::initOrch
-                        </ref>
-                        initialize entities on the map at first round.
-                    </para>
-                </briefdescription>
-                <detaileddescription>
-                    <para>
-                        <parameterlist kind="param">
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>config</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                        </parameterlist>
-                    </para>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="27" column="10" bodyfile="orchestrator.cpp" bodystart="73"
-                          bodyend="82"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1abba7d1f0fe26a8fc5f3d8ac5ce00a61a" prot="public"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>void</type>
-                <definition>void Orchestrator::doRound</definition>
-                <argsstring>()</argsstring>
-                <name>doRound</name>
-                <briefdescription>
-                    <para>
-                        <ref refid="class_orchestrator_1abba7d1f0fe26a8fc5f3d8ac5ce00a61a" kindref="member">
-                            Orchestrator::doRound()
-                        </ref>
-                        integrate all actions that are done in a round by the entities.
-                    </para>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="28" column="10" bodyfile="orchestrator.cpp" bodystart="87"
-                          bodyend="120"/>
-            </memberdef>
-        </sectiondef>
-        <sectiondef kind="private-func">
-            <memberdef kind="function" id="class_orchestrator_1a216468278e2ee2cdca398eec4365d03e" prot="private"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>void</type>
-                <definition>void Orchestrator::createAnthill</definition>
-                <argsstring>(pair&lt; int, int &gt; position, bool init)</argsstring>
-                <name>createAnthill</name>
-                <param>
-                    <type>pair&lt; int, int &gt;</type>
-                    <declname>position</declname>
-                </param>
-                <param>
-                    <type>bool</type>
-                    <declname>init</declname>
-                </param>
-                <briefdescription>
-                    <para>Orchestrator::createAnthill create an anthil and add it to the orchestrator&apos;s anthill
-                        list.
-                    </para>
-                </briefdescription>
-                <detaileddescription>
-                    <para>
-                        <parameterlist kind="param">
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>position</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>init</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para>boolean that indicates if the new anthill need to be initialized with eggs,
-                                        larvas and workers
-                                    </para>
-                                </parameterdescription>
-                            </parameteritem>
-                        </parameterlist>
-                    </para>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="44" column="10" bodyfile="orchestrator.cpp" bodystart="127"
-                          bodyend="138"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1a7635636d46b44e40fa200d53f9b971a0" prot="private"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>void</type>
-                <definition>void Orchestrator::createFoodSpawner</definition>
-                <argsstring>(pair&lt; int, int &gt; position)</argsstring>
-                <name>createFoodSpawner</name>
-                <param>
-                    <type>pair&lt; int, int &gt;</type>
-                    <declname>position</declname>
-                </param>
-                <briefdescription>
-                    <para>Orchestrator::createFoodSpawner create a food spawner and add it to the orchestrator&apos;s
-                        food spawner list.
-                    </para>
-                </briefdescription>
-                <detaileddescription>
-                    <para>
-                        <parameterlist kind="param">
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>position</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                        </parameterlist>
-                    </para>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="45" column="10" bodyfile="orchestrator.cpp" bodystart="144"
-                          bodyend="151"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1a2dfa8c2b0162af323317599f49200a8f" prot="private"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>void</type>
-                <definition>void Orchestrator::initFoodSpawners</definition>
-                <argsstring>(int nbFoodSpawnerInit)</argsstring>
-                <name>initFoodSpawners</name>
-                <param>
-                    <type>int</type>
-                    <declname>nbFoodSpawnerInit</declname>
-                </param>
-                <briefdescription>
-                    <para>Orchestrator::initFoodSpawners create multiple food spawners at initialization round.</para>
-                </briefdescription>
-                <detaileddescription>
-                    <para>
-                        <parameterlist kind="param">
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>nbFoodSpawnerInit</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                        </parameterlist>
-                    </para>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="46" column="10" bodyfile="orchestrator.cpp" bodystart="157"
-                          bodyend="164"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1a6e3a5a53780b02873be2da3f8ab2d711" prot="private"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>void</type>
-                <definition>void Orchestrator::createObstacle</definition>
-                <argsstring>(pair&lt; int, int &gt; position)</argsstring>
-                <name>createObstacle</name>
-                <param>
-                    <type>pair&lt; int, int &gt;</type>
-                    <declname>position</declname>
-                </param>
-                <briefdescription>
-                    <para>Orchestrator::createObstacle create an obstacle and add it to the orchestrator&apos;s obstacle
-                        list.
-                    </para>
-                </briefdescription>
-                <detaileddescription>
-                    <para>
-                        <parameterlist kind="param">
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>position</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                        </parameterlist>
-                    </para>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="47" column="10" bodyfile="orchestrator.cpp" bodystart="170"
-                          bodyend="177"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1aff9557532543b014a8606170c4e856cf" prot="private"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>void</type>
-                <definition>void Orchestrator::initObstacles</definition>
-                <argsstring>(int nbObstacleInit)</argsstring>
-                <name>initObstacles</name>
-                <param>
-                    <type>int</type>
-                    <declname>nbObstacleInit</declname>
-                </param>
-                <briefdescription>
-                    <para>Orchestrator::initObstacles create multiple food spawners at initialization round.</para>
-                </briefdescription>
-                <detaileddescription>
-                    <para>
-                        <parameterlist kind="param">
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>nbObstacleInit</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                        </parameterlist>
-                    </para>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="48" column="10" bodyfile="orchestrator.cpp" bodystart="183"
-                          bodyend="190"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1a126d478e6d98106b19e71a5b87ab5032" prot="private"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>void</type>
-                <definition>void Orchestrator::createWarrior</definition>
-                <argsstring>(pair&lt; int, int &gt; position, Anthill &amp;anthill)</argsstring>
-                <name>createWarrior</name>
-                <param>
-                    <type>pair&lt; int, int &gt;</type>
-                    <declname>position</declname>
-                </param>
-                <param>
-                    <type>
-                        <ref refid="class_anthill" kindref="compound">Anthill</ref> &amp;
-                    </type>
-                    <declname>anthill</declname>
-                </param>
-                <briefdescription>
-                    <para>Orchestrator::createWarrior create a warrior and add it to the orchestrator&apos;s warrior
-                        list.
-                    </para>
-                </briefdescription>
-                <detaileddescription>
-                    <para>
-                        <parameterlist kind="param">
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>position</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>anthill</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                        </parameterlist>
-                    </para>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="49" column="10" bodyfile="orchestrator.cpp" bodystart="217"
-                          bodyend="224"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1a2d93cd3e339988d5e0a767f9500cb160" prot="private"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>void</type>
-                <definition>void Orchestrator::initWarriors</definition>
-                <argsstring>(int nbWarriorInit, Anthill &amp;anthill)</argsstring>
-                <name>initWarriors</name>
-                <param>
-                    <type>int</type>
-                    <declname>nbWarriorInit</declname>
-                </param>
-                <param>
-                    <type>
-                        <ref refid="class_anthill" kindref="compound">Anthill</ref> &amp;
-                    </type>
-                    <declname>anthill</declname>
-                </param>
-                <briefdescription>
-                    <para>Orchestrator::initWarriors create multiple warriors at initialization round.</para>
-                </briefdescription>
-                <detaileddescription>
-                    <para>
-                        <parameterlist kind="param">
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>nbWarriorInit</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>anthill</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                        </parameterlist>
-                    </para>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="50" column="10" bodyfile="orchestrator.cpp" bodystart="197"
-                          bodyend="210"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1a534fcfe78c9b1370b81b8d24bb53cd98" prot="private"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>void</type>
-                <definition>void Orchestrator::setCaseTaken</definition>
-                <argsstring>(int x, int y, bool taken)</argsstring>
-                <name>setCaseTaken</name>
-                <param>
-                    <type>int</type>
-                    <declname>x</declname>
-                </param>
-                <param>
-                    <type>int</type>
-                    <declname>y</declname>
-                </param>
-                <param>
-                    <type>bool</type>
-                    <declname>taken</declname>
-                </param>
-                <briefdescription>
-                    <para>Orchestrator::setCaseTaken set the location on the map to &quot;taken&quot;.</para>
-                </briefdescription>
-                <detaileddescription>
-                    <para>
-                        <parameterlist kind="param">
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>x</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>y</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>taken</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para>: boolean value of the taken location on the map</para>
-                                </parameterdescription>
-                            </parameteritem>
-                        </parameterlist>
-                    </para>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="51" column="10" bodyfile="orchestrator.cpp" bodystart="320"
-                          bodyend="326"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1a3a81ec4039f8c4907619990044719161" prot="private"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>bool</type>
-                <definition>bool Orchestrator::isCaseTaken</definition>
-                <argsstring>(int x, int y)</argsstring>
-                <name>isCaseTaken</name>
-                <param>
-                    <type>int</type>
-                    <declname>x</declname>
-                </param>
-                <param>
-                    <type>int</type>
-                    <declname>y</declname>
-                </param>
-                <briefdescription>
-                    <para>Orchestrator::isCaseTaken tells if the given position is available.</para>
-                </briefdescription>
-                <detaileddescription>
-                    <para>
-                        <parameterlist kind="param">
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>x</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>y</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                        </parameterlist>
-                        <simplesect kind="return">
-                            <para>true if the position is taken, false is it&apos;s available</para>
-                        </simplesect>
-                    </para>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="52" column="10" bodyfile="orchestrator.cpp" bodystart="303"
-                          bodyend="312"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1a1024f2cc58dce887df34f2a277fca64c" prot="private"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>bool</type>
-                <definition>bool Orchestrator::isNextTo</definition>
-                <argsstring>(int antX, int antY, int objX, int objY)</argsstring>
-                <name>isNextTo</name>
-                <param>
-                    <type>int</type>
-                    <declname>antX</declname>
-                </param>
-                <param>
-                    <type>int</type>
-                    <declname>antY</declname>
-                </param>
-                <param>
-                    <type>int</type>
-                    <declname>objX</declname>
-                </param>
-                <param>
-                    <type>int</type>
-                    <declname>objY</declname>
-                </param>
-                <briefdescription>
-                    <para>Orchestrator::isNextTo tell if your ant is next to an object.</para>
-                </briefdescription>
-                <detaileddescription>
-                    <para>
-                        <parameterlist kind="param">
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>myX</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>myY</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>objX</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>objY</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                        </parameterlist>
-                        <simplesect kind="return">
-                            <para>true</para>
-                        </simplesect>
-                    </para>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="53" column="10" bodyfile="orchestrator.cpp" bodystart="336"
-                          bodyend="343"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1ade36383af2fa4ef4ec1c2dabaf5aa50c" prot="private"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>vector&lt; pair&lt; int, int &gt; &gt;</type>
-                <definition>vector&lt; pair&lt; int, int &gt; &gt; Orchestrator::getFreePositions</definition>
-                <argsstring>()</argsstring>
-                <name>getFreePositions</name>
-                <briefdescription>
-                    <para>Orchestrator::getFreePositions return all empty positions on the map.</para>
-                </briefdescription>
-                <detaileddescription>
-                    <para>
-                        <simplesect kind="return">
-                            <para>return all empty positions on the map as vector&lt;pair &lt;int, int&gt;&gt;</para>
-                        </simplesect>
-                    </para>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="55" column="12" bodyfile="orchestrator.cpp" bodystart="230"
-                          bodyend="244"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1ac13a40be361212148a9bf26ded46b683" prot="private"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>vector&lt; pair&lt; int, int &gt; &gt;</type>
-                <definition>vector&lt; pair&lt; int, int &gt; &gt; Orchestrator::getForbiddenPositions</definition>
-                <argsstring>(int x, int y)</argsstring>
-                <name>getForbiddenPositions</name>
-                <param>
-                    <type>int</type>
-                    <declname>x</declname>
-                </param>
-                <param>
-                    <type>int</type>
-                    <declname>y</declname>
-                </param>
-                <briefdescription>
-                    <para>Orchestrator::getForbiddenPositions return the positions around the given coordinates.</para>
-                </briefdescription>
-                <detaileddescription>
-                    <para>
-                        <parameterlist kind="param">
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>x</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>y</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                        </parameterlist>
-                        <simplesect kind="return">
-                            <para></para>
-                        </simplesect>
-                    </para>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="56" column="12" bodyfile="orchestrator.cpp" bodystart="252"
-                          bodyend="276"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1a9ecf235e2c706f78b7f9c004dfd28e61" prot="private"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>
-                    <ref refid="class_food_spawner" kindref="compound">FoodSpawner</ref>
-                    *
-                </type>
-                <definition>FoodSpawner * Orchestrator::checkFoodNearby</definition>
-                <argsstring>(int x, int y)</argsstring>
-                <name>checkFoodNearby</name>
-                <param>
-                    <type>int</type>
-                    <declname>x</declname>
-                </param>
-                <param>
-                    <type>int</type>
-                    <declname>y</declname>
-                </param>
-                <briefdescription>
-                    <para>Orchestrator::checkFoodNearby.</para>
-                </briefdescription>
-                <detaileddescription>
-                    <para>
-                        <parameterlist kind="param">
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>x</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>y</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                        </parameterlist>
-                        <simplesect kind="return">
-                            <para>the foodspawner if there is one next to the position, 0 if not</para>
-                        </simplesect>
-                    </para>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="57" column="17" bodyfile="orchestrator.cpp" bodystart="284"
-                          bodyend="295"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1a6d15cbca43cff0b32a8c54968b0c695c" prot="private"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>bool</type>
-                <definition>bool Orchestrator::checkPosition</definition>
-                <argsstring>(int x, int y)</argsstring>
-                <name>checkPosition</name>
-                <param>
-                    <type>int</type>
-                    <declname>x</declname>
-                </param>
-                <param>
-                    <type>int</type>
-                    <declname>y</declname>
-                </param>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="58" column="10"/>
-            </memberdef>
-            <memberdef kind="function" id="class_orchestrator_1a5feb59e28b476102074bb38e9b252ee4" prot="private"
-                       static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>vector&lt; pair&lt; int, int &gt; &gt;</type>
-                <definition>vector&lt; pair&lt; int, int &gt; &gt; Orchestrator::getWarriorsFreePositions</definition>
-                <argsstring>(Anthill &amp;anthill)</argsstring>
-                <name>getWarriorsFreePositions</name>
-                <param>
-                    <type>
-                        <ref refid="class_anthill" kindref="compound">Anthill</ref> &amp;
-                    </type>
-                    <declname>anthill</declname>
-                </param>
-                <briefdescription>
-                    <para>Orchestrator::getWarriorsFreePositions get all warriors available position to spawn around the
-                        anthill.
-                    </para>
-                </briefdescription>
-                <detaileddescription>
-                    <para>
-                        <parameterlist kind="param">
-                            <parameteritem>
-                                <parameternamelist>
-                                    <parametername>anthill</parametername>
-                                </parameternamelist>
-                                <parameterdescription>
-                                    <para></para>
-                                </parameterdescription>
-                            </parameteritem>
-                        </parameterlist>
-                        <simplesect kind="return">
-                            <para>all warriors free positions as vector&lt;pair &lt;int,int&gt;&gt;</para>
-                        </simplesect>
-                    </para>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="orchestrator.h" line="59" column="12" bodyfile="orchestrator.cpp" bodystart="350"
-                          bodyend="365"/>
-            </memberdef>
-        </sectiondef>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_orchestrator" kind="class" language="C++" prot="public">
+    <compoundname>Orchestrator</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_orchestrator_1a965da4741bf99096a42d1a92b87bf83f" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref></type>
+        <definition>CONFIG Orchestrator::_config</definition>
+        <argsstring></argsstring>
+        <name>_config</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
-        <location file="orchestrator.h" line="16" column="1" bodyfile="orchestrator.h" bodystart="17" bodyend="61"/>
-        <listofallmembers>
-            <member refid="class_orchestrator_1afa5440a71435ab53e096fa58ae724aca" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>_anthills</name>
-            </member>
-            <member refid="class_orchestrator_1ac3e2fa909f04ba0259aa8155d4ecf596" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>_anthillsGrid</name>
-            </member>
-            <member refid="class_orchestrator_1a965da4741bf99096a42d1a92b87bf83f" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>_config</name>
-            </member>
-            <member refid="class_orchestrator_1a0ce7e3ef5d9a75129617b73bfdfecf57" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>_dimension</name>
-            </member>
-            <member refid="class_orchestrator_1a464d27075256d666248977b473be3aa8" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>_foodSpawners</name>
-            </member>
-            <member refid="class_orchestrator_1a2477aeaf7c2daaaa422ca10c361cacb2" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>_foodSpawnersGrid</name>
-            </member>
-            <member refid="class_orchestrator_1a0be9646a122a25fa69e7b1685ce5d045" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>_grid</name>
-            </member>
-            <member refid="class_orchestrator_1aabb53161f65ca915ea3d80019b522904" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>_obstacles</name>
-            </member>
-            <member refid="class_orchestrator_1a3de65a747f1c0cb041bca1d9efdab5bb" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>_obstaclesGrid</name>
-            </member>
-            <member refid="class_orchestrator_1a4df763ed3b1e4a88d30167db2b60bbae" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>_warriors</name>
-            </member>
-            <member refid="class_orchestrator_1a9ecf235e2c706f78b7f9c004dfd28e61" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>checkFoodNearby</name>
-            </member>
-            <member refid="class_orchestrator_1a6d15cbca43cff0b32a8c54968b0c695c" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>checkPosition</name>
-            </member>
-            <member refid="class_orchestrator_1a216468278e2ee2cdca398eec4365d03e" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>createAnthill</name>
-            </member>
-            <member refid="class_orchestrator_1a7635636d46b44e40fa200d53f9b971a0" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>createFoodSpawner</name>
-            </member>
-            <member refid="class_orchestrator_1a6e3a5a53780b02873be2da3f8ab2d711" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>createObstacle</name>
-            </member>
-            <member refid="class_orchestrator_1a126d478e6d98106b19e71a5b87ab5032" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>createWarrior</name>
-            </member>
-            <member refid="class_orchestrator_1abba7d1f0fe26a8fc5f3d8ac5ce00a61a" prot="public" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>doRound</name>
-            </member>
-            <member refid="class_orchestrator_1a5e0ce1da543b2cc6f1d4aedc9de75ff5" prot="public" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>getDimension</name>
-            </member>
-            <member refid="class_orchestrator_1ac13a40be361212148a9bf26ded46b683" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>getForbiddenPositions</name>
-            </member>
-            <member refid="class_orchestrator_1ade36383af2fa4ef4ec1c2dabaf5aa50c" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>getFreePositions</name>
-            </member>
-            <member refid="class_orchestrator_1a43534ccc11df40a762dd0305135afd6a" prot="public" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>getMapEntity</name>
-            </member>
-            <member refid="class_orchestrator_1a5feb59e28b476102074bb38e9b252ee4" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>getWarriorsFreePositions</name>
-            </member>
-            <member refid="class_orchestrator_1a2dfa8c2b0162af323317599f49200a8f" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>initFoodSpawners</name>
-            </member>
-            <member refid="class_orchestrator_1aff9557532543b014a8606170c4e856cf" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>initObstacles</name>
-            </member>
-            <member refid="class_orchestrator_1a8f4d36b247fe79935c10e695c873befc" prot="public" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>initOrch</name>
-            </member>
-            <member refid="class_orchestrator_1a2d93cd3e339988d5e0a767f9500cb160" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>initWarriors</name>
-            </member>
-            <member refid="class_orchestrator_1a3a81ec4039f8c4907619990044719161" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>isCaseTaken</name>
-            </member>
-            <member refid="class_orchestrator_1a1024f2cc58dce887df34f2a277fca64c" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>isNextTo</name>
-            </member>
-            <member refid="class_orchestrator_1a11b00b1d6352b20cd3f06147950a3067" prot="public" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>Orchestrator</name>
-            </member>
-            <member refid="class_orchestrator_1a962cc595d5600e1eb600fe5946153c6e" prot="public" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>Orchestrator</name>
-            </member>
-            <member refid="class_orchestrator_1a534fcfe78c9b1370b81b8d24bb53cd98" prot="private" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>setCaseTaken</name>
-            </member>
-            <member refid="class_orchestrator_1a134459a83f516ef59fb70a3451d40d0b" prot="public" virt="non-virtual">
-                <scope>Orchestrator</scope>
-                <name>~Orchestrator</name>
-            </member>
-        </listofallmembers>
-    </compounddef>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="38" column="12" bodyfile="orchestrator.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_orchestrator_1a0ce7e3ef5d9a75129617b73bfdfecf57" prot="private" static="no" mutable="no">
+        <type>pair&lt; int, int &gt;</type>
+        <definition>pair&lt;int, int&gt; Orchestrator::_dimension</definition>
+        <argsstring></argsstring>
+        <name>_dimension</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="39" column="10" bodyfile="orchestrator.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_orchestrator_1a0be9646a122a25fa69e7b1685ce5d045" prot="private" static="no" mutable="no">
+        <type>vector&lt; vector&lt; bool &gt; &gt;</type>
+        <definition>vector&lt;vector&lt;bool&gt; &gt; Orchestrator::_grid</definition>
+        <argsstring></argsstring>
+        <name>_grid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="40" column="13" bodyfile="orchestrator.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_orchestrator_1a3de65a747f1c0cb041bca1d9efdab5bb" prot="private" static="no" mutable="no">
+        <type>vector&lt; vector&lt; bool &gt; &gt;</type>
+        <definition>vector&lt;vector&lt;bool&gt; &gt; Orchestrator::_obstaclesGrid</definition>
+        <argsstring></argsstring>
+        <name>_obstaclesGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="41" column="13" bodyfile="orchestrator.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_orchestrator_1a2477aeaf7c2daaaa422ca10c361cacb2" prot="private" static="no" mutable="no">
+        <type>vector&lt; vector&lt; bool &gt; &gt;</type>
+        <definition>vector&lt;vector&lt;bool&gt; &gt; Orchestrator::_foodSpawnersGrid</definition>
+        <argsstring></argsstring>
+        <name>_foodSpawnersGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="42" column="13" bodyfile="orchestrator.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_orchestrator_1ac3e2fa909f04ba0259aa8155d4ecf596" prot="private" static="no" mutable="no">
+        <type>vector&lt; vector&lt; bool &gt; &gt;</type>
+        <definition>vector&lt;vector&lt;bool&gt; &gt; Orchestrator::_anthillsGrid</definition>
+        <argsstring></argsstring>
+        <name>_anthillsGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="43" column="13" bodyfile="orchestrator.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_orchestrator_1a4df763ed3b1e4a88d30167db2b60bbae" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_warrior" kindref="compound">Warrior</ref> * &gt;</type>
+        <definition>vector&lt;Warrior *&gt; Orchestrator::_warriors</definition>
+        <argsstring></argsstring>
+        <name>_warriors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="44" column="12" bodyfile="orchestrator.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_orchestrator_1aabb53161f65ca915ea3d80019b522904" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_obstacle" kindref="compound">Obstacle</ref> * &gt;</type>
+        <definition>vector&lt;Obstacle *&gt; Orchestrator::_obstacles</definition>
+        <argsstring></argsstring>
+        <name>_obstacles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="45" column="12" bodyfile="orchestrator.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_orchestrator_1a464d27075256d666248977b473be3aa8" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_food_spawner" kindref="compound">FoodSpawner</ref> * &gt;</type>
+        <definition>vector&lt;FoodSpawner *&gt; Orchestrator::_foodSpawners</definition>
+        <argsstring></argsstring>
+        <name>_foodSpawners</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="46" column="12" bodyfile="orchestrator.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_orchestrator_1afa5440a71435ab53e096fa58ae724aca" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_anthill" kindref="compound">Anthill</ref> * &gt;</type>
+        <definition>vector&lt;Anthill *&gt; Orchestrator::_anthills</definition>
+        <argsstring></argsstring>
+        <name>_anthills</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="47" column="12" bodyfile="orchestrator.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_orchestrator_1a11b00b1d6352b20cd3f06147950a3067" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Orchestrator::Orchestrator</definition>
+        <argsstring>()</argsstring>
+        <name>Orchestrator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="22" column="5" bodyfile="orchestrator.cpp" bodystart="6" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1a962cc595d5600e1eb600fe5946153c6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Orchestrator::Orchestrator</definition>
+        <argsstring>(CONFIG config)</argsstring>
+        <name>Orchestrator</name>
+        <param>
+          <type><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref></type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="24" column="5" bodyfile="orchestrator.cpp" bodystart="14" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1a134459a83f516ef59fb70a3451d40d0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Orchestrator::~Orchestrator</definition>
+        <argsstring>()</argsstring>
+        <name>~Orchestrator</name>
+        <briefdescription>
+<para>default destructor of orchestrator </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="26" column="5" bodyfile="orchestrator.cpp" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1a5e0ce1da543b2cc6f1d4aedc9de75ff5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>pair&lt; int, int &gt;</type>
+        <definition>pair&lt; int, int &gt; Orchestrator::getDimension</definition>
+        <argsstring>() const</argsstring>
+        <name>getDimension</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="28" column="10" bodyfile="orchestrator.cpp" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1a43534ccc11df40a762dd0305135afd6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Orchestrator::getMapEntity</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>getMapEntity</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>return an int mapped to an object moving on the map </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="30" column="9" bodyfile="orchestrator.cpp" bodystart="60" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1a8f4d36b247fe79935c10e695c873befc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Orchestrator::initOrch</definition>
+        <argsstring>(CONFIG config)</argsstring>
+        <name>initOrch</name>
+        <param>
+          <type><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref></type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>initialize entities on the map at first round </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="32" column="10" bodyfile="orchestrator.cpp" bodystart="81" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1a5a614792639e1d837c393efe8a7c491d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Orchestrator::doRound</definition>
+        <argsstring>()</argsstring>
+        <name>doRound</name>
+        <briefdescription>
+<para><ref refid="class_orchestrator_1a5a614792639e1d837c393efe8a7c491d" kindref="member">Orchestrator::doRound</ref> the orchestrator do the round of the anthill and warriors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>0 if ecerything is fine, 1 if the queen is dead </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="34" column="9" bodyfile="orchestrator.cpp" bodystart="95" bodyend="164"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_orchestrator_1a216468278e2ee2cdca398eec4365d03e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Orchestrator::createAnthill</definition>
+        <argsstring>(pair&lt; int, int &gt; position, bool init)</argsstring>
+        <name>createAnthill</name>
+        <param>
+          <type>pair&lt; int, int &gt;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>init</declname>
+        </param>
+        <briefdescription>
+<para>create an anthil and add it to the orchestrator&apos;s anthill list </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>init</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boolean that indicates if the new anthill need to be initialized with eggs, larvas and workers </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="50" column="10" bodyfile="orchestrator.cpp" bodystart="171" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1a7635636d46b44e40fa200d53f9b971a0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Orchestrator::createFoodSpawner</definition>
+        <argsstring>(pair&lt; int, int &gt; position)</argsstring>
+        <name>createFoodSpawner</name>
+        <param>
+          <type>pair&lt; int, int &gt;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>create a food spawner and add it to the orchestrator&apos;s food spawner list </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="52" column="10" bodyfile="orchestrator.cpp" bodystart="186" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1a2dfa8c2b0162af323317599f49200a8f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Orchestrator::initFoodSpawners</definition>
+        <argsstring>(int nbFoodSpawnerInit)</argsstring>
+        <name>initFoodSpawners</name>
+        <param>
+          <type>int</type>
+          <declname>nbFoodSpawnerInit</declname>
+        </param>
+        <briefdescription>
+<para>create multiple food spawners at initialization round </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nbFoodSpawnerInit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="54" column="10" bodyfile="orchestrator.cpp" bodystart="198" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1a6e3a5a53780b02873be2da3f8ab2d711" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Orchestrator::createObstacle</definition>
+        <argsstring>(pair&lt; int, int &gt; position)</argsstring>
+        <name>createObstacle</name>
+        <param>
+          <type>pair&lt; int, int &gt;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>create an obstacle and add it to the orchestrator&apos;s obstacle list </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="56" column="10" bodyfile="orchestrator.cpp" bodystart="213" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1aff9557532543b014a8606170c4e856cf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Orchestrator::initObstacles</definition>
+        <argsstring>(int nbObstacleInit)</argsstring>
+        <name>initObstacles</name>
+        <param>
+          <type>int</type>
+          <declname>nbObstacleInit</declname>
+        </param>
+        <briefdescription>
+<para>create multiple food spawners at initialization round </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nbObstacleInit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="58" column="10" bodyfile="orchestrator.cpp" bodystart="225" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1ac0f805620a70d833aec829f6096f99e7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Orchestrator::createWarrior</definition>
+        <argsstring>(pair&lt; int, int &gt; position, Anthill *anthill)</argsstring>
+        <name>createWarrior</name>
+        <param>
+          <type>pair&lt; int, int &gt;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type><ref refid="class_anthill" kindref="compound">Anthill</ref> *</type>
+          <declname>anthill</declname>
+        </param>
+        <briefdescription>
+<para>create a warrior and add it to the orchestrator&apos;s warrior list </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>anthill</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="60" column="10" bodyfile="orchestrator.cpp" bodystart="259" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1a30c5bdad20f3741126446716b7869359" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Orchestrator::initWarriors</definition>
+        <argsstring>(int nbWarriorInit, Anthill *anthill)</argsstring>
+        <name>initWarriors</name>
+        <param>
+          <type>int</type>
+          <declname>nbWarriorInit</declname>
+        </param>
+        <param>
+          <type><ref refid="class_anthill" kindref="compound">Anthill</ref> *</type>
+          <declname>anthill</declname>
+        </param>
+        <briefdescription>
+<para>create multiple warriors at initialization round </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nbWarriorInit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>anthill</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="62" column="10" bodyfile="orchestrator.cpp" bodystart="241" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1a534fcfe78c9b1370b81b8d24bb53cd98" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Orchestrator::setCaseTaken</definition>
+        <argsstring>(int x, int y, bool taken)</argsstring>
+        <name>setCaseTaken</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>taken</declname>
+        </param>
+        <briefdescription>
+<para>set the location on the map to &quot;taken&quot; </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>taken</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: boolean value of the taken location on the map </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="64" column="10" bodyfile="orchestrator.cpp" bodystart="349" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1a3a81ec4039f8c4907619990044719161" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Orchestrator::isCaseTaken</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>isCaseTaken</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>tells if the given position is available </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the position is taken, false is it&apos;s available </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="66" column="10" bodyfile="orchestrator.cpp" bodystart="334" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1a1024f2cc58dce887df34f2a277fca64c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Orchestrator::isNextTo</definition>
+        <argsstring>(int antX, int antY, int objX, int objY)</argsstring>
+        <name>isNextTo</name>
+        <param>
+          <type>int</type>
+          <declname>antX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>antY</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>objX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>objY</declname>
+        </param>
+        <briefdescription>
+<para>tell if your ant is next to an object </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>myX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>myY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>objX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>objY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="68" column="10" bodyfile="orchestrator.cpp" bodystart="363" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1ade36383af2fa4ef4ec1c2dabaf5aa50c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; pair&lt; int, int &gt; &gt;</type>
+        <definition>vector&lt; pair&lt; int, int &gt; &gt; Orchestrator::getFreePositions</definition>
+        <argsstring>()</argsstring>
+        <name>getFreePositions</name>
+        <briefdescription>
+<para>return all empty positions on the map </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>return all empty positions on the map as vector&lt;pair &lt;int, int&gt;&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="70" column="13" bodyfile="orchestrator.cpp" bodystart="270" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1ac13a40be361212148a9bf26ded46b683" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; pair&lt; int, int &gt; &gt;</type>
+        <definition>vector&lt; pair&lt; int, int &gt; &gt; Orchestrator::getForbiddenPositions</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>getForbiddenPositions</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Orchestrator::getForbidenPositions indicates position where you cannot go next to the coordinates you give. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the occupied position around the given coordinates </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="72" column="13" bodyfile="orchestrator.cpp" bodystart="291" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1a9ecf235e2c706f78b7f9c004dfd28e61" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_food_spawner" kindref="compound">FoodSpawner</ref> *</type>
+        <definition>FoodSpawner * Orchestrator::checkFoodNearby</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>checkFoodNearby</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>methods used to verify if there is food near the position </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the foodspawner if there is one next to the position, 0 if not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="74" column="17" bodyfile="orchestrator.cpp" bodystart="318" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1a6d15cbca43cff0b32a8c54968b0c695c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Orchestrator::checkPosition</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>checkPosition</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="76" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orchestrator_1a5feb59e28b476102074bb38e9b252ee4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; pair&lt; int, int &gt; &gt;</type>
+        <definition>vector&lt; pair&lt; int, int &gt; &gt; Orchestrator::getWarriorsFreePositions</definition>
+        <argsstring>(Anthill &amp;anthill)</argsstring>
+        <name>getWarriorsFreePositions</name>
+        <param>
+          <type><ref refid="class_anthill" kindref="compound">Anthill</ref> &amp;</type>
+          <declname>anthill</declname>
+        </param>
+        <briefdescription>
+<para>get all warriors available position to spawn around the anthill </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>anthill</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>all warriors free positions as vector&lt;pair &lt;int,int&gt;&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="orchestrator.h" line="78" column="13" bodyfile="orchestrator.cpp" bodystart="376" bodyend="398"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="orchestrator.h" line="18" column="1" bodyfile="orchestrator.h" bodystart="18" bodyend="80"/>
+    <listofallmembers>
+      <member refid="class_orchestrator_1afa5440a71435ab53e096fa58ae724aca" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>_anthills</name></member>
+      <member refid="class_orchestrator_1ac3e2fa909f04ba0259aa8155d4ecf596" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>_anthillsGrid</name></member>
+      <member refid="class_orchestrator_1a965da4741bf99096a42d1a92b87bf83f" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>_config</name></member>
+      <member refid="class_orchestrator_1a0ce7e3ef5d9a75129617b73bfdfecf57" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>_dimension</name></member>
+      <member refid="class_orchestrator_1a464d27075256d666248977b473be3aa8" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>_foodSpawners</name></member>
+      <member refid="class_orchestrator_1a2477aeaf7c2daaaa422ca10c361cacb2" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>_foodSpawnersGrid</name></member>
+      <member refid="class_orchestrator_1a0be9646a122a25fa69e7b1685ce5d045" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>_grid</name></member>
+      <member refid="class_orchestrator_1aabb53161f65ca915ea3d80019b522904" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>_obstacles</name></member>
+      <member refid="class_orchestrator_1a3de65a747f1c0cb041bca1d9efdab5bb" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>_obstaclesGrid</name></member>
+      <member refid="class_orchestrator_1a4df763ed3b1e4a88d30167db2b60bbae" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>_warriors</name></member>
+      <member refid="class_orchestrator_1a9ecf235e2c706f78b7f9c004dfd28e61" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>checkFoodNearby</name></member>
+      <member refid="class_orchestrator_1a6d15cbca43cff0b32a8c54968b0c695c" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>checkPosition</name></member>
+      <member refid="class_orchestrator_1a216468278e2ee2cdca398eec4365d03e" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>createAnthill</name></member>
+      <member refid="class_orchestrator_1a7635636d46b44e40fa200d53f9b971a0" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>createFoodSpawner</name></member>
+      <member refid="class_orchestrator_1a6e3a5a53780b02873be2da3f8ab2d711" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>createObstacle</name></member>
+      <member refid="class_orchestrator_1ac0f805620a70d833aec829f6096f99e7" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>createWarrior</name></member>
+      <member refid="class_orchestrator_1a5a614792639e1d837c393efe8a7c491d" prot="public" virt="non-virtual"><scope>Orchestrator</scope><name>doRound</name></member>
+      <member refid="class_orchestrator_1a5e0ce1da543b2cc6f1d4aedc9de75ff5" prot="public" virt="non-virtual"><scope>Orchestrator</scope><name>getDimension</name></member>
+      <member refid="class_orchestrator_1ac13a40be361212148a9bf26ded46b683" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>getForbiddenPositions</name></member>
+      <member refid="class_orchestrator_1ade36383af2fa4ef4ec1c2dabaf5aa50c" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>getFreePositions</name></member>
+      <member refid="class_orchestrator_1a43534ccc11df40a762dd0305135afd6a" prot="public" virt="non-virtual"><scope>Orchestrator</scope><name>getMapEntity</name></member>
+      <member refid="class_orchestrator_1a5feb59e28b476102074bb38e9b252ee4" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>getWarriorsFreePositions</name></member>
+      <member refid="class_orchestrator_1a2dfa8c2b0162af323317599f49200a8f" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>initFoodSpawners</name></member>
+      <member refid="class_orchestrator_1aff9557532543b014a8606170c4e856cf" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>initObstacles</name></member>
+      <member refid="class_orchestrator_1a8f4d36b247fe79935c10e695c873befc" prot="public" virt="non-virtual"><scope>Orchestrator</scope><name>initOrch</name></member>
+      <member refid="class_orchestrator_1a30c5bdad20f3741126446716b7869359" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>initWarriors</name></member>
+      <member refid="class_orchestrator_1a3a81ec4039f8c4907619990044719161" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>isCaseTaken</name></member>
+      <member refid="class_orchestrator_1a1024f2cc58dce887df34f2a277fca64c" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>isNextTo</name></member>
+      <member refid="class_orchestrator_1a11b00b1d6352b20cd3f06147950a3067" prot="public" virt="non-virtual"><scope>Orchestrator</scope><name>Orchestrator</name></member>
+      <member refid="class_orchestrator_1a962cc595d5600e1eb600fe5946153c6e" prot="public" virt="non-virtual"><scope>Orchestrator</scope><name>Orchestrator</name></member>
+      <member refid="class_orchestrator_1a534fcfe78c9b1370b81b8d24bb53cd98" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>setCaseTaken</name></member>
+      <member refid="class_orchestrator_1a134459a83f516ef59fb70a3451d40d0b" prot="public" virt="non-virtual"><scope>Orchestrator</scope><name>~Orchestrator</name></member>
+    </listofallmembers>
+  </compounddef>
 </doxygen>

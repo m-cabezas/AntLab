@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_game" kind="class" language="C++" prot="public">
+    <compoundname>Game</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_game_1ab86178da8c4aec78d63f8204c5f0f732" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref></type>
+        <definition>CONFIG Game::_config</definition>
+        <argsstring></argsstring>
+        <name>_config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game.h" line="26" column="12" bodyfile="game.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a3f7a53430c601b7529859ad956c19864" prot="private" static="no" mutable="no">
+        <type><ref refid="class_orchestrator" kindref="compound">Orchestrator</ref> *</type>
+        <definition>Orchestrator* Game::_orchestrator</definition>
+        <argsstring></argsstring>
+        <name>_orchestrator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game.h" line="27" column="18" bodyfile="game.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_1ad59df6562a58a614fda24622d3715b65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Game::Game</definition>
+        <argsstring>()</argsstring>
+        <name>Game</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game.h" line="14" column="5" bodyfile="game.cpp" bodystart="8" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1ae3d112ca6e0e55150d2fdbc704474530" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Game::~Game</definition>
+        <argsstring>()</argsstring>
+        <name>~Game</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game.h" line="16" column="5" bodyfile="game.cpp" bodystart="116" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1ac082f03dde132ecc22cc7b1bba81ce2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::initializeGrid</definition>
+        <argsstring>()</argsstring>
+        <name>initializeGrid</name>
+        <briefdescription>
+<para>display an process the console UI </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game.h" line="18" column="10" bodyfile="game.cpp" bodystart="76" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1ab684b380c7d3f3577e2fb80006415297" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::initGame</definition>
+        <argsstring>()</argsstring>
+        <name>initGame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init the orchestrator and launch the MainWindow </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game.h" line="20" column="10" bodyfile="game.cpp" bodystart="40" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1a4c9dbf1ff2cd693cb94f19cdc4c405e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref></type>
+        <definition>CONFIG Game::getConfig</definition>
+        <argsstring>()</argsstring>
+        <name>getConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game.h" line="22" column="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_game_1ae2c26d3f666115ca618288a6508bef9e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Game::newRound</definition>
+        <argsstring>(int roundNumber)</argsstring>
+        <name>newRound</name>
+        <param>
+          <type>int</type>
+          <declname>roundNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game.h" line="30" column="10" bodyfile="game.cpp" bodystart="57" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1adcdde0679446f22b509555245186a3ff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::doRounds</definition>
+        <argsstring>()</argsstring>
+        <name>doRounds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game.h" line="32" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="game.h" line="11" column="1" bodyfile="game.h" bodystart="11" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_game_1ab86178da8c4aec78d63f8204c5f0f732" prot="private" virt="non-virtual"><scope>Game</scope><name>_config</name></member>
+      <member refid="class_game_1a3f7a53430c601b7529859ad956c19864" prot="private" virt="non-virtual"><scope>Game</scope><name>_orchestrator</name></member>
+      <member refid="class_game_1adcdde0679446f22b509555245186a3ff" prot="private" virt="non-virtual"><scope>Game</scope><name>doRounds</name></member>
+      <member refid="class_game_1ad59df6562a58a614fda24622d3715b65" prot="public" virt="non-virtual"><scope>Game</scope><name>Game</name></member>
+      <member refid="class_game_1a4c9dbf1ff2cd693cb94f19cdc4c405e3" prot="public" virt="non-virtual"><scope>Game</scope><name>getConfig</name></member>
+      <member refid="class_game_1ab684b380c7d3f3577e2fb80006415297" prot="public" virt="non-virtual"><scope>Game</scope><name>initGame</name></member>
+      <member refid="class_game_1ac082f03dde132ecc22cc7b1bba81ce2d" prot="public" virt="non-virtual"><scope>Game</scope><name>initializeGrid</name></member>
+      <member refid="class_game_1ae2c26d3f666115ca618288a6508bef9e" prot="private" virt="non-virtual"><scope>Game</scope><name>newRound</name></member>
+      <member refid="class_game_1ae3d112ca6e0e55150d2fdbc704474530" prot="public" virt="non-virtual"><scope>Game</scope><name>~Game</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

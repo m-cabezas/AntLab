@@ -6,19 +6,34 @@
 \mbox{\Hypertarget{class_orchestrator_a962cc595d5600e1eb600fe5946153c6e}\label{class_orchestrator_a962cc595d5600e1eb600fe5946153c6e}} 
 {\bfseries Orchestrator} (\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} config)
 \item 
+\mbox{\Hypertarget{class_orchestrator_a134459a83f516ef59fb70a3451d40d0b}\label{class_orchestrator_a134459a83f516ef59fb70a3451d40d0b}} 
+\mbox{\hyperlink{class_orchestrator_a134459a83f516ef59fb70a3451d40d0b}{$\sim$\+Orchestrator}} ()
+\begin{DoxyCompactList}\small\item\em default destructor of orchestrator \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_orchestrator_a5e0ce1da543b2cc6f1d4aedc9de75ff5}\label{class_orchestrator_a5e0ce1da543b2cc6f1d4aedc9de75ff5}} 
 pair$<$ int, int $>$ {\bfseries get\+Dimension} () const
 \item 
 int \mbox{\hyperlink{class_orchestrator_a43534ccc11df40a762dd0305135afd6a}{get\+Map\+Entity}} (int x, int y)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_orchestrator_a43534ccc11df40a762dd0305135afd6a}{Orchestrator\+::get\+Map\+Entity}} return an int mapped to an object moving on the map. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em return an int mapped to an object moving on the map \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_orchestrator_a8f4d36b247fe79935c10e695c873befc}{init\+Orch}} (\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} config)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_orchestrator_a8f4d36b247fe79935c10e695c873befc}{Orchestrator\+::init\+Orch}} initialize entities on the map at first round. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_orchestrator_abba7d1f0fe26a8fc5f3d8ac5ce00a61a}\label{class_orchestrator_abba7d1f0fe26a8fc5f3d8ac5ce00a61a}} 
-void \mbox{\hyperlink{class_orchestrator_abba7d1f0fe26a8fc5f3d8ac5ce00a61a}{do\+Round}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_orchestrator_abba7d1f0fe26a8fc5f3d8ac5ce00a61a}{Orchestrator\+::do\+Round()}} integrate all actions that are done in a round by the entities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em initialize entities on the map at first round \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_orchestrator_a5a614792639e1d837c393efe8a7c491d}{do\+Round}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_orchestrator_a5a614792639e1d837c393efe8a7c491d}{Orchestrator\+::do\+Round}} the orchestrator do the round of the anthill and warriors. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_orchestrator_a5a614792639e1d837c393efe8a7c491d}\label{class_orchestrator_a5a614792639e1d837c393efe8a7c491d}} 
+\index{Orchestrator@{Orchestrator}!doRound@{doRound}}
+\index{doRound@{doRound}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{doRound()}{doRound()}}
+{\footnotesize\ttfamily int Orchestrator\+::do\+Round (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_orchestrator_a5a614792639e1d837c393efe8a7c491d}{Orchestrator\+::do\+Round}} the orchestrator do the round of the anthill and warriors. 
+
+\begin{DoxyReturn}{Returns}
+0 if ecerything is fine, 1 if the queen is dead 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_orchestrator_a43534ccc11df40a762dd0305135afd6a}\label{class_orchestrator_a43534ccc11df40a762dd0305135afd6a}} 
 \index{Orchestrator@{Orchestrator}!getMapEntity@{getMapEntity}}
 \index{getMapEntity@{getMapEntity}!Orchestrator@{Orchestrator}}
@@ -27,7 +42,7 @@ void \mbox{\hyperlink{class_orchestrator_abba7d1f0fe26a8fc5f3d8ac5ce00a61a}{do\+
 
 
 
-\mbox{\hyperlink{class_orchestrator_a43534ccc11df40a762dd0305135afd6a}{Orchestrator\+::get\+Map\+Entity}} return an int mapped to an object moving on the map. 
+return an int mapped to an object moving on the map 
 
 
 \begin{DoxyParams}{Parameters}
@@ -47,7 +62,7 @@ void \mbox{\hyperlink{class_orchestrator_abba7d1f0fe26a8fc5f3d8ac5ce00a61a}{do\+
 
 
 
-\mbox{\hyperlink{class_orchestrator_a8f4d36b247fe79935c10e695c873befc}{Orchestrator\+::init\+Orch}} initialize entities on the map at first round. 
+initialize entities on the map at first round 
 
 
 \begin{DoxyParams}{Parameters}

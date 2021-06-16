@@ -1,274 +1,208 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.9.1" xml:lang="en-US">
-    <compounddef id="class_larva" kind="class" language="C++" prot="public">
-        <compoundname>Larva</compoundname>
-        <basecompoundref refid="class_egg" prot="public" virt="non-virtual">Egg</basecompoundref>
-        <derivedcompoundref refid="class_worker" prot="public" virt="non-virtual">Worker</derivedcompoundref>
-        <sectiondef kind="protected-attrib">
-            <memberdef kind="variable" id="class_larva_1aff0c81a8dda39bbb4ab10553d7c47c69" prot="protected" static="no"
-                       mutable="no">
-                <type>int</type>
-                <definition>int Larva::_foodCons</definition>
-                <argsstring></argsstring>
-                <name>_foodCons</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="larva.h" line="21" column="9" bodyfile="larva.h" bodystart="21" bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable" id="class_larva_1a6c110f254d97b23fface50ba929dc316" prot="protected" static="no"
-                       mutable="no">
-                <type>int</type>
-                <definition>int Larva::_currentHealth</definition>
-                <argsstring></argsstring>
-                <name>_currentHealth</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="larva.h" line="22" column="9" bodyfile="larva.h" bodystart="22" bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable" id="class_larva_1a8c51a31397bcc72b39b5b79e5d5dfc98" prot="protected" static="no"
-                       mutable="no">
-                <type>int</type>
-                <definition>int Larva::_maxHealth</definition>
-                <argsstring></argsstring>
-                <name>_maxHealth</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="larva.h" line="23" column="9" bodyfile="larva.h" bodystart="23" bodyend="-1"/>
-            </memberdef>
-        </sectiondef>
-        <sectiondef kind="public-func">
-            <memberdef kind="function" id="class_larva_1a4b111b5a13f5d3b1fb7121ac79824fe4" prot="public" static="no"
-                       const="no" explicit="no" inline="no" virt="non-virtual">
-                <type></type>
-                <definition>Larva::Larva</definition>
-                <argsstring>()</argsstring>
-                <name>Larva</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="larva.h" line="11" column="5" bodyfile="larva.cpp" bodystart="3" bodyend="6"/>
-            </memberdef>
-            <memberdef kind="function" id="class_larva_1a34766742688547c5295f578da74ac080" prot="public" static="no"
-                       const="no" explicit="no" inline="no" virt="non-virtual">
-                <type></type>
-                <definition>Larva::Larva</definition>
-                <argsstring>(CONFIG &amp;config, string name)</argsstring>
-                <name>Larva</name>
-                <param>
-                    <type>
-                        <ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref> &amp;
-                    </type>
-                    <declname>config</declname>
-                </param>
-                <param>
-                    <type>string</type>
-                    <declname>name</declname>
-                </param>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="larva.h" line="12" column="5" bodyfile="larva.cpp" bodystart="8" bodyend="15"/>
-            </memberdef>
-            <memberdef kind="function" id="class_larva_1a1f7555c8d84576eda0d3dbfc8bb88c2f" prot="public" static="no"
-                       const="no" explicit="no" inline="no" virt="non-virtual">
-                <type></type>
-                <definition>Larva::~Larva</definition>
-                <argsstring>()</argsstring>
-                <name>~Larva</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="larva.h" line="13" column="5" bodyfile="larva.cpp" bodystart="17" bodyend="20"/>
-            </memberdef>
-            <memberdef kind="function" id="class_larva_1adbe862633e03ac3ec06230353b222767" prot="public" static="no"
-                       const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>void</type>
-                <definition>void Larva::heal</definition>
-                <argsstring>(int foodNumber)</argsstring>
-                <name>heal</name>
-                <param>
-                    <type>int</type>
-                    <declname>foodNumber</declname>
-                </param>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="larva.h" line="15" column="10" bodyfile="larva.cpp" bodystart="22" bodyend="28"/>
-            </memberdef>
-            <memberdef kind="function" id="class_larva_1aa98638a241743fe9b0eab9267593e143" prot="public" static="no"
-                       const="no" explicit="no" inline="no" virt="non-virtual">
-                <type>void</type>
-                <definition>void Larva::starve</definition>
-                <argsstring>()</argsstring>
-                <name>starve</name>
-                <briefdescription>
-                    <para>
-                        <ref refid="class_larva_1aa98638a241743fe9b0eab9267593e143" kindref="member">Larva::starve</ref>
-                        reduce the life of the ant according to its food consumption.
-                    </para>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="larva.h" line="16" column="10" bodyfile="larva.cpp" bodystart="33" bodyend="38"/>
-            </memberdef>
-            <memberdef kind="function" id="class_larva_1aa02ca1d9e4b69832742214094e48cbd0" prot="public" static="no"
-                       const="yes" explicit="no" inline="no" virt="non-virtual">
-                <type>int</type>
-                <definition>int Larva::getCurrentHealth</definition>
-                <argsstring>() const</argsstring>
-                <name>getCurrentHealth</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="larva.h" line="17" column="9" bodyfile="larva.cpp" bodystart="41" bodyend="44"/>
-            </memberdef>
-        </sectiondef>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_larva" kind="class" language="C++" prot="public">
+    <compoundname>Larva</compoundname>
+    <basecompoundref refid="class_egg" prot="public" virt="non-virtual">Egg</basecompoundref>
+    <derivedcompoundref refid="class_worker" prot="public" virt="non-virtual">Worker</derivedcompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_larva_1aff0c81a8dda39bbb4ab10553d7c47c69" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Larva::_foodCons</definition>
+        <argsstring></argsstring>
+        <name>_foodCons</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
-        <inheritancegraph>
-            <node id="2">
-                <label>Egg</label>
-                <link refid="class_egg"/>
-            </node>
-            <node id="4">
-                <label>Warrior</label>
-                <link refid="class_warrior"/>
-                <childnode refid="3" relation="public-inheritance">
-                </childnode>
-            </node>
-            <node id="5">
-                <label>Queen</label>
-                <link refid="class_queen"/>
-                <childnode refid="4" relation="public-inheritance">
-                </childnode>
-            </node>
-            <node id="3">
-                <label>Worker</label>
-                <link refid="class_worker"/>
-                <childnode refid="1" relation="public-inheritance">
-                </childnode>
-            </node>
-            <node id="1">
-                <label>Larva</label>
-                <link refid="class_larva"/>
-                <childnode refid="2" relation="public-inheritance">
-                </childnode>
-            </node>
-        </inheritancegraph>
-        <collaborationgraph>
-            <node id="2">
-                <label>Egg</label>
-                <link refid="class_egg"/>
-            </node>
-            <node id="1">
-                <label>Larva</label>
-                <link refid="class_larva"/>
-                <childnode refid="2" relation="public-inheritance">
-                </childnode>
-            </node>
-        </collaborationgraph>
-        <location file="larva.h" line="7" column="1" bodyfile="larva.h" bodystart="8" bodyend="25"/>
-        <listofallmembers>
-            <member refid="class_egg_1a5943a93f9bb3c8e785ae5ca491776440" prot="protected" virt="non-virtual">
-                <scope>Larva</scope>
-                <name>_currentAge</name>
-            </member>
-            <member refid="class_larva_1a6c110f254d97b23fface50ba929dc316" prot="protected" virt="non-virtual">
-                <scope>Larva</scope>
-                <name>_currentHealth</name>
-            </member>
-            <member refid="class_larva_1aff0c81a8dda39bbb4ab10553d7c47c69" prot="protected" virt="non-virtual">
-                <scope>Larva</scope>
-                <name>_foodCons</name>
-            </member>
-            <member refid="class_larva_1a8c51a31397bcc72b39b5b79e5d5dfc98" prot="protected" virt="non-virtual">
-                <scope>Larva</scope>
-                <name>_maxHealth</name>
-            </member>
-            <member refid="class_egg_1a57ca36eb21771f70b66b52f3273c1479" prot="protected" virt="non-virtual">
-                <scope>Larva</scope>
-                <name>_name</name>
-            </member>
-            <member refid="class_egg_1a7bc49a621a55e7236415ad5da41d3b54" prot="public" virt="non-virtual">
-                <scope>Larva</scope>
-                <name>Egg</name>
-            </member>
-            <member refid="class_egg_1a90ffc2d1e1f8bc43e871e47e1d1f80aa" prot="public" virt="non-virtual">
-                <scope>Larva</scope>
-                <name>Egg</name>
-            </member>
-            <member refid="class_egg_1a56270a17b03c82f769bb97bbbabd91f5" prot="public" virt="non-virtual">
-                <scope>Larva</scope>
-                <name>getCurrentAge</name>
-            </member>
-            <member refid="class_larva_1aa02ca1d9e4b69832742214094e48cbd0" prot="public" virt="non-virtual">
-                <scope>Larva</scope>
-                <name>getCurrentHealth</name>
-            </member>
-            <member refid="class_egg_1ad6892cf4ac2739b9e8346db7a541ce1f" prot="public" virt="non-virtual">
-                <scope>Larva</scope>
-                <name>getName</name>
-            </member>
-            <member refid="class_larva_1adbe862633e03ac3ec06230353b222767" prot="public" virt="non-virtual">
-                <scope>Larva</scope>
-                <name>heal</name>
-            </member>
-            <member refid="class_egg_1a6d90db3b102903ce9e53f07a16c7403d" prot="public" virt="non-virtual">
-                <scope>Larva</scope>
-                <name>increaseAge</name>
-            </member>
-            <member refid="class_larva_1a4b111b5a13f5d3b1fb7121ac79824fe4" prot="public" virt="non-virtual">
-                <scope>Larva</scope>
-                <name>Larva</name>
-            </member>
-            <member refid="class_larva_1a34766742688547c5295f578da74ac080" prot="public" virt="non-virtual">
-                <scope>Larva</scope>
-                <name>Larva</name>
-            </member>
-            <member refid="class_larva_1aa98638a241743fe9b0eab9267593e143" prot="public" virt="non-virtual">
-                <scope>Larva</scope>
-                <name>starve</name>
-            </member>
-            <member refid="class_egg_1a0eb6ce527494b7f97f362b6eb6b7f11d" prot="public" virt="non-virtual">
-                <scope>Larva</scope>
-                <name>~Egg</name>
-            </member>
-            <member refid="class_larva_1a1f7555c8d84576eda0d3dbfc8bb88c2f" prot="public" virt="non-virtual">
-                <scope>Larva</scope>
-                <name>~Larva</name>
-            </member>
-        </listofallmembers>
-    </compounddef>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="larva.h" line="24" column="9" bodyfile="larva.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_larva_1a6c110f254d97b23fface50ba929dc316" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Larva::_currentHealth</definition>
+        <argsstring></argsstring>
+        <name>_currentHealth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="larva.h" line="25" column="9" bodyfile="larva.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_larva_1a8c51a31397bcc72b39b5b79e5d5dfc98" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Larva::_maxHealth</definition>
+        <argsstring></argsstring>
+        <name>_maxHealth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="larva.h" line="26" column="9" bodyfile="larva.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_larva_1a4b111b5a13f5d3b1fb7121ac79824fe4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Larva::Larva</definition>
+        <argsstring>()</argsstring>
+        <name>Larva</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="larva.h" line="10" column="5" bodyfile="larva.cpp" bodystart="6" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_larva_1a34766742688547c5295f578da74ac080" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Larva::Larva</definition>
+        <argsstring>(CONFIG &amp;config, string name)</argsstring>
+        <name>Larva</name>
+        <param>
+          <type><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="larva.h" line="12" column="5" bodyfile="larva.cpp" bodystart="15" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_larva_1a1f7555c8d84576eda0d3dbfc8bb88c2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Larva::~Larva</definition>
+        <argsstring>()</argsstring>
+        <name>~Larva</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="larva.h" line="14" column="5" bodyfile="larva.cpp" bodystart="26" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_larva_1adbe862633e03ac3ec06230353b222767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Larva::heal</definition>
+        <argsstring>(int foodNumber)</argsstring>
+        <name>heal</name>
+        <param>
+          <type>int</type>
+          <declname>foodNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="larva.h" line="16" column="10" bodyfile="larva.cpp" bodystart="33" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_larva_1aa98638a241743fe9b0eab9267593e143" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Larva::starve</definition>
+        <argsstring>()</argsstring>
+        <name>starve</name>
+        <briefdescription>
+<para><ref refid="class_larva_1aa98638a241743fe9b0eab9267593e143" kindref="member">Larva::starve</ref> reduce the life of the ant according to its food consumption. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="larva.h" line="18" column="10" bodyfile="larva.cpp" bodystart="43" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_larva_1aa02ca1d9e4b69832742214094e48cbd0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Larva::getCurrentHealth</definition>
+        <argsstring>() const</argsstring>
+        <name>getCurrentHealth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="larva.h" line="20" column="9" bodyfile="larva.cpp" bodystart="55" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Egg</label>
+        <link refid="class_egg"/>
+      </node>
+      <node id="5">
+        <label>Warrior</label>
+        <link refid="class_warrior"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Queen</label>
+        <link refid="class_queen"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Worker</label>
+        <link refid="class_worker"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Larva</label>
+        <link refid="class_larva"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Egg</label>
+        <link refid="class_egg"/>
+      </node>
+      <node id="1">
+        <label>Larva</label>
+        <link refid="class_larva"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="larva.h" line="7" column="1" bodyfile="larva.h" bodystart="7" bodyend="28"/>
+    <listofallmembers>
+      <member refid="class_egg_1a5943a93f9bb3c8e785ae5ca491776440" prot="protected" virt="non-virtual"><scope>Larva</scope><name>_currentAge</name></member>
+      <member refid="class_larva_1a6c110f254d97b23fface50ba929dc316" prot="protected" virt="non-virtual"><scope>Larva</scope><name>_currentHealth</name></member>
+      <member refid="class_larva_1aff0c81a8dda39bbb4ab10553d7c47c69" prot="protected" virt="non-virtual"><scope>Larva</scope><name>_foodCons</name></member>
+      <member refid="class_larva_1a8c51a31397bcc72b39b5b79e5d5dfc98" prot="protected" virt="non-virtual"><scope>Larva</scope><name>_maxHealth</name></member>
+      <member refid="class_egg_1a57ca36eb21771f70b66b52f3273c1479" prot="protected" virt="non-virtual"><scope>Larva</scope><name>_name</name></member>
+      <member refid="class_egg_1a7bc49a621a55e7236415ad5da41d3b54" prot="public" virt="non-virtual"><scope>Larva</scope><name>Egg</name></member>
+      <member refid="class_egg_1a90ffc2d1e1f8bc43e871e47e1d1f80aa" prot="public" virt="non-virtual"><scope>Larva</scope><name>Egg</name></member>
+      <member refid="class_egg_1a56270a17b03c82f769bb97bbbabd91f5" prot="public" virt="non-virtual"><scope>Larva</scope><name>getCurrentAge</name></member>
+      <member refid="class_larva_1aa02ca1d9e4b69832742214094e48cbd0" prot="public" virt="non-virtual"><scope>Larva</scope><name>getCurrentHealth</name></member>
+      <member refid="class_egg_1ad6892cf4ac2739b9e8346db7a541ce1f" prot="public" virt="non-virtual"><scope>Larva</scope><name>getName</name></member>
+      <member refid="class_larva_1adbe862633e03ac3ec06230353b222767" prot="public" virt="non-virtual"><scope>Larva</scope><name>heal</name></member>
+      <member refid="class_egg_1a6d90db3b102903ce9e53f07a16c7403d" prot="public" virt="non-virtual"><scope>Larva</scope><name>increaseAge</name></member>
+      <member refid="class_larva_1a4b111b5a13f5d3b1fb7121ac79824fe4" prot="public" virt="non-virtual"><scope>Larva</scope><name>Larva</name></member>
+      <member refid="class_larva_1a34766742688547c5295f578da74ac080" prot="public" virt="non-virtual"><scope>Larva</scope><name>Larva</name></member>
+      <member refid="class_larva_1aa98638a241743fe9b0eab9267593e143" prot="public" virt="non-virtual"><scope>Larva</scope><name>starve</name></member>
+      <member refid="class_egg_1a0eb6ce527494b7f97f362b6eb6b7f11d" prot="public" virt="non-virtual"><scope>Larva</scope><name>~Egg</name></member>
+      <member refid="class_larva_1a1f7555c8d84576eda0d3dbfc8bb88c2f" prot="public" virt="non-virtual"><scope>Larva</scope><name>~Larva</name></member>
+    </listofallmembers>
+  </compounddef>
 </doxygen>

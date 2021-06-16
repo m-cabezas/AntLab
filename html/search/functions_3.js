@@ -1,6 +1,9 @@
-var searchData =
-    [
-        ['initgame_41', ['initGame', ['../class_main_window.html#aa846305d4ae16b22996019890a79e009', 1, 'MainWindow']]],
-        ['initializegrid_42', ['initializeGrid', ['../class_main_window.html#a12bf72ccae3700805645f893c5e50cb9', 1, 'MainWindow']]],
-        ['initorch_43', ['initOrch', ['../class_orchestrator.html#a8f4d36b247fe79935c10e695c873befc', 1, 'Orchestrator']]]
-    ];
+var searchData=
+[
+  ['getcurrentfood_43',['getCurrentFood',['../class_warrior.html#a4bc9809c4d99995f6793d47a38da1eb1',1,'Warrior']]],
+  ['getmapentity_44',['getMapEntity',['../class_orchestrator.html#a43534ccc11df40a762dd0305135afd6a',1,'Orchestrator']]],
+  ['getmode_45',['getMode',['../class_warrior.html#a780a0b83407f54b3436b1b4be5c144ed',1,'Warrior']]],
+  ['getpopulation_46',['getPopulation',['../class_anthill.html#a335795a55847de8ab6da4d09875bacd5',1,'Anthill']]],
+  ['getprevpos_47',['getPrevPos',['../class_warrior.html#ae20cc62958d7e76559213d5ef6740242',1,'Warrior']]],
+  ['givefood_48',['giveFood',['../class_warrior.html#aa48d40a851d3a3790eb1b980e50fd255',1,'Warrior']]]
+];

@@ -1,176 +1,147 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd"
-         version="1.9.1" xml:lang="en-US">
-    <compounddef id="class_obstacle" kind="class" language="C++" prot="public">
-        <compoundname>Obstacle</compoundname>
-        <derivedcompoundref refid="class_anthill" prot="public" virt="non-virtual">Anthill</derivedcompoundref>
-        <derivedcompoundref refid="class_food_spawner" prot="public" virt="non-virtual">FoodSpawner</derivedcompoundref>
-        <sectiondef kind="protected-attrib">
-            <memberdef kind="variable" id="class_obstacle_1a8d106b884920860c54d611db01bae4d0" prot="protected"
-                       static="no" mutable="no">
-                <type>pair&lt; int, int &gt;</type>
-                <definition>pair&lt;int,int&gt; Obstacle::position</definition>
-                <argsstring></argsstring>
-                <name>position</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="obstacle.h" line="21" column="11" bodyfile="obstacle.h" bodystart="21" bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable" id="class_obstacle_1a4e5aa724fcb93a5e6b709ef73794bd9c" prot="protected"
-                       static="no" mutable="no">
-                <type>int</type>
-                <definition>int Obstacle::width</definition>
-                <argsstring></argsstring>
-                <name>width</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="obstacle.h" line="22" column="9" bodyfile="obstacle.h" bodystart="22" bodyend="-1"/>
-            </memberdef>
-            <memberdef kind="variable" id="class_obstacle_1ad02a40c256d57a90c65e8bc8b4bdb156" prot="protected"
-                       static="no" mutable="no">
-                <type>int</type>
-                <definition>int Obstacle::height</definition>
-                <argsstring></argsstring>
-                <name>height</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="obstacle.h" line="23" column="9" bodyfile="obstacle.h" bodystart="23" bodyend="-1"/>
-            </memberdef>
-        </sectiondef>
-        <sectiondef kind="public-func">
-            <memberdef kind="function" id="class_obstacle_1a8f734072321fa06a7b7dae2d5f50f352" prot="public" static="no"
-                       const="no" explicit="no" inline="no" virt="non-virtual">
-                <type></type>
-                <definition>Obstacle::Obstacle</definition>
-                <argsstring>()</argsstring>
-                <name>Obstacle</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="obstacle.h" line="13" column="5" bodyfile="obstacle.cpp" bodystart="3" bodyend="6"/>
-            </memberdef>
-            <memberdef kind="function" id="class_obstacle_1ae21c8a847bc1d69fac749f694e2d996c" prot="public" static="no"
-                       const="no" explicit="no" inline="no" virt="non-virtual">
-                <type></type>
-                <definition>Obstacle::Obstacle</definition>
-                <argsstring>(pair&lt; int, int &gt; position, int width, int height)</argsstring>
-                <name>Obstacle</name>
-                <param>
-                    <type>pair&lt; int, int &gt;</type>
-                    <declname>position</declname>
-                </param>
-                <param>
-                    <type>int</type>
-                    <declname>width</declname>
-                </param>
-                <param>
-                    <type>int</type>
-                    <declname>height</declname>
-                </param>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="obstacle.h" line="14" column="5" bodyfile="obstacle.cpp" bodystart="8" bodyend="13"/>
-            </memberdef>
-            <memberdef kind="function" id="class_obstacle_1af2f9cc9c6cff75dca0974fd5ac4f71a9" prot="public" static="no"
-                       const="no" explicit="no" inline="no" virt="non-virtual">
-                <type></type>
-                <definition>Obstacle::~Obstacle</definition>
-                <argsstring>()</argsstring>
-                <name>~Obstacle</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="obstacle.h" line="15" column="5" bodyfile="obstacle.cpp" bodystart="15" bodyend="18"/>
-            </memberdef>
-            <memberdef kind="function" id="class_obstacle_1a1d5d0250c1154662ebd2b8ee4a8de7e1" prot="public" static="no"
-                       const="no" explicit="no" inline="no" virt="virtual">
-                <type>const pair&lt; int, int &gt;</type>
-                <definition>const pair&lt; int, int &gt; Obstacle::getPosition</definition>
-                <argsstring>()</argsstring>
-                <name>getPosition</name>
-                <briefdescription>
-                </briefdescription>
-                <detaileddescription>
-                </detaileddescription>
-                <inbodydescription>
-                </inbodydescription>
-                <location file="obstacle.h" line="17" column="24" bodyfile="obstacle.cpp" bodystart="20" bodyend="22"/>
-            </memberdef>
-        </sectiondef>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_obstacle" kind="class" language="C++" prot="public">
+    <compoundname>Obstacle</compoundname>
+    <derivedcompoundref refid="class_anthill" prot="public" virt="non-virtual">Anthill</derivedcompoundref>
+    <derivedcompoundref refid="class_food_spawner" prot="public" virt="non-virtual">FoodSpawner</derivedcompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_obstacle_1a18f2015af9237ad50bd1d5f6e610ee14" prot="protected" static="no" mutable="no">
+        <type>pair&lt; int, int &gt;</type>
+        <definition>pair&lt;int, int&gt; Obstacle::_position</definition>
+        <argsstring></argsstring>
+        <name>_position</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
-        <inheritancegraph>
-            <node id="2">
-                <label>Anthill</label>
-                <link refid="class_anthill"/>
-                <childnode refid="1" relation="public-inheritance">
-                </childnode>
-            </node>
-            <node id="1">
-                <label>Obstacle</label>
-                <link refid="class_obstacle"/>
-            </node>
-            <node id="3">
-                <label>FoodSpawner</label>
-                <link refid="class_food_spawner"/>
-                <childnode refid="1" relation="public-inheritance">
-                </childnode>
-            </node>
-        </inheritancegraph>
-        <location file="obstacle.h" line="9" column="1" bodyfile="obstacle.h" bodystart="10" bodyend="24"/>
-        <listofallmembers>
-            <member refid="class_obstacle_1a1d5d0250c1154662ebd2b8ee4a8de7e1" prot="public" virt="virtual">
-                <scope>Obstacle</scope>
-                <name>getPosition</name>
-            </member>
-            <member refid="class_obstacle_1ad02a40c256d57a90c65e8bc8b4bdb156" prot="protected" virt="non-virtual">
-                <scope>Obstacle</scope>
-                <name>height</name>
-            </member>
-            <member refid="class_obstacle_1a8f734072321fa06a7b7dae2d5f50f352" prot="public" virt="non-virtual">
-                <scope>Obstacle</scope>
-                <name>Obstacle</name>
-            </member>
-            <member refid="class_obstacle_1ae21c8a847bc1d69fac749f694e2d996c" prot="public" virt="non-virtual">
-                <scope>Obstacle</scope>
-                <name>Obstacle</name>
-            </member>
-            <member refid="class_obstacle_1a8d106b884920860c54d611db01bae4d0" prot="protected" virt="non-virtual">
-                <scope>Obstacle</scope>
-                <name>position</name>
-            </member>
-            <member refid="class_obstacle_1a4e5aa724fcb93a5e6b709ef73794bd9c" prot="protected" virt="non-virtual">
-                <scope>Obstacle</scope>
-                <name>width</name>
-            </member>
-            <member refid="class_obstacle_1af2f9cc9c6cff75dca0974fd5ac4f71a9" prot="public" virt="non-virtual">
-                <scope>Obstacle</scope>
-                <name>~Obstacle</name>
-            </member>
-        </listofallmembers>
-    </compounddef>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="obstacle.h" line="22" column="10" bodyfile="obstacle.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_obstacle_1a4519d71400a5a972093f63dc29aa9283" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Obstacle::_width</definition>
+        <argsstring></argsstring>
+        <name>_width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="obstacle.h" line="23" column="9" bodyfile="obstacle.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_obstacle_1a19eb8cda52476027a0429fa5fea6e0e9" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Obstacle::_height</definition>
+        <argsstring></argsstring>
+        <name>_height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="obstacle.h" line="24" column="9" bodyfile="obstacle.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_obstacle_1a8f734072321fa06a7b7dae2d5f50f352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Obstacle::Obstacle</definition>
+        <argsstring>()</argsstring>
+        <name>Obstacle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="obstacle.h" line="12" column="5" bodyfile="obstacle.cpp" bodystart="6" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_obstacle_1ae21c8a847bc1d69fac749f694e2d996c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Obstacle::Obstacle</definition>
+        <argsstring>(pair&lt; int, int &gt; position, int width, int height)</argsstring>
+        <name>Obstacle</name>
+        <param>
+          <type>pair&lt; int, int &gt;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="obstacle.h" line="14" column="5" bodyfile="obstacle.cpp" bodystart="16" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_obstacle_1af2f9cc9c6cff75dca0974fd5ac4f71a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Obstacle::~Obstacle</definition>
+        <argsstring>()</argsstring>
+        <name>~Obstacle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="obstacle.h" line="16" column="5" bodyfile="obstacle.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_obstacle_1a1d5d0250c1154662ebd2b8ee4a8de7e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>const pair&lt; int, int &gt;</type>
+        <definition>const pair&lt; int, int &gt; Obstacle::getPosition</definition>
+        <argsstring>()</argsstring>
+        <name>getPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="obstacle.h" line="18" column="24" bodyfile="obstacle.cpp" bodystart="33" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Anthill</label>
+        <link refid="class_anthill"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Obstacle</label>
+        <link refid="class_obstacle"/>
+      </node>
+      <node id="3">
+        <label>FoodSpawner</label>
+        <link refid="class_food_spawner"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="obstacle.h" line="9" column="1" bodyfile="obstacle.h" bodystart="9" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_obstacle_1a19eb8cda52476027a0429fa5fea6e0e9" prot="protected" virt="non-virtual"><scope>Obstacle</scope><name>_height</name></member>
+      <member refid="class_obstacle_1a18f2015af9237ad50bd1d5f6e610ee14" prot="protected" virt="non-virtual"><scope>Obstacle</scope><name>_position</name></member>
+      <member refid="class_obstacle_1a4519d71400a5a972093f63dc29aa9283" prot="protected" virt="non-virtual"><scope>Obstacle</scope><name>_width</name></member>
+      <member refid="class_obstacle_1a1d5d0250c1154662ebd2b8ee4a8de7e1" prot="public" virt="virtual"><scope>Obstacle</scope><name>getPosition</name></member>
+      <member refid="class_obstacle_1a8f734072321fa06a7b7dae2d5f50f352" prot="public" virt="non-virtual"><scope>Obstacle</scope><name>Obstacle</name></member>
+      <member refid="class_obstacle_1ae21c8a847bc1d69fac749f694e2d996c" prot="public" virt="non-virtual"><scope>Obstacle</scope><name>Obstacle</name></member>
+      <member refid="class_obstacle_1af2f9cc9c6cff75dca0974fd5ac4f71a9" prot="public" virt="non-virtual"><scope>Obstacle</scope><name>~Obstacle</name></member>
+    </listofallmembers>
+  </compounddef>
 </doxygen>
