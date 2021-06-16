@@ -79,10 +79,10 @@ void Game::initializeGrid() {
         display->append("*");
     }
     display->append("\n");
-    for (int y = 0;y < dimensions.second;y++) {
+    for (int y = 0; y < dimensions.second; y++) {
         display->append("*");
-        for (int x = 0;x < dimensions.first;x++) {
-            switch (_orchestrator->getMapEntity(x,y)) {
+        for (int x = 0; x < dimensions.first; x++) {
+            switch (_orchestrator->getMapEntity(x, y)) {
                 case 1:
                     display->append(" ");
                     break;
@@ -103,7 +103,7 @@ void Game::initializeGrid() {
         display->append("*");
         display->append("\n");
     }
-    for (int n = 0;n < dimensions.first+2; n++) {
+    for (int n = 0; n < dimensions.first + 2; n++) {
         display->append("*");
     }
     cout << *display << endl;

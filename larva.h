@@ -4,16 +4,19 @@
 #include "egg.h"
 #include "util.h"
 
-class Larva : public Egg
-{
+class Larva : public Egg {
 public:
     //Methods
     Larva();
+
     Larva(CONFIG &config, string name);
+
     ~Larva();
 
     void heal(int foodNumber);
+
     void starve();
+
     int getCurrentHealth() const;
 
 protected:

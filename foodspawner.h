@@ -4,17 +4,21 @@
 #include <iostream>
 #include "obstacle.h"
 
-class FoodSpawner : public Obstacle
-{
+class FoodSpawner : public Obstacle {
 public:
     //Methods
     FoodSpawner();
-    FoodSpawner(int maxQuantity, pair<int,int> position, int width, int height);
+
+    FoodSpawner(int maxQuantity, pair<int, int> position, int width, int height);
+
     ~FoodSpawner();
 
     void doRound();
+
     int getCurrentQuantity() const;
+
     void decreaseQuantity(int quantity);
+
 private:
     //Attributes
     int _maxQuantity;

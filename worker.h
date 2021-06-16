@@ -4,12 +4,13 @@
 #include "larva.h"
 #include "util.h"
 
-class Worker : public Larva
-{
+class Worker : public Larva {
 public:
     //Methods
     Worker();
+
     Worker(CONFIG &config, string name);
+
     ~Worker();
 };
 

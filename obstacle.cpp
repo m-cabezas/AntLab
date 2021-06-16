@@ -3,8 +3,7 @@
 /***
  * @brief default constructor of obstacle
  */
-Obstacle::Obstacle()
-{
+Obstacle::Obstacle() {
 
 }
 
@@ -14,8 +13,7 @@ Obstacle::Obstacle()
  * @param width
  * @param height
  */
-Obstacle::Obstacle(pair <int,int> position, int width, int height)
-{
+Obstacle::Obstacle(pair<int, int> position, int width, int height) {
     _position = position;
     _width = width;
     _height = height;
@@ -24,8 +22,7 @@ Obstacle::Obstacle(pair <int,int> position, int width, int height)
 /***
  * @brief default destructor of obstacle
  */
-Obstacle::~Obstacle()
-{
+Obstacle::~Obstacle() {
 
 }
 
@@ -33,6 +30,6 @@ Obstacle::~Obstacle()
  * @brief method used to access the coordinates of the obstacle
  * @return
  */
-const pair<int,int> Obstacle::getPosition(){
+const pair<int, int> Obstacle::getPosition() {
     return _position;
 }

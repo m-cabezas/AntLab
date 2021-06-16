@@ -3,11 +3,13 @@
 
 #include "worker.h"
 
-class Queen : public Worker
-{
+class Queen : public Worker {
 public:
+    //Methods
     Queen();
+
     Queen(CONFIG &config);
+
     ~Queen();
 
 private:

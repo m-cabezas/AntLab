@@ -6,19 +6,20 @@
 
 using namespace std;
 
-class Obstacle
-{
+class Obstacle {
 public:
     //Methods
     Obstacle();
-    Obstacle(pair <int,int> position, int width, int height);
+
+    Obstacle(pair<int, int> position, int width, int height);
+
     ~Obstacle();
 
-    virtual const pair<int,int> getPosition();
+    virtual const pair<int, int> getPosition();
 
 protected:
     //Attributs
-    pair <int,int> _position;
+    pair<int, int> _position;
     int _width;
     int _height;
 };

@@ -9,7 +9,7 @@ struct CONFIG {
     int ageWorker;
     int ageWarrior;
     int ageQueen;
-    int lifeLarva ;
+    int lifeLarva;
     int lifeWorker;
     int lifeWarrior;
     int lifeQueen;

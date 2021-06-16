@@ -3,8 +3,7 @@
 /***
  * @brief default constructor of egg
  */
-Egg::Egg()
-{
+Egg::Egg() {
     _name = "";
     _currentAge = 0;
 }
@@ -13,8 +12,7 @@ Egg::Egg()
  * @brief main constructor of egg
  * @param name
  */
-Egg::Egg(string name)
-{
+Egg::Egg(string name) {
     _name = name;
     _currentAge = 0;
 }
@@ -22,16 +20,13 @@ Egg::Egg(string name)
 /***
  * @brief default destructor of egg
  */
-Egg::~Egg()
-{
-    //cout << "Oh no ! Egg " << _name << " died ! :-(" << endl;
+Egg::~Egg() {
 }
 
 /***
  * @brief method used by anthill to increase egg age
  */
-void Egg::increaseAge()
-{
+void Egg::increaseAge() {
     _currentAge++;
 }
 
@@ -39,8 +34,7 @@ void Egg::increaseAge()
  * @brief method used by anthill to get current age of the current egg
  * @return
  */
-int Egg::getCurrentAge() const
-{
+int Egg::getCurrentAge() const {
     return _currentAge;
 }
 
@@ -48,7 +42,6 @@ int Egg::getCurrentAge() const
  * @brief method used to get the name of the current egg
  * @return
  */
-string Egg::getName() const
-{
+string Egg::getName() const {
     return _name;
 }

@@ -4,8 +4,7 @@
 /***
  * @brief default constructor of food spawner
  */
-FoodSpawner::FoodSpawner()
-{
+FoodSpawner::FoodSpawner() {
 
 }
 
@@ -16,8 +15,7 @@ FoodSpawner::FoodSpawner()
  * @param width
  * @param height
  */
-FoodSpawner::FoodSpawner(int maxQuantity, pair<int,int> position, int width, int height)
-{
+FoodSpawner::FoodSpawner(int maxQuantity, pair<int, int> position, int width, int height) {
     _maxQuantity = maxQuantity;
     _currentQuantity = rand() % maxQuantity + 50;
     _position = position;
@@ -28,19 +26,16 @@ FoodSpawner::FoodSpawner(int maxQuantity, pair<int,int> position, int width, int
 /***
  * @brief default destructor of food spawner
  */
-FoodSpawner::~FoodSpawner()
-{
+FoodSpawner::~FoodSpawner() {
 
 }
 
 /***
  * @brief all actions that are done in a round by the food spawner
  */
-void FoodSpawner::doRound()
-{
+void FoodSpawner::doRound() {
     int spawnProb = rand() % 5;
-    if (spawnProb == 1)
-    {
+    if (spawnProb == 1) {
         randomFood();
     }
 }
@@ -49,8 +44,7 @@ void FoodSpawner::doRound()
  * @brief method used to access food quantity of the food spawner
  * @return return the food quantity with an int
  */
-int FoodSpawner::getCurrentQuantity() const
-{
+int FoodSpawner::getCurrentQuantity() const {
     return _currentQuantity;
 }
 
@@ -58,8 +52,7 @@ int FoodSpawner::getCurrentQuantity() const
  * @brief method used to decrease the quantity of food contained by the food spawner
  * @param quantity
  */
-void FoodSpawner::decreaseQuantity(int quantity)
-{
+void FoodSpawner::decreaseQuantity(int quantity) {
     _currentQuantity -= quantity;
 }
 
@@ -67,11 +60,9 @@ void FoodSpawner::decreaseQuantity(int quantity)
 /***
  * @brief method used to create random quantity of food inside the food spawner
  */
-void FoodSpawner::randomFood()
-{
+void FoodSpawner::randomFood() {
     _currentQuantity += rand() % 50 + 0;
-    if (_currentQuantity > _maxQuantity)
-    {
+    if (_currentQuantity > _maxQuantity) {
         _currentQuantity = _maxQuantity;
     }
 

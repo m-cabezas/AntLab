@@ -1,9 +1,9 @@
 #include "larva.h"
+
 /***
  * @brief default constructor of larva
  */
-Larva::Larva()
-{
+Larva::Larva() {
 
 }
 
@@ -12,8 +12,7 @@ Larva::Larva()
  * @param config
  * @param name
  */
-Larva::Larva(CONFIG &config, string name)
-{
+Larva::Larva(CONFIG &config, string name) {
     _name = name;
     _currentAge = config.ageLarva;
     _maxHealth = config.lifeLarva;
@@ -24,19 +23,16 @@ Larva::Larva(CONFIG &config, string name)
 /***
  * @brief default destructor of larva
  */
-Larva::~Larva()
-{
-    //cout << "Oh no ! Larva " << _name << " died ! :-(" << endl;
+Larva::~Larva() {
 }
 
 /***
  * @brief method used to increase the life of a larva based on the food quantity it eat
  * @param foodNumber
  */
-void Larva::heal(int foodNumber)
-{
+void Larva::heal(int foodNumber) {
     _currentHealth += foodNumber;
-    if(_currentHealth > _maxHealth) {
+    if (_currentHealth > _maxHealth) {
         _currentHealth = _maxHealth;
     }
 }
@@ -44,9 +40,9 @@ void Larva::heal(int foodNumber)
 /**
  * @brief Larva::starve reduce the life of the ant according to its food consumption
  */
-void Larva::starve(){
+void Larva::starve() {
     _currentHealth -= _foodCons;
-    if(_currentHealth < 0) {
+    if (_currentHealth < 0) {
         _currentHealth = 0;
     }
 }
@@ -56,8 +52,7 @@ void Larva::starve(){
  * @brief method used to get the current health level of the larva
  * @return return the current health level as an int
  */
-int Larva::getCurrentHealth() const
-{
+int Larva::getCurrentHealth() const {
     return _currentHealth;
 }
 

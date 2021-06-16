@@ -6,17 +6,21 @@
 
 using namespace std;
 
-class Egg
-{
+class Egg {
 public:
     //Methods
     Egg();
+
     Egg(string name);
+
     ~Egg();
 
     void increaseAge();
+
     int getCurrentAge() const;
+
     string getName() const;
+
 private:
 
 protected:

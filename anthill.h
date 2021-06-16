@@ -11,23 +11,30 @@
 #include <random>
 #include <chrono>
 
-class Anthill : public Obstacle
-{
-public: 
+class Anthill : public Obstacle {
+public:
     //Attributes
 
 
     //Methods
     Anthill();
-    Anthill(CONFIG &config, int maxPop, int maxFood, pair<int,int> position, int width, int height);
+
+    Anthill(CONFIG &config, int maxPop, int maxFood, pair<int, int> position, int width, int height);
+
     ~Anthill();
+
     int getNewWarriors() const;
+
     int getPopulation() const;
 
     void initAnthill();
+
     void spawnEgg();
-    void doRound();    
+
+    void doRound();
+
     void addFood(int foodQuantity);
+
     bool isQueenAlive();
 
 private:
@@ -37,7 +44,7 @@ private:
     int _maxFood;
     int _currentFood;
     bool _queenAlive;
-    Queen* _queen;
+    Queen *_queen;
     vector<Egg *> _eggs;
     vector<Larva *> _larvas;
     vector<Worker *> _workers;
@@ -45,15 +52,25 @@ private:
 
     //Methods
     void doRoundQueen();
+
     void doRoundEggs();
+
     void doRoundLarvas();
+
     void doRoundWorkers();
-    void growUpToLarva(Egg* egg);
-    void growUpToWorker(Larva* larva);
-    void growUpToWarrior(Worker* worker);
+
+    void growUpToLarva(Egg *egg);
+
+    void growUpToWorker(Larva *larva);
+
+    void growUpToWarrior(Worker *worker);
+
     void createEgg();
+
     void createLarva();
+
     void createWorker();
+
     int foodCons(int desiredFood);
 
 
