@@ -5,8 +5,7 @@
 /***
  * @brief default constructor of game
  */
-Game::Game()
-{
+Game::Game() {
     _config = {
             500,    // maxFood
             20,     // maxPopAnthill
@@ -38,14 +37,12 @@ Game::Game()
 /**
  * Init the orchestrator and launch the MainWindow
  */
-void Game::initGame()
-{
+void Game::initGame() {
     cout << "Init Game" << endl;
     _orchestrator->initOrch(_config);
     int i = 0;
-    while (true)
-    {
-        if(!newRound(i)) {
+    while (true) {
+        if (!newRound(i)) {
             break;
         }
         i++;
@@ -57,18 +54,19 @@ void Game::initGame()
  * @brief Init a new round
  * @param roundNumber
  */
-bool Game::newRound(int roundNumber)
-{
+bool Game::newRound(int roundNumber) {
     cout << "ROUND : " << roundNumber << endl;
     initializeGrid();
     int res = _orchestrator->doRound();
-    if(res == 1) {
+    if (res == 1) {
         cout << "London Bridge is Down! Our beloved Queen passed away this morning..." << endl;
         return false;
     }
     Sleep(200);
     system("CLS");
-    cout << "_________________________________________________________________________________________________________________________________________" << endl;
+    cout
+            << "_________________________________________________________________________________________________________________________________________"
+            << endl;
     return true;
 }
 
@@ -76,9 +74,9 @@ bool Game::newRound(int roundNumber)
  * @brief display an process the console UI
  */
 void Game::initializeGrid() {
-    pair<int,int> dimensions = _orchestrator->getDimension();
-    string * display = new string();
-    for (int i = 0;i < dimensions.first+2; i++) {
+    pair<int, int> dimensions = _orchestrator->getDimension();
+    string *display = new string();
+    for (int i = 0; i < dimensions.first + 2; i++) {
         display->append("*");
     }
     display->append("\n");
@@ -115,8 +113,7 @@ void Game::initializeGrid() {
 /***
  * @brief Game default destructor
  */
-Game::~Game()
-{
+Game::~Game() {
     delete _orchestrator;
 }
 

@@ -321,7 +321,8 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>pair&lt;int,int&gt;<sp/>newPosition<sp/>=<sp/>getRandomPos(forbiddenPositions,<sp/>
+                    <sp/>pair&lt;int,int&gt;<sp/>newPosition<sp/>=<sp/>getRandomPos(forbiddenPositions,
+                    <sp/>
                     _prevPos.first,<sp/>_prevPos.second,<sp/>_position.first,<sp/>_position.second);
                 </highlight>
             </codeline>
@@ -696,7 +697,8 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>pair&lt;int,int&gt;<sp/>newPosition<sp/>=<sp/>getRandomPos(forbiddenPositions,<sp/>
+                    <sp/>pair&lt;int,int&gt;<sp/>newPosition<sp/>=<sp/>getRandomPos(forbiddenPositions,
+                    <sp/>
                     _prevPos.first,<sp/>_prevPos.second,<sp/>_position.first,<sp/>_position.second);
                 </highlight>
             </codeline>
@@ -951,7 +953,8 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>pair&lt;int,int&gt;<sp/>newPosition<sp/>=<sp/>getRandomPos(forbiddenPositions,<sp/>
+                    <sp/>pair&lt;int,int&gt;<sp/>newPosition<sp/>=<sp/>getRandomPos(forbiddenPositions,
+                    <sp/>
                     _prevPos.first,<sp/>_prevPos.second,<sp/>_position.first,<sp/>_position.second);
                 </highlight>
             </codeline>
@@ -1257,7 +1260,8 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>pair&lt;int,int&gt;<sp/>newPosition<sp/>=<sp/>getRandomPos(forbiddenPositions,<sp/>
+                    <sp/>pair&lt;int,int&gt;<sp/>newPosition<sp/>=<sp/>getRandomPos(forbiddenPositions,
+                    <sp/>
                     _prevPos.first,<sp/>_prevPos.second,<sp/>_position.first,<sp/>_position.second);
                 </highlight>
             </codeline>
@@ -1512,7 +1516,8 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>pair&lt;int,int&gt;<sp/>newPosition<sp/>=<sp/>getRandomPos(forbiddenPositions,<sp/>
+                    <sp/>pair&lt;int,int&gt;<sp/>newPosition<sp/>=<sp/>getRandomPos(forbiddenPositions,
+                    <sp/>
                     _prevPos.first,<sp/>_prevPos.second,<sp/>_position.first,<sp/>_position.second);
                 </highlight>
             </codeline>
@@ -1647,8 +1652,10 @@
                     <sp/>
                     <sp/>
                 </highlight>
-                <highlight class="comment">//<sp/>If<sp/>the<sp/>Ant<sp/>is<sp/>not<sp/>on<sp/>any<sp/>axes<sp/>of<sp/>
-                    the<sp/>anthill,<sp/>it<sp/>tries<sp/>to<sp/>get<sp/>closer<sp/>starting<sp/>with<sp/>the<sp/>X<sp/>
+                <highlight class="comment">//<sp/>If<sp/>the<sp/>Ant<sp/>is<sp/>not<sp/>on<sp/>any<sp/>axes<sp/>of
+                    <sp/>
+                    the<sp/>anthill,<sp/>it<sp/>tries<sp/>to<sp/>get<sp/>closer<sp/>starting<sp/>with<sp/>the<sp/>X
+                    <sp/>
                     axe
                 </highlight>
                 <highlight class="normal"></highlight>
@@ -1816,7 +1823,8 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>pair&lt;int,int&gt;<sp/>newPosition<sp/>=<sp/>getRandomPos(forbiddenPositions,<sp/>
+                    <sp/>pair&lt;int,int&gt;<sp/>newPosition<sp/>=<sp/>getRandomPos(forbiddenPositions,
+                    <sp/>
                     _prevPos.first,<sp/>_prevPos.second,<sp/>_position.first,<sp/>_position.second);
                 </highlight>
             </codeline>
@@ -2071,7 +2079,8 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>pair&lt;int,int&gt;<sp/>newPosition<sp/>=<sp/>getRandomPos(forbiddenPositions,<sp/>
+                    <sp/>pair&lt;int,int&gt;<sp/>newPosition<sp/>=<sp/>getRandomPos(forbiddenPositions,
+                    <sp/>
                     _prevPos.first,<sp/>_prevPos.second,<sp/>_position.first,<sp/>_position.second);
                 </highlight>
             </codeline>
@@ -2338,7 +2347,8 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>pair&lt;int,int&gt;<sp/>newPosition<sp/>=<sp/>getRandomPos(forbiddenPositions,<sp/>
+                    <sp/>pair&lt;int,int&gt;<sp/>newPosition<sp/>=<sp/>getRandomPos(forbiddenPositions,
+                    <sp/>
                     _prevPos.first,<sp/>_prevPos.second,<sp/>_position.first,<sp/>_position.second);
                 </highlight>
             </codeline>
@@ -2593,7 +2603,8 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>pair&lt;int,int&gt;<sp/>newPosition<sp/>=<sp/>getRandomPos(forbiddenPositions,<sp/>
+                    <sp/>pair&lt;int,int&gt;<sp/>newPosition<sp/>=<sp/>getRandomPos(forbiddenPositions,
+                    <sp/>
                     _prevPos.first,<sp/>_prevPos.second,<sp/>_position.first,<sp/>_position.second);
                 </highlight>
             </codeline>
@@ -3324,8 +3335,10 @@
                     <sp/>
                 </highlight>
                 <highlight class="keywordflow">if</highlight>
-                <highlight class="normal">(checkPosition(forbiddenPositions,<sp/>candidates[i].first,<sp/>
-                    candidates[i].second)<sp/>&amp;&amp;<sp/>(candidates[i].first<sp/>!=<sp/>prevX<sp/>||<sp/>
+                <highlight class="normal">(checkPosition(forbiddenPositions,<sp/>candidates[i].first,
+                    <sp/>
+                    candidates[i].second)<sp/>&amp;&amp;<sp/>(candidates[i].first<sp/>!=<sp/>prevX<sp/>||
+                    <sp/>
                     candidates[i].second<sp/>!=<sp/>prevY))
                 </highlight>
             </codeline>
@@ -3876,7 +3889,8 @@
                 </highlight>
                 <highlight class="keywordflow">if</highlight>
                 <highlight class="normal"><sp/>((objX<sp/>==<sp/>antX+1<sp/>&amp;&amp;<sp/>objY<sp/>==<sp/>antY)<sp/>||
-                    <sp/>(objX<sp/>==<sp/>antX-1<sp/>&amp;&amp;<sp/>objY<sp/>==<sp/>antY)<sp/>||<sp/>(objX<sp/>==<sp/>
+                    <sp/>(objX<sp/>==<sp/>antX-1<sp/>&amp;&amp;<sp/>objY<sp/>==<sp/>antY)<sp/>||<sp/>(objX<sp/>==
+                    <sp/>
                     antX<sp/>&amp;&amp;<sp/>objY<sp/>==<sp/>antY+1)<sp/>||<sp/>(objX<sp/>==<sp/>antX<sp/>&amp;&amp;<sp/>
                     objY<sp/>==<sp/>antY-1))
                 </highlight>

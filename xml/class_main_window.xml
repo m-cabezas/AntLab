@@ -137,9 +137,10 @@
                 <briefdescription>
                 </briefdescription>
                 <detaileddescription>
-                    <para>Init the orchestrator and launch the <ref refid="class_main_window" kindref="compound">
-                        MainWindow
-                    </ref>
+                    <para>Init the orchestrator and launch the
+                        <ref refid="class_main_window" kindref="compound">
+                            MainWindow
+                        </ref>
                     </para>
                 </detaileddescription>
                 <inbodydescription>

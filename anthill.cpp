@@ -62,8 +62,8 @@ void Anthill::initAnthill() {
          << _config.nbWorkerInit << " workers" << endl;
     _queenAlive = true;
     _currentFood = _config.maxFoodAnthill;
-    for (int i = 0;  i < _config.nbEggInit; i++){
-      Anthill::createEgg();
+    for (int i = 0; i < _config.nbEggInit; i++) {
+        Anthill::createEgg();
     }
     for (int i = 0; i < _config.nbLarvaInit; i++) {
         Anthill::createLarva();
@@ -76,19 +76,17 @@ void Anthill::initAnthill() {
 /***
  * @brief method used to spawn eggs in the anthill, between 0 and 5 eggs are created
  */
-void Anthill::spawnEgg()
-{    
-   default_random_engine re(std::chrono::system_clock::now().time_since_epoch().count());
-   uniform_int_distribution<int> distrib{0,6};
-   int lucky =  distrib(re);
-   if (lucky == 1) {
-       uniform_int_distribution<int> distrib{0,9};
-       int newEggs = distrib(re);
-       for (int i = 0; i < newEggs; i++)
-       {
-           createEgg();
-       }
-   }
+void Anthill::spawnEgg() {
+    default_random_engine re(std::chrono::system_clock::now().time_since_epoch().count());
+    uniform_int_distribution<int> distrib{0, 6};
+    int lucky = distrib(re);
+    if (lucky == 1) {
+        uniform_int_distribution<int> distrib{0, 9};
+        int newEggs = distrib(re);
+        for (int i = 0; i < newEggs; i++) {
+            createEgg();
+        }
+    }
 }
 
 /***
@@ -155,9 +153,8 @@ void Anthill::doRoundEggs() {
  */
 void Anthill::doRoundLarvas() {
     // Larvas treatment
-    vector<Larva *> newLarvas;
-    for(unsigned int i = 0 ; i < _larvas.size(); i++)
-    {
+    vector < Larva * > newLarvas;
+    for (unsigned int i = 0; i < _larvas.size(); i++) {
         _larvas[i]->increaseAge();
         _larvas[i]->starve();
         // If the ant is not dead, we add it to the new ant list

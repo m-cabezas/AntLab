@@ -278,12 +278,11 @@ Warrior::getRandomPos(vector <pair<int, int>> forbiddenPositions, int prevX, int
     candidates.push_back(right);
 
     //Iterating threw the candidates
-    vector<pair<int,int>> availableCandidates;
-    for(unsigned int i = 0; i < candidates.size(); i++)
-    {
-        if(checkPosition(forbiddenPositions, candidates[i].first, candidates[i].second) && (candidates[i].first != prevX || candidates[i].second != prevY))
-        {            
-            pair<int,int> available;
+    vector <pair<int, int>> availableCandidates;
+    for (unsigned int i = 0; i < candidates.size(); i++) {
+        if (checkPosition(forbiddenPositions, candidates[i].first, candidates[i].second) &&
+            (candidates[i].first != prevX || candidates[i].second != prevY)) {
+            pair<int, int> available;
             available.first = candidates[i].first;
             available.second = candidates[i].second;
             availableCandidates.push_back(available);
@@ -294,10 +293,10 @@ Warrior::getRandomPos(vector <pair<int, int>> forbiddenPositions, int prevX, int
     if (availableCandidates.size() > 0) {
         default_random_engine re(std::chrono::system_clock::now().time_since_epoch().count());
         srand(time(0));
-        int random = rand () % availableCandidates.size() + 0;
+        int random = rand() % availableCandidates.size() + 0;
         result.first = availableCandidates[random].first;
         result.second = availableCandidates[random].second;
-    } else if(checkPosition(forbiddenPositions, prevX, prevY)){
+    } else if (checkPosition(forbiddenPositions, prevX, prevY)) {
         //If there are no more available candidates, the ant tries to go back  
         result.first = prevX;
         result.second = prevY;
@@ -318,12 +317,9 @@ Warrior::getRandomPos(vector <pair<int, int>> forbiddenPositions, int prevX, int
  * @param posY the Y coordinate you want to check
  * @return true if the position is available, false if not
  */
-bool Warrior::checkPosition(vector<pair<int, int>> forbiddenPositions, int posX, int posY)
-{
-    for(unsigned int i= 0 ; i < forbiddenPositions.size(); i++)
-    {
-        if (forbiddenPositions[i].first == posX && forbiddenPositions[i].second == posY)
-        {            
+bool Warrior::checkPosition(vector <pair<int, int>> forbiddenPositions, int posX, int posY) {
+    for (unsigned int i = 0; i < forbiddenPositions.size(); i++) {
+        if (forbiddenPositions[i].first == posX && forbiddenPositions[i].second == posY) {
             return false;
         }
     }

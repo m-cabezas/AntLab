@@ -693,7 +693,8 @@
                     <sp/>
                     <sp/>cout<sp/>&lt;&lt;<sp/>
                 </highlight>
-                <highlight class="stringliteral">&quot;\t-<sp/>Init<sp/>Orchestrator<sp/>:<sp/>Environment<sp/>of<sp/>
+                <highlight class="stringliteral">&quot;\t-<sp/>Init<sp/>Orchestrator<sp/>:<sp/>Environment<sp/>of
+                    <sp/>
                     size<sp/>x=&quot;
                 </highlight>
                 <highlight class="normal"><sp/>&lt;&lt;<sp/>_dimension.first<sp/>&lt;&lt;<sp/>
@@ -1123,7 +1124,8 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>_warriors[i]-&gt;returnToAnthill(getForbiddenPositions(warriorPos.first,<sp/>
+                    <sp/>_warriors[i]-&gt;returnToAnthill(getForbiddenPositions(warriorPos.first,
+                    <sp/>
                     warriorPos.second));
                 </highlight>
             </codeline>
@@ -1266,7 +1268,8 @@
                 <highlight class="keyword">new</highlight>
                 <highlight class="normal">
                     <sp/>
-                    <ref refid="class_anthill" kindref="compound">Anthill</ref>(_config,<sp/>_config.maxPopAnthill,<sp/>
+                    <ref refid="class_anthill" kindref="compound">Anthill</ref>(_config,<sp/>_config.maxPopAnthill,
+                    <sp/>
                     _config.maxFoodAnthill,<sp/>position,<sp/>1,<sp/>1);
                 </highlight>
             </codeline>
@@ -1627,7 +1630,8 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>pair<sp/>&lt;int,int&gt;<sp/>obstaclePosition<sp/>=<sp/>getFreePositions().at(rand()<sp/>%<sp/>
+                    <sp/>pair<sp/>&lt;int,int&gt;<sp/>obstaclePosition<sp/>=<sp/>getFreePositions().at(rand()<sp/>%
+                    <sp/>
                     getFreePositions().size()<sp/>+<sp/>0);
                 </highlight>
             </codeline>
@@ -1707,7 +1711,8 @@
                     <sp/>
                     <sp/>
                     <sp/>
-                    <sp/>vector&lt;pair&lt;int,int&gt;&gt;<sp/>warriorsFreePositions<sp/>=<sp/>
+                    <sp/>vector&lt;pair&lt;int,int&gt;&gt;<sp/>warriorsFreePositions<sp/>=
+                    <sp/>
                     getWarriorsFreePositions(anthill);
                 </highlight>
             </codeline>
@@ -2327,7 +2332,8 @@
                 <highlight class="normal"></highlight>
             </codeline>
             <codeline lineno="284">
-                <highlight class="normal"><ref refid="class_food_spawner" kindref="compound">FoodSpawner</ref>*<sp/>
+                <highlight class="normal"><ref refid="class_food_spawner" kindref="compound">FoodSpawner</ref>*
+                    <sp/>
                     Orchestrator::checkFoodNearby(
                 </highlight>
                 <highlight class="keywordtype">int</highlight>
@@ -2668,7 +2674,8 @@
                 </highlight>
                 <highlight class="keywordflow">if</highlight>
                 <highlight class="normal"><sp/>((objX<sp/>==<sp/>antX+1<sp/>&amp;&amp;<sp/>objY<sp/>==<sp/>antY)<sp/>||
-                    <sp/>(objX<sp/>==<sp/>antX-1<sp/>&amp;&amp;<sp/>objY<sp/>==<sp/>antY)<sp/>||<sp/>(objX<sp/>==<sp/>
+                    <sp/>(objX<sp/>==<sp/>antX-1<sp/>&amp;&amp;<sp/>objY<sp/>==<sp/>antY)<sp/>||<sp/>(objX<sp/>==
+                    <sp/>
                     antX<sp/>&amp;&amp;<sp/>objY<sp/>==<sp/>antY+1)<sp/>||<sp/>(objX<sp/>==<sp/>antX<sp/>&amp;&amp;<sp/>
                     objY<sp/>==<sp/>antY-1))
                 </highlight>

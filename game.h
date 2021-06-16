@@ -8,24 +8,28 @@
 
 using namespace std;
 
-class Game
-{
+class Game {
 public:
     //Methods
     Game();
+
     ~Game();
 
     void initializeGrid();
+
     void initGame();
+
     CONFIG getConfig();
 
 private:
     //Attributes
     CONFIG _config;
-    Orchestrator * _orchestrator;
+    Orchestrator *_orchestrator;
 
     //Methods
     bool newRound(int roundNumber);
+
     void doRounds();
 };
+
 #endif // GAME_H

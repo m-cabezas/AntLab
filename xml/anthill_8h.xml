@@ -504,7 +504,8 @@
                     <sp/>
                 </highlight>
                 <highlight class="keywordtype">void</highlight>
-                <highlight class="normal"><sp/>growUpToLarva(<ref refid="class_egg" kindref="compound">Egg</ref>*<sp/>
+                <highlight class="normal"><sp/>growUpToLarva(<ref refid="class_egg" kindref="compound">Egg</ref>*
+                    <sp/>
                     egg);
                 </highlight>
             </codeline>

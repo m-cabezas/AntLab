@@ -159,7 +159,8 @@
                     <sp/>
                     <sp/>
                 </highlight>
-                <highlight class="comment">//cout<sp/>&lt;&lt;<sp/>&quot;London<sp/>Bridge<sp/>is<sp/>Down!<sp/>Our<sp/>
+                <highlight class="comment">//cout<sp/>&lt;&lt;<sp/>&quot;London<sp/>Bridge<sp/>is<sp/>Down!<sp/>Our
+                    <sp/>
                     beloved<sp/>Queen<sp/>passed<sp/>away<sp/>this<sp/>morning...<sp/>She<sp/>was<sp/>&quot;<sp/>&lt;&lt;<sp/>
                     _currentAge<sp/>&lt;&lt;<sp/>&quot;<sp/>years<sp/>old.&quot;<sp/>&lt;&lt;<sp/>endl;
                 </highlight>

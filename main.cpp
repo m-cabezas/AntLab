@@ -12,8 +12,7 @@
  * @param argv
  * @return
  */
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     Game w;
 
     return 0;
