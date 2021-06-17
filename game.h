@@ -15,7 +15,7 @@ public:
 
     ~Game();
 
-    void initializeGrid();
+    void refreshGrid();
 
     void initGame();
 

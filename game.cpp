@@ -40,6 +40,7 @@ Game::Game() {
 void Game::initGame() {
     cout << "Init Game" << endl;
     _orchestrator->initOrch(_config);
+    refreshGrid();
     int i = 0;
     while (true) {
         if (!newRound(i)) {
@@ -55,9 +56,9 @@ void Game::initGame() {
  * @param roundNumber
  */
 bool Game::newRound(int roundNumber) {
-    cout << "ROUND : " << roundNumber << endl;
-    initializeGrid();
+    cout << "ROUND : " << roundNumber << endl;    
     int res = _orchestrator->doRound();
+    refreshGrid();
     if (res == 1) {
         cout << "London Bridge is Down! Our beloved Queen passed away this morning..." << endl;
         return false;
@@ -73,7 +74,7 @@ bool Game::newRound(int roundNumber) {
 /**
  * @brief display an process the console UI
  */
-void Game::initializeGrid() {
+void Game::refreshGrid() {
     pair<int, int> dimensions = _orchestrator->getDimension();
     string *display = new string();
     for (int i = 0; i < dimensions.first + 2; i++) {
