@@ -55,20 +55,20 @@ pair<int, int> Orchestrator::getDimension() const {
  * @brief return an int mapped to an object moving on the map
  * @param x
  * @param y
- * @return
+ * @return 1 if there is nothing, 2 if there is an obstacle, 3 if there is a foodSpawner, 4 if it is the anthill  and 5 for a warrior
  */
 int Orchestrator::getMapEntity(int x, int y) {
     if (_grid.at(x).at(y) == false) {
-        return 1;
+        return 1; // There is nothing
     }
     if (_foodSpawnersGrid.at(x).at(y) == true) {
-        return 3;
+        return 3; // It is a FoodSpawner
     }
     if (_anthillsGrid.at(x).at(y) == true) {
-        return 4;
+        return 4; // It is the anthill
     }
     if (_obstaclesGrid.at(x).at(y) == true) {
-        return 2;
+        return 2; // It is an obstacle
     }
     //return code for warriors : 5
     return 5;
@@ -90,7 +90,7 @@ void Orchestrator::initOrch(CONFIG config) {
 
 /**
  * @brief Orchestrator::doRound the orchestrator do the round of the anthill and warriors
- * @return 0 if ecerything is fine, 1 if the queen is dead
+ * @return 0 if everything is fine, 1 if the queen is dead
  */
 int Orchestrator::doRound() {
     // Anthill
@@ -101,13 +101,15 @@ int Orchestrator::doRound() {
         _anthills[0]->spawnEgg();
     }
 
-    //Warriors
-    //creating the new warriors (workers that grown up)
-    initWarriors(numberNewWarriors, _anthills[0]);
+
     //Iterating through the foodSpawners
     for (unsigned int i = 0; i < _foodSpawners.size(); i++) {
         _foodSpawners[i]->doRound();
     }
+
+    //Warriors
+    //creating the new warriors (workers that grown up)
+    initWarriors(numberNewWarriors, _anthills[0]);
     vector < Warrior * > newWarriors;
     // Iterating through the warriors
     for (unsigned int i = 0; i < _warriors.size(); i++) {
