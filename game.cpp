@@ -27,8 +27,8 @@ Game::Game() {
             3,      //nbLarvaInit
             3,      //nbWorkerInit
             8,      //nbWarriorInit
-            30,     //nbFoodSpawnerInit
-            50      //nbObstacleInit
+            100,     //nbFoodSpawnerInit
+            300      //nbObstacleInit
     };
     _orchestrator = new Orchestrator(_config);
     Game::initGame();

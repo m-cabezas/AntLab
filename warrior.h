@@ -26,8 +26,6 @@ public:
 
     int takeFood(int availableQuantity);
 
-    void attack();
-
     void giveFood();
 
     int getMode() const;

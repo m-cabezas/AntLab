@@ -233,10 +233,6 @@ int Warrior::takeFood(int availableQuantity) {
     return 0;
 }
 
-void Warrior::attack() {
-
-}
-
 /**
  * @brief interaction method that warriors use to put food in the Anthill
  */
