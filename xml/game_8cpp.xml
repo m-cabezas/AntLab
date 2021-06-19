@@ -162,9 +162,6 @@
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>@brief<sp/>default<sp/>constructor<sp/>of<sp/>game</highlight></codeline>
-<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"><ref refid="class_game_1ad59df6562a58a614fda24622d3715b65" kindref="member">Game::Game</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_game_1ab86178da8c4aec78d63f8204c5f0f732" kindref="member">_config</ref><sp/>=<sp/>{</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>500,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>maxFood</highlight><highlight class="normal"></highlight></codeline>
@@ -208,10 +205,6 @@
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;End<sp/>Game&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
 <codeline lineno="52"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="55"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Init<sp/>a<sp/>new<sp/>round</highlight></codeline>
-<codeline lineno="56"><highlight class="comment"><sp/>*<sp/>@param<sp/>roundNumber</highlight></codeline>
-<codeline lineno="57"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_game_1ae2c26d3f666115ca618288a6508bef9e" kindref="member">Game::newRound</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>roundNumber)<sp/>{</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;ROUND<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>roundNumber<sp/>&lt;&lt;<sp/>endl;<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>res<sp/>=<sp/><ref refid="class_game_1a3f7a53430c601b7529859ad956c19864" kindref="member">_orchestrator</ref>-&gt;<ref refid="class_orchestrator_1a5a614792639e1d837c393efe8a7c491d" kindref="member">doRound</ref>();</highlight></codeline>
@@ -265,9 +258,6 @@
 <codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>*display<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
 <codeline lineno="112"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="115"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Game<sp/>default<sp/>destructor</highlight></codeline>
-<codeline lineno="116"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="117"><highlight class="normal"><ref refid="class_game_1ae3d112ca6e0e55150d2fdbc704474530" kindref="member">Game::~Game</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_game_1a3f7a53430c601b7529859ad956c19864" kindref="member">_orchestrator</ref>;</highlight></codeline>
 <codeline lineno="119"><highlight class="normal">}</highlight></codeline>

@@ -97,9 +97,6 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="anthill_8h" kindref="compound">anthill.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>@brief<sp/>default<sp/>constructor<sp/>of<sp/>anthill</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><ref refid="class_anthill_1a2b5eb754c236e4add4ba4077fb134782" kindref="member">Anthill::Anthill</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal">}</highlight></codeline>
@@ -116,19 +113,12 @@
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>@brief<sp/>destructor<sp/>of<sp/>anthill</highlight></codeline>
-<codeline lineno="33"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><ref refid="class_anthill_1a0a8a9aa35526e2c65e4520a990a18e18" kindref="member">Anthill::~Anthill</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_anthill_1a679c378ae33e2483b73f4e873ed0878c" kindref="member">_eggs</ref>.erase(<ref refid="class_anthill_1a679c378ae33e2483b73f4e873ed0878c" kindref="member">_eggs</ref>.begin(),<sp/><ref refid="class_anthill_1a679c378ae33e2483b73f4e873ed0878c" kindref="member">_eggs</ref>.end());</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_anthill_1afc8cc3ccd45701fe26fa35b4f8696f04" kindref="member">_larvas</ref>.erase(<ref refid="class_anthill_1afc8cc3ccd45701fe26fa35b4f8696f04" kindref="member">_larvas</ref>.begin(),<sp/><ref refid="class_anthill_1afc8cc3ccd45701fe26fa35b4f8696f04" kindref="member">_larvas</ref>.end());</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_anthill_1a92cfa9df16dcac810eb7410712164bed" kindref="member">_workers</ref>.erase(<ref refid="class_anthill_1a92cfa9df16dcac810eb7410712164bed" kindref="member">_workers</ref>.begin(),<sp/><ref refid="class_anthill_1a92cfa9df16dcac810eb7410712164bed" kindref="member">_workers</ref>.end());</highlight></codeline>
 <codeline lineno="38"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="41"><highlight class="comment"><sp/>*<sp/>@brief<sp/>get<sp/>all<sp/>warriors<sp/>that<sp/>just<sp/>evolved<sp/>from<sp/>workers</highlight></codeline>
-<codeline lineno="42"><highlight class="comment"><sp/>*<sp/>@return<sp/>return<sp/>warriors<sp/>created<sp/>by<sp/>orchestrator</highlight></codeline>
-<codeline lineno="43"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_anthill_1ad7ddaced1d80e90839a7fb80760a59fa" kindref="member">Anthill::getNewWarriors</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_anthill_1abf85b8dbefb90401102290d1239e5caf" kindref="member">_newWarriors</ref>;</highlight></codeline>
 <codeline lineno="46"><highlight class="normal">}</highlight></codeline>
@@ -137,11 +127,8 @@
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_anthill_1a679c378ae33e2483b73f4e873ed0878c" kindref="member">_eggs</ref>.size()<sp/>+<sp/><ref refid="class_anthill_1afc8cc3ccd45701fe26fa35b4f8696f04" kindref="member">_larvas</ref>.size()<sp/>+<sp/><ref refid="class_anthill_1a92cfa9df16dcac810eb7410712164bed" kindref="member">_workers</ref>.size();</highlight></codeline>
 <codeline lineno="54"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//PUBLIC</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="58"><highlight class="comment"><sp/>*<sp/>@brief<sp/>create<sp/>eggs,<sp/>larvas,<sp/>workers<sp/>at<sp/>first<sp/>round</highlight></codeline>
-<codeline lineno="59"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_anthill_1a7ff7e41269324d61bc60360a6fb59a79" kindref="member">Anthill::initAnthill</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//PUBLIC</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_anthill_1a7ff7e41269324d61bc60360a6fb59a79" kindref="member">Anthill::initAnthill</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Init<sp/>anthill<sp/>with<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="class_anthill_1a5ce3eeda78bd506d69605907d921872f" kindref="member">_config</ref>.<ref refid="struct_c_o_n_f_i_g_1a99da682bf00d782ebbbf4f1ae4ddcfc0" kindref="member">nbEggInit</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>eggs,<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="class_anthill_1a5ce3eeda78bd506d69605907d921872f" kindref="member">_config</ref>.<ref refid="struct_c_o_n_f_i_g_1aca4cfa9612eb0b92b3c56190845be748" kindref="member">nbLarvaInit</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>larvas<sp/><sp/>and<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/><ref refid="class_anthill_1a5ce3eeda78bd506d69605907d921872f" kindref="member">_config</ref>.<ref refid="struct_c_o_n_f_i_g_1a891377a6a98538ce720b7299157d9745" kindref="member">nbWorkerInit</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>workers&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_anthill_1ae998f83155953a248872a9078734e820" kindref="member">_queenAlive</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
@@ -157,9 +144,6 @@
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="74"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="77"><highlight class="comment"><sp/>*<sp/>@brief<sp/>method<sp/>used<sp/>to<sp/>spawn<sp/>eggs<sp/>in<sp/>the<sp/>anthill,<sp/>between<sp/>0<sp/>and<sp/>5<sp/>eggs<sp/>are<sp/>created</highlight></codeline>
-<codeline lineno="78"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_anthill_1aca5a12987317ef7e9780b231aad1c153" kindref="member">Anthill::spawnEgg</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>default_random_engine<sp/>re(std::chrono::system_clock::now().time_since_epoch().count());</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>uniform_int_distribution&lt;int&gt;<sp/>distrib{0,<sp/>6};</highlight></codeline>
@@ -173,9 +157,6 @@
 <codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="90"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="93"><highlight class="comment"><sp/>*<sp/>@brief<sp/>contain<sp/>all<sp/>Anthill<sp/>actions<sp/>for<sp/>a<sp/>round</highlight></codeline>
-<codeline lineno="94"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_anthill_1a68a8d3b051e9a67dc0d61873e608e80a" kindref="member">Anthill::doRound</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_anthill_1abf85b8dbefb90401102290d1239e5caf" kindref="member">_newWarriors</ref><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_anthill_1a37f3181a47613e31ec78bbfd70daffd7" kindref="member">doRoundQueen</ref>();</highlight></codeline>
@@ -285,38 +266,22 @@
 <codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_anthill_1a92cfa9df16dcac810eb7410712164bed" kindref="member">_workers</ref><sp/>=<sp/>newWorkers;</highlight></codeline>
 <codeline lineno="214"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="215"><highlight class="normal"></highlight></codeline>
-<codeline lineno="216"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="217"><highlight class="comment"><sp/>*<sp/>@brief<sp/>method<sp/>used<sp/>by<sp/>the<sp/>anthill<sp/>to<sp/>grow<sp/>egg<sp/>to<sp/>larva</highlight></codeline>
-<codeline lineno="218"><highlight class="comment"><sp/>*<sp/>@param<sp/>egg</highlight></codeline>
-<codeline lineno="219"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="220"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_anthill_1a102fd88e130c745e9fff50b38ae6f4e6" kindref="member">Anthill::growUpToLarva</ref>(<ref refid="class_egg" kindref="compound">Egg</ref><sp/>*egg)<sp/>{</highlight></codeline>
 <codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_anthill_1a80a0ca8f374d92072891f67fb8441966" kindref="member">Anthill::createLarva</ref>();</highlight></codeline>
 <codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>egg;</highlight></codeline>
 <codeline lineno="223"><highlight class="normal"></highlight></codeline>
 <codeline lineno="224"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="225"><highlight class="normal"></highlight></codeline>
-<codeline lineno="226"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="227"><highlight class="comment"><sp/>*<sp/>@brief<sp/>method<sp/>used<sp/>by<sp/>the<sp/>anthill<sp/>to<sp/>grow<sp/>larva<sp/>to<sp/>worker</highlight></codeline>
-<codeline lineno="228"><highlight class="comment"><sp/>*<sp/>@param<sp/>larva</highlight></codeline>
-<codeline lineno="229"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="230"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_anthill_1af6f59868ae7db300e5c650ea0cea2a1f" kindref="member">Anthill::growUpToWorker</ref>(<ref refid="class_larva" kindref="compound">Larva</ref><sp/>*larva)<sp/>{</highlight></codeline>
 <codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_anthill_1a3f398643ba67c9710e54b1675fc3e1c4" kindref="member">Anthill::createWorker</ref>();</highlight></codeline>
 <codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>larva;</highlight></codeline>
 <codeline lineno="233"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="234"><highlight class="normal"></highlight></codeline>
-<codeline lineno="235"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="236"><highlight class="comment"><sp/>*<sp/>@brief<sp/>method<sp/>used<sp/>by<sp/>the<sp/>anthill<sp/>to<sp/>grow<sp/>worker<sp/>to<sp/>warrior</highlight></codeline>
-<codeline lineno="237"><highlight class="comment"><sp/>*<sp/>@param<sp/>worker</highlight></codeline>
-<codeline lineno="238"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="239"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_anthill_1a3b1854805b88fac7d7d33096e3fc5577" kindref="member">Anthill::growUpToWarrior</ref>(<ref refid="class_worker" kindref="compound">Worker</ref><sp/>*worker)<sp/>{</highlight></codeline>
 <codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_anthill_1abf85b8dbefb90401102290d1239e5caf" kindref="member">_newWarriors</ref><sp/>+=<sp/>1;</highlight></codeline>
 <codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>worker;</highlight></codeline>
 <codeline lineno="242"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="243"><highlight class="normal"></highlight></codeline>
-<codeline lineno="244"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="245"><highlight class="comment"><sp/>*<sp/>@brief<sp/>method<sp/>used<sp/>by<sp/>anthill<sp/>that<sp/>is<sp/>called<sp/>by<sp/>the<sp/>warrior<sp/>to<sp/>increase<sp/>food<sp/>quantity<sp/>via<sp/>la<sp/>méthode<sp/>giveFood</highlight></codeline>
-<codeline lineno="246"><highlight class="comment"><sp/>*<sp/>@param<sp/>foodQuantity</highlight></codeline>
-<codeline lineno="247"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="248"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_anthill_1af2bd0764ae0640aedd72ee10c1a60418" kindref="member">Anthill::addFood</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>foodQuantity)<sp/>{</highlight></codeline>
 <codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_anthill_1a5aae123ca7c7ad1b6c84e3fc9e3368a6" kindref="member">_currentFood</ref><sp/>+=<sp/>foodQuantity;</highlight></codeline>
 <codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_anthill_1a5aae123ca7c7ad1b6c84e3fc9e3368a6" kindref="member">_currentFood</ref><sp/>&gt;<sp/><ref refid="class_anthill_1a0236d40219d628649e35b55e9ad1681e" kindref="member">_maxFood</ref>)<sp/>{</highlight></codeline>
@@ -324,39 +289,25 @@
 <codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="253"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="254"><highlight class="normal"></highlight></codeline>
-<codeline lineno="255"><highlight class="normal"></highlight><highlight class="comment">//PRIVATE</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="256"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="257"><highlight class="comment"><sp/>*<sp/>@brief<sp/>method<sp/>used<sp/>by<sp/>the<sp/>anthill<sp/>to<sp/>create<sp/>one<sp/>egg</highlight></codeline>
-<codeline lineno="258"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="259"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_anthill_1adfea94fd7fa75d08f8c657d97fecdfb8" kindref="member">Anthill::createEgg</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="comment">//PRIVATE</highlight></codeline>
+<codeline lineno="259"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_anthill_1adfea94fd7fa75d08f8c657d97fecdfb8" kindref="member">Anthill::createEgg</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;egg&quot;</highlight><highlight class="normal"><sp/>+<sp/>to_string(<ref refid="class_anthill_1a679c378ae33e2483b73f4e873ed0878c" kindref="member">_eggs</ref>.size());</highlight></codeline>
 <codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_egg" kindref="compound">Egg</ref><sp/>*egg<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_egg" kindref="compound">Egg</ref>(name);</highlight></codeline>
 <codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_anthill_1a679c378ae33e2483b73f4e873ed0878c" kindref="member">_eggs</ref>.push_back(egg);</highlight></codeline>
 <codeline lineno="263"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="264"><highlight class="normal"></highlight></codeline>
-<codeline lineno="265"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="266"><highlight class="comment"><sp/>*<sp/>@brief<sp/>method<sp/>used<sp/>by<sp/>the<sp/>anthill<sp/>to<sp/>create<sp/>one<sp/>larva</highlight></codeline>
-<codeline lineno="267"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="268"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_anthill_1a80a0ca8f374d92072891f67fb8441966" kindref="member">Anthill::createLarva</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;larva&quot;</highlight><highlight class="normal"><sp/>+<sp/>to_string(<ref refid="class_anthill_1afc8cc3ccd45701fe26fa35b4f8696f04" kindref="member">_larvas</ref>.size());</highlight></codeline>
 <codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_larva" kindref="compound">Larva</ref><sp/>*larva<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_larva" kindref="compound">Larva</ref>(<ref refid="class_anthill_1a5ce3eeda78bd506d69605907d921872f" kindref="member">_config</ref>,<sp/>name);</highlight></codeline>
 <codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_anthill_1afc8cc3ccd45701fe26fa35b4f8696f04" kindref="member">_larvas</ref>.push_back(larva);</highlight></codeline>
 <codeline lineno="272"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="273"><highlight class="normal"></highlight></codeline>
-<codeline lineno="274"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="275"><highlight class="comment"><sp/>*<sp/>@brief<sp/>method<sp/>used<sp/>by<sp/>the<sp/>anthill<sp/>to<sp/>create<sp/>one<sp/>worker</highlight></codeline>
-<codeline lineno="276"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="277"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_anthill_1a3f398643ba67c9710e54b1675fc3e1c4" kindref="member">Anthill::createWorker</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;worker&quot;</highlight><highlight class="normal"><sp/>+<sp/>to_string(<ref refid="class_anthill_1a92cfa9df16dcac810eb7410712164bed" kindref="member">_workers</ref>.size());</highlight></codeline>
 <codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_worker" kindref="compound">Worker</ref><sp/>*worker<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_worker" kindref="compound">Worker</ref>(<ref refid="class_anthill_1a5ce3eeda78bd506d69605907d921872f" kindref="member">_config</ref>,<sp/>name);</highlight></codeline>
 <codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_anthill_1a92cfa9df16dcac810eb7410712164bed" kindref="member">_workers</ref>.push_back(worker);</highlight></codeline>
 <codeline lineno="281"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="282"><highlight class="normal"></highlight></codeline>
-<codeline lineno="283"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="284"><highlight class="comment"><sp/>*<sp/>@brief<sp/>method<sp/>used<sp/>by<sp/>the<sp/>anthill<sp/>to<sp/>manage<sp/>food<sp/>consumed<sp/>by<sp/>the<sp/>warriors</highlight></codeline>
-<codeline lineno="285"><highlight class="comment"><sp/>*<sp/>@param<sp/>desiredFood</highlight></codeline>
-<codeline lineno="286"><highlight class="comment"><sp/>*<sp/>@return<sp/>available<sp/>food<sp/>quantity<sp/>that<sp/>can<sp/>be<sp/>consumed<sp/>as<sp/>an<sp/>int</highlight></codeline>
-<codeline lineno="287"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="288"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_anthill_1a559f93071aa74542e86a8f891778eff0" kindref="member">Anthill::foodCons</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>desiredFood)<sp/>{</highlight></codeline>
 <codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>availableCons<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_anthill_1a5aae123ca7c7ad1b6c84e3fc9e3368a6" kindref="member">_currentFood</ref><sp/>&lt;=<sp/>0)<sp/>{</highlight></codeline>

@@ -6,7 +6,7 @@
 #include <map>
 #include <string>
 
-/***
+/**
  * @brief main program method
  * @param argc
  * @param argv

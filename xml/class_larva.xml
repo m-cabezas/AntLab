@@ -53,6 +53,7 @@
         <argsstring>()</argsstring>
         <name>Larva</name>
         <briefdescription>
+<para>default constructor of larva </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -74,8 +75,27 @@
           <declname>name</declname>
         </param>
         <briefdescription>
+<para>main constructor of larva </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -87,6 +107,7 @@
         <argsstring>()</argsstring>
         <name>~Larva</name>
         <briefdescription>
+<para>default destructor of larva </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -104,8 +125,19 @@
           <declname>foodNumber</declname>
         </param>
         <briefdescription>
+<para>method used to increase the life of a larva based on the food quantity it eat </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>foodNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -131,8 +163,12 @@
         <argsstring>() const</argsstring>
         <name>getCurrentHealth</name>
         <briefdescription>
+<para>method used to get the current health level of the larva </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>return the current health level as an int </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

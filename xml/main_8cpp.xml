@@ -184,8 +184,29 @@
           <array>[]</array>
         </param>
         <briefdescription>
+<para>main program method </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -205,12 +226,6 @@
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>@brief<sp/>main<sp/>program<sp/>method</highlight></codeline>
-<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>@param<sp/>argc</highlight></codeline>
-<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>@param<sp/>argv</highlight></codeline>
-<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>@return</highlight></codeline>
-<codeline lineno="14"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])<sp/>{</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_game" kindref="compound">Game</ref><sp/>w;</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>

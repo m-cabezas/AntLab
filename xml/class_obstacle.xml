@@ -53,6 +53,7 @@
         <argsstring>()</argsstring>
         <name>Obstacle</name>
         <briefdescription>
+<para>default constructor of obstacle </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -78,8 +79,35 @@
           <declname>height</declname>
         </param>
         <briefdescription>
+<para>main constructor of obstacle </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -91,6 +119,7 @@
         <argsstring>()</argsstring>
         <name>~Obstacle</name>
         <briefdescription>
+<para>default destructor of obstacle </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -104,8 +133,12 @@
         <argsstring>()</argsstring>
         <name>getPosition</name>
         <briefdescription>
+<para>method used to access the coordinates of the obstacle </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

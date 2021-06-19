@@ -139,17 +139,10 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="orchestrator_8h" kindref="compound">orchestrator.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>@brief<sp/>default<sp/>constructor<sp/>of<sp/>orchestrator</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><ref refid="class_orchestrator_1a11b00b1d6352b20cd3f06147950a3067" kindref="member">Orchestrator::Orchestrator</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>@brief<sp/>main<sp/>constructor<sp/>of<sp/>orchestrator</highlight></codeline>
-<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>@param<sp/>config</highlight></codeline>
-<codeline lineno="13"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><ref refid="class_orchestrator_1a11b00b1d6352b20cd3f06147950a3067" kindref="member">Orchestrator::Orchestrator</ref>(<ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref><sp/>config)<sp/>{</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_orchestrator_1a965da4741bf99096a42d1a92b87bf83f" kindref="member">_config</ref><sp/>=<sp/>config;</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_orchestrator_1a0ce7e3ef5d9a75129617b73bfdfecf57" kindref="member">_dimension</ref><sp/>=<sp/>pair&lt;int,<sp/>int&gt;(100,<sp/>50);</highlight></codeline>
@@ -179,10 +172,6 @@
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>@brief<sp/>method<sp/>used<sp/>to<sp/>access<sp/>the<sp/>dimensions<sp/>of<sp/>the<sp/>orchestrator<sp/>map</highlight></codeline>
-<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>@return</highlight></codeline>
-<codeline lineno="49"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal">pair&lt;int,<sp/>int&gt;<sp/><ref refid="class_orchestrator_1a5e0ce1da543b2cc6f1d4aedc9de75ff5" kindref="member">Orchestrator::getDimension</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_orchestrator_1a0ce7e3ef5d9a75129617b73bfdfecf57" kindref="member">_dimension</ref>;</highlight></codeline>
 <codeline lineno="52"><highlight class="normal">}</highlight></codeline>

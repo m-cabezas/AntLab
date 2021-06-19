@@ -13,6 +13,7 @@
         <argsstring>()</argsstring>
         <name>Worker</name>
         <briefdescription>
+<para>default constructor of worker </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -34,8 +35,27 @@
           <declname>name</declname>
         </param>
         <briefdescription>
+<para>main constructor of worker </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -47,6 +67,7 @@
         <argsstring>()</argsstring>
         <name>~Worker</name>
         <briefdescription>
+<para>default destructor of worker </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>

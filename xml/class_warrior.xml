@@ -91,6 +91,7 @@
         <argsstring>()</argsstring>
         <name>Warrior</name>
         <briefdescription>
+<para>default constructor of warrior </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -168,6 +169,7 @@
         <argsstring>()</argsstring>
         <name>~Warrior</name>
         <briefdescription>
+<para>default destructor of warrior </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -181,8 +183,12 @@
         <argsstring>()</argsstring>
         <name>getPosition</name>
         <briefdescription>
+<para>method used to access the position of the current warrior </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

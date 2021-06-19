@@ -7,7 +7,7 @@ Queen::Queen() {
 
 }
 
-/***
+/**
  * @brief main constructor of queen
  * @param config
  */
@@ -19,7 +19,7 @@ Queen::Queen(CONFIG &config) {
     _name = "Queen";
 }
 
-/***
+/**
  * @brief default destructor of queen
  */
 Queen::~Queen() {

@@ -14,23 +14,23 @@ Inheritance diagram for Anthill\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_anthill_a2b5eb754c236e4add4ba4077fb134782}{Anthill}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em default constructor of anthill \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_anthill_a6c39fdc3e19ce0369e890bb543f9bf0a}{Anthill}} (\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} \&config, int max\+Pop, int max\+Food, pair$<$ int, int $>$ position, int width, int height)
 \begin{DoxyCompactList}\small\item\em main constructor of \mbox{\hyperlink{class_anthill}{Anthill}} \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_anthill_a0a8a9aa35526e2c65e4520a990a18e18}{$\sim$\+Anthill}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em destructor of anthill \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_anthill_ad7ddaced1d80e90839a7fb80760a59fa}{get\+New\+Warriors}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em get all warriors that just evolved from workers \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_anthill_a335795a55847de8ab6da4d09875bacd5}{get\+Population}} () const
 \item 
 void \mbox{\hyperlink{class_anthill_a7ff7e41269324d61bc60360a6fb59a79}{init\+Anthill}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em create eggs, larvas, workers at first round \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_anthill_aca5a12987317ef7e9780b231aad1c153}{spawn\+Egg}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em method used to spawn eggs in the anthill, between 0 and 5 eggs are created \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_anthill_a68a8d3b051e9a67dc0d61873e608e80a}{do\+Round}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em contain all \mbox{\hyperlink{class_anthill}{Anthill}} actions for a round \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_anthill_af2bd0764ae0640aedd72ee10c1a60418}{add\+Food}} (int food\+Quantity)
-\item 
+\begin{DoxyCompactList}\small\item\em method used by anthill that is called by the warrior to increase food quantity via la méthode give\+Food \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_anthill_a0acbebd49855ce62b3f30218467338ea}{is\+Queen\+Alive}} ()
 \begin{DoxyCompactList}\small\item\em method used to know if queen is still alive \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
@@ -45,19 +45,19 @@ void \mbox{\hyperlink{class_anthill_a10dc28d387e14883c2f2f73b60b50271}{do\+Round
 void \mbox{\hyperlink{class_anthill_a03505a5a65d3d9cac82bdfb83db625cc}{do\+Round\+Workers}} ()
 \begin{DoxyCompactList}\small\item\em manage workers round \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_anthill_a102fd88e130c745e9fff50b38ae6f4e6}{grow\+Up\+To\+Larva}} (\mbox{\hyperlink{class_egg}{Egg}} $\ast$egg)
-\item 
+\begin{DoxyCompactList}\small\item\em method used by the anthill to grow egg to larva \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_anthill_af6f59868ae7db300e5c650ea0cea2a1f}{grow\+Up\+To\+Worker}} (\mbox{\hyperlink{class_larva}{Larva}} $\ast$larva)
-\item 
+\begin{DoxyCompactList}\small\item\em method used by the anthill to grow larva to worker \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_anthill_a3b1854805b88fac7d7d33096e3fc5577}{grow\+Up\+To\+Warrior}} (\mbox{\hyperlink{class_worker}{Worker}} $\ast$worker)
-\item 
+\begin{DoxyCompactList}\small\item\em method used by the anthill to grow worker to warrior \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_anthill_adfea94fd7fa75d08f8c657d97fecdfb8}{create\+Egg}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em method used by the anthill to create one egg \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_anthill_a80a0ca8f374d92072891f67fb8441966}{create\+Larva}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em method used by the anthill to create one larva \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_anthill_a3f398643ba67c9710e54b1675fc3e1c4}{create\+Worker}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em method used by the anthill to create one worker \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_anthill_a559f93071aa74542e86a8f891778eff0}{food\+Cons}} (int desired\+Food)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em method used by the anthill to manage food consumed by the warriors \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -90,6 +90,10 @@ int \mbox{\hyperlink{class_anthill_abf85b8dbefb90401102290d1239e5caf}{\+\_\+new\
 \index{Anthill@{Anthill}!Anthill@{Anthill}}
 \doxysubsubsection{\texorpdfstring{Anthill()}{Anthill()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Anthill\+::\+Anthill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+default constructor of anthill 
 
 \mbox{\Hypertarget{class_anthill_a6c39fdc3e19ce0369e890bb543f9bf0a}\label{class_anthill_a6c39fdc3e19ce0369e890bb543f9bf0a}} 
 \index{Anthill@{Anthill}!Anthill@{Anthill}}
@@ -124,6 +128,10 @@ main constructor of \mbox{\hyperlink{class_anthill}{Anthill}}
 
 
 
+destructor of anthill 
+
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_anthill_af2bd0764ae0640aedd72ee10c1a60418}\label{class_anthill_af2bd0764ae0640aedd72ee10c1a60418}} 
 \index{Anthill@{Anthill}!addFood@{addFood}}
@@ -131,11 +139,24 @@ main constructor of \mbox{\hyperlink{class_anthill}{Anthill}}
 \doxysubsubsection{\texorpdfstring{addFood()}{addFood()}}
 {\footnotesize\ttfamily void Anthill\+::add\+Food (\begin{DoxyParamCaption}\item[{int}]{food\+Quantity }\end{DoxyParamCaption})}
 
+
+
+method used by anthill that is called by the warrior to increase food quantity via la méthode give\+Food 
+
+
+\begin{DoxyParams}{Parameters}
+{\em food\+Quantity} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_anthill_adfea94fd7fa75d08f8c657d97fecdfb8}\label{class_anthill_adfea94fd7fa75d08f8c657d97fecdfb8}} 
 \index{Anthill@{Anthill}!createEgg@{createEgg}}
 \index{createEgg@{createEgg}!Anthill@{Anthill}}
 \doxysubsubsection{\texorpdfstring{createEgg()}{createEgg()}}
 {\footnotesize\ttfamily void Anthill\+::create\+Egg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+method used by the anthill to create one egg 
 
 \mbox{\Hypertarget{class_anthill_a80a0ca8f374d92072891f67fb8441966}\label{class_anthill_a80a0ca8f374d92072891f67fb8441966}} 
 \index{Anthill@{Anthill}!createLarva@{createLarva}}
@@ -143,17 +164,29 @@ main constructor of \mbox{\hyperlink{class_anthill}{Anthill}}
 \doxysubsubsection{\texorpdfstring{createLarva()}{createLarva()}}
 {\footnotesize\ttfamily void Anthill\+::create\+Larva (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+method used by the anthill to create one larva 
+
 \mbox{\Hypertarget{class_anthill_a3f398643ba67c9710e54b1675fc3e1c4}\label{class_anthill_a3f398643ba67c9710e54b1675fc3e1c4}} 
 \index{Anthill@{Anthill}!createWorker@{createWorker}}
 \index{createWorker@{createWorker}!Anthill@{Anthill}}
 \doxysubsubsection{\texorpdfstring{createWorker()}{createWorker()}}
 {\footnotesize\ttfamily void Anthill\+::create\+Worker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+method used by the anthill to create one worker 
+
 \mbox{\Hypertarget{class_anthill_a68a8d3b051e9a67dc0d61873e608e80a}\label{class_anthill_a68a8d3b051e9a67dc0d61873e608e80a}} 
 \index{Anthill@{Anthill}!doRound@{doRound}}
 \index{doRound@{doRound}!Anthill@{Anthill}}
 \doxysubsubsection{\texorpdfstring{doRound()}{doRound()}}
 {\footnotesize\ttfamily void Anthill\+::do\+Round (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+contain all \mbox{\hyperlink{class_anthill}{Anthill}} actions for a round 
 
 \mbox{\Hypertarget{class_anthill_a006c4f2759a3cb5cb2b51771adcc3042}\label{class_anthill_a006c4f2759a3cb5cb2b51771adcc3042}} 
 \index{Anthill@{Anthill}!doRoundEggs@{doRoundEggs}}
@@ -201,12 +234,31 @@ manage workers round
 \doxysubsubsection{\texorpdfstring{foodCons()}{foodCons()}}
 {\footnotesize\ttfamily int Anthill\+::food\+Cons (\begin{DoxyParamCaption}\item[{int}]{desired\+Food }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+method used by the anthill to manage food consumed by the warriors 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desired\+Food} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+available food quantity that can be consumed as an int 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_anthill_ad7ddaced1d80e90839a7fb80760a59fa}\label{class_anthill_ad7ddaced1d80e90839a7fb80760a59fa}} 
 \index{Anthill@{Anthill}!getNewWarriors@{getNewWarriors}}
 \index{getNewWarriors@{getNewWarriors}!Anthill@{Anthill}}
 \doxysubsubsection{\texorpdfstring{getNewWarriors()}{getNewWarriors()}}
 {\footnotesize\ttfamily int Anthill\+::get\+New\+Warriors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+get all warriors that just evolved from workers 
+
+\begin{DoxyReturn}{Returns}
+return warriors created by orchestrator 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_anthill_a335795a55847de8ab6da4d09875bacd5}\label{class_anthill_a335795a55847de8ab6da4d09875bacd5}} 
 \index{Anthill@{Anthill}!getPopulation@{getPopulation}}
 \index{getPopulation@{getPopulation}!Anthill@{Anthill}}
@@ -222,23 +274,54 @@ total population
 \doxysubsubsection{\texorpdfstring{growUpToLarva()}{growUpToLarva()}}
 {\footnotesize\ttfamily void Anthill\+::grow\+Up\+To\+Larva (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_egg}{Egg}} $\ast$}]{egg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+method used by the anthill to grow egg to larva 
+
+
+\begin{DoxyParams}{Parameters}
+{\em egg} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_anthill_a3b1854805b88fac7d7d33096e3fc5577}\label{class_anthill_a3b1854805b88fac7d7d33096e3fc5577}} 
 \index{Anthill@{Anthill}!growUpToWarrior@{growUpToWarrior}}
 \index{growUpToWarrior@{growUpToWarrior}!Anthill@{Anthill}}
 \doxysubsubsection{\texorpdfstring{growUpToWarrior()}{growUpToWarrior()}}
 {\footnotesize\ttfamily void Anthill\+::grow\+Up\+To\+Warrior (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_worker}{Worker}} $\ast$}]{worker }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+method used by the anthill to grow worker to warrior 
+
+
+\begin{DoxyParams}{Parameters}
+{\em worker} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_anthill_af6f59868ae7db300e5c650ea0cea2a1f}\label{class_anthill_af6f59868ae7db300e5c650ea0cea2a1f}} 
 \index{Anthill@{Anthill}!growUpToWorker@{growUpToWorker}}
 \index{growUpToWorker@{growUpToWorker}!Anthill@{Anthill}}
 \doxysubsubsection{\texorpdfstring{growUpToWorker()}{growUpToWorker()}}
 {\footnotesize\ttfamily void Anthill\+::grow\+Up\+To\+Worker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_larva}{Larva}} $\ast$}]{larva }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+method used by the anthill to grow larva to worker 
+
+
+\begin{DoxyParams}{Parameters}
+{\em larva} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_anthill_a7ff7e41269324d61bc60360a6fb59a79}\label{class_anthill_a7ff7e41269324d61bc60360a6fb59a79}} 
 \index{Anthill@{Anthill}!initAnthill@{initAnthill}}
 \index{initAnthill@{initAnthill}!Anthill@{Anthill}}
 \doxysubsubsection{\texorpdfstring{initAnthill()}{initAnthill()}}
 {\footnotesize\ttfamily void Anthill\+::init\+Anthill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+create eggs, larvas, workers at first round 
 
 \mbox{\Hypertarget{class_anthill_a0acbebd49855ce62b3f30218467338ea}\label{class_anthill_a0acbebd49855ce62b3f30218467338ea}} 
 \index{Anthill@{Anthill}!isQueenAlive@{isQueenAlive}}
@@ -258,6 +341,10 @@ method used to know if queen is still alive
 \index{spawnEgg@{spawnEgg}!Anthill@{Anthill}}
 \doxysubsubsection{\texorpdfstring{spawnEgg()}{spawnEgg()}}
 {\footnotesize\ttfamily void Anthill\+::spawn\+Egg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+method used to spawn eggs in the anthill, between 0 and 5 eggs are created 
 
 
 

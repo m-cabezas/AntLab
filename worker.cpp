@@ -1,13 +1,13 @@
 #include "worker.h"
 
-/***
+/**
  * @brief default constructor of worker
  */
 Worker::Worker() {
 
 }
 
-/***
+/**
  * @brief main constructor of worker
  * @param config
  * @param name
@@ -20,7 +20,7 @@ Worker::Worker(CONFIG &config, string name) {
     _currentHealth = config.lifeWorker;
 }
 
-/***
+/**
  * @brief default destructor of worker
  */
 Worker::~Worker() {

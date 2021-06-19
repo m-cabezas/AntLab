@@ -39,6 +39,7 @@
         <argsstring>()</argsstring>
         <name>FoodSpawner</name>
         <briefdescription>
+<para>default constructor of food spawner </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -68,8 +69,43 @@
           <declname>height</declname>
         </param>
         <briefdescription>
+<para>main constructor of food spawner </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>maxQuantity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -81,6 +117,7 @@
         <argsstring>()</argsstring>
         <name>~FoodSpawner</name>
         <briefdescription>
+<para>default destructor of food spawner </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -94,6 +131,7 @@
         <argsstring>()</argsstring>
         <name>doRound</name>
         <briefdescription>
+<para>all actions that are done in a round by the food spawner </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -107,8 +145,12 @@
         <argsstring>() const</argsstring>
         <name>getCurrentQuantity</name>
         <briefdescription>
+<para>method used to access food quantity of the food spawner </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>return the food quantity with an int </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -124,8 +166,19 @@
           <declname>quantity</declname>
         </param>
         <briefdescription>
+<para>method used to decrease the quantity of food contained by the food spawner </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>quantity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -139,6 +192,7 @@
         <argsstring>()</argsstring>
         <name>randomFood</name>
         <briefdescription>
+<para>method used to create random quantity of food inside the food spawner </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>

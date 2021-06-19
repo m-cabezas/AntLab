@@ -8,13 +8,13 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_orchestrator_a11b00b1d6352b20cd3f06147950a3067}{Orchestrator}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em default constructor of orchestrator \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_orchestrator_a962cc595d5600e1eb600fe5946153c6e}{Orchestrator}} (\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} config)
-\item 
+\begin{DoxyCompactList}\small\item\em main constructor of orchestrator \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_orchestrator_a134459a83f516ef59fb70a3451d40d0b}{$\sim$\+Orchestrator}} ()
 \begin{DoxyCompactList}\small\item\em default destructor of orchestrator \end{DoxyCompactList}\item 
 pair$<$ int, int $>$ \mbox{\hyperlink{class_orchestrator_a5e0ce1da543b2cc6f1d4aedc9de75ff5}{get\+Dimension}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em method used to access the dimensions of the orchestrator map \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_orchestrator_a43534ccc11df40a762dd0305135afd6a}{get\+Map\+Entity}} (int x, int y)
 \begin{DoxyCompactList}\small\item\em return an int mapped to an object moving on the map \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_orchestrator_a8f4d36b247fe79935c10e695c873befc}{init\+Orch}} (\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} config)
@@ -86,12 +86,25 @@ vector$<$ \mbox{\hyperlink{class_anthill}{Anthill}} $\ast$ $>$ \mbox{\hyperlink{
 \doxysubsubsection{\texorpdfstring{Orchestrator()}{Orchestrator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Orchestrator\+::\+Orchestrator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+default constructor of orchestrator 
+
 \mbox{\Hypertarget{class_orchestrator_a962cc595d5600e1eb600fe5946153c6e}\label{class_orchestrator_a962cc595d5600e1eb600fe5946153c6e}} 
 \index{Orchestrator@{Orchestrator}!Orchestrator@{Orchestrator}}
 \index{Orchestrator@{Orchestrator}!Orchestrator@{Orchestrator}}
 \doxysubsubsection{\texorpdfstring{Orchestrator()}{Orchestrator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Orchestrator\+::\+Orchestrator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}}}]{config }\end{DoxyParamCaption})}
 
+
+
+main constructor of orchestrator 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_orchestrator_a134459a83f516ef59fb70a3451d40d0b}\label{class_orchestrator_a134459a83f516ef59fb70a3451d40d0b}} 
 \index{Orchestrator@{Orchestrator}!````~Orchestrator@{$\sim$Orchestrator}}
 \index{````~Orchestrator@{$\sim$Orchestrator}!Orchestrator@{Orchestrator}}
@@ -214,6 +227,13 @@ create a warrior and add it to the orchestrator\textquotesingle{}s warrior list
 \doxysubsubsection{\texorpdfstring{getDimension()}{getDimension()}}
 {\footnotesize\ttfamily pair$<$ int, int $>$ Orchestrator\+::get\+Dimension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+method used to access the dimensions of the orchestrator map 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_orchestrator_ac13a40be361212148a9bf26ded46b683}\label{class_orchestrator_ac13a40be361212148a9bf26ded46b683}} 
 \index{Orchestrator@{Orchestrator}!getForbiddenPositions@{getForbiddenPositions}}
 \index{getForbiddenPositions@{getForbiddenPositions}!Orchestrator@{Orchestrator}}

@@ -41,18 +41,10 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="larva_8h" kindref="compound">larva.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>@brief<sp/>default<sp/>constructor<sp/>of<sp/>larva</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><ref refid="class_larva_1a4b111b5a13f5d3b1fb7121ac79824fe4" kindref="member">Larva::Larva</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>@brief<sp/>main<sp/>constructor<sp/>of<sp/>larva</highlight></codeline>
-<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>@param<sp/>config</highlight></codeline>
-<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>@param<sp/>name</highlight></codeline>
-<codeline lineno="14"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><ref refid="class_larva_1a4b111b5a13f5d3b1fb7121ac79824fe4" kindref="member">Larva::Larva</ref>(<ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref><sp/>&amp;config,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>name)<sp/>{</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_egg_1a57ca36eb21771f70b66b52f3273c1479" kindref="member">_name</ref><sp/>=<sp/>name;</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_egg_1a5943a93f9bb3c8e785ae5ca491776440" kindref="member">_currentAge</ref><sp/>=<sp/>config.<ref refid="struct_c_o_n_f_i_g_1adaef13114c96052ed48fd5b1c2f71751" kindref="member">ageLarva</ref>;</highlight></codeline>
@@ -61,16 +53,9 @@
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_larva_1a6c110f254d97b23fface50ba929dc316" kindref="member">_currentHealth</ref><sp/>=<sp/>config.<ref refid="struct_c_o_n_f_i_g_1ac5af4472e37f58a99db6462c6ab26489" kindref="member">lifeLarva</ref>;</highlight></codeline>
 <codeline lineno="21"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>@brief<sp/>default<sp/>destructor<sp/>of<sp/>larva</highlight></codeline>
-<codeline lineno="25"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><ref refid="class_larva_1a1f7555c8d84576eda0d3dbfc8bb88c2f" kindref="member">Larva::~Larva</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="27"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>@brief<sp/>method<sp/>used<sp/>to<sp/>increase<sp/>the<sp/>life<sp/>of<sp/>a<sp/>larva<sp/>based<sp/>on<sp/>the<sp/>food<sp/>quantity<sp/>it<sp/>eat</highlight></codeline>
-<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>@param<sp/>foodNumber</highlight></codeline>
-<codeline lineno="32"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_larva_1adbe862633e03ac3ec06230353b222767" kindref="member">Larva::heal</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>foodNumber)<sp/>{</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_larva_1a6c110f254d97b23fface50ba929dc316" kindref="member">_currentHealth</ref><sp/>+=<sp/>foodNumber;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_larva_1a6c110f254d97b23fface50ba929dc316" kindref="member">_currentHealth</ref><sp/>&gt;<sp/><ref refid="class_larva_1a8c51a31397bcc72b39b5b79e5d5dfc98" kindref="member">_maxHealth</ref>)<sp/>{</highlight></codeline>
@@ -85,12 +70,8 @@
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="48"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GETTERS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="52"><highlight class="comment"><sp/>*<sp/>@brief<sp/>method<sp/>used<sp/>to<sp/>get<sp/>the<sp/>current<sp/>health<sp/>level<sp/>of<sp/>the<sp/>larva</highlight></codeline>
-<codeline lineno="53"><highlight class="comment"><sp/>*<sp/>@return<sp/>return<sp/>the<sp/>current<sp/>health<sp/>level<sp/>as<sp/>an<sp/>int</highlight></codeline>
-<codeline lineno="54"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_larva_1aa02ca1d9e4b69832742214094e48cbd0" kindref="member">Larva::getCurrentHealth</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GETTERS</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_larva_1aa02ca1d9e4b69832742214094e48cbd0" kindref="member">Larva::getCurrentHealth</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_larva_1a6c110f254d97b23fface50ba929dc316" kindref="member">_currentHealth</ref>;</highlight></codeline>
 <codeline lineno="57"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>

@@ -1,6 +1,6 @@
 #include "warrior.h"
 
-/***
+/**
  * @brief default constructor of warrior
  */
 Warrior::Warrior() {
@@ -30,13 +30,13 @@ Warrior::Warrior(pair<int, int> position, string name, Anthill *anthill, CONFIG 
     _currentHealth = config.lifeWarrior;
 }
 
-/***
+/**
  * @brief default destructor of warrior
  */
 Warrior::~Warrior() {
 }
 
-/***
+/**
  * @brief method used to access the position of the current warrior
  * @return
  */

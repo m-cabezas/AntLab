@@ -1,14 +1,14 @@
 #include "foodspawner.h"
 
 //PUBLIC
-/***
+/**
  * @brief default constructor of food spawner
  */
 FoodSpawner::FoodSpawner() {
 
 }
 
-/***
+/**
  * @brief main constructor of food spawner
  * @param maxQuantity
  * @param position
@@ -23,14 +23,14 @@ FoodSpawner::FoodSpawner(int maxQuantity, pair<int, int> position, int width, in
     _height = height;
 }
 
-/***
+/**
  * @brief default destructor of food spawner
  */
 FoodSpawner::~FoodSpawner() {
 
 }
 
-/***
+/**
  * @brief all actions that are done in a round by the food spawner
  */
 void FoodSpawner::doRound() {
@@ -40,7 +40,7 @@ void FoodSpawner::doRound() {
     }
 }
 
-/***
+/**
  * @brief method used to access food quantity of the food spawner
  * @return return the food quantity with an int
  */
@@ -48,7 +48,7 @@ int FoodSpawner::getCurrentQuantity() const {
     return _currentQuantity;
 }
 
-/***
+/**
  * @brief method used to decrease the quantity of food contained by the food spawner
  * @param quantity
  */
@@ -57,7 +57,7 @@ void FoodSpawner::decreaseQuantity(int quantity) {
 }
 
 //PRIVATE
-/***
+/**
  * @brief method used to create random quantity of food inside the food spawner
  */
 void FoodSpawner::randomFood() {

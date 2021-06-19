@@ -29,8 +29,19 @@
           <declname>config</declname>
         </param>
         <briefdescription>
+<para>main constructor of queen </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -42,6 +53,7 @@
         <argsstring>()</argsstring>
         <name>~Queen</name>
         <briefdescription>
+<para>default destructor of queen </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>

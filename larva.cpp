@@ -1,13 +1,13 @@
 #include "larva.h"
 
-/***
+/**
  * @brief default constructor of larva
  */
 Larva::Larva() {
 
 }
 
-/***
+/**
  * @brief main constructor of larva
  * @param config
  * @param name
@@ -20,13 +20,13 @@ Larva::Larva(CONFIG &config, string name) {
     _currentHealth = config.lifeLarva;
 }
 
-/***
+/**
  * @brief default destructor of larva
  */
 Larva::~Larva() {
 }
 
-/***
+/**
  * @brief method used to increase the life of a larva based on the food quantity it eat
  * @param foodNumber
  */
@@ -48,7 +48,7 @@ void Larva::starve() {
 }
 
 // GETTERS
-/***
+/**
  * @brief method used to get the current health level of the larva
  * @return return the current health level as an int
  */

@@ -143,6 +143,7 @@
         <argsstring>()</argsstring>
         <name>Anthill</name>
         <briefdescription>
+<para>default constructor of anthill </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -244,6 +245,7 @@
         <argsstring>()</argsstring>
         <name>~Anthill</name>
         <briefdescription>
+<para>destructor of anthill </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -257,8 +259,12 @@
         <argsstring>() const</argsstring>
         <name>getNewWarriors</name>
         <briefdescription>
+<para>get all warriors that just evolved from workers </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>return warriors created by orchestrator </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -286,6 +292,7 @@
         <argsstring>()</argsstring>
         <name>initAnthill</name>
         <briefdescription>
+<para>create eggs, larvas, workers at first round </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -299,6 +306,7 @@
         <argsstring>()</argsstring>
         <name>spawnEgg</name>
         <briefdescription>
+<para>method used to spawn eggs in the anthill, between 0 and 5 eggs are created </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -312,6 +320,7 @@
         <argsstring>()</argsstring>
         <name>doRound</name>
         <briefdescription>
+<para>contain all <ref refid="class_anthill" kindref="compound">Anthill</ref> actions for a round </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -329,8 +338,19 @@
           <declname>foodQuantity</declname>
         </param>
         <briefdescription>
+<para>method used by anthill that is called by the warrior to increase food quantity via la méthode giveFood </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>foodQuantity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -421,8 +441,19 @@
           <declname>egg</declname>
         </param>
         <briefdescription>
+<para>method used by the anthill to grow egg to larva </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>egg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -438,8 +469,19 @@
           <declname>larva</declname>
         </param>
         <briefdescription>
+<para>method used by the anthill to grow larva to worker </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>larva</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -455,8 +497,19 @@
           <declname>worker</declname>
         </param>
         <briefdescription>
+<para>method used by the anthill to grow worker to warrior </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>worker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -468,6 +521,7 @@
         <argsstring>()</argsstring>
         <name>createEgg</name>
         <briefdescription>
+<para>method used by the anthill to create one egg </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -481,6 +535,7 @@
         <argsstring>()</argsstring>
         <name>createLarva</name>
         <briefdescription>
+<para>method used by the anthill to create one larva </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -494,6 +549,7 @@
         <argsstring>()</argsstring>
         <name>createWorker</name>
         <briefdescription>
+<para>method used by the anthill to create one worker </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -511,8 +567,21 @@
           <declname>desiredFood</declname>
         </param>
         <briefdescription>
+<para>method used by the anthill to manage food consumed by the warriors </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>desiredFood</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>available food quantity that can be consumed as an int </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

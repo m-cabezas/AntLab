@@ -1,6 +1,6 @@
 #include "anthill.h"
 
-/***
+/**
  * @brief default constructor of anthill
  */
 Anthill::Anthill() {
@@ -28,7 +28,7 @@ Anthill::Anthill(CONFIG &config, int maxPop, int maxFood, pair<int, int> positio
 
 }
 
-/***
+/**
  * @brief destructor of anthill
  */
 Anthill::~Anthill() {
@@ -37,7 +37,7 @@ Anthill::~Anthill() {
     _workers.erase(_workers.begin(), _workers.end());
 }
 
-/***
+/**
  * @brief get all warriors that just evolved from workers
  * @return return warriors created by orchestrator
  */
@@ -54,7 +54,7 @@ int Anthill::getPopulation() const {
 }
 
 //PUBLIC
-/***
+/**
  * @brief create eggs, larvas, workers at first round
  */
 void Anthill::initAnthill() {
@@ -73,7 +73,7 @@ void Anthill::initAnthill() {
     }
 }
 
-/***
+/**
  * @brief method used to spawn eggs in the anthill, between 0 and 5 eggs are created
  */
 void Anthill::spawnEgg() {
@@ -89,7 +89,7 @@ void Anthill::spawnEgg() {
     }
 }
 
-/***
+/**
  * @brief contain all Anthill actions for a round
  */
 void Anthill::doRound() {
@@ -213,7 +213,7 @@ void Anthill::doRoundWorkers() {
     _workers = newWorkers;
 }
 
-/***
+/**
  * @brief method used by the anthill to grow egg to larva
  * @param egg
  */
@@ -223,7 +223,7 @@ void Anthill::growUpToLarva(Egg *egg) {
 
 }
 
-/***
+/**
  * @brief method used by the anthill to grow larva to worker
  * @param larva
  */
@@ -232,7 +232,7 @@ void Anthill::growUpToWorker(Larva *larva) {
     delete larva;
 }
 
-/***
+/**
  * @brief method used by the anthill to grow worker to warrior
  * @param worker
  */
@@ -241,7 +241,7 @@ void Anthill::growUpToWarrior(Worker *worker) {
     delete worker;
 }
 
-/***
+/**
  * @brief method used by anthill that is called by the warrior to increase food quantity via la méthode giveFood
  * @param foodQuantity
  */
@@ -253,7 +253,7 @@ void Anthill::addFood(int foodQuantity) {
 }
 
 //PRIVATE
-/***
+/**
  * @brief method used by the anthill to create one egg
  */
 void Anthill::createEgg() {
@@ -262,7 +262,7 @@ void Anthill::createEgg() {
     _eggs.push_back(egg);
 }
 
-/***
+/**
  * @brief method used by the anthill to create one larva
  */
 void Anthill::createLarva() {
@@ -271,7 +271,7 @@ void Anthill::createLarva() {
     _larvas.push_back(larva);
 }
 
-/***
+/**
  * @brief method used by the anthill to create one worker
  */
 void Anthill::createWorker() {
@@ -280,7 +280,7 @@ void Anthill::createWorker() {
     _workers.push_back(worker);
 }
 
-/***
+/**
  * @brief method used by the anthill to manage food consumed by the warriors
  * @param desiredFood
  * @return available food quantity that can be consumed as an int

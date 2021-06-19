@@ -38,6 +38,7 @@
         <argsstring>()</argsstring>
         <name>Game</name>
         <briefdescription>
+<para>default constructor of game </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -51,6 +52,7 @@
         <argsstring>()</argsstring>
         <name>~Game</name>
         <briefdescription>
+<para><ref refid="class_game" kindref="compound">Game</ref> default destructor. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -111,8 +113,19 @@
           <declname>roundNumber</declname>
         </param>
         <briefdescription>
+<para>Init a new round. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>roundNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

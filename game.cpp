@@ -2,7 +2,7 @@
 
 #include <windows.h>
 
-/***
+/**
  * @brief default constructor of game
  */
 Game::Game() {
@@ -51,7 +51,7 @@ void Game::initGame() {
     cout << "End Game" << endl;
 }
 
-/***
+/**
  * @brief Init a new round
  * @param roundNumber
  */
@@ -111,7 +111,7 @@ void Game::refreshGrid() {
     cout << *display << endl;
 }
 
-/***
+/**
  * @brief Game default destructor
  */
 Game::~Game() {

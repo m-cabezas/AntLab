@@ -1,13 +1,13 @@
 #include "orchestrator.h"
 
-/***
+/**
  * @brief default constructor of orchestrator
  */
 Orchestrator::Orchestrator() {
 
 }
 
-/***
+/**
  * @brief main constructor of orchestrator
  * @param config
  */
@@ -43,7 +43,7 @@ Orchestrator::~Orchestrator() {
 
 }
 
-/***
+/**
  * @brief method used to access the dimensions of the orchestrator map
  * @return
  */

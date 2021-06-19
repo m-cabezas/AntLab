@@ -14,22 +14,22 @@ Inheritance diagram for Food\+Spawner\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_food_spawner_a6e15c0426be75c74718d0b9aea4f418c}{Food\+Spawner}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em default constructor of food spawner \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_food_spawner_aa2477bc549a8680fa37f4e92c7d542f5}{Food\+Spawner}} (int max\+Quantity, pair$<$ int, int $>$ position, int width, int height)
-\item 
+\begin{DoxyCompactList}\small\item\em main constructor of food spawner \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_food_spawner_a14ddfc1f560fb57b80689be1bb61db06}{$\sim$\+Food\+Spawner}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em default destructor of food spawner \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_food_spawner_a97adce43c478029bb484d1582636fe22}{do\+Round}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em all actions that are done in a round by the food spawner \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_food_spawner_a9e9ba67a74657330082dfc4c515f55ad}{get\+Current\+Quantity}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em method used to access food quantity of the food spawner \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_food_spawner_a116b7945c47c92732c3e2d9c44da3faa}{decrease\+Quantity}} (int quantity)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em method used to decrease the quantity of food contained by the food spawner \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_food_spawner_a75674ca9013d335dab893fe406e40d94}{random\+Food}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em method used to create random quantity of food inside the food spawner \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -47,17 +47,40 @@ int \mbox{\hyperlink{class_food_spawner_a48c03ec6ccdcea768f4413a47481e5fe}{\+\_\
 \doxysubsubsection{\texorpdfstring{FoodSpawner()}{FoodSpawner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Food\+Spawner\+::\+Food\+Spawner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+default constructor of food spawner 
+
 \mbox{\Hypertarget{class_food_spawner_aa2477bc549a8680fa37f4e92c7d542f5}\label{class_food_spawner_aa2477bc549a8680fa37f4e92c7d542f5}} 
 \index{FoodSpawner@{FoodSpawner}!FoodSpawner@{FoodSpawner}}
 \index{FoodSpawner@{FoodSpawner}!FoodSpawner@{FoodSpawner}}
 \doxysubsubsection{\texorpdfstring{FoodSpawner()}{FoodSpawner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Food\+Spawner\+::\+Food\+Spawner (\begin{DoxyParamCaption}\item[{int}]{max\+Quantity,  }\item[{pair$<$ int, int $>$}]{position,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
 
+
+
+main constructor of food spawner 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Quantity} & \\
+\hline
+{\em position} & \\
+\hline
+{\em width} & \\
+\hline
+{\em height} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_food_spawner_a14ddfc1f560fb57b80689be1bb61db06}\label{class_food_spawner_a14ddfc1f560fb57b80689be1bb61db06}} 
 \index{FoodSpawner@{FoodSpawner}!````~FoodSpawner@{$\sim$FoodSpawner}}
 \index{````~FoodSpawner@{$\sim$FoodSpawner}!FoodSpawner@{FoodSpawner}}
 \doxysubsubsection{\texorpdfstring{$\sim$FoodSpawner()}{~FoodSpawner()}}
 {\footnotesize\ttfamily Food\+Spawner\+::$\sim$\+Food\+Spawner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+default destructor of food spawner 
 
 
 
@@ -68,11 +91,24 @@ int \mbox{\hyperlink{class_food_spawner_a48c03ec6ccdcea768f4413a47481e5fe}{\+\_\
 \doxysubsubsection{\texorpdfstring{decreaseQuantity()}{decreaseQuantity()}}
 {\footnotesize\ttfamily void Food\+Spawner\+::decrease\+Quantity (\begin{DoxyParamCaption}\item[{int}]{quantity }\end{DoxyParamCaption})}
 
+
+
+method used to decrease the quantity of food contained by the food spawner 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quantity} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_food_spawner_a97adce43c478029bb484d1582636fe22}\label{class_food_spawner_a97adce43c478029bb484d1582636fe22}} 
 \index{FoodSpawner@{FoodSpawner}!doRound@{doRound}}
 \index{doRound@{doRound}!FoodSpawner@{FoodSpawner}}
 \doxysubsubsection{\texorpdfstring{doRound()}{doRound()}}
 {\footnotesize\ttfamily void Food\+Spawner\+::do\+Round (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+all actions that are done in a round by the food spawner 
 
 \mbox{\Hypertarget{class_food_spawner_a9e9ba67a74657330082dfc4c515f55ad}\label{class_food_spawner_a9e9ba67a74657330082dfc4c515f55ad}} 
 \index{FoodSpawner@{FoodSpawner}!getCurrentQuantity@{getCurrentQuantity}}
@@ -80,11 +116,22 @@ int \mbox{\hyperlink{class_food_spawner_a48c03ec6ccdcea768f4413a47481e5fe}{\+\_\
 \doxysubsubsection{\texorpdfstring{getCurrentQuantity()}{getCurrentQuantity()}}
 {\footnotesize\ttfamily int Food\+Spawner\+::get\+Current\+Quantity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+method used to access food quantity of the food spawner 
+
+\begin{DoxyReturn}{Returns}
+return the food quantity with an int 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_food_spawner_a75674ca9013d335dab893fe406e40d94}\label{class_food_spawner_a75674ca9013d335dab893fe406e40d94}} 
 \index{FoodSpawner@{FoodSpawner}!randomFood@{randomFood}}
 \index{randomFood@{randomFood}!FoodSpawner@{FoodSpawner}}
 \doxysubsubsection{\texorpdfstring{randomFood()}{randomFood()}}
 {\footnotesize\ttfamily void Food\+Spawner\+::random\+Food (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+method used to create random quantity of food inside the food spawner 
 
 
 

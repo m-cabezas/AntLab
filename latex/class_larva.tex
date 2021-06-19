@@ -14,17 +14,17 @@ Inheritance diagram for Larva\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_larva_a4b111b5a13f5d3b1fb7121ac79824fe4}{Larva}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em default constructor of larva \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_larva_a34766742688547c5295f578da74ac080}{Larva}} (\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} \&config, string name)
-\item 
+\begin{DoxyCompactList}\small\item\em main constructor of larva \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_larva_a1f7555c8d84576eda0d3dbfc8bb88c2f}{$\sim$\+Larva}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em default destructor of larva \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_larva_adbe862633e03ac3ec06230353b222767}{heal}} (int food\+Number)
-\item 
+\begin{DoxyCompactList}\small\item\em method used to increase the life of a larva based on the food quantity it eat \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_larva_aa98638a241743fe9b0eab9267593e143}{starve}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_larva_aa98638a241743fe9b0eab9267593e143}{Larva\+::starve}} reduce the life of the ant according to its food consumption. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_larva_aa02ca1d9e4b69832742214094e48cbd0}{get\+Current\+Health}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em method used to get the current health level of the larva \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -43,17 +43,36 @@ int \mbox{\hyperlink{class_larva_a8c51a31397bcc72b39b5b79e5d5dfc98}{\+\_\+max\+H
 \doxysubsubsection{\texorpdfstring{Larva()}{Larva()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Larva\+::\+Larva (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+default constructor of larva 
+
 \mbox{\Hypertarget{class_larva_a34766742688547c5295f578da74ac080}\label{class_larva_a34766742688547c5295f578da74ac080}} 
 \index{Larva@{Larva}!Larva@{Larva}}
 \index{Larva@{Larva}!Larva@{Larva}}
 \doxysubsubsection{\texorpdfstring{Larva()}{Larva()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Larva\+::\+Larva (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} \&}]{config,  }\item[{string}]{name }\end{DoxyParamCaption})}
 
+
+
+main constructor of larva 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & \\
+\hline
+{\em name} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_larva_a1f7555c8d84576eda0d3dbfc8bb88c2f}\label{class_larva_a1f7555c8d84576eda0d3dbfc8bb88c2f}} 
 \index{Larva@{Larva}!````~Larva@{$\sim$Larva}}
 \index{````~Larva@{$\sim$Larva}!Larva@{Larva}}
 \doxysubsubsection{\texorpdfstring{$\sim$Larva()}{~Larva()}}
 {\footnotesize\ttfamily Larva\+::$\sim$\+Larva (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+default destructor of larva 
 
 
 
@@ -64,12 +83,28 @@ int \mbox{\hyperlink{class_larva_a8c51a31397bcc72b39b5b79e5d5dfc98}{\+\_\+max\+H
 \doxysubsubsection{\texorpdfstring{getCurrentHealth()}{getCurrentHealth()}}
 {\footnotesize\ttfamily int Larva\+::get\+Current\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+method used to get the current health level of the larva 
+
+\begin{DoxyReturn}{Returns}
+return the current health level as an int 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_larva_adbe862633e03ac3ec06230353b222767}\label{class_larva_adbe862633e03ac3ec06230353b222767}} 
 \index{Larva@{Larva}!heal@{heal}}
 \index{heal@{heal}!Larva@{Larva}}
 \doxysubsubsection{\texorpdfstring{heal()}{heal()}}
 {\footnotesize\ttfamily void Larva\+::heal (\begin{DoxyParamCaption}\item[{int}]{food\+Number }\end{DoxyParamCaption})}
 
+
+
+method used to increase the life of a larva based on the food quantity it eat 
+
+
+\begin{DoxyParams}{Parameters}
+{\em food\+Number} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_larva_aa98638a241743fe9b0eab9267593e143}\label{class_larva_aa98638a241743fe9b0eab9267593e143}} 
 \index{Larva@{Larva}!starve@{starve}}
 \index{starve@{starve}!Larva@{Larva}}

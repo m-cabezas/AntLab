@@ -142,6 +142,7 @@
         <argsstring>()</argsstring>
         <name>Orchestrator</name>
         <briefdescription>
+<para>default constructor of orchestrator </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -159,8 +160,19 @@
           <declname>config</declname>
         </param>
         <briefdescription>
+<para>main constructor of orchestrator </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -186,8 +198,12 @@
         <argsstring>() const</argsstring>
         <name>getDimension</name>
         <briefdescription>
+<para>method used to access the dimensions of the orchestrator map </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

@@ -59,10 +59,6 @@
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>@brief<sp/>main<sp/>constructor<sp/>of<sp/>queen</highlight></codeline>
-<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>@param<sp/>config</highlight></codeline>
-<codeline lineno="13"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><ref refid="class_queen_1ae2314f4890c7fa7d5da670b3c0b6293b" kindref="member">Queen::Queen</ref>(<ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref><sp/>&amp;config)<sp/>{</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_egg_1a5943a93f9bb3c8e785ae5ca491776440" kindref="member">_currentAge</ref><sp/>=<sp/>config.<ref refid="struct_c_o_n_f_i_g_1aa20147d7048b5a3644ff7de40e5b4a0d" kindref="member">ageWarrior</ref>;</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_larva_1a8c51a31397bcc72b39b5b79e5d5dfc98" kindref="member">_maxHealth</ref><sp/>=<sp/>config.<ref refid="struct_c_o_n_f_i_g_1a89904d8c21627914cdfba6033fbc12d4" kindref="member">lifeQueen</ref>;</highlight></codeline>
@@ -71,9 +67,6 @@
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_egg_1a57ca36eb21771f70b66b52f3273c1479" kindref="member">_name</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Queen&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="20"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
-<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>@brief<sp/>default<sp/>destructor<sp/>of<sp/>queen</highlight></codeline>
-<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><ref refid="class_queen_1aa22f6c1a49a583b549bd1f940e50721d" kindref="member">Queen::~Queen</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal">}</highlight></codeline>
