@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="struct_c_o_n_f_i_g" kind="struct" language="C++" prot="public">
     <compoundname>CONFIG</compoundname>
+    <includes refid="util_8h" local="no">util.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct_c_o_n_f_i_g_1a527ab3c6fe268dd7c0e1803ee22e0682" prot="public" static="no" mutable="no">
         <type>int</type>

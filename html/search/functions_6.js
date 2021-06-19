@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['returntoanthill_54',['returnToAnthill',['../class_warrior.html#a36fabf05ac60a23af9d7f7fb940cfc9d',1,'Warrior']]]
+  ['heal_240',['heal',['../class_larva.html#adbe862633e03ac3ec06230353b222767',1,'Larva']]]
 ];

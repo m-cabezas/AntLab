@@ -3,6 +3,7 @@
   <compounddef id="class_warrior" kind="class" language="C++" prot="public">
     <compoundname>Warrior</compoundname>
     <basecompoundref refid="class_worker" prot="public" virt="non-virtual">Worker</basecompoundref>
+    <includes refid="warrior_8h" local="no">warrior.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_warrior_1ad9757eeba69475bbf211040c24e84c63" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -15,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="warrior.h" line="41" column="9" bodyfile="warrior.h" bodystart="41" bodyend="-1"/>
+        <location file="warrior.h" line="39" column="9" bodyfile="warrior.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_warrior_1a44b63505023fc315f976b3876e2f9b61" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="warrior.h" line="42" column="9" bodyfile="warrior.h" bodystart="42" bodyend="-1"/>
+        <location file="warrior.h" line="40" column="9" bodyfile="warrior.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_warrior_1ae1897ab85118e334f8cf2f2f797c114e" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -41,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="warrior.h" line="43" column="9" bodyfile="warrior.h" bodystart="43" bodyend="-1"/>
+        <location file="warrior.h" line="41" column="9" bodyfile="warrior.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_warrior_1a09864b2710b33d5803b6df857435e66a" prot="private" static="no" mutable="no">
         <type>pair&lt; int, int &gt;</type>
@@ -54,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="warrior.h" line="44" column="10" bodyfile="warrior.h" bodystart="44" bodyend="-1"/>
+        <location file="warrior.h" line="42" column="10" bodyfile="warrior.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_warrior_1a0ec388a0e49599d20d535adfad0263c3" prot="private" static="no" mutable="no">
         <type>pair&lt; int, int &gt;</type>
@@ -67,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="warrior.h" line="45" column="10" bodyfile="warrior.h" bodystart="45" bodyend="-1"/>
+        <location file="warrior.h" line="43" column="10" bodyfile="warrior.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_warrior_1a5bc5947cf97abb73144cd19a40942238" prot="private" static="no" mutable="no">
         <type><ref refid="class_anthill" kindref="compound">Anthill</ref> *</type>
@@ -80,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="warrior.h" line="46" column="13" bodyfile="warrior.h" bodystart="46" bodyend="-1"/>
+        <location file="warrior.h" line="44" column="13" bodyfile="warrior.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -202,7 +203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="warrior.h" line="21" column="16" bodyfile="warrior.cpp" bodystart="359" bodyend="361"/>
+        <location file="warrior.h" line="21" column="16" bodyfile="warrior.cpp" bodystart="355" bodyend="357"/>
       </memberdef>
       <memberdef kind="function" id="class_warrior_1a3346c2a6bd3aff2e6ce00ccaf8689285" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -290,19 +291,6 @@
         </inbodydescription>
         <location file="warrior.h" line="27" column="9" bodyfile="warrior.cpp" bodystart="220" bodyend="234"/>
       </memberdef>
-      <memberdef kind="function" id="class_warrior_1aa3620b12e2a5e0c0edc5ce5a2cb43d02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Warrior::attack</definition>
-        <argsstring>()</argsstring>
-        <name>attack</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="warrior.h" line="29" column="10" bodyfile="warrior.cpp" bodystart="236" bodyend="238"/>
-      </memberdef>
       <memberdef kind="function" id="class_warrior_1aa48d40a851d3a3790eb1b980e50fd255" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void Warrior::giveFood</definition>
@@ -315,7 +303,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="warrior.h" line="31" column="10" bodyfile="warrior.cpp" bodystart="243" bodyend="247"/>
+        <location file="warrior.h" line="29" column="10" bodyfile="warrior.cpp" bodystart="239" bodyend="243"/>
       </memberdef>
       <memberdef kind="function" id="class_warrior_1a780a0b83407f54b3436b1b4be5c144ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -332,7 +320,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="warrior.h" line="33" column="9" bodyfile="warrior.cpp" bodystart="335" bodyend="337"/>
+        <location file="warrior.h" line="31" column="9" bodyfile="warrior.cpp" bodystart="331" bodyend="333"/>
       </memberdef>
       <memberdef kind="function" id="class_warrior_1a4bc9809c4d99995f6793d47a38da1eb1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -349,7 +337,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="warrior.h" line="35" column="9" bodyfile="warrior.cpp" bodystart="51" bodyend="53"/>
+        <location file="warrior.h" line="33" column="9" bodyfile="warrior.cpp" bodystart="51" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="class_warrior_1abf1ab498912f05c443fc997a2e50974d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -377,7 +365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="warrior.h" line="37" column="10" bodyfile="warrior.cpp" bodystart="59" bodyend="61"/>
+        <location file="warrior.h" line="35" column="10" bodyfile="warrior.cpp" bodystart="59" bodyend="61"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -433,7 +421,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="warrior.h" line="49" column="10" bodyfile="warrior.cpp" bodystart="320" bodyend="327"/>
+        <location file="warrior.h" line="47" column="10" bodyfile="warrior.cpp" bodystart="316" bodyend="323"/>
       </memberdef>
       <memberdef kind="function" id="class_warrior_1addb38f2991fb13a6d6919539ff0b5dcf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>pair&lt; int, int &gt;</type>
@@ -511,7 +499,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="warrior.h" line="51" column="10" bodyfile="warrior.cpp" bodystart="259" bodyend="311"/>
+        <location file="warrior.h" line="49" column="10" bodyfile="warrior.cpp" bodystart="255" bodyend="307"/>
       </memberdef>
       <memberdef kind="function" id="class_warrior_1a9fa41656c1f5e79d32799eb6df913ad6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -577,7 +565,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="warrior.h" line="53" column="10" bodyfile="warrior.cpp" bodystart="347" bodyend="353"/>
+        <location file="warrior.h" line="51" column="10" bodyfile="warrior.cpp" bodystart="343" bodyend="349"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -609,6 +597,18 @@
       </node>
     </inheritancegraph>
     <collaborationgraph>
+      <node id="5">
+        <label>Anthill</label>
+        <link refid="class_anthill"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>_config</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>_queen</edgelabel>
+        </childnode>
+      </node>
       <node id="4">
         <label>Egg</label>
         <link refid="class_egg"/>
@@ -618,12 +618,29 @@
         <link refid="class_warrior"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>_anthill</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Queen</label>
+        <link refid="class_queen"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
       </node>
       <node id="2">
         <label>Worker</label>
         <link refid="class_worker"/>
         <childnode refid="3" relation="public-inheritance">
         </childnode>
+      </node>
+      <node id="6">
+        <label>Obstacle</label>
+        <link refid="class_obstacle"/>
+      </node>
+      <node id="7">
+        <label>CONFIG</label>
+        <link refid="struct_c_o_n_f_i_g"/>
       </node>
       <node id="3">
         <label>Larva</label>
@@ -632,7 +649,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="warrior.h" line="10" column="1" bodyfile="warrior.h" bodystart="10" bodyend="55"/>
+    <location file="warrior.h" line="10" column="1" bodyfile="warrior.h" bodystart="10" bodyend="53"/>
     <listofallmembers>
       <member refid="class_warrior_1a5bc5947cf97abb73144cd19a40942238" prot="private" virt="non-virtual"><scope>Warrior</scope><name>_anthill</name></member>
       <member refid="class_egg_1a5943a93f9bb3c8e785ae5ca491776440" prot="protected" virt="non-virtual"><scope>Warrior</scope><name>_currentAge</name></member>
@@ -645,7 +662,6 @@
       <member refid="class_egg_1a57ca36eb21771f70b66b52f3273c1479" prot="protected" virt="non-virtual"><scope>Warrior</scope><name>_name</name></member>
       <member refid="class_warrior_1a09864b2710b33d5803b6df857435e66a" prot="private" virt="non-virtual"><scope>Warrior</scope><name>_position</name></member>
       <member refid="class_warrior_1a0ec388a0e49599d20d535adfad0263c3" prot="private" virt="non-virtual"><scope>Warrior</scope><name>_prevPos</name></member>
-      <member refid="class_warrior_1aa3620b12e2a5e0c0edc5ce5a2cb43d02" prot="public" virt="non-virtual"><scope>Warrior</scope><name>attack</name></member>
       <member refid="class_warrior_1ab125312bf657eb9c7e9c4e713bbbafcd" prot="private" virt="non-virtual"><scope>Warrior</scope><name>checkPosition</name></member>
       <member refid="class_egg_1a7bc49a621a55e7236415ad5da41d3b54" prot="public" virt="non-virtual"><scope>Warrior</scope><name>Egg</name></member>
       <member refid="class_egg_1a90ffc2d1e1f8bc43e871e47e1d1f80aa" prot="public" virt="non-virtual"><scope>Warrior</scope><name>Egg</name></member>

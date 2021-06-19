@@ -4,6 +4,7 @@
     <compoundname>Obstacle</compoundname>
     <derivedcompoundref refid="class_anthill" prot="public" virt="non-virtual">Anthill</derivedcompoundref>
     <derivedcompoundref refid="class_food_spawner" prot="public" virt="non-virtual">FoodSpawner</derivedcompoundref>
+    <includes refid="obstacle_8h" local="no">obstacle.h</includes>
       <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="class_obstacle_1a18f2015af9237ad50bd1d5f6e610ee14" prot="protected" static="no" mutable="no">
         <type>pair&lt; int, int &gt;</type>

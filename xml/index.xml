@@ -83,7 +83,7 @@
     <member refid="class_game_1a3f7a53430c601b7529859ad956c19864" kind="variable"><name>_orchestrator</name></member>
     <member refid="class_game_1ad59df6562a58a614fda24622d3715b65" kind="function"><name>Game</name></member>
     <member refid="class_game_1ae3d112ca6e0e55150d2fdbc704474530" kind="function"><name>~Game</name></member>
-    <member refid="class_game_1ac082f03dde132ecc22cc7b1bba81ce2d" kind="function"><name>initializeGrid</name></member>
+    <member refid="class_game_1afcdd8f1f5aa1d7cc955300b03f6cefe1" kind="function"><name>refreshGrid</name></member>
     <member refid="class_game_1ab684b380c7d3f3577e2fb80006415297" kind="function"><name>initGame</name></member>
     <member refid="class_game_1a4c9dbf1ff2cd693cb94f19cdc4c405e3" kind="function"><name>getConfig</name></member>
     <member refid="class_game_1ae2c26d3f666115ca618288a6508bef9e" kind="function"><name>newRound</name></member>
@@ -163,7 +163,6 @@
     <member refid="class_warrior_1a3346c2a6bd3aff2e6ce00ccaf8689285" kind="function"><name>explore</name></member>
     <member refid="class_warrior_1a36fabf05ac60a23af9d7f7fb940cfc9d" kind="function"><name>returnToAnthill</name></member>
     <member refid="class_warrior_1a8660e68f16b482e46cb838f627fc94c0" kind="function"><name>takeFood</name></member>
-    <member refid="class_warrior_1aa3620b12e2a5e0c0edc5ce5a2cb43d02" kind="function"><name>attack</name></member>
     <member refid="class_warrior_1aa48d40a851d3a3790eb1b980e50fd255" kind="function"><name>giveFood</name></member>
     <member refid="class_warrior_1a780a0b83407f54b3436b1b4be5c144ed" kind="function"><name>getMode</name></member>
     <member refid="class_warrior_1a4bc9809c4d99995f6793d47a38da1eb1" kind="function"><name>getCurrentFood</name></member>

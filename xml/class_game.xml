@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="class_game" kind="class" language="C++" prot="public">
     <compoundname>Game</compoundname>
+    <includes refid="game_8h" local="no">game.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_game_1ab86178da8c4aec78d63f8204c5f0f732" prot="private" static="no" mutable="no">
         <type><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref></type>
@@ -55,13 +56,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="game.h" line="16" column="5" bodyfile="game.cpp" bodystart="116" bodyend="118"/>
+        <location file="game.h" line="16" column="5" bodyfile="game.cpp" bodystart="117" bodyend="119"/>
       </memberdef>
-      <memberdef kind="function" id="class_game_1ac082f03dde132ecc22cc7b1bba81ce2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_game_1afcdd8f1f5aa1d7cc955300b03f6cefe1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Game::initializeGrid</definition>
+        <definition>void Game::refreshGrid</definition>
         <argsstring>()</argsstring>
-        <name>initializeGrid</name>
+        <name>refreshGrid</name>
         <briefdescription>
 <para>display an process the console UI </para>
         </briefdescription>
@@ -69,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="game.h" line="18" column="10" bodyfile="game.cpp" bodystart="76" bodyend="111"/>
+        <location file="game.h" line="18" column="10" bodyfile="game.cpp" bodystart="77" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="class_game_1ab684b380c7d3f3577e2fb80006415297" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -83,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="game.h" line="20" column="10" bodyfile="game.cpp" bodystart="40" bodyend="51"/>
+        <location file="game.h" line="20" column="10" bodyfile="game.cpp" bodystart="40" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="class_game_1a4c9dbf1ff2cd693cb94f19cdc4c405e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref></type>
@@ -115,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="game.h" line="30" column="10" bodyfile="game.cpp" bodystart="57" bodyend="71"/>
+        <location file="game.h" line="30" column="10" bodyfile="game.cpp" bodystart="58" bodyend="72"/>
       </memberdef>
       <memberdef kind="function" id="class_game_1adcdde0679446f22b509555245186a3ff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -135,6 +136,29 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Game</label>
+        <link refid="class_game"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_config</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_orchestrator</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CONFIG</label>
+        <link refid="struct_c_o_n_f_i_g"/>
+      </node>
+      <node id="3">
+        <label>Orchestrator</label>
+        <link refid="class_orchestrator"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_config</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
     <location file="game.h" line="11" column="1" bodyfile="game.h" bodystart="11" bodyend="33"/>
     <listofallmembers>
       <member refid="class_game_1ab86178da8c4aec78d63f8204c5f0f732" prot="private" virt="non-virtual"><scope>Game</scope><name>_config</name></member>
@@ -143,8 +167,8 @@
       <member refid="class_game_1ad59df6562a58a614fda24622d3715b65" prot="public" virt="non-virtual"><scope>Game</scope><name>Game</name></member>
       <member refid="class_game_1a4c9dbf1ff2cd693cb94f19cdc4c405e3" prot="public" virt="non-virtual"><scope>Game</scope><name>getConfig</name></member>
       <member refid="class_game_1ab684b380c7d3f3577e2fb80006415297" prot="public" virt="non-virtual"><scope>Game</scope><name>initGame</name></member>
-      <member refid="class_game_1ac082f03dde132ecc22cc7b1bba81ce2d" prot="public" virt="non-virtual"><scope>Game</scope><name>initializeGrid</name></member>
       <member refid="class_game_1ae2c26d3f666115ca618288a6508bef9e" prot="private" virt="non-virtual"><scope>Game</scope><name>newRound</name></member>
+      <member refid="class_game_1afcdd8f1f5aa1d7cc955300b03f6cefe1" prot="public" virt="non-virtual"><scope>Game</scope><name>refreshGrid</name></member>
       <member refid="class_game_1ae3d112ca6e0e55150d2fdbc704474530" prot="public" virt="non-virtual"><scope>Game</scope><name>~Game</name></member>
     </listofallmembers>
   </compounddef>

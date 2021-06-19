@@ -3,6 +3,7 @@
   <compounddef id="class_queen" kind="class" language="C++" prot="public">
     <compoundname>Queen</compoundname>
     <basecompoundref refid="class_worker" prot="public" virt="non-virtual">Worker</basecompoundref>
+    <includes refid="queen_8h" local="no">queen.h</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="class_queen_1ae2314f4890c7fa7d5da670b3c0b6293b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>

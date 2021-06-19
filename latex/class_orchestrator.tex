@@ -1,16 +1,19 @@
 \hypertarget{class_orchestrator}{}\doxysection{Orchestrator Class Reference}
 \label{class_orchestrator}\index{Orchestrator@{Orchestrator}}
+
+
+{\ttfamily \#include $<$orchestrator.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_orchestrator_a962cc595d5600e1eb600fe5946153c6e}\label{class_orchestrator_a962cc595d5600e1eb600fe5946153c6e}} 
-{\bfseries Orchestrator} (\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} config)
+\mbox{\hyperlink{class_orchestrator_a11b00b1d6352b20cd3f06147950a3067}{Orchestrator}} ()
 \item 
-\mbox{\Hypertarget{class_orchestrator_a134459a83f516ef59fb70a3451d40d0b}\label{class_orchestrator_a134459a83f516ef59fb70a3451d40d0b}} 
+\mbox{\hyperlink{class_orchestrator_a962cc595d5600e1eb600fe5946153c6e}{Orchestrator}} (\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} config)
+\item 
 \mbox{\hyperlink{class_orchestrator_a134459a83f516ef59fb70a3451d40d0b}{$\sim$\+Orchestrator}} ()
 \begin{DoxyCompactList}\small\item\em default destructor of orchestrator \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_orchestrator_a5e0ce1da543b2cc6f1d4aedc9de75ff5}\label{class_orchestrator_a5e0ce1da543b2cc6f1d4aedc9de75ff5}} 
-pair$<$ int, int $>$ {\bfseries get\+Dimension} () const
+pair$<$ int, int $>$ \mbox{\hyperlink{class_orchestrator_a5e0ce1da543b2cc6f1d4aedc9de75ff5}{get\+Dimension}} () const
 \item 
 int \mbox{\hyperlink{class_orchestrator_a43534ccc11df40a762dd0305135afd6a}{get\+Map\+Entity}} (int x, int y)
 \begin{DoxyCompactList}\small\item\em return an int mapped to an object moving on the map \end{DoxyCompactList}\item 
@@ -18,9 +21,180 @@ void \mbox{\hyperlink{class_orchestrator_a8f4d36b247fe79935c10e695c873befc}{init
 \begin{DoxyCompactList}\small\item\em initialize entities on the map at first round \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_orchestrator_a5a614792639e1d837c393efe8a7c491d}{do\+Round}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_orchestrator_a5a614792639e1d837c393efe8a7c491d}{Orchestrator\+::do\+Round}} the orchestrator do the round of the anthill and warriors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_orchestrator_a216468278e2ee2cdca398eec4365d03e}{create\+Anthill}} (pair$<$ int, int $>$ position, bool init)
+\begin{DoxyCompactList}\small\item\em create an anthil and add it to the orchestrator\textquotesingle{}s anthill list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_orchestrator_a7635636d46b44e40fa200d53f9b971a0}{create\+Food\+Spawner}} (pair$<$ int, int $>$ position)
+\begin{DoxyCompactList}\small\item\em create a food spawner and add it to the orchestrator\textquotesingle{}s food spawner list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_orchestrator_a2dfa8c2b0162af323317599f49200a8f}{init\+Food\+Spawners}} (int nb\+Food\+Spawner\+Init)
+\begin{DoxyCompactList}\small\item\em create multiple food spawners at initialization round \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_orchestrator_a6e3a5a53780b02873be2da3f8ab2d711}{create\+Obstacle}} (pair$<$ int, int $>$ position)
+\begin{DoxyCompactList}\small\item\em create an obstacle and add it to the orchestrator\textquotesingle{}s obstacle list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_orchestrator_aff9557532543b014a8606170c4e856cf}{init\+Obstacles}} (int nb\+Obstacle\+Init)
+\begin{DoxyCompactList}\small\item\em create multiple food spawners at initialization round \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_orchestrator_ac0f805620a70d833aec829f6096f99e7}{create\+Warrior}} (pair$<$ int, int $>$ position, \mbox{\hyperlink{class_anthill}{Anthill}} $\ast$anthill)
+\begin{DoxyCompactList}\small\item\em create a warrior and add it to the orchestrator\textquotesingle{}s warrior list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_orchestrator_a30c5bdad20f3741126446716b7869359}{init\+Warriors}} (int nb\+Warrior\+Init, \mbox{\hyperlink{class_anthill}{Anthill}} $\ast$anthill)
+\begin{DoxyCompactList}\small\item\em create multiple warriors at initialization round \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_orchestrator_a534fcfe78c9b1370b81b8d24bb53cd98}{set\+Case\+Taken}} (int x, int y, bool taken)
+\begin{DoxyCompactList}\small\item\em set the location on the map to \char`\"{}taken\char`\"{} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_orchestrator_a3a81ec4039f8c4907619990044719161}{is\+Case\+Taken}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em tells if the given position is available \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_orchestrator_a1024f2cc58dce887df34f2a277fca64c}{is\+Next\+To}} (int antX, int antY, int objX, int objY)
+\begin{DoxyCompactList}\small\item\em tell if your ant is next to an object \end{DoxyCompactList}\item 
+vector$<$ pair$<$ int, int $>$ $>$ \mbox{\hyperlink{class_orchestrator_ade36383af2fa4ef4ec1c2dabaf5aa50c}{get\+Free\+Positions}} ()
+\begin{DoxyCompactList}\small\item\em return all empty positions on the map \end{DoxyCompactList}\item 
+vector$<$ pair$<$ int, int $>$ $>$ \mbox{\hyperlink{class_orchestrator_ac13a40be361212148a9bf26ded46b683}{get\+Forbidden\+Positions}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Orchestrator\+::get\+Forbiden\+Positions indicates position where you cannot go next to the coordinates you give. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_food_spawner}{Food\+Spawner}} $\ast$ \mbox{\hyperlink{class_orchestrator_a9ecf235e2c706f78b7f9c004dfd28e61}{check\+Food\+Nearby}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em methods used to verify if there is food near the position \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_orchestrator_a6d15cbca43cff0b32a8c54968b0c695c}{check\+Position}} (int x, int y)
+\item 
+vector$<$ pair$<$ int, int $>$ $>$ \mbox{\hyperlink{class_orchestrator_a5feb59e28b476102074bb38e9b252ee4}{get\+Warriors\+Free\+Positions}} (\mbox{\hyperlink{class_anthill}{Anthill}} \&anthill)
+\begin{DoxyCompactList}\small\item\em get all warriors available position to spawn around the anthill \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} \mbox{\hyperlink{class_orchestrator_a965da4741bf99096a42d1a92b87bf83f}{\+\_\+config}}
+\item 
+pair$<$ int, int $>$ \mbox{\hyperlink{class_orchestrator_a0ce7e3ef5d9a75129617b73bfdfecf57}{\+\_\+dimension}}
+\item 
+vector$<$ vector$<$ bool $>$ $>$ \mbox{\hyperlink{class_orchestrator_a0be9646a122a25fa69e7b1685ce5d045}{\+\_\+grid}}
+\item 
+vector$<$ vector$<$ bool $>$ $>$ \mbox{\hyperlink{class_orchestrator_a3de65a747f1c0cb041bca1d9efdab5bb}{\+\_\+obstacles\+Grid}}
+\item 
+vector$<$ vector$<$ bool $>$ $>$ \mbox{\hyperlink{class_orchestrator_a2477aeaf7c2daaaa422ca10c361cacb2}{\+\_\+food\+Spawners\+Grid}}
+\item 
+vector$<$ vector$<$ bool $>$ $>$ \mbox{\hyperlink{class_orchestrator_ac3e2fa909f04ba0259aa8155d4ecf596}{\+\_\+anthills\+Grid}}
+\item 
+vector$<$ \mbox{\hyperlink{class_warrior}{Warrior}} $\ast$ $>$ \mbox{\hyperlink{class_orchestrator_a4df763ed3b1e4a88d30167db2b60bbae}{\+\_\+warriors}}
+\item 
+vector$<$ \mbox{\hyperlink{class_obstacle}{Obstacle}} $\ast$ $>$ \mbox{\hyperlink{class_orchestrator_aabb53161f65ca915ea3d80019b522904}{\+\_\+obstacles}}
+\item 
+vector$<$ \mbox{\hyperlink{class_food_spawner}{Food\+Spawner}} $\ast$ $>$ \mbox{\hyperlink{class_orchestrator_a464d27075256d666248977b473be3aa8}{\+\_\+food\+Spawners}}
+\item 
+vector$<$ \mbox{\hyperlink{class_anthill}{Anthill}} $\ast$ $>$ \mbox{\hyperlink{class_orchestrator_afa5440a71435ab53e096fa58ae724aca}{\+\_\+anthills}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_orchestrator_a11b00b1d6352b20cd3f06147950a3067}\label{class_orchestrator_a11b00b1d6352b20cd3f06147950a3067}} 
+\index{Orchestrator@{Orchestrator}!Orchestrator@{Orchestrator}}
+\index{Orchestrator@{Orchestrator}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{Orchestrator()}{Orchestrator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Orchestrator\+::\+Orchestrator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_orchestrator_a962cc595d5600e1eb600fe5946153c6e}\label{class_orchestrator_a962cc595d5600e1eb600fe5946153c6e}} 
+\index{Orchestrator@{Orchestrator}!Orchestrator@{Orchestrator}}
+\index{Orchestrator@{Orchestrator}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{Orchestrator()}{Orchestrator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Orchestrator\+::\+Orchestrator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}}}]{config }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_orchestrator_a134459a83f516ef59fb70a3451d40d0b}\label{class_orchestrator_a134459a83f516ef59fb70a3451d40d0b}} 
+\index{Orchestrator@{Orchestrator}!````~Orchestrator@{$\sim$Orchestrator}}
+\index{````~Orchestrator@{$\sim$Orchestrator}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{$\sim$Orchestrator()}{~Orchestrator()}}
+{\footnotesize\ttfamily Orchestrator\+::$\sim$\+Orchestrator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+default destructor of orchestrator 
+
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_orchestrator_a9ecf235e2c706f78b7f9c004dfd28e61}\label{class_orchestrator_a9ecf235e2c706f78b7f9c004dfd28e61}} 
+\index{Orchestrator@{Orchestrator}!checkFoodNearby@{checkFoodNearby}}
+\index{checkFoodNearby@{checkFoodNearby}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{checkFoodNearby()}{checkFoodNearby()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_food_spawner}{Food\+Spawner}} $\ast$ Orchestrator\+::check\+Food\+Nearby (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+methods used to verify if there is food near the position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the foodspawner if there is one next to the position, 0 if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_orchestrator_a6d15cbca43cff0b32a8c54968b0c695c}\label{class_orchestrator_a6d15cbca43cff0b32a8c54968b0c695c}} 
+\index{Orchestrator@{Orchestrator}!checkPosition@{checkPosition}}
+\index{checkPosition@{checkPosition}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{checkPosition()}{checkPosition()}}
+{\footnotesize\ttfamily bool Orchestrator\+::check\+Position (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_orchestrator_a216468278e2ee2cdca398eec4365d03e}\label{class_orchestrator_a216468278e2ee2cdca398eec4365d03e}} 
+\index{Orchestrator@{Orchestrator}!createAnthill@{createAnthill}}
+\index{createAnthill@{createAnthill}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{createAnthill()}{createAnthill()}}
+{\footnotesize\ttfamily void Orchestrator\+::create\+Anthill (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{position,  }\item[{bool}]{init }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+create an anthil and add it to the orchestrator\textquotesingle{}s anthill list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+{\em init} & boolean that indicates if the new anthill need to be initialized with eggs, larvas and workers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_orchestrator_a7635636d46b44e40fa200d53f9b971a0}\label{class_orchestrator_a7635636d46b44e40fa200d53f9b971a0}} 
+\index{Orchestrator@{Orchestrator}!createFoodSpawner@{createFoodSpawner}}
+\index{createFoodSpawner@{createFoodSpawner}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{createFoodSpawner()}{createFoodSpawner()}}
+{\footnotesize\ttfamily void Orchestrator\+::create\+Food\+Spawner (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+create a food spawner and add it to the orchestrator\textquotesingle{}s food spawner list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_orchestrator_a6e3a5a53780b02873be2da3f8ab2d711}\label{class_orchestrator_a6e3a5a53780b02873be2da3f8ab2d711}} 
+\index{Orchestrator@{Orchestrator}!createObstacle@{createObstacle}}
+\index{createObstacle@{createObstacle}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{createObstacle()}{createObstacle()}}
+{\footnotesize\ttfamily void Orchestrator\+::create\+Obstacle (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+create an obstacle and add it to the orchestrator\textquotesingle{}s obstacle list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_orchestrator_ac0f805620a70d833aec829f6096f99e7}\label{class_orchestrator_ac0f805620a70d833aec829f6096f99e7}} 
+\index{Orchestrator@{Orchestrator}!createWarrior@{createWarrior}}
+\index{createWarrior@{createWarrior}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{createWarrior()}{createWarrior()}}
+{\footnotesize\ttfamily void Orchestrator\+::create\+Warrior (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{position,  }\item[{\mbox{\hyperlink{class_anthill}{Anthill}} $\ast$}]{anthill }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+create a warrior and add it to the orchestrator\textquotesingle{}s warrior list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+{\em anthill} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_orchestrator_a5a614792639e1d837c393efe8a7c491d}\label{class_orchestrator_a5a614792639e1d837c393efe8a7c491d}} 
 \index{Orchestrator@{Orchestrator}!doRound@{doRound}}
 \index{doRound@{doRound}!Orchestrator@{Orchestrator}}
@@ -32,7 +206,46 @@ int \mbox{\hyperlink{class_orchestrator_a5a614792639e1d837c393efe8a7c491d}{do\+R
 \mbox{\hyperlink{class_orchestrator_a5a614792639e1d837c393efe8a7c491d}{Orchestrator\+::do\+Round}} the orchestrator do the round of the anthill and warriors. 
 
 \begin{DoxyReturn}{Returns}
-0 if ecerything is fine, 1 if the queen is dead 
+0 if everything is fine, 1 if the queen is dead 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_orchestrator_a5e0ce1da543b2cc6f1d4aedc9de75ff5}\label{class_orchestrator_a5e0ce1da543b2cc6f1d4aedc9de75ff5}} 
+\index{Orchestrator@{Orchestrator}!getDimension@{getDimension}}
+\index{getDimension@{getDimension}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{getDimension()}{getDimension()}}
+{\footnotesize\ttfamily pair$<$ int, int $>$ Orchestrator\+::get\+Dimension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_orchestrator_ac13a40be361212148a9bf26ded46b683}\label{class_orchestrator_ac13a40be361212148a9bf26ded46b683}} 
+\index{Orchestrator@{Orchestrator}!getForbiddenPositions@{getForbiddenPositions}}
+\index{getForbiddenPositions@{getForbiddenPositions}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{getForbiddenPositions()}{getForbiddenPositions()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ int, int $>$ $>$ Orchestrator\+::get\+Forbidden\+Positions (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Orchestrator\+::get\+Forbiden\+Positions indicates position where you cannot go next to the coordinates you give. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the occupied position around the given coordinates 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_orchestrator_ade36383af2fa4ef4ec1c2dabaf5aa50c}\label{class_orchestrator_ade36383af2fa4ef4ec1c2dabaf5aa50c}} 
+\index{Orchestrator@{Orchestrator}!getFreePositions@{getFreePositions}}
+\index{getFreePositions@{getFreePositions}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{getFreePositions()}{getFreePositions()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ int, int $>$ $>$ Orchestrator\+::get\+Free\+Positions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+return all empty positions on the map 
+
+\begin{DoxyReturn}{Returns}
+return all empty positions on the map as vector$<$pair $<$int, int$>$$>$ 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_orchestrator_a43534ccc11df40a762dd0305135afd6a}\label{class_orchestrator_a43534ccc11df40a762dd0305135afd6a}} 
 \index{Orchestrator@{Orchestrator}!getMapEntity@{getMapEntity}}
@@ -52,8 +265,56 @@ return an int mapped to an object moving on the map
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+1 if there is nothing, 2 if there is an obstacle, 3 if there is a food\+Spawner, 4 if it is the anthill and 5 for a warrior 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_orchestrator_a5feb59e28b476102074bb38e9b252ee4}\label{class_orchestrator_a5feb59e28b476102074bb38e9b252ee4}} 
+\index{Orchestrator@{Orchestrator}!getWarriorsFreePositions@{getWarriorsFreePositions}}
+\index{getWarriorsFreePositions@{getWarriorsFreePositions}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{getWarriorsFreePositions()}{getWarriorsFreePositions()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ int, int $>$ $>$ Orchestrator\+::get\+Warriors\+Free\+Positions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_anthill}{Anthill}} \&}]{anthill }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+get all warriors available position to spawn around the anthill 
+
+
+\begin{DoxyParams}{Parameters}
+{\em anthill} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+all warriors free positions as vector$<$pair $<$int,int$>$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_orchestrator_a2dfa8c2b0162af323317599f49200a8f}\label{class_orchestrator_a2dfa8c2b0162af323317599f49200a8f}} 
+\index{Orchestrator@{Orchestrator}!initFoodSpawners@{initFoodSpawners}}
+\index{initFoodSpawners@{initFoodSpawners}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{initFoodSpawners()}{initFoodSpawners()}}
+{\footnotesize\ttfamily void Orchestrator\+::init\+Food\+Spawners (\begin{DoxyParamCaption}\item[{int}]{nb\+Food\+Spawner\+Init }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+create multiple food spawners at initialization round 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb\+Food\+Spawner\+Init} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_orchestrator_aff9557532543b014a8606170c4e856cf}\label{class_orchestrator_aff9557532543b014a8606170c4e856cf}} 
+\index{Orchestrator@{Orchestrator}!initObstacles@{initObstacles}}
+\index{initObstacles@{initObstacles}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{initObstacles()}{initObstacles()}}
+{\footnotesize\ttfamily void Orchestrator\+::init\+Obstacles (\begin{DoxyParamCaption}\item[{int}]{nb\+Obstacle\+Init }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+create multiple food spawners at initialization round 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb\+Obstacle\+Init} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_orchestrator_a8f4d36b247fe79935c10e695c873befc}\label{class_orchestrator_a8f4d36b247fe79935c10e695c873befc}} 
 \index{Orchestrator@{Orchestrator}!initOrch@{initOrch}}
 \index{initOrch@{initOrch}!Orchestrator@{Orchestrator}}
@@ -69,9 +330,152 @@ initialize entities on the map at first round
 {\em config} & \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_orchestrator_a30c5bdad20f3741126446716b7869359}\label{class_orchestrator_a30c5bdad20f3741126446716b7869359}} 
+\index{Orchestrator@{Orchestrator}!initWarriors@{initWarriors}}
+\index{initWarriors@{initWarriors}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{initWarriors()}{initWarriors()}}
+{\footnotesize\ttfamily void Orchestrator\+::init\+Warriors (\begin{DoxyParamCaption}\item[{int}]{nb\+Warrior\+Init,  }\item[{\mbox{\hyperlink{class_anthill}{Anthill}} $\ast$}]{anthill }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+create multiple warriors at initialization round 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb\+Warrior\+Init} & \\
+\hline
+{\em anthill} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_orchestrator_a3a81ec4039f8c4907619990044719161}\label{class_orchestrator_a3a81ec4039f8c4907619990044719161}} 
+\index{Orchestrator@{Orchestrator}!isCaseTaken@{isCaseTaken}}
+\index{isCaseTaken@{isCaseTaken}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{isCaseTaken()}{isCaseTaken()}}
+{\footnotesize\ttfamily bool Orchestrator\+::is\+Case\+Taken (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+tells if the given position is available 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the position is taken, false is it\textquotesingle{}s available 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_orchestrator_a1024f2cc58dce887df34f2a277fca64c}\label{class_orchestrator_a1024f2cc58dce887df34f2a277fca64c}} 
+\index{Orchestrator@{Orchestrator}!isNextTo@{isNextTo}}
+\index{isNextTo@{isNextTo}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{isNextTo()}{isNextTo()}}
+{\footnotesize\ttfamily bool Orchestrator\+::is\+Next\+To (\begin{DoxyParamCaption}\item[{int}]{antX,  }\item[{int}]{antY,  }\item[{int}]{objX,  }\item[{int}]{objY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+tell if your ant is next to an object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em myX} & \\
+\hline
+{\em myY} & \\
+\hline
+{\em objX} & \\
+\hline
+{\em objY} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_orchestrator_a534fcfe78c9b1370b81b8d24bb53cd98}\label{class_orchestrator_a534fcfe78c9b1370b81b8d24bb53cd98}} 
+\index{Orchestrator@{Orchestrator}!setCaseTaken@{setCaseTaken}}
+\index{setCaseTaken@{setCaseTaken}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{setCaseTaken()}{setCaseTaken()}}
+{\footnotesize\ttfamily void Orchestrator\+::set\+Case\+Taken (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{bool}]{taken }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+set the location on the map to \char`\"{}taken\char`\"{} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em taken} & \+: boolean value of the taken location on the map \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_orchestrator_afa5440a71435ab53e096fa58ae724aca}\label{class_orchestrator_afa5440a71435ab53e096fa58ae724aca}} 
+\index{Orchestrator@{Orchestrator}!\_anthills@{\_anthills}}
+\index{\_anthills@{\_anthills}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{\_anthills}{\_anthills}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_anthill}{Anthill}} $\ast$$>$ Orchestrator\+::\+\_\+anthills\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_orchestrator_ac3e2fa909f04ba0259aa8155d4ecf596}\label{class_orchestrator_ac3e2fa909f04ba0259aa8155d4ecf596}} 
+\index{Orchestrator@{Orchestrator}!\_anthillsGrid@{\_anthillsGrid}}
+\index{\_anthillsGrid@{\_anthillsGrid}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{\_anthillsGrid}{\_anthillsGrid}}
+{\footnotesize\ttfamily vector$<$vector$<$bool$>$ $>$ Orchestrator\+::\+\_\+anthills\+Grid\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_orchestrator_a965da4741bf99096a42d1a92b87bf83f}\label{class_orchestrator_a965da4741bf99096a42d1a92b87bf83f}} 
+\index{Orchestrator@{Orchestrator}!\_config@{\_config}}
+\index{\_config@{\_config}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{\_config}{\_config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} Orchestrator\+::\+\_\+config\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_orchestrator_a0ce7e3ef5d9a75129617b73bfdfecf57}\label{class_orchestrator_a0ce7e3ef5d9a75129617b73bfdfecf57}} 
+\index{Orchestrator@{Orchestrator}!\_dimension@{\_dimension}}
+\index{\_dimension@{\_dimension}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{\_dimension}{\_dimension}}
+{\footnotesize\ttfamily pair$<$int, int$>$ Orchestrator\+::\+\_\+dimension\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_orchestrator_a464d27075256d666248977b473be3aa8}\label{class_orchestrator_a464d27075256d666248977b473be3aa8}} 
+\index{Orchestrator@{Orchestrator}!\_foodSpawners@{\_foodSpawners}}
+\index{\_foodSpawners@{\_foodSpawners}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{\_foodSpawners}{\_foodSpawners}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_food_spawner}{Food\+Spawner}} $\ast$$>$ Orchestrator\+::\+\_\+food\+Spawners\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_orchestrator_a2477aeaf7c2daaaa422ca10c361cacb2}\label{class_orchestrator_a2477aeaf7c2daaaa422ca10c361cacb2}} 
+\index{Orchestrator@{Orchestrator}!\_foodSpawnersGrid@{\_foodSpawnersGrid}}
+\index{\_foodSpawnersGrid@{\_foodSpawnersGrid}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{\_foodSpawnersGrid}{\_foodSpawnersGrid}}
+{\footnotesize\ttfamily vector$<$vector$<$bool$>$ $>$ Orchestrator\+::\+\_\+food\+Spawners\+Grid\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_orchestrator_a0be9646a122a25fa69e7b1685ce5d045}\label{class_orchestrator_a0be9646a122a25fa69e7b1685ce5d045}} 
+\index{Orchestrator@{Orchestrator}!\_grid@{\_grid}}
+\index{\_grid@{\_grid}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{\_grid}{\_grid}}
+{\footnotesize\ttfamily vector$<$vector$<$bool$>$ $>$ Orchestrator\+::\+\_\+grid\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_orchestrator_aabb53161f65ca915ea3d80019b522904}\label{class_orchestrator_aabb53161f65ca915ea3d80019b522904}} 
+\index{Orchestrator@{Orchestrator}!\_obstacles@{\_obstacles}}
+\index{\_obstacles@{\_obstacles}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{\_obstacles}{\_obstacles}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_obstacle}{Obstacle}} $\ast$$>$ Orchestrator\+::\+\_\+obstacles\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_orchestrator_a3de65a747f1c0cb041bca1d9efdab5bb}\label{class_orchestrator_a3de65a747f1c0cb041bca1d9efdab5bb}} 
+\index{Orchestrator@{Orchestrator}!\_obstaclesGrid@{\_obstaclesGrid}}
+\index{\_obstaclesGrid@{\_obstaclesGrid}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{\_obstaclesGrid}{\_obstaclesGrid}}
+{\footnotesize\ttfamily vector$<$vector$<$bool$>$ $>$ Orchestrator\+::\+\_\+obstacles\+Grid\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_orchestrator_a4df763ed3b1e4a88d30167db2b60bbae}\label{class_orchestrator_a4df763ed3b1e4a88d30167db2b60bbae}} 
+\index{Orchestrator@{Orchestrator}!\_warriors@{\_warriors}}
+\index{\_warriors@{\_warriors}!Orchestrator@{Orchestrator}}
+\doxysubsubsection{\texorpdfstring{\_warriors}{\_warriors}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_warrior}{Warrior}} $\ast$$>$ Orchestrator\+::\+\_\+warriors\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-orchestrator.\+h\item 
-orchestrator.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{orchestrator_8h}{orchestrator.\+h}}\item 
+\mbox{\hyperlink{orchestrator_8cpp}{orchestrator.\+cpp}}\end{DoxyCompactItemize}

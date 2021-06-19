@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['getcurrentfood_43',['getCurrentFood',['../class_warrior.html#a4bc9809c4d99995f6793d47a38da1eb1',1,'Warrior']]],
-  ['getmapentity_44',['getMapEntity',['../class_orchestrator.html#a43534ccc11df40a762dd0305135afd6a',1,'Orchestrator']]],
-  ['getmode_45',['getMode',['../class_warrior.html#a780a0b83407f54b3436b1b4be5c144ed',1,'Warrior']]],
-  ['getpopulation_46',['getPopulation',['../class_anthill.html#a335795a55847de8ab6da4d09875bacd5',1,'Anthill']]],
-  ['getprevpos_47',['getPrevPos',['../class_warrior.html#ae20cc62958d7e76559213d5ef6740242',1,'Warrior']]],
-  ['givefood_48',['giveFood',['../class_warrior.html#aa48d40a851d3a3790eb1b980e50fd255',1,'Warrior']]]
+  ['egg_214',['Egg',['../class_egg.html#a7bc49a621a55e7236415ad5da41d3b54',1,'Egg::Egg()'],['../class_egg.html#a90ffc2d1e1f8bc43e871e47e1d1f80aa',1,'Egg::Egg(string name)']]],
+  ['explore_215',['explore',['../class_warrior.html#a3346c2a6bd3aff2e6ce00ccaf8689285',1,'Warrior']]]
 ];

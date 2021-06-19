@@ -11,7 +11,7 @@
     <incdepgraph>
       <node id="11">
         <label>obstacle.h</label>
-        <link refid="obstacle_8h_source"/>
+        <link refid="obstacle_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
@@ -19,7 +19,7 @@
       </node>
       <node id="4">
         <label>worker.h</label>
-        <link refid="worker_8h_source"/>
+        <link refid="worker_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
@@ -27,7 +27,7 @@
       </node>
       <node id="6">
         <label>egg.h</label>
-        <link refid="egg_8h_source"/>
+        <link refid="egg_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
@@ -47,14 +47,14 @@
       </node>
       <node id="8">
         <label>util.h</label>
-        <link refid="util_8h_source"/>
+        <link refid="util_8h"/>
       </node>
       <node id="2">
         <label>random</label>
       </node>
       <node id="13">
         <label>queen.h</label>
-        <link refid="queen_8h_source"/>
+        <link refid="queen_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
@@ -63,7 +63,7 @@
       </node>
       <node id="9">
         <label>anthill.h</label>
-        <link refid="anthill_8h_source"/>
+        <link refid="anthill_8h"/>
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
@@ -88,7 +88,7 @@
       </node>
       <node id="5">
         <label>larva.h</label>
-        <link refid="larva_8h_source"/>
+        <link refid="larva_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
@@ -102,21 +102,45 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="4">
+        <label>game.cpp</label>
+        <link refid="game_8cpp"/>
+      </node>
       <node id="2">
         <label>orchestrator.h</label>
-        <link refid="orchestrator_8h_source"/>
+        <link refid="orchestrator_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>warrior.cpp</label>
+        <link refid="warrior_8cpp"/>
       </node>
       <node id="1">
         <label>warrior.h</label>
         <link refid="warrior_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
       <node id="3">
         <label>game.h</label>
-        <link refid="game_8h_source"/>
+        <link refid="game_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="6">
+        <label>orchestrator.cpp</label>
+        <link refid="orchestrator_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_warrior" prot="public">Warrior</innerclass>
@@ -131,19 +155,19 @@
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;worker.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;anthill.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="worker_8h" kindref="compound">worker.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="anthill_8h" kindref="compound">anthill.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10" refid="class_warrior" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_warrior" kindref="compound">Warrior</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_worker" kindref="compound">Worker</ref><sp/>{</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Methods</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warrior" kindref="compound">Warrior</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warrior_1a514c253a8e9c3f845f11f344804335d4" kindref="member">Warrior</ref>();</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warrior" kindref="compound">Warrior</ref>(pair&lt;int,<sp/>int&gt;<sp/>position,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>name,<sp/><ref refid="class_anthill" kindref="compound">Anthill</ref><sp/>*anthill,<sp/><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref><sp/>&amp;config);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warrior_1a514c253a8e9c3f845f11f344804335d4" kindref="member">Warrior</ref>(pair&lt;int,<sp/>int&gt;<sp/>position,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>name,<sp/><ref refid="class_anthill" kindref="compound">Anthill</ref><sp/>*anthill,<sp/><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref><sp/>&amp;config);</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="class_warrior" kindref="compound">Warrior</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_warrior_1aab6dc963d8e8e13517e5a9e5fa74aaaa" kindref="member">~Warrior</ref>();</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pair&lt;int,<sp/>int&gt;<sp/>getPosition();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pair&lt;int,<sp/>int&gt;<sp/><ref refid="class_warrior_1ad3f4db2c2df1559c6cb1bbd56fbba2e9" kindref="member">getPosition</ref>();</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pair&lt;int,<sp/>int&gt;<sp/><ref refid="class_warrior_1ae20cc62958d7e76559213d5ef6740242" kindref="member">getPrevPos</ref>();</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
@@ -153,35 +177,33 @@
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_warrior_1a8660e68f16b482e46cb838f627fc94c0" kindref="member">takeFood</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>availableQuantity);</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>attack();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_warrior_1aa48d40a851d3a3790eb1b980e50fd255" kindref="member">giveFood</ref>();</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_warrior_1aa48d40a851d3a3790eb1b980e50fd255" kindref="member">giveFood</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_warrior_1a780a0b83407f54b3436b1b4be5c144ed" kindref="member">getMode</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_warrior_1a780a0b83407f54b3436b1b4be5c144ed" kindref="member">getMode</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_warrior_1a4bc9809c4d99995f6793d47a38da1eb1" kindref="member">getCurrentFood</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_warrior_1a4bc9809c4d99995f6793d47a38da1eb1" kindref="member">getCurrentFood</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_warrior_1abf1ab498912f05c443fc997a2e50974d" kindref="member">setCurrentFood</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>food);</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_warrior_1abf1ab498912f05c443fc997a2e50974d" kindref="member">setCurrentFood</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>food);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Attributes</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_foodCapacity;<sp/></highlight><highlight class="comment">//<sp/>the<sp/>maximum<sp/>food<sp/>the<sp/>ant<sp/>can<sp/>carry</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_currentFood;<sp/></highlight><highlight class="comment">//<sp/>The<sp/>food<sp/>the<sp/>ant<sp/>is<sp/>carrying</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_mode;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>pair&lt;int,<sp/>int&gt;<sp/>_position;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>pair&lt;int,<sp/>int&gt;<sp/>_prevPos;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_anthill" kindref="compound">Anthill</ref><sp/>*_anthill;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Methods</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>checkPosition(vector<sp/>&lt;pair&lt;int,<sp/>int&gt;&gt;<sp/>forbiddenPositions,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>posX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>posY);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Attributes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_warrior_1ad9757eeba69475bbf211040c24e84c63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_warrior_1ad9757eeba69475bbf211040c24e84c63" kindref="member">_foodCapacity</ref>;<sp/></highlight><highlight class="comment">//<sp/>the<sp/>maximum<sp/>food<sp/>the<sp/>ant<sp/>can<sp/>carry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="class_warrior_1a44b63505023fc315f976b3876e2f9b61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_warrior_1a44b63505023fc315f976b3876e2f9b61" kindref="member">_currentFood</ref>;<sp/></highlight><highlight class="comment">//<sp/>The<sp/>food<sp/>the<sp/>ant<sp/>is<sp/>carrying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_warrior_1ae1897ab85118e334f8cf2f2f797c114e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_warrior_1ae1897ab85118e334f8cf2f2f797c114e" kindref="member">_mode</ref>;</highlight></codeline>
+<codeline lineno="42" refid="class_warrior_1a09864b2710b33d5803b6df857435e66a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>pair&lt;int,<sp/>int&gt;<sp/><ref refid="class_warrior_1a09864b2710b33d5803b6df857435e66a" kindref="member">_position</ref>;</highlight></codeline>
+<codeline lineno="43" refid="class_warrior_1a0ec388a0e49599d20d535adfad0263c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>pair&lt;int,<sp/>int&gt;<sp/><ref refid="class_warrior_1a0ec388a0e49599d20d535adfad0263c3" kindref="member">_prevPos</ref>;</highlight></codeline>
+<codeline lineno="44" refid="class_warrior_1a5bc5947cf97abb73144cd19a40942238" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_anthill" kindref="compound">Anthill</ref><sp/>*<ref refid="class_warrior_1a5bc5947cf97abb73144cd19a40942238" kindref="member">_anthill</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_warrior_1ab125312bf657eb9c7e9c4e713bbbafcd" kindref="member">checkPosition</ref>(vector<sp/>&lt;pair&lt;int,<sp/>int&gt;&gt;<sp/>forbiddenPositions,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>posX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>posY);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>pair&lt;int,<sp/>int&gt;<sp/><ref refid="class_warrior_1addb38f2991fb13a6d6919539ff0b5dcf" kindref="member">getRandomPos</ref>(vector<sp/>&lt;pair&lt;int,<sp/>int&gt;&gt;<sp/>forbiddenPositions,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prevX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prevY,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>posX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>posY);</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>pair&lt;int,<sp/>int&gt;<sp/>getRandomPos(vector<sp/>&lt;pair&lt;int,<sp/>int&gt;&gt;<sp/>forbiddenPositions,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prevX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prevY,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>posX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>posY);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_warrior_1a9fa41656c1f5e79d32799eb6df913ad6" kindref="member">isNextTo</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>antX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>antY,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>objX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>objY);</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNextTo(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>antX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>antY,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>objX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>objY);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>WARRIOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>WARRIOR_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="warrior.h"/>
   </compounddef>

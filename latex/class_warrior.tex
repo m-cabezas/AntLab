@@ -1,5 +1,9 @@
 \hypertarget{class_warrior}{}\doxysection{Warrior Class Reference}
 \label{class_warrior}\index{Warrior@{Warrior}}
+
+
+{\ttfamily \#include $<$warrior.\+h$>$}
+
 Inheritance diagram for Warrior\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,10 +13,13 @@ Inheritance diagram for Warrior\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_warrior_a514c253a8e9c3f845f11f344804335d4}{Warrior}} ()
+\item 
 \mbox{\hyperlink{class_warrior_af271d54079a347aa6a5c6a2805daf7b5}{Warrior}} (pair$<$ int, int $>$ position, string name, \mbox{\hyperlink{class_anthill}{Anthill}} $\ast$anthill, \mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} \&config)
 \begin{DoxyCompactList}\small\item\em main constructor of warrior \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_warrior_ad3f4db2c2df1559c6cb1bbd56fbba2e9}\label{class_warrior_ad3f4db2c2df1559c6cb1bbd56fbba2e9}} 
-const pair$<$ int, int $>$ {\bfseries get\+Position} ()
+\mbox{\hyperlink{class_warrior_aab6dc963d8e8e13517e5a9e5fa74aaaa}{$\sim$\+Warrior}} ()
+\item 
+const pair$<$ int, int $>$ \mbox{\hyperlink{class_warrior_ad3f4db2c2df1559c6cb1bbd56fbba2e9}{get\+Position}} ()
 \item 
 const pair$<$ int, int $>$ \mbox{\hyperlink{class_warrior_ae20cc62958d7e76559213d5ef6740242}{get\+Prev\+Pos}} ()
 \begin{DoxyCompactList}\small\item\em return the position at the round n-\/1 of the warrior \end{DoxyCompactList}\item 
@@ -22,10 +29,6 @@ void \mbox{\hyperlink{class_warrior_a36fabf05ac60a23af9d7f7fb940cfc9d}{return\+T
 \begin{DoxyCompactList}\small\item\em moving method for warrior based on the idea that the warrior know the path \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_warrior_a8660e68f16b482e46cb838f627fc94c0}{take\+Food}} (int available\+Quantity)
 \begin{DoxyCompactList}\small\item\em indicates to the ant that she can take the given quantity of food \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_warrior_aa3620b12e2a5e0c0edc5ce5a2cb43d02}\label{class_warrior_aa3620b12e2a5e0c0edc5ce5a2cb43d02}} 
-void {\bfseries attack} ()
-\item 
-\mbox{\Hypertarget{class_warrior_aa48d40a851d3a3790eb1b980e50fd255}\label{class_warrior_aa48d40a851d3a3790eb1b980e50fd255}} 
 void \mbox{\hyperlink{class_warrior_aa48d40a851d3a3790eb1b980e50fd255}{give\+Food}} ()
 \begin{DoxyCompactList}\small\item\em interaction method that warriors use to put food in the \mbox{\hyperlink{class_anthill}{Anthill}} \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_warrior_a780a0b83407f54b3436b1b4be5c144ed}{get\+Mode}} () const
@@ -34,14 +37,44 @@ int \mbox{\hyperlink{class_warrior_a4bc9809c4d99995f6793d47a38da1eb1}{get\+Curre
 \begin{DoxyCompactList}\small\item\em method used to access food level of a warrior \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_warrior_abf1ab498912f05c443fc997a2e50974d}{set\+Current\+Food}} (unsigned int food)
 \begin{DoxyCompactList}\small\item\em method used to set the food level of a warrior \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_warrior_ab125312bf657eb9c7e9c4e713bbbafcd}{check\+Position}} (vector$<$ pair$<$ int, int $>$$>$ forbidden\+Positions, int posX, int posY)
+\begin{DoxyCompactList}\small\item\em iterate through the forbidden positions to check if the given X and Y are available \end{DoxyCompactList}\item 
+pair$<$ int, int $>$ \mbox{\hyperlink{class_warrior_addb38f2991fb13a6d6919539ff0b5dcf}{get\+Random\+Pos}} (vector$<$ pair$<$ int, int $>$$>$ forbidden\+Positions, int prevX, int prevY, int posX, int posY)
+\begin{DoxyCompactList}\small\item\em gives a random position considering the previous position of the ant, the current position and the forbidden \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_warrior_a9fa41656c1f5e79d32799eb6df913ad6}{is\+Next\+To}} (int antX, int antY, int objX, int objY)
+\begin{DoxyCompactList}\small\item\em methods used to tell if your ant is next to an object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_warrior_ad9757eeba69475bbf211040c24e84c63}{\+\_\+food\+Capacity}}
+\item 
+int \mbox{\hyperlink{class_warrior_a44b63505023fc315f976b3876e2f9b61}{\+\_\+current\+Food}}
+\item 
+int \mbox{\hyperlink{class_warrior_ae1897ab85118e334f8cf2f2f797c114e}{\+\_\+mode}}
+\item 
+pair$<$ int, int $>$ \mbox{\hyperlink{class_warrior_a09864b2710b33d5803b6df857435e66a}{\+\_\+position}}
+\item 
+pair$<$ int, int $>$ \mbox{\hyperlink{class_warrior_a0ec388a0e49599d20d535adfad0263c3}{\+\_\+prev\+Pos}}
+\item 
+\mbox{\hyperlink{class_anthill}{Anthill}} $\ast$ \mbox{\hyperlink{class_warrior_a5bc5947cf97abb73144cd19a40942238}{\+\_\+anthill}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_warrior_a514c253a8e9c3f845f11f344804335d4}\label{class_warrior_a514c253a8e9c3f845f11f344804335d4}} 
+\index{Warrior@{Warrior}!Warrior@{Warrior}}
+\index{Warrior@{Warrior}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{Warrior()}{Warrior()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Warrior\+::\+Warrior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{class_warrior_af271d54079a347aa6a5c6a2805daf7b5}\label{class_warrior_af271d54079a347aa6a5c6a2805daf7b5}} 
 \index{Warrior@{Warrior}!Warrior@{Warrior}}
 \index{Warrior@{Warrior}!Warrior@{Warrior}}
-\doxysubsubsection{\texorpdfstring{Warrior()}{Warrior()}}
+\doxysubsubsection{\texorpdfstring{Warrior()}{Warrior()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Warrior\+::\+Warrior (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{position,  }\item[{string}]{name,  }\item[{\mbox{\hyperlink{class_anthill}{Anthill}} $\ast$}]{anthill,  }\item[{\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} \&}]{config }\end{DoxyParamCaption})}
 
 
@@ -59,9 +92,37 @@ main constructor of warrior
 {\em config} & \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_warrior_aab6dc963d8e8e13517e5a9e5fa74aaaa}\label{class_warrior_aab6dc963d8e8e13517e5a9e5fa74aaaa}} 
+\index{Warrior@{Warrior}!````~Warrior@{$\sim$Warrior}}
+\index{````~Warrior@{$\sim$Warrior}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{$\sim$Warrior()}{~Warrior()}}
+{\footnotesize\ttfamily Warrior\+::$\sim$\+Warrior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_warrior_ab125312bf657eb9c7e9c4e713bbbafcd}\label{class_warrior_ab125312bf657eb9c7e9c4e713bbbafcd}} 
+\index{Warrior@{Warrior}!checkPosition@{checkPosition}}
+\index{checkPosition@{checkPosition}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{checkPosition()}{checkPosition()}}
+{\footnotesize\ttfamily bool Warrior\+::check\+Position (\begin{DoxyParamCaption}\item[{vector$<$ pair$<$ int, int $>$$>$}]{forbidden\+Positions,  }\item[{int}]{posX,  }\item[{int}]{posY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+iterate through the forbidden positions to check if the given X and Y are available 
+
+
+\begin{DoxyParams}{Parameters}
+{\em forbidden\+Positions} & list of impossible move for the ant \\
+\hline
+{\em posX} & the X coordinate you want to check \\
+\hline
+{\em posY} & the Y coordinate you want to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the position is available, false if not 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_warrior_a3346c2a6bd3aff2e6ce00ccaf8689285}\label{class_warrior_a3346c2a6bd3aff2e6ce00ccaf8689285}} 
 \index{Warrior@{Warrior}!explore@{explore}}
 \index{explore@{explore}!Warrior@{Warrior}}
@@ -103,6 +164,12 @@ method used to access the movement mode of the warrior mode = 1 \+: Exploration 
 \begin{DoxyReturn}{Returns}
 current mode 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_warrior_ad3f4db2c2df1559c6cb1bbd56fbba2e9}\label{class_warrior_ad3f4db2c2df1559c6cb1bbd56fbba2e9}} 
+\index{Warrior@{Warrior}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily const pair$<$ int, int $>$ Warrior\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{class_warrior_ae20cc62958d7e76559213d5ef6740242}\label{class_warrior_ae20cc62958d7e76559213d5ef6740242}} 
 \index{Warrior@{Warrior}!getPrevPos@{getPrevPos}}
 \index{getPrevPos@{getPrevPos}!Warrior@{Warrior}}
@@ -115,6 +182,66 @@ return the position at the round n-\/1 of the warrior
 
 \begin{DoxyReturn}{Returns}
 return the previous position as pair$<$int,int$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_warrior_addb38f2991fb13a6d6919539ff0b5dcf}\label{class_warrior_addb38f2991fb13a6d6919539ff0b5dcf}} 
+\index{Warrior@{Warrior}!getRandomPos@{getRandomPos}}
+\index{getRandomPos@{getRandomPos}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{getRandomPos()}{getRandomPos()}}
+{\footnotesize\ttfamily pair$<$ int, int $>$ Warrior\+::get\+Random\+Pos (\begin{DoxyParamCaption}\item[{vector$<$ pair$<$ int, int $>$$>$}]{forbidden\+Positions,  }\item[{int}]{prevX,  }\item[{int}]{prevY,  }\item[{int}]{posX,  }\item[{int}]{posY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+gives a random position considering the previous position of the ant, the current position and the forbidden 
+
+
+\begin{DoxyParams}{Parameters}
+{\em forbidden\+Positions} & \\
+\hline
+{\em prevX} & \\
+\hline
+{\em prevY} & \\
+\hline
+{\em posX} & \\
+\hline
+{\em posY} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a proposition of available position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_warrior_aa48d40a851d3a3790eb1b980e50fd255}\label{class_warrior_aa48d40a851d3a3790eb1b980e50fd255}} 
+\index{Warrior@{Warrior}!giveFood@{giveFood}}
+\index{giveFood@{giveFood}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{giveFood()}{giveFood()}}
+{\footnotesize\ttfamily void Warrior\+::give\+Food (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+interaction method that warriors use to put food in the \mbox{\hyperlink{class_anthill}{Anthill}} 
+
+\mbox{\Hypertarget{class_warrior_a9fa41656c1f5e79d32799eb6df913ad6}\label{class_warrior_a9fa41656c1f5e79d32799eb6df913ad6}} 
+\index{Warrior@{Warrior}!isNextTo@{isNextTo}}
+\index{isNextTo@{isNextTo}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{isNextTo()}{isNextTo()}}
+{\footnotesize\ttfamily bool Warrior\+::is\+Next\+To (\begin{DoxyParamCaption}\item[{int}]{antX,  }\item[{int}]{antY,  }\item[{int}]{objX,  }\item[{int}]{objY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+methods used to tell if your ant is next to an object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em myX} & \\
+\hline
+{\em myY} & \\
+\hline
+{\em objX} & \\
+\hline
+{\em objY} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_warrior_a36fabf05ac60a23af9d7f7fb940cfc9d}\label{class_warrior_a36fabf05ac60a23af9d7f7fb940cfc9d}} 
 \index{Warrior@{Warrior}!returnToAnthill@{returnToAnthill}}
@@ -166,7 +293,46 @@ the actual taken quantity
 \end{DoxyReturn}
 
 
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_warrior_a5bc5947cf97abb73144cd19a40942238}\label{class_warrior_a5bc5947cf97abb73144cd19a40942238}} 
+\index{Warrior@{Warrior}!\_anthill@{\_anthill}}
+\index{\_anthill@{\_anthill}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{\_anthill}{\_anthill}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_anthill}{Anthill}}$\ast$ Warrior\+::\+\_\+anthill\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_warrior_a44b63505023fc315f976b3876e2f9b61}\label{class_warrior_a44b63505023fc315f976b3876e2f9b61}} 
+\index{Warrior@{Warrior}!\_currentFood@{\_currentFood}}
+\index{\_currentFood@{\_currentFood}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{\_currentFood}{\_currentFood}}
+{\footnotesize\ttfamily int Warrior\+::\+\_\+current\+Food\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_warrior_ad9757eeba69475bbf211040c24e84c63}\label{class_warrior_ad9757eeba69475bbf211040c24e84c63}} 
+\index{Warrior@{Warrior}!\_foodCapacity@{\_foodCapacity}}
+\index{\_foodCapacity@{\_foodCapacity}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{\_foodCapacity}{\_foodCapacity}}
+{\footnotesize\ttfamily int Warrior\+::\+\_\+food\+Capacity\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_warrior_ae1897ab85118e334f8cf2f2f797c114e}\label{class_warrior_ae1897ab85118e334f8cf2f2f797c114e}} 
+\index{Warrior@{Warrior}!\_mode@{\_mode}}
+\index{\_mode@{\_mode}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{\_mode}{\_mode}}
+{\footnotesize\ttfamily int Warrior\+::\+\_\+mode\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_warrior_a09864b2710b33d5803b6df857435e66a}\label{class_warrior_a09864b2710b33d5803b6df857435e66a}} 
+\index{Warrior@{Warrior}!\_position@{\_position}}
+\index{\_position@{\_position}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{\_position}{\_position}}
+{\footnotesize\ttfamily pair$<$int, int$>$ Warrior\+::\+\_\+position\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_warrior_a0ec388a0e49599d20d535adfad0263c3}\label{class_warrior_a0ec388a0e49599d20d535adfad0263c3}} 
+\index{Warrior@{Warrior}!\_prevPos@{\_prevPos}}
+\index{\_prevPos@{\_prevPos}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{\_prevPos}{\_prevPos}}
+{\footnotesize\ttfamily pair$<$int, int$>$ Warrior\+::\+\_\+prev\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-warrior.\+h\item 
-warrior.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{warrior_8h}{warrior.\+h}}\item 
+\mbox{\hyperlink{warrior_8cpp}{warrior.\+cpp}}\end{DoxyCompactItemize}

@@ -4,6 +4,7 @@
     <compoundname>Larva</compoundname>
     <basecompoundref refid="class_egg" prot="public" virt="non-virtual">Egg</basecompoundref>
     <derivedcompoundref refid="class_worker" prot="public" virt="non-virtual">Worker</derivedcompoundref>
+    <includes refid="larva_8h" local="no">larva.h</includes>
       <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="class_larva_1aff0c81a8dda39bbb4ab10553d7c47c69" prot="protected" static="no" mutable="no">
         <type>int</type>

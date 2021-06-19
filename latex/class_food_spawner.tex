@@ -1,5 +1,9 @@
 \hypertarget{class_food_spawner}{}\doxysection{Food\+Spawner Class Reference}
 \label{class_food_spawner}\index{FoodSpawner@{FoodSpawner}}
+
+
+{\ttfamily \#include $<$foodspawner.\+h$>$}
+
 Inheritance diagram for Food\+Spawner\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,22 +13,97 @@ Inheritance diagram for Food\+Spawner\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_food_spawner_aa2477bc549a8680fa37f4e92c7d542f5}\label{class_food_spawner_aa2477bc549a8680fa37f4e92c7d542f5}} 
-{\bfseries Food\+Spawner} (int max\+Quantity, pair$<$ int, int $>$ position, int width, int height)
+\mbox{\hyperlink{class_food_spawner_a6e15c0426be75c74718d0b9aea4f418c}{Food\+Spawner}} ()
 \item 
-\mbox{\Hypertarget{class_food_spawner_a97adce43c478029bb484d1582636fe22}\label{class_food_spawner_a97adce43c478029bb484d1582636fe22}} 
-void {\bfseries do\+Round} ()
+\mbox{\hyperlink{class_food_spawner_aa2477bc549a8680fa37f4e92c7d542f5}{Food\+Spawner}} (int max\+Quantity, pair$<$ int, int $>$ position, int width, int height)
 \item 
-\mbox{\Hypertarget{class_food_spawner_a9e9ba67a74657330082dfc4c515f55ad}\label{class_food_spawner_a9e9ba67a74657330082dfc4c515f55ad}} 
-int {\bfseries get\+Current\+Quantity} () const
+\mbox{\hyperlink{class_food_spawner_a14ddfc1f560fb57b80689be1bb61db06}{$\sim$\+Food\+Spawner}} ()
 \item 
-\mbox{\Hypertarget{class_food_spawner_a116b7945c47c92732c3e2d9c44da3faa}\label{class_food_spawner_a116b7945c47c92732c3e2d9c44da3faa}} 
-void {\bfseries decrease\+Quantity} (int quantity)
+void \mbox{\hyperlink{class_food_spawner_a97adce43c478029bb484d1582636fe22}{do\+Round}} ()
+\item 
+int \mbox{\hyperlink{class_food_spawner_a9e9ba67a74657330082dfc4c515f55ad}{get\+Current\+Quantity}} () const
+\item 
+void \mbox{\hyperlink{class_food_spawner_a116b7945c47c92732c3e2d9c44da3faa}{decrease\+Quantity}} (int quantity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_food_spawner_a75674ca9013d335dab893fe406e40d94}{random\+Food}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_food_spawner_a96e64dd82678a9015e0f471364a7bdfc}{\+\_\+max\+Quantity}}
+\item 
+int \mbox{\hyperlink{class_food_spawner_a48c03ec6ccdcea768f4413a47481e5fe}{\+\_\+current\+Quantity}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_food_spawner_a6e15c0426be75c74718d0b9aea4f418c}\label{class_food_spawner_a6e15c0426be75c74718d0b9aea4f418c}} 
+\index{FoodSpawner@{FoodSpawner}!FoodSpawner@{FoodSpawner}}
+\index{FoodSpawner@{FoodSpawner}!FoodSpawner@{FoodSpawner}}
+\doxysubsubsection{\texorpdfstring{FoodSpawner()}{FoodSpawner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Food\+Spawner\+::\+Food\+Spawner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_food_spawner_aa2477bc549a8680fa37f4e92c7d542f5}\label{class_food_spawner_aa2477bc549a8680fa37f4e92c7d542f5}} 
+\index{FoodSpawner@{FoodSpawner}!FoodSpawner@{FoodSpawner}}
+\index{FoodSpawner@{FoodSpawner}!FoodSpawner@{FoodSpawner}}
+\doxysubsubsection{\texorpdfstring{FoodSpawner()}{FoodSpawner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Food\+Spawner\+::\+Food\+Spawner (\begin{DoxyParamCaption}\item[{int}]{max\+Quantity,  }\item[{pair$<$ int, int $>$}]{position,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_food_spawner_a14ddfc1f560fb57b80689be1bb61db06}\label{class_food_spawner_a14ddfc1f560fb57b80689be1bb61db06}} 
+\index{FoodSpawner@{FoodSpawner}!````~FoodSpawner@{$\sim$FoodSpawner}}
+\index{````~FoodSpawner@{$\sim$FoodSpawner}!FoodSpawner@{FoodSpawner}}
+\doxysubsubsection{\texorpdfstring{$\sim$FoodSpawner()}{~FoodSpawner()}}
+{\footnotesize\ttfamily Food\+Spawner\+::$\sim$\+Food\+Spawner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_food_spawner_a116b7945c47c92732c3e2d9c44da3faa}\label{class_food_spawner_a116b7945c47c92732c3e2d9c44da3faa}} 
+\index{FoodSpawner@{FoodSpawner}!decreaseQuantity@{decreaseQuantity}}
+\index{decreaseQuantity@{decreaseQuantity}!FoodSpawner@{FoodSpawner}}
+\doxysubsubsection{\texorpdfstring{decreaseQuantity()}{decreaseQuantity()}}
+{\footnotesize\ttfamily void Food\+Spawner\+::decrease\+Quantity (\begin{DoxyParamCaption}\item[{int}]{quantity }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_food_spawner_a97adce43c478029bb484d1582636fe22}\label{class_food_spawner_a97adce43c478029bb484d1582636fe22}} 
+\index{FoodSpawner@{FoodSpawner}!doRound@{doRound}}
+\index{doRound@{doRound}!FoodSpawner@{FoodSpawner}}
+\doxysubsubsection{\texorpdfstring{doRound()}{doRound()}}
+{\footnotesize\ttfamily void Food\+Spawner\+::do\+Round (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_food_spawner_a9e9ba67a74657330082dfc4c515f55ad}\label{class_food_spawner_a9e9ba67a74657330082dfc4c515f55ad}} 
+\index{FoodSpawner@{FoodSpawner}!getCurrentQuantity@{getCurrentQuantity}}
+\index{getCurrentQuantity@{getCurrentQuantity}!FoodSpawner@{FoodSpawner}}
+\doxysubsubsection{\texorpdfstring{getCurrentQuantity()}{getCurrentQuantity()}}
+{\footnotesize\ttfamily int Food\+Spawner\+::get\+Current\+Quantity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_food_spawner_a75674ca9013d335dab893fe406e40d94}\label{class_food_spawner_a75674ca9013d335dab893fe406e40d94}} 
+\index{FoodSpawner@{FoodSpawner}!randomFood@{randomFood}}
+\index{randomFood@{randomFood}!FoodSpawner@{FoodSpawner}}
+\doxysubsubsection{\texorpdfstring{randomFood()}{randomFood()}}
+{\footnotesize\ttfamily void Food\+Spawner\+::random\+Food (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_food_spawner_a48c03ec6ccdcea768f4413a47481e5fe}\label{class_food_spawner_a48c03ec6ccdcea768f4413a47481e5fe}} 
+\index{FoodSpawner@{FoodSpawner}!\_currentQuantity@{\_currentQuantity}}
+\index{\_currentQuantity@{\_currentQuantity}!FoodSpawner@{FoodSpawner}}
+\doxysubsubsection{\texorpdfstring{\_currentQuantity}{\_currentQuantity}}
+{\footnotesize\ttfamily int Food\+Spawner\+::\+\_\+current\+Quantity\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_food_spawner_a96e64dd82678a9015e0f471364a7bdfc}\label{class_food_spawner_a96e64dd82678a9015e0f471364a7bdfc}} 
+\index{FoodSpawner@{FoodSpawner}!\_maxQuantity@{\_maxQuantity}}
+\index{\_maxQuantity@{\_maxQuantity}!FoodSpawner@{FoodSpawner}}
+\doxysubsubsection{\texorpdfstring{\_maxQuantity}{\_maxQuantity}}
+{\footnotesize\ttfamily int Food\+Spawner\+::\+\_\+max\+Quantity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-foodspawner.\+h\item 
-foodspawner.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{foodspawner_8h}{foodspawner.\+h}}\item 
+\mbox{\hyperlink{foodspawner_8cpp}{foodspawner.\+cpp}}\end{DoxyCompactItemize}

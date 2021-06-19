@@ -6,7 +6,7 @@
     <incdepgraph>
       <node id="2">
         <label>foodspawner.h</label>
-        <link refid="foodspawner_8h_source"/>
+        <link refid="foodspawner_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -14,7 +14,7 @@
       </node>
       <node id="4">
         <label>obstacle.h</label>
-        <link refid="obstacle_8h_source"/>
+        <link refid="obstacle_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
@@ -38,13 +38,13 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;foodspawner.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="foodspawner_8h" kindref="compound">foodspawner.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//PUBLIC</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/>@brief<sp/>default<sp/>constructor<sp/>of<sp/>food<sp/>spawner</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal">FoodSpawner::FoodSpawner()<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="class_food_spawner_1a6e15c0426be75c74718d0b9aea4f418c" kindref="member">FoodSpawner::FoodSpawner</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
@@ -55,28 +55,28 @@
 <codeline lineno="15"><highlight class="comment"><sp/>*<sp/>@param<sp/>width</highlight></codeline>
 <codeline lineno="16"><highlight class="comment"><sp/>*<sp/>@param<sp/>height</highlight></codeline>
 <codeline lineno="17"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal">FoodSpawner::FoodSpawner(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxQuantity,<sp/>pair&lt;int,<sp/>int&gt;<sp/>position,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height)<sp/>{</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>_maxQuantity<sp/>=<sp/>maxQuantity;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>_currentQuantity<sp/>=<sp/>rand()<sp/>%<sp/>maxQuantity<sp/>+<sp/>50;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>_position<sp/>=<sp/>position;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>_width<sp/>=<sp/>width;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>_height<sp/>=<sp/>height;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><ref refid="class_food_spawner_1a6e15c0426be75c74718d0b9aea4f418c" kindref="member">FoodSpawner::FoodSpawner</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxQuantity,<sp/>pair&lt;int,<sp/>int&gt;<sp/>position,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_food_spawner_1a96e64dd82678a9015e0f471364a7bdfc" kindref="member">_maxQuantity</ref><sp/>=<sp/>maxQuantity;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_food_spawner_1a48c03ec6ccdcea768f4413a47481e5fe" kindref="member">_currentQuantity</ref><sp/>=<sp/>rand()<sp/>%<sp/>maxQuantity<sp/>+<sp/>50;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_obstacle_1a18f2015af9237ad50bd1d5f6e610ee14" kindref="member">_position</ref><sp/>=<sp/>position;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_obstacle_1a4519d71400a5a972093f63dc29aa9283" kindref="member">_width</ref><sp/>=<sp/>width;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_obstacle_1a19eb8cda52476027a0429fa5fea6e0e9" kindref="member">_height</ref><sp/>=<sp/>height;</highlight></codeline>
 <codeline lineno="24"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
 <codeline lineno="27"><highlight class="comment"><sp/>*<sp/>@brief<sp/>default<sp/>destructor<sp/>of<sp/>food<sp/>spawner</highlight></codeline>
 <codeline lineno="28"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal">FoodSpawner::~FoodSpawner()<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><ref refid="class_food_spawner_1a14ddfc1f560fb57b80689be1bb61db06" kindref="member">FoodSpawner::~FoodSpawner</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
 <codeline lineno="34"><highlight class="comment"><sp/>*<sp/>@brief<sp/>all<sp/>actions<sp/>that<sp/>are<sp/>done<sp/>in<sp/>a<sp/>round<sp/>by<sp/>the<sp/>food<sp/>spawner</highlight></codeline>
 <codeline lineno="35"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>FoodSpawner::doRound()<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_food_spawner_1a97adce43c478029bb484d1582636fe22" kindref="member">FoodSpawner::doRound</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>spawnProb<sp/>=<sp/>rand()<sp/>%<sp/>5;</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(spawnProb<sp/>==<sp/>1)<sp/>{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>randomFood();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_food_spawner_1a75674ca9013d335dab893fe406e40d94" kindref="member">randomFood</ref>();</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="41"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
@@ -84,26 +84,26 @@
 <codeline lineno="44"><highlight class="comment"><sp/>*<sp/>@brief<sp/>method<sp/>used<sp/>to<sp/>access<sp/>food<sp/>quantity<sp/>of<sp/>the<sp/>food<sp/>spawner</highlight></codeline>
 <codeline lineno="45"><highlight class="comment"><sp/>*<sp/>@return<sp/>return<sp/>the<sp/>food<sp/>quantity<sp/>with<sp/>an<sp/>int</highlight></codeline>
 <codeline lineno="46"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>FoodSpawner::getCurrentQuantity()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_currentQuantity;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_food_spawner_1a9e9ba67a74657330082dfc4c515f55ad" kindref="member">FoodSpawner::getCurrentQuantity</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_food_spawner_1a48c03ec6ccdcea768f4413a47481e5fe" kindref="member">_currentQuantity</ref>;</highlight></codeline>
 <codeline lineno="49"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
 <codeline lineno="52"><highlight class="comment"><sp/>*<sp/>@brief<sp/>method<sp/>used<sp/>to<sp/>decrease<sp/>the<sp/>quantity<sp/>of<sp/>food<sp/>contained<sp/>by<sp/>the<sp/>food<sp/>spawner</highlight></codeline>
 <codeline lineno="53"><highlight class="comment"><sp/>*<sp/>@param<sp/>quantity</highlight></codeline>
 <codeline lineno="54"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>FoodSpawner::decreaseQuantity(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>quantity)<sp/>{</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>_currentQuantity<sp/>-=<sp/>quantity;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_food_spawner_1a116b7945c47c92732c3e2d9c44da3faa" kindref="member">FoodSpawner::decreaseQuantity</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>quantity)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_food_spawner_1a48c03ec6ccdcea768f4413a47481e5fe" kindref="member">_currentQuantity</ref><sp/>-=<sp/>quantity;</highlight></codeline>
 <codeline lineno="57"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//PRIVATE</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
 <codeline lineno="61"><highlight class="comment"><sp/>*<sp/>@brief<sp/>method<sp/>used<sp/>to<sp/>create<sp/>random<sp/>quantity<sp/>of<sp/>food<sp/>inside<sp/>the<sp/>food<sp/>spawner</highlight></codeline>
 <codeline lineno="62"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>FoodSpawner::randomFood()<sp/>{</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>_currentQuantity<sp/>+=<sp/>rand()<sp/>%<sp/>50<sp/>+<sp/>0;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_currentQuantity<sp/>&gt;<sp/>_maxQuantity)<sp/>{</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_currentQuantity<sp/>=<sp/>_maxQuantity;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_food_spawner_1a75674ca9013d335dab893fe406e40d94" kindref="member">FoodSpawner::randomFood</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_food_spawner_1a48c03ec6ccdcea768f4413a47481e5fe" kindref="member">_currentQuantity</ref><sp/>+=<sp/>rand()<sp/>%<sp/>50<sp/>+<sp/>0;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_food_spawner_1a48c03ec6ccdcea768f4413a47481e5fe" kindref="member">_currentQuantity</ref><sp/>&gt;<sp/><ref refid="class_food_spawner_1a96e64dd82678a9015e0f471364a7bdfc" kindref="member">_maxQuantity</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_food_spawner_1a48c03ec6ccdcea768f4413a47481e5fe" kindref="member">_currentQuantity</ref><sp/>=<sp/><ref refid="class_food_spawner_1a96e64dd82678a9015e0f471364a7bdfc" kindref="member">_maxQuantity</ref>;</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
 <codeline lineno="69"><highlight class="normal">}</highlight></codeline>

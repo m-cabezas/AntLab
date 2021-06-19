@@ -3,6 +3,7 @@
   <compounddef id="class_egg" kind="class" language="C++" prot="public">
     <compoundname>Egg</compoundname>
     <derivedcompoundref refid="class_larva" prot="public" virt="non-virtual">Larva</derivedcompoundref>
+    <includes refid="egg_8h" local="no">egg.h</includes>
       <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="class_egg_1a57ca36eb21771f70b66b52f3273c1479" prot="protected" static="no" mutable="no">
         <type>string</type>

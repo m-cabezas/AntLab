@@ -5,6 +5,7 @@
     <basecompoundref refid="class_larva" prot="public" virt="non-virtual">Larva</basecompoundref>
     <derivedcompoundref refid="class_queen" prot="public" virt="non-virtual">Queen</derivedcompoundref>
     <derivedcompoundref refid="class_warrior" prot="public" virt="non-virtual">Warrior</derivedcompoundref>
+    <includes refid="worker_8h" local="no">worker.h</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="class_worker_1a3754817df06ffe220f7f0d903c78ccac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>

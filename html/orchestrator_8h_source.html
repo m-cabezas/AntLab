@@ -65,7 +65,7 @@ $(function() {
 <div class="title">orchestrator.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ORCHESTRATOR_H</span></div>
+<a href="orchestrator_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ORCHESTRATOR_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ORCHESTRATOR_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
@@ -74,11 +74,11 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;foodspawner.h&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;obstacle.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;warrior.h&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;util.h&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;anthill.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="foodspawner_8h.html">foodspawner.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="obstacle_8h.html">obstacle.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="warrior_8h.html">warrior.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="util_8h.html">util.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="anthill_8h.html">anthill.h</a>&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
@@ -102,16 +102,16 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">//Attributes</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="struct_c_o_n_f_i_g.html">CONFIG</a> _config;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    pair&lt;int, int&gt; _dimension;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    vector &lt;vector&lt;bool&gt;&gt; _grid;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    vector &lt;vector&lt;bool&gt;&gt; _obstaclesGrid;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    vector &lt;vector&lt;bool&gt;&gt; _foodSpawnersGrid;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    vector &lt;vector&lt;bool&gt;&gt; _anthillsGrid;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    vector&lt;Warrior *&gt; _warriors;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    vector&lt;Obstacle *&gt; _obstacles;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    vector&lt;FoodSpawner *&gt; _foodSpawners;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    vector&lt;Anthill *&gt; _anthills;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_orchestrator.html#a965da4741bf99096a42d1a92b87bf83f">   38</a></span>&#160;    <a class="code" href="struct_c_o_n_f_i_g.html">CONFIG</a> <a class="code" href="class_orchestrator.html#a965da4741bf99096a42d1a92b87bf83f">_config</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_orchestrator.html#a0ce7e3ef5d9a75129617b73bfdfecf57">   39</a></span>&#160;    pair&lt;int, int&gt; <a class="code" href="class_orchestrator.html#a0ce7e3ef5d9a75129617b73bfdfecf57">_dimension</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_orchestrator.html#a0be9646a122a25fa69e7b1685ce5d045">   40</a></span>&#160;    vector &lt;vector&lt;bool&gt;&gt; <a class="code" href="class_orchestrator.html#a0be9646a122a25fa69e7b1685ce5d045">_grid</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_orchestrator.html#a3de65a747f1c0cb041bca1d9efdab5bb">   41</a></span>&#160;    vector &lt;vector&lt;bool&gt;&gt; <a class="code" href="class_orchestrator.html#a3de65a747f1c0cb041bca1d9efdab5bb">_obstaclesGrid</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_orchestrator.html#a2477aeaf7c2daaaa422ca10c361cacb2">   42</a></span>&#160;    vector &lt;vector&lt;bool&gt;&gt; <a class="code" href="class_orchestrator.html#a2477aeaf7c2daaaa422ca10c361cacb2">_foodSpawnersGrid</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_orchestrator.html#ac3e2fa909f04ba0259aa8155d4ecf596">   43</a></span>&#160;    vector &lt;vector&lt;bool&gt;&gt; <a class="code" href="class_orchestrator.html#ac3e2fa909f04ba0259aa8155d4ecf596">_anthillsGrid</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_orchestrator.html#a4df763ed3b1e4a88d30167db2b60bbae">   44</a></span>&#160;    vector&lt;Warrior *&gt; <a class="code" href="class_orchestrator.html#a4df763ed3b1e4a88d30167db2b60bbae">_warriors</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_orchestrator.html#aabb53161f65ca915ea3d80019b522904">   45</a></span>&#160;    vector&lt;Obstacle *&gt; <a class="code" href="class_orchestrator.html#aabb53161f65ca915ea3d80019b522904">_obstacles</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_orchestrator.html#a464d27075256d666248977b473be3aa8">   46</a></span>&#160;    vector&lt;FoodSpawner *&gt; <a class="code" href="class_orchestrator.html#a464d27075256d666248977b473be3aa8">_foodSpawners</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_orchestrator.html#afa5440a71435ab53e096fa58ae724aca">   47</a></span>&#160;    vector&lt;Anthill *&gt; <a class="code" href="class_orchestrator.html#afa5440a71435ab53e096fa58ae724aca">_anthills</a>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">//Methods</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> createAnthill(pair&lt;int, int&gt; position, <span class="keywordtype">bool</span> init);</div>
@@ -140,17 +140,33 @@ $(function() {
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="class_food_spawner.html">FoodSpawner</a> *checkFoodNearby(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">bool</span> checkPosition(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_orchestrator.html#a6d15cbca43cff0b32a8c54968b0c695c">   76</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_orchestrator.html#a6d15cbca43cff0b32a8c54968b0c695c">checkPosition</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    vector &lt;pair&lt;int, int&gt;&gt; getWarriorsFreePositions(<a class="code" href="class_anthill.html">Anthill</a> &amp;anthill);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ORCHESTRATOR_H</span></div>
+<div class="ttc" id="aanthill_8h_html"><div class="ttname"><a href="anthill_8h.html">anthill.h</a></div></div>
 <div class="ttc" id="aclass_anthill_html"><div class="ttname"><a href="class_anthill.html">Anthill</a></div><div class="ttdef"><b>Definition:</b> anthill.h:14</div></div>
 <div class="ttc" id="aclass_food_spawner_html"><div class="ttname"><a href="class_food_spawner.html">FoodSpawner</a></div><div class="ttdef"><b>Definition:</b> foodspawner.h:7</div></div>
 <div class="ttc" id="aclass_orchestrator_html"><div class="ttname"><a href="class_orchestrator.html">Orchestrator</a></div><div class="ttdef"><b>Definition:</b> orchestrator.h:18</div></div>
+<div class="ttc" id="aclass_orchestrator_html_a0be9646a122a25fa69e7b1685ce5d045"><div class="ttname"><a href="class_orchestrator.html#a0be9646a122a25fa69e7b1685ce5d045">Orchestrator::_grid</a></div><div class="ttdeci">vector&lt; vector&lt; bool &gt; &gt; _grid</div><div class="ttdef"><b>Definition:</b> orchestrator.h:40</div></div>
+<div class="ttc" id="aclass_orchestrator_html_a0ce7e3ef5d9a75129617b73bfdfecf57"><div class="ttname"><a href="class_orchestrator.html#a0ce7e3ef5d9a75129617b73bfdfecf57">Orchestrator::_dimension</a></div><div class="ttdeci">pair&lt; int, int &gt; _dimension</div><div class="ttdef"><b>Definition:</b> orchestrator.h:39</div></div>
+<div class="ttc" id="aclass_orchestrator_html_a2477aeaf7c2daaaa422ca10c361cacb2"><div class="ttname"><a href="class_orchestrator.html#a2477aeaf7c2daaaa422ca10c361cacb2">Orchestrator::_foodSpawnersGrid</a></div><div class="ttdeci">vector&lt; vector&lt; bool &gt; &gt; _foodSpawnersGrid</div><div class="ttdef"><b>Definition:</b> orchestrator.h:42</div></div>
+<div class="ttc" id="aclass_orchestrator_html_a3de65a747f1c0cb041bca1d9efdab5bb"><div class="ttname"><a href="class_orchestrator.html#a3de65a747f1c0cb041bca1d9efdab5bb">Orchestrator::_obstaclesGrid</a></div><div class="ttdeci">vector&lt; vector&lt; bool &gt; &gt; _obstaclesGrid</div><div class="ttdef"><b>Definition:</b> orchestrator.h:41</div></div>
+<div class="ttc" id="aclass_orchestrator_html_a464d27075256d666248977b473be3aa8"><div class="ttname"><a href="class_orchestrator.html#a464d27075256d666248977b473be3aa8">Orchestrator::_foodSpawners</a></div><div class="ttdeci">vector&lt; FoodSpawner * &gt; _foodSpawners</div><div class="ttdef"><b>Definition:</b> orchestrator.h:46</div></div>
+<div class="ttc" id="aclass_orchestrator_html_a4df763ed3b1e4a88d30167db2b60bbae"><div class="ttname"><a href="class_orchestrator.html#a4df763ed3b1e4a88d30167db2b60bbae">Orchestrator::_warriors</a></div><div class="ttdeci">vector&lt; Warrior * &gt; _warriors</div><div class="ttdef"><b>Definition:</b> orchestrator.h:44</div></div>
+<div class="ttc" id="aclass_orchestrator_html_a6d15cbca43cff0b32a8c54968b0c695c"><div class="ttname"><a href="class_orchestrator.html#a6d15cbca43cff0b32a8c54968b0c695c">Orchestrator::checkPosition</a></div><div class="ttdeci">bool checkPosition(int x, int y)</div></div>
+<div class="ttc" id="aclass_orchestrator_html_a965da4741bf99096a42d1a92b87bf83f"><div class="ttname"><a href="class_orchestrator.html#a965da4741bf99096a42d1a92b87bf83f">Orchestrator::_config</a></div><div class="ttdeci">CONFIG _config</div><div class="ttdef"><b>Definition:</b> orchestrator.h:38</div></div>
+<div class="ttc" id="aclass_orchestrator_html_aabb53161f65ca915ea3d80019b522904"><div class="ttname"><a href="class_orchestrator.html#aabb53161f65ca915ea3d80019b522904">Orchestrator::_obstacles</a></div><div class="ttdeci">vector&lt; Obstacle * &gt; _obstacles</div><div class="ttdef"><b>Definition:</b> orchestrator.h:45</div></div>
+<div class="ttc" id="aclass_orchestrator_html_ac3e2fa909f04ba0259aa8155d4ecf596"><div class="ttname"><a href="class_orchestrator.html#ac3e2fa909f04ba0259aa8155d4ecf596">Orchestrator::_anthillsGrid</a></div><div class="ttdeci">vector&lt; vector&lt; bool &gt; &gt; _anthillsGrid</div><div class="ttdef"><b>Definition:</b> orchestrator.h:43</div></div>
+<div class="ttc" id="aclass_orchestrator_html_afa5440a71435ab53e096fa58ae724aca"><div class="ttname"><a href="class_orchestrator.html#afa5440a71435ab53e096fa58ae724aca">Orchestrator::_anthills</a></div><div class="ttdeci">vector&lt; Anthill * &gt; _anthills</div><div class="ttdef"><b>Definition:</b> orchestrator.h:47</div></div>
+<div class="ttc" id="afoodspawner_8h_html"><div class="ttname"><a href="foodspawner_8h.html">foodspawner.h</a></div></div>
+<div class="ttc" id="aobstacle_8h_html"><div class="ttname"><a href="obstacle_8h.html">obstacle.h</a></div></div>
 <div class="ttc" id="astruct_c_o_n_f_i_g_html"><div class="ttname"><a href="struct_c_o_n_f_i_g.html">CONFIG</a></div><div class="ttdef"><b>Definition:</b> util.h:4</div></div>
+<div class="ttc" id="autil_8h_html"><div class="ttname"><a href="util_8h.html">util.h</a></div></div>
+<div class="ttc" id="awarrior_8h_html"><div class="ttname"><a href="warrior_8h.html">warrior.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

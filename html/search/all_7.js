@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['larva_18',['Larva',['../class_larva.html',1,'']]]
+  ['heal_97',['heal',['../class_larva.html#adbe862633e03ac3ec06230353b222767',1,'Larva']]]
 ];

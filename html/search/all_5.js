@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['game_7',['Game',['../class_game.html',1,'']]],
-  ['getcurrentfood_8',['getCurrentFood',['../class_warrior.html#a4bc9809c4d99995f6793d47a38da1eb1',1,'Warrior']]],
-  ['getmapentity_9',['getMapEntity',['../class_orchestrator.html#a43534ccc11df40a762dd0305135afd6a',1,'Orchestrator']]],
-  ['getmode_10',['getMode',['../class_warrior.html#a780a0b83407f54b3436b1b4be5c144ed',1,'Warrior']]],
-  ['getpopulation_11',['getPopulation',['../class_anthill.html#a335795a55847de8ab6da4d09875bacd5',1,'Anthill']]],
-  ['getprevpos_12',['getPrevPos',['../class_warrior.html#ae20cc62958d7e76559213d5ef6740242',1,'Warrior']]],
-  ['givefood_13',['giveFood',['../class_warrior.html#aa48d40a851d3a3790eb1b980e50fd255',1,'Warrior']]]
+  ['foodcons_69',['foodCons',['../class_anthill.html#a559f93071aa74542e86a8f891778eff0',1,'Anthill']]],
+  ['foodspawner_70',['FoodSpawner',['../class_food_spawner.html',1,'FoodSpawner'],['../class_food_spawner.html#a6e15c0426be75c74718d0b9aea4f418c',1,'FoodSpawner::FoodSpawner()'],['../class_food_spawner.html#aa2477bc549a8680fa37f4e92c7d542f5',1,'FoodSpawner::FoodSpawner(int maxQuantity, pair&lt; int, int &gt; position, int width, int height)']]],
+  ['foodspawner_2ecpp_71',['foodspawner.cpp',['../foodspawner_8cpp.html',1,'']]],
+  ['foodspawner_2eh_72',['foodspawner.h',['../foodspawner_8h.html',1,'']]]
 ];

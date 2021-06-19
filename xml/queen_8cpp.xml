@@ -6,7 +6,7 @@
     <incdepgraph>
       <node id="3">
         <label>worker.h</label>
-        <link refid="worker_8h_source"/>
+        <link refid="worker_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
@@ -14,7 +14,7 @@
       </node>
       <node id="5">
         <label>egg.h</label>
-        <link refid="egg_8h_source"/>
+        <link refid="egg_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
@@ -28,17 +28,17 @@
       </node>
       <node id="7">
         <label>util.h</label>
-        <link refid="util_8h_source"/>
+        <link refid="util_8h"/>
       </node>
       <node id="2">
         <label>queen.h</label>
-        <link refid="queen_8h_source"/>
+        <link refid="queen_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="4">
         <label>larva.h</label>
-        <link refid="larva_8h_source"/>
+        <link refid="larva_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
@@ -53,7 +53,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;queen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="queen_8h" kindref="compound">queen.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><ref refid="class_queen_1ae2314f4890c7fa7d5da670b3c0b6293b" kindref="member">Queen::Queen</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
@@ -64,17 +64,17 @@
 <codeline lineno="12"><highlight class="comment"><sp/>*<sp/>@param<sp/>config</highlight></codeline>
 <codeline lineno="13"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><ref refid="class_queen_1ae2314f4890c7fa7d5da670b3c0b6293b" kindref="member">Queen::Queen</ref>(<ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref><sp/>&amp;config)<sp/>{</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>_currentAge<sp/>=<sp/>config.ageWarrior;</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>_maxHealth<sp/>=<sp/>config.lifeQueen;</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>_foodCons<sp/>=<sp/>config.consQueen;</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>_currentHealth<sp/>=<sp/>config.lifeQueen;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>_name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Queen&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_egg_1a5943a93f9bb3c8e785ae5ca491776440" kindref="member">_currentAge</ref><sp/>=<sp/>config.<ref refid="struct_c_o_n_f_i_g_1aa20147d7048b5a3644ff7de40e5b4a0d" kindref="member">ageWarrior</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_larva_1a8c51a31397bcc72b39b5b79e5d5dfc98" kindref="member">_maxHealth</ref><sp/>=<sp/>config.<ref refid="struct_c_o_n_f_i_g_1a89904d8c21627914cdfba6033fbc12d4" kindref="member">lifeQueen</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_larva_1aff0c81a8dda39bbb4ab10553d7c47c69" kindref="member">_foodCons</ref><sp/>=<sp/>config.<ref refid="struct_c_o_n_f_i_g_1a30855c029f6a6a8be2b2614959a8a0dd" kindref="member">consQueen</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_larva_1a6c110f254d97b23fface50ba929dc316" kindref="member">_currentHealth</ref><sp/>=<sp/>config.<ref refid="struct_c_o_n_f_i_g_1a89904d8c21627914cdfba6033fbc12d4" kindref="member">lifeQueen</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_egg_1a57ca36eb21771f70b66b52f3273c1479" kindref="member">_name</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Queen&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="20"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
 <codeline lineno="23"><highlight class="comment"><sp/>*<sp/>@brief<sp/>default<sp/>destructor<sp/>of<sp/>queen</highlight></codeline>
 <codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal">Queen::~Queen()<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="class_queen_1aa22f6c1a49a583b549bd1f940e50721d" kindref="member">Queen::~Queen</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal">}</highlight></codeline>
     </programlisting>

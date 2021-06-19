@@ -25,10 +25,12 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="6">
+      <node id="11">
         <label>foodspawner.h</label>
-        <link refid="foodspawner_8h_source"/>
-        <childnode refid="3" relation="include">
+        <link refid="foodspawner_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -36,34 +38,74 @@
         <link refid="obstacle_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>orchestrator.h</label>
-        <link refid="orchestrator_8h_source"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="5">
-        <label>warrior.h</label>
-        <link refid="warrior_8h_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
+      <node id="6">
+        <label>game.cpp</label>
+        <link refid="game_8cpp"/>
       </node>
       <node id="4">
+        <label>orchestrator.h</label>
+        <link refid="orchestrator_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>warrior.cpp</label>
+        <link refid="warrior_8cpp"/>
+      </node>
+      <node id="9">
+        <label>warrior.h</label>
+        <link refid="warrior_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
         <label>game.h</label>
-        <link refid="game_8h_source"/>
+        <link refid="game_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>anthill.h</label>
-        <link refid="anthill_8h_source"/>
+        <link refid="anthill_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>obstacle.cpp</label>
+        <link refid="obstacle_8cpp"/>
+      </node>
+      <node id="7">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="8">
+        <label>orchestrator.cpp</label>
+        <link refid="orchestrator_8cpp"/>
+      </node>
+      <node id="12">
+        <label>foodspawner.cpp</label>
+        <link refid="foodspawner_8cpp"/>
+      </node>
+      <node id="3">
+        <label>anthill.cpp</label>
+        <link refid="anthill_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_obstacle" prot="public">Obstacle</innerclass>
@@ -93,9 +135,9 @@
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Attributs</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>pair&lt;int,<sp/>int&gt;<sp/>_position;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_width;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_height;</highlight></codeline>
+<codeline lineno="22" refid="class_obstacle_1a18f2015af9237ad50bd1d5f6e610ee14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>pair&lt;int,<sp/>int&gt;<sp/><ref refid="class_obstacle_1a18f2015af9237ad50bd1d5f6e610ee14" kindref="member">_position</ref>;</highlight></codeline>
+<codeline lineno="23" refid="class_obstacle_1a4519d71400a5a972093f63dc29aa9283" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_obstacle_1a4519d71400a5a972093f63dc29aa9283" kindref="member">_width</ref>;</highlight></codeline>
+<codeline lineno="24" refid="class_obstacle_1a19eb8cda52476027a0429fa5fea6e0e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_obstacle_1a19eb8cda52476027a0429fa5fea6e0e9" kindref="member">_height</ref>;</highlight></codeline>
 <codeline lineno="25"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>OBSTACLE_H</highlight><highlight class="normal"></highlight></codeline>

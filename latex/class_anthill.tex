@@ -1,5 +1,9 @@
 \hypertarget{class_anthill}{}\doxysection{Anthill Class Reference}
 \label{class_anthill}\index{Anthill@{Anthill}}
+
+
+{\ttfamily \#include $<$anthill.\+h$>$}
+
 Inheritance diagram for Anthill\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,35 +13,88 @@ Inheritance diagram for Anthill\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_anthill_a2b5eb754c236e4add4ba4077fb134782}{Anthill}} ()
+\item 
 \mbox{\hyperlink{class_anthill_a6c39fdc3e19ce0369e890bb543f9bf0a}{Anthill}} (\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} \&config, int max\+Pop, int max\+Food, pair$<$ int, int $>$ position, int width, int height)
 \begin{DoxyCompactList}\small\item\em main constructor of \mbox{\hyperlink{class_anthill}{Anthill}} \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_anthill_ad7ddaced1d80e90839a7fb80760a59fa}\label{class_anthill_ad7ddaced1d80e90839a7fb80760a59fa}} 
-int {\bfseries get\+New\+Warriors} () const
+\mbox{\hyperlink{class_anthill_a0a8a9aa35526e2c65e4520a990a18e18}{$\sim$\+Anthill}} ()
+\item 
+int \mbox{\hyperlink{class_anthill_ad7ddaced1d80e90839a7fb80760a59fa}{get\+New\+Warriors}} () const
 \item 
 int \mbox{\hyperlink{class_anthill_a335795a55847de8ab6da4d09875bacd5}{get\+Population}} () const
 \item 
-\mbox{\Hypertarget{class_anthill_a7ff7e41269324d61bc60360a6fb59a79}\label{class_anthill_a7ff7e41269324d61bc60360a6fb59a79}} 
-void {\bfseries init\+Anthill} ()
+void \mbox{\hyperlink{class_anthill_a7ff7e41269324d61bc60360a6fb59a79}{init\+Anthill}} ()
 \item 
-\mbox{\Hypertarget{class_anthill_aca5a12987317ef7e9780b231aad1c153}\label{class_anthill_aca5a12987317ef7e9780b231aad1c153}} 
-void {\bfseries spawn\+Egg} ()
+void \mbox{\hyperlink{class_anthill_aca5a12987317ef7e9780b231aad1c153}{spawn\+Egg}} ()
 \item 
-\mbox{\Hypertarget{class_anthill_a68a8d3b051e9a67dc0d61873e608e80a}\label{class_anthill_a68a8d3b051e9a67dc0d61873e608e80a}} 
-void {\bfseries do\+Round} ()
+void \mbox{\hyperlink{class_anthill_a68a8d3b051e9a67dc0d61873e608e80a}{do\+Round}} ()
 \item 
-\mbox{\Hypertarget{class_anthill_af2bd0764ae0640aedd72ee10c1a60418}\label{class_anthill_af2bd0764ae0640aedd72ee10c1a60418}} 
-void {\bfseries add\+Food} (int food\+Quantity)
+void \mbox{\hyperlink{class_anthill_af2bd0764ae0640aedd72ee10c1a60418}{add\+Food}} (int food\+Quantity)
 \item 
 bool \mbox{\hyperlink{class_anthill_a0acbebd49855ce62b3f30218467338ea}{is\+Queen\+Alive}} ()
 \begin{DoxyCompactList}\small\item\em method used to know if queen is still alive \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_anthill_a37f3181a47613e31ec78bbfd70daffd7}{do\+Round\+Queen}} ()
+\begin{DoxyCompactList}\small\item\em manage the \mbox{\hyperlink{class_queen}{Queen}}\textquotesingle{}s round \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_anthill_a006c4f2759a3cb5cb2b51771adcc3042}{do\+Round\+Eggs}} ()
+\begin{DoxyCompactList}\small\item\em manage eggs age for a round \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_anthill_a10dc28d387e14883c2f2f73b60b50271}{do\+Round\+Larvas}} ()
+\begin{DoxyCompactList}\small\item\em manage larvas round \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_anthill_a03505a5a65d3d9cac82bdfb83db625cc}{do\+Round\+Workers}} ()
+\begin{DoxyCompactList}\small\item\em manage workers round \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_anthill_a102fd88e130c745e9fff50b38ae6f4e6}{grow\+Up\+To\+Larva}} (\mbox{\hyperlink{class_egg}{Egg}} $\ast$egg)
+\item 
+void \mbox{\hyperlink{class_anthill_af6f59868ae7db300e5c650ea0cea2a1f}{grow\+Up\+To\+Worker}} (\mbox{\hyperlink{class_larva}{Larva}} $\ast$larva)
+\item 
+void \mbox{\hyperlink{class_anthill_a3b1854805b88fac7d7d33096e3fc5577}{grow\+Up\+To\+Warrior}} (\mbox{\hyperlink{class_worker}{Worker}} $\ast$worker)
+\item 
+void \mbox{\hyperlink{class_anthill_adfea94fd7fa75d08f8c657d97fecdfb8}{create\+Egg}} ()
+\item 
+void \mbox{\hyperlink{class_anthill_a80a0ca8f374d92072891f67fb8441966}{create\+Larva}} ()
+\item 
+void \mbox{\hyperlink{class_anthill_a3f398643ba67c9710e54b1675fc3e1c4}{create\+Worker}} ()
+\item 
+int \mbox{\hyperlink{class_anthill_a559f93071aa74542e86a8f891778eff0}{food\+Cons}} (int desired\+Food)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} \mbox{\hyperlink{class_anthill_a5ce3eeda78bd506d69605907d921872f}{\+\_\+config}}
+\item 
+int \mbox{\hyperlink{class_anthill_a1c85bf4b9dc60899ae1dd37121e786bd}{\+\_\+max\+Pop}}
+\item 
+int \mbox{\hyperlink{class_anthill_a0236d40219d628649e35b55e9ad1681e}{\+\_\+max\+Food}}
+\item 
+int \mbox{\hyperlink{class_anthill_a5aae123ca7c7ad1b6c84e3fc9e3368a6}{\+\_\+current\+Food}}
+\item 
+bool \mbox{\hyperlink{class_anthill_ae998f83155953a248872a9078734e820}{\+\_\+queen\+Alive}}
+\item 
+\mbox{\hyperlink{class_queen}{Queen}} $\ast$ \mbox{\hyperlink{class_anthill_a24d3cd883be1897ca9b577fa09dfc1c4}{\+\_\+queen}}
+\item 
+vector$<$ \mbox{\hyperlink{class_egg}{Egg}} $\ast$ $>$ \mbox{\hyperlink{class_anthill_a679c378ae33e2483b73f4e873ed0878c}{\+\_\+eggs}}
+\item 
+vector$<$ \mbox{\hyperlink{class_larva}{Larva}} $\ast$ $>$ \mbox{\hyperlink{class_anthill_afc8cc3ccd45701fe26fa35b4f8696f04}{\+\_\+larvas}}
+\item 
+vector$<$ \mbox{\hyperlink{class_worker}{Worker}} $\ast$ $>$ \mbox{\hyperlink{class_anthill_a92cfa9df16dcac810eb7410712164bed}{\+\_\+workers}}
+\item 
+int \mbox{\hyperlink{class_anthill_abf85b8dbefb90401102290d1239e5caf}{\+\_\+new\+Warriors}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_anthill_a2b5eb754c236e4add4ba4077fb134782}\label{class_anthill_a2b5eb754c236e4add4ba4077fb134782}} 
+\index{Anthill@{Anthill}!Anthill@{Anthill}}
+\index{Anthill@{Anthill}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{Anthill()}{Anthill()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Anthill\+::\+Anthill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{class_anthill_a6c39fdc3e19ce0369e890bb543f9bf0a}\label{class_anthill_a6c39fdc3e19ce0369e890bb543f9bf0a}} 
 \index{Anthill@{Anthill}!Anthill@{Anthill}}
 \index{Anthill@{Anthill}!Anthill@{Anthill}}
-\doxysubsubsection{\texorpdfstring{Anthill()}{Anthill()}}
+\doxysubsubsection{\texorpdfstring{Anthill()}{Anthill()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Anthill\+::\+Anthill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} \&}]{config,  }\item[{int}]{max\+Pop,  }\item[{int}]{max\+Food,  }\item[{pair$<$ int, int $>$}]{position,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
 
 
@@ -59,9 +116,97 @@ main constructor of \mbox{\hyperlink{class_anthill}{Anthill}}
 {\em height} & \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_anthill_a0a8a9aa35526e2c65e4520a990a18e18}\label{class_anthill_a0a8a9aa35526e2c65e4520a990a18e18}} 
+\index{Anthill@{Anthill}!````~Anthill@{$\sim$Anthill}}
+\index{````~Anthill@{$\sim$Anthill}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{$\sim$Anthill()}{~Anthill()}}
+{\footnotesize\ttfamily Anthill\+::$\sim$\+Anthill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_anthill_af2bd0764ae0640aedd72ee10c1a60418}\label{class_anthill_af2bd0764ae0640aedd72ee10c1a60418}} 
+\index{Anthill@{Anthill}!addFood@{addFood}}
+\index{addFood@{addFood}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{addFood()}{addFood()}}
+{\footnotesize\ttfamily void Anthill\+::add\+Food (\begin{DoxyParamCaption}\item[{int}]{food\+Quantity }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_anthill_adfea94fd7fa75d08f8c657d97fecdfb8}\label{class_anthill_adfea94fd7fa75d08f8c657d97fecdfb8}} 
+\index{Anthill@{Anthill}!createEgg@{createEgg}}
+\index{createEgg@{createEgg}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{createEgg()}{createEgg()}}
+{\footnotesize\ttfamily void Anthill\+::create\+Egg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anthill_a80a0ca8f374d92072891f67fb8441966}\label{class_anthill_a80a0ca8f374d92072891f67fb8441966}} 
+\index{Anthill@{Anthill}!createLarva@{createLarva}}
+\index{createLarva@{createLarva}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{createLarva()}{createLarva()}}
+{\footnotesize\ttfamily void Anthill\+::create\+Larva (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anthill_a3f398643ba67c9710e54b1675fc3e1c4}\label{class_anthill_a3f398643ba67c9710e54b1675fc3e1c4}} 
+\index{Anthill@{Anthill}!createWorker@{createWorker}}
+\index{createWorker@{createWorker}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{createWorker()}{createWorker()}}
+{\footnotesize\ttfamily void Anthill\+::create\+Worker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anthill_a68a8d3b051e9a67dc0d61873e608e80a}\label{class_anthill_a68a8d3b051e9a67dc0d61873e608e80a}} 
+\index{Anthill@{Anthill}!doRound@{doRound}}
+\index{doRound@{doRound}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{doRound()}{doRound()}}
+{\footnotesize\ttfamily void Anthill\+::do\+Round (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_anthill_a006c4f2759a3cb5cb2b51771adcc3042}\label{class_anthill_a006c4f2759a3cb5cb2b51771adcc3042}} 
+\index{Anthill@{Anthill}!doRoundEggs@{doRoundEggs}}
+\index{doRoundEggs@{doRoundEggs}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{doRoundEggs()}{doRoundEggs()}}
+{\footnotesize\ttfamily void Anthill\+::do\+Round\+Eggs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+manage eggs age for a round 
+
+\mbox{\Hypertarget{class_anthill_a10dc28d387e14883c2f2f73b60b50271}\label{class_anthill_a10dc28d387e14883c2f2f73b60b50271}} 
+\index{Anthill@{Anthill}!doRoundLarvas@{doRoundLarvas}}
+\index{doRoundLarvas@{doRoundLarvas}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{doRoundLarvas()}{doRoundLarvas()}}
+{\footnotesize\ttfamily void Anthill\+::do\+Round\+Larvas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+manage larvas round 
+
+\mbox{\Hypertarget{class_anthill_a37f3181a47613e31ec78bbfd70daffd7}\label{class_anthill_a37f3181a47613e31ec78bbfd70daffd7}} 
+\index{Anthill@{Anthill}!doRoundQueen@{doRoundQueen}}
+\index{doRoundQueen@{doRoundQueen}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{doRoundQueen()}{doRoundQueen()}}
+{\footnotesize\ttfamily void Anthill\+::do\+Round\+Queen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+manage the \mbox{\hyperlink{class_queen}{Queen}}\textquotesingle{}s round 
+
+\mbox{\Hypertarget{class_anthill_a03505a5a65d3d9cac82bdfb83db625cc}\label{class_anthill_a03505a5a65d3d9cac82bdfb83db625cc}} 
+\index{Anthill@{Anthill}!doRoundWorkers@{doRoundWorkers}}
+\index{doRoundWorkers@{doRoundWorkers}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{doRoundWorkers()}{doRoundWorkers()}}
+{\footnotesize\ttfamily void Anthill\+::do\+Round\+Workers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+manage workers round 
+
+\mbox{\Hypertarget{class_anthill_a559f93071aa74542e86a8f891778eff0}\label{class_anthill_a559f93071aa74542e86a8f891778eff0}} 
+\index{Anthill@{Anthill}!foodCons@{foodCons}}
+\index{foodCons@{foodCons}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{foodCons()}{foodCons()}}
+{\footnotesize\ttfamily int Anthill\+::food\+Cons (\begin{DoxyParamCaption}\item[{int}]{desired\+Food }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anthill_ad7ddaced1d80e90839a7fb80760a59fa}\label{class_anthill_ad7ddaced1d80e90839a7fb80760a59fa}} 
+\index{Anthill@{Anthill}!getNewWarriors@{getNewWarriors}}
+\index{getNewWarriors@{getNewWarriors}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{getNewWarriors()}{getNewWarriors()}}
+{\footnotesize\ttfamily int Anthill\+::get\+New\+Warriors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 \mbox{\Hypertarget{class_anthill_a335795a55847de8ab6da4d09875bacd5}\label{class_anthill_a335795a55847de8ab6da4d09875bacd5}} 
 \index{Anthill@{Anthill}!getPopulation@{getPopulation}}
 \index{getPopulation@{getPopulation}!Anthill@{Anthill}}
@@ -71,6 +216,30 @@ main constructor of \mbox{\hyperlink{class_anthill}{Anthill}}
 Gives the current population within the anthill \begin{DoxyReturn}{Returns}
 total population 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_anthill_a102fd88e130c745e9fff50b38ae6f4e6}\label{class_anthill_a102fd88e130c745e9fff50b38ae6f4e6}} 
+\index{Anthill@{Anthill}!growUpToLarva@{growUpToLarva}}
+\index{growUpToLarva@{growUpToLarva}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{growUpToLarva()}{growUpToLarva()}}
+{\footnotesize\ttfamily void Anthill\+::grow\+Up\+To\+Larva (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_egg}{Egg}} $\ast$}]{egg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anthill_a3b1854805b88fac7d7d33096e3fc5577}\label{class_anthill_a3b1854805b88fac7d7d33096e3fc5577}} 
+\index{Anthill@{Anthill}!growUpToWarrior@{growUpToWarrior}}
+\index{growUpToWarrior@{growUpToWarrior}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{growUpToWarrior()}{growUpToWarrior()}}
+{\footnotesize\ttfamily void Anthill\+::grow\+Up\+To\+Warrior (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_worker}{Worker}} $\ast$}]{worker }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anthill_af6f59868ae7db300e5c650ea0cea2a1f}\label{class_anthill_af6f59868ae7db300e5c650ea0cea2a1f}} 
+\index{Anthill@{Anthill}!growUpToWorker@{growUpToWorker}}
+\index{growUpToWorker@{growUpToWorker}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{growUpToWorker()}{growUpToWorker()}}
+{\footnotesize\ttfamily void Anthill\+::grow\+Up\+To\+Worker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_larva}{Larva}} $\ast$}]{larva }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anthill_a7ff7e41269324d61bc60360a6fb59a79}\label{class_anthill_a7ff7e41269324d61bc60360a6fb59a79}} 
+\index{Anthill@{Anthill}!initAnthill@{initAnthill}}
+\index{initAnthill@{initAnthill}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{initAnthill()}{initAnthill()}}
+{\footnotesize\ttfamily void Anthill\+::init\+Anthill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{class_anthill_a0acbebd49855ce62b3f30218467338ea}\label{class_anthill_a0acbebd49855ce62b3f30218467338ea}} 
 \index{Anthill@{Anthill}!isQueenAlive@{isQueenAlive}}
 \index{isQueenAlive@{isQueenAlive}!Anthill@{Anthill}}
@@ -84,9 +253,78 @@ method used to know if queen is still alive
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_anthill_aca5a12987317ef7e9780b231aad1c153}\label{class_anthill_aca5a12987317ef7e9780b231aad1c153}} 
+\index{Anthill@{Anthill}!spawnEgg@{spawnEgg}}
+\index{spawnEgg@{spawnEgg}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{spawnEgg()}{spawnEgg()}}
+{\footnotesize\ttfamily void Anthill\+::spawn\+Egg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_anthill_a5ce3eeda78bd506d69605907d921872f}\label{class_anthill_a5ce3eeda78bd506d69605907d921872f}} 
+\index{Anthill@{Anthill}!\_config@{\_config}}
+\index{\_config@{\_config}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{\_config}{\_config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} Anthill\+::\+\_\+config\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anthill_a5aae123ca7c7ad1b6c84e3fc9e3368a6}\label{class_anthill_a5aae123ca7c7ad1b6c84e3fc9e3368a6}} 
+\index{Anthill@{Anthill}!\_currentFood@{\_currentFood}}
+\index{\_currentFood@{\_currentFood}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{\_currentFood}{\_currentFood}}
+{\footnotesize\ttfamily int Anthill\+::\+\_\+current\+Food\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anthill_a679c378ae33e2483b73f4e873ed0878c}\label{class_anthill_a679c378ae33e2483b73f4e873ed0878c}} 
+\index{Anthill@{Anthill}!\_eggs@{\_eggs}}
+\index{\_eggs@{\_eggs}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{\_eggs}{\_eggs}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_egg}{Egg}} $\ast$$>$ Anthill\+::\+\_\+eggs\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anthill_afc8cc3ccd45701fe26fa35b4f8696f04}\label{class_anthill_afc8cc3ccd45701fe26fa35b4f8696f04}} 
+\index{Anthill@{Anthill}!\_larvas@{\_larvas}}
+\index{\_larvas@{\_larvas}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{\_larvas}{\_larvas}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_larva}{Larva}} $\ast$$>$ Anthill\+::\+\_\+larvas\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anthill_a0236d40219d628649e35b55e9ad1681e}\label{class_anthill_a0236d40219d628649e35b55e9ad1681e}} 
+\index{Anthill@{Anthill}!\_maxFood@{\_maxFood}}
+\index{\_maxFood@{\_maxFood}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{\_maxFood}{\_maxFood}}
+{\footnotesize\ttfamily int Anthill\+::\+\_\+max\+Food\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anthill_a1c85bf4b9dc60899ae1dd37121e786bd}\label{class_anthill_a1c85bf4b9dc60899ae1dd37121e786bd}} 
+\index{Anthill@{Anthill}!\_maxPop@{\_maxPop}}
+\index{\_maxPop@{\_maxPop}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{\_maxPop}{\_maxPop}}
+{\footnotesize\ttfamily int Anthill\+::\+\_\+max\+Pop\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anthill_abf85b8dbefb90401102290d1239e5caf}\label{class_anthill_abf85b8dbefb90401102290d1239e5caf}} 
+\index{Anthill@{Anthill}!\_newWarriors@{\_newWarriors}}
+\index{\_newWarriors@{\_newWarriors}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{\_newWarriors}{\_newWarriors}}
+{\footnotesize\ttfamily int Anthill\+::\+\_\+new\+Warriors\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anthill_a24d3cd883be1897ca9b577fa09dfc1c4}\label{class_anthill_a24d3cd883be1897ca9b577fa09dfc1c4}} 
+\index{Anthill@{Anthill}!\_queen@{\_queen}}
+\index{\_queen@{\_queen}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{\_queen}{\_queen}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_queen}{Queen}}$\ast$ Anthill\+::\+\_\+queen\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anthill_ae998f83155953a248872a9078734e820}\label{class_anthill_ae998f83155953a248872a9078734e820}} 
+\index{Anthill@{Anthill}!\_queenAlive@{\_queenAlive}}
+\index{\_queenAlive@{\_queenAlive}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{\_queenAlive}{\_queenAlive}}
+{\footnotesize\ttfamily bool Anthill\+::\+\_\+queen\+Alive\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anthill_a92cfa9df16dcac810eb7410712164bed}\label{class_anthill_a92cfa9df16dcac810eb7410712164bed}} 
+\index{Anthill@{Anthill}!\_workers@{\_workers}}
+\index{\_workers@{\_workers}!Anthill@{Anthill}}
+\doxysubsubsection{\texorpdfstring{\_workers}{\_workers}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_worker}{Worker}} $\ast$$>$ Anthill\+::\+\_\+workers\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-anthill.\+h\item 
-anthill.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{anthill_8h}{anthill.\+h}}\item 
+\mbox{\hyperlink{anthill_8cpp}{anthill.\+cpp}}\end{DoxyCompactItemize}

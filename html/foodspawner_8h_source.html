@@ -65,40 +65,49 @@ $(function() {
 <div class="title">foodspawner.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef FOODSPAWNER_H</span></div>
+<a href="foodspawner_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef FOODSPAWNER_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define FOODSPAWNER_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;obstacle.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="obstacle_8h.html">obstacle.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_food_spawner.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_food_spawner.html">FoodSpawner</a> : <span class="keyword">public</span> <a class="code" href="class_obstacle.html">Obstacle</a> {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment">//Methods</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_food_spawner.html">FoodSpawner</a>();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_food_spawner.html#a6e15c0426be75c74718d0b9aea4f418c">FoodSpawner</a>();</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_food_spawner.html">FoodSpawner</a>(<span class="keywordtype">int</span> maxQuantity, pair&lt;int, int&gt; position, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_food_spawner.html#a6e15c0426be75c74718d0b9aea4f418c">FoodSpawner</a>(<span class="keywordtype">int</span> maxQuantity, pair&lt;int, int&gt; position, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    ~<a class="code" href="class_food_spawner.html">FoodSpawner</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_food_spawner.html#a14ddfc1f560fb57b80689be1bb61db06">~FoodSpawner</a>();</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> doRound();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_food_spawner.html#a97adce43c478029bb484d1582636fe22">doRound</a>();</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span> getCurrentQuantity() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_food_spawner.html#a9e9ba67a74657330082dfc4c515f55ad">getCurrentQuantity</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> decreaseQuantity(<span class="keywordtype">int</span> quantity);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_food_spawner.html#a116b7945c47c92732c3e2d9c44da3faa">decreaseQuantity</a>(<span class="keywordtype">int</span> quantity);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">//Attributes</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> _maxQuantity;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">int</span> _currentQuantity;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_food_spawner.html#a96e64dd82678a9015e0f471364a7bdfc">   24</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_food_spawner.html#a96e64dd82678a9015e0f471364a7bdfc">_maxQuantity</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_food_spawner.html#a48c03ec6ccdcea768f4413a47481e5fe">   25</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_food_spawner.html#a48c03ec6ccdcea768f4413a47481e5fe">_currentQuantity</a>;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">//Methods</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> randomFood();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_food_spawner.html#a75674ca9013d335dab893fe406e40d94">randomFood</a>();</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// FOODSPAWNER_H</span></div>
 <div class="ttc" id="aclass_food_spawner_html"><div class="ttname"><a href="class_food_spawner.html">FoodSpawner</a></div><div class="ttdef"><b>Definition:</b> foodspawner.h:7</div></div>
+<div class="ttc" id="aclass_food_spawner_html_a116b7945c47c92732c3e2d9c44da3faa"><div class="ttname"><a href="class_food_spawner.html#a116b7945c47c92732c3e2d9c44da3faa">FoodSpawner::decreaseQuantity</a></div><div class="ttdeci">void decreaseQuantity(int quantity)</div><div class="ttdef"><b>Definition:</b> foodspawner.cpp:55</div></div>
+<div class="ttc" id="aclass_food_spawner_html_a14ddfc1f560fb57b80689be1bb61db06"><div class="ttname"><a href="class_food_spawner.html#a14ddfc1f560fb57b80689be1bb61db06">FoodSpawner::~FoodSpawner</a></div><div class="ttdeci">~FoodSpawner()</div><div class="ttdef"><b>Definition:</b> foodspawner.cpp:29</div></div>
+<div class="ttc" id="aclass_food_spawner_html_a48c03ec6ccdcea768f4413a47481e5fe"><div class="ttname"><a href="class_food_spawner.html#a48c03ec6ccdcea768f4413a47481e5fe">FoodSpawner::_currentQuantity</a></div><div class="ttdeci">int _currentQuantity</div><div class="ttdef"><b>Definition:</b> foodspawner.h:25</div></div>
+<div class="ttc" id="aclass_food_spawner_html_a6e15c0426be75c74718d0b9aea4f418c"><div class="ttname"><a href="class_food_spawner.html#a6e15c0426be75c74718d0b9aea4f418c">FoodSpawner::FoodSpawner</a></div><div class="ttdeci">FoodSpawner()</div><div class="ttdef"><b>Definition:</b> foodspawner.cpp:7</div></div>
+<div class="ttc" id="aclass_food_spawner_html_a75674ca9013d335dab893fe406e40d94"><div class="ttname"><a href="class_food_spawner.html#a75674ca9013d335dab893fe406e40d94">FoodSpawner::randomFood</a></div><div class="ttdeci">void randomFood()</div><div class="ttdef"><b>Definition:</b> foodspawner.cpp:63</div></div>
+<div class="ttc" id="aclass_food_spawner_html_a96e64dd82678a9015e0f471364a7bdfc"><div class="ttname"><a href="class_food_spawner.html#a96e64dd82678a9015e0f471364a7bdfc">FoodSpawner::_maxQuantity</a></div><div class="ttdeci">int _maxQuantity</div><div class="ttdef"><b>Definition:</b> foodspawner.h:24</div></div>
+<div class="ttc" id="aclass_food_spawner_html_a97adce43c478029bb484d1582636fe22"><div class="ttname"><a href="class_food_spawner.html#a97adce43c478029bb484d1582636fe22">FoodSpawner::doRound</a></div><div class="ttdeci">void doRound()</div><div class="ttdef"><b>Definition:</b> foodspawner.cpp:36</div></div>
+<div class="ttc" id="aclass_food_spawner_html_a9e9ba67a74657330082dfc4c515f55ad"><div class="ttname"><a href="class_food_spawner.html#a9e9ba67a74657330082dfc4c515f55ad">FoodSpawner::getCurrentQuantity</a></div><div class="ttdeci">int getCurrentQuantity() const</div><div class="ttdef"><b>Definition:</b> foodspawner.cpp:47</div></div>
 <div class="ttc" id="aclass_obstacle_html"><div class="ttname"><a href="class_obstacle.html">Obstacle</a></div><div class="ttdef"><b>Definition:</b> obstacle.h:9</div></div>
+<div class="ttc" id="aobstacle_8h_html"><div class="ttname"><a href="obstacle_8h.html">obstacle.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

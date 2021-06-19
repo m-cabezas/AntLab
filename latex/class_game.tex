@@ -1,28 +1,106 @@
 \hypertarget{class_game}{}\doxysection{Game Class Reference}
 \label{class_game}\index{Game@{Game}}
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_game_ac082f03dde132ecc22cc7b1bba81ce2d}\label{class_game_ac082f03dde132ecc22cc7b1bba81ce2d}} 
-void \mbox{\hyperlink{class_game_ac082f03dde132ecc22cc7b1bba81ce2d}{initialize\+Grid}} ()
+\mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\item 
+\mbox{\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{$\sim$\+Game}} ()
+\item 
+void \mbox{\hyperlink{class_game_afcdd8f1f5aa1d7cc955300b03f6cefe1}{refresh\+Grid}} ()
 \begin{DoxyCompactList}\small\item\em display an process the console UI \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_game_ab684b380c7d3f3577e2fb80006415297}{init\+Game}} ()
 \item 
-\mbox{\Hypertarget{class_game_a4c9dbf1ff2cd693cb94f19cdc4c405e3}\label{class_game_a4c9dbf1ff2cd693cb94f19cdc4c405e3}} 
-\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} {\bfseries get\+Config} ()
+\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} \mbox{\hyperlink{class_game_a4c9dbf1ff2cd693cb94f19cdc4c405e3}{get\+Config}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_game_ae2c26d3f666115ca618288a6508bef9e}{new\+Round}} (int round\+Number)
+\item 
+void \mbox{\hyperlink{class_game_adcdde0679446f22b509555245186a3ff}{do\+Rounds}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} \mbox{\hyperlink{class_game_ab86178da8c4aec78d63f8204c5f0f732}{\+\_\+config}}
+\item 
+\mbox{\hyperlink{class_orchestrator}{Orchestrator}} $\ast$ \mbox{\hyperlink{class_game_a3f7a53430c601b7529859ad956c19864}{\+\_\+orchestrator}}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}\label{class_game_ad59df6562a58a614fda24622d3715b65}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_game_ae3d112ca6e0e55150d2fdbc704474530}\label{class_game_ae3d112ca6e0e55150d2fdbc704474530}} 
+\index{Game@{Game}!````~Game@{$\sim$Game}}
+\index{````~Game@{$\sim$Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{$\sim$Game()}{~Game()}}
+{\footnotesize\ttfamily Game\+::$\sim$\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_adcdde0679446f22b509555245186a3ff}\label{class_game_adcdde0679446f22b509555245186a3ff}} 
+\index{Game@{Game}!doRounds@{doRounds}}
+\index{doRounds@{doRounds}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{doRounds()}{doRounds()}}
+{\footnotesize\ttfamily void Game\+::do\+Rounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_game_a4c9dbf1ff2cd693cb94f19cdc4c405e3}\label{class_game_a4c9dbf1ff2cd693cb94f19cdc4c405e3}} 
+\index{Game@{Game}!getConfig@{getConfig}}
+\index{getConfig@{getConfig}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getConfig()}{getConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} Game\+::get\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{class_game_ab684b380c7d3f3577e2fb80006415297}\label{class_game_ab684b380c7d3f3577e2fb80006415297}} 
 \index{Game@{Game}!initGame@{initGame}}
 \index{initGame@{initGame}!Game@{Game}}
 \doxysubsubsection{\texorpdfstring{initGame()}{initGame()}}
 {\footnotesize\ttfamily void Game\+::init\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Init the orchestrator and launch the Main\+Window 
+Init the orchestrator and launch the Main\+Window \mbox{\Hypertarget{class_game_ae2c26d3f666115ca618288a6508bef9e}\label{class_game_ae2c26d3f666115ca618288a6508bef9e}} 
+\index{Game@{Game}!newRound@{newRound}}
+\index{newRound@{newRound}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{newRound()}{newRound()}}
+{\footnotesize\ttfamily bool Game\+::new\+Round (\begin{DoxyParamCaption}\item[{int}]{round\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_game_afcdd8f1f5aa1d7cc955300b03f6cefe1}\label{class_game_afcdd8f1f5aa1d7cc955300b03f6cefe1}} 
+\index{Game@{Game}!refreshGrid@{refreshGrid}}
+\index{refreshGrid@{refreshGrid}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{refreshGrid()}{refreshGrid()}}
+{\footnotesize\ttfamily void Game\+::refresh\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+display an process the console UI 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_ab86178da8c4aec78d63f8204c5f0f732}\label{class_game_ab86178da8c4aec78d63f8204c5f0f732}} 
+\index{Game@{Game}!\_config@{\_config}}
+\index{\_config@{\_config}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{\_config}{\_config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_o_n_f_i_g}{CONFIG}} Game\+::\+\_\+config\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_game_a3f7a53430c601b7529859ad956c19864}\label{class_game_a3f7a53430c601b7529859ad956c19864}} 
+\index{Game@{Game}!\_orchestrator@{\_orchestrator}}
+\index{\_orchestrator@{\_orchestrator}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{\_orchestrator}{\_orchestrator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_orchestrator}{Orchestrator}}$\ast$ Game\+::\+\_\+orchestrator\hspace{0.3cm}{\ttfamily [private]}}
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game.\+h\item 
-game.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{game_8h}{game.\+h}}\item 
+\mbox{\hyperlink{game_8cpp}{game.\+cpp}}\end{DoxyCompactItemize}

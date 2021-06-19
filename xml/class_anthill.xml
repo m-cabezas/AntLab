@@ -3,6 +3,7 @@
   <compounddef id="class_anthill" kind="class" language="C++" prot="public">
     <compoundname>Anthill</compoundname>
     <basecompoundref refid="class_obstacle" prot="public" virt="non-virtual">Obstacle</basecompoundref>
+    <includes refid="anthill_8h" local="no">anthill.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_anthill_1a5ce3eeda78bd506d69605907d921872f" prot="private" static="no" mutable="no">
         <type><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref></type>
@@ -540,10 +541,42 @@
         <link refid="class_anthill"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_config</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>_queen</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Egg</label>
+        <link refid="class_egg"/>
+      </node>
+      <node id="4">
+        <label>Queen</label>
+        <link refid="class_queen"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Worker</label>
+        <link refid="class_worker"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
       </node>
       <node id="2">
         <label>Obstacle</label>
         <link refid="class_obstacle"/>
+      </node>
+      <node id="3">
+        <label>CONFIG</label>
+        <link refid="struct_c_o_n_f_i_g"/>
+      </node>
+      <node id="6">
+        <label>Larva</label>
+        <link refid="class_larva"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
       </node>
     </collaborationgraph>
     <location file="anthill.h" line="14" column="1" bodyfile="anthill.h" bodystart="14" bodyend="77"/>

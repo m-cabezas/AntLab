@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7eorchestrator_59',['~Orchestrator',['../class_orchestrator.html#a134459a83f516ef59fb70a3451d40d0b',1,'Orchestrator']]]
+  ['newround_253',['newRound',['../class_game.html#ae2c26d3f666115ca618288a6508bef9e',1,'Game']]]
 ];

@@ -65,13 +65,13 @@ $(function() {
 <div class="title">game.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GAME_H</span></div>
+<a href="game_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GAME_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GAME_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;orchestrator.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;util.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="orchestrator_8h.html">orchestrator.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="util_8h.html">util.h</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
@@ -82,27 +82,33 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    ~<a class="code" href="class_game.html">Game</a>();</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> initializeGrid();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> refreshGrid();</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> initGame();</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="struct_c_o_n_f_i_g.html">CONFIG</a> getConfig();</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_game.html#a4c9dbf1ff2cd693cb94f19cdc4c405e3">   22</a></span>&#160;    <a class="code" href="struct_c_o_n_f_i_g.html">CONFIG</a> <a class="code" href="class_game.html#a4c9dbf1ff2cd693cb94f19cdc4c405e3">getConfig</a>();</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">//Attributes</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="struct_c_o_n_f_i_g.html">CONFIG</a> _config;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_orchestrator.html">Orchestrator</a> *_orchestrator;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_game.html#ab86178da8c4aec78d63f8204c5f0f732">   26</a></span>&#160;    <a class="code" href="struct_c_o_n_f_i_g.html">CONFIG</a> <a class="code" href="class_game.html#ab86178da8c4aec78d63f8204c5f0f732">_config</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_game.html#a3f7a53430c601b7529859ad956c19864">   27</a></span>&#160;    <a class="code" href="class_orchestrator.html">Orchestrator</a> *<a class="code" href="class_game.html#a3f7a53430c601b7529859ad956c19864">_orchestrator</a>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">//Methods</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span> newRound(<span class="keywordtype">int</span> roundNumber);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> doRounds();</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_game.html#adcdde0679446f22b509555245186a3ff">   32</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game.html#adcdde0679446f22b509555245186a3ff">doRounds</a>();</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// GAME_H</span></div>
 <div class="ttc" id="aclass_game_html"><div class="ttname"><a href="class_game.html">Game</a></div><div class="ttdef"><b>Definition:</b> game.h:11</div></div>
+<div class="ttc" id="aclass_game_html_a3f7a53430c601b7529859ad956c19864"><div class="ttname"><a href="class_game.html#a3f7a53430c601b7529859ad956c19864">Game::_orchestrator</a></div><div class="ttdeci">Orchestrator * _orchestrator</div><div class="ttdef"><b>Definition:</b> game.h:27</div></div>
+<div class="ttc" id="aclass_game_html_a4c9dbf1ff2cd693cb94f19cdc4c405e3"><div class="ttname"><a href="class_game.html#a4c9dbf1ff2cd693cb94f19cdc4c405e3">Game::getConfig</a></div><div class="ttdeci">CONFIG getConfig()</div></div>
+<div class="ttc" id="aclass_game_html_ab86178da8c4aec78d63f8204c5f0f732"><div class="ttname"><a href="class_game.html#ab86178da8c4aec78d63f8204c5f0f732">Game::_config</a></div><div class="ttdeci">CONFIG _config</div><div class="ttdef"><b>Definition:</b> game.h:26</div></div>
+<div class="ttc" id="aclass_game_html_adcdde0679446f22b509555245186a3ff"><div class="ttname"><a href="class_game.html#adcdde0679446f22b509555245186a3ff">Game::doRounds</a></div><div class="ttdeci">void doRounds()</div></div>
 <div class="ttc" id="aclass_orchestrator_html"><div class="ttname"><a href="class_orchestrator.html">Orchestrator</a></div><div class="ttdef"><b>Definition:</b> orchestrator.h:18</div></div>
+<div class="ttc" id="aorchestrator_8h_html"><div class="ttname"><a href="orchestrator_8h.html">orchestrator.h</a></div></div>
 <div class="ttc" id="astruct_c_o_n_f_i_g_html"><div class="ttname"><a href="struct_c_o_n_f_i_g.html">CONFIG</a></div><div class="ttdef"><b>Definition:</b> util.h:4</div></div>
+<div class="ttc" id="autil_8h_html"><div class="ttname"><a href="util_8h.html">util.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

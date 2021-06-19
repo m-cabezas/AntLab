@@ -6,7 +6,7 @@
     <incdepgraph>
       <node id="2">
         <label>egg.h</label>
-        <link refid="egg_8h_source"/>
+        <link refid="egg_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -14,7 +14,7 @@
       </node>
       <node id="4">
         <label>util.h</label>
-        <link refid="util_8h_source"/>
+        <link refid="util_8h"/>
       </node>
       <node id="3">
         <label>iostream</label>
@@ -31,52 +31,52 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;egg.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="egg_8h" kindref="compound">egg.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/>@brief<sp/>default<sp/>constructor<sp/>of<sp/>egg</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal">Egg::Egg()<sp/>{</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>_name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>_currentAge<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="class_egg_1a7bc49a621a55e7236415ad5da41d3b54" kindref="member">Egg::Egg</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_egg_1a57ca36eb21771f70b66b52f3273c1479" kindref="member">_name</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_egg_1a5943a93f9bb3c8e785ae5ca491776440" kindref="member">_currentAge</ref><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="9"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
 <codeline lineno="12"><highlight class="comment"><sp/>*<sp/>@brief<sp/>main<sp/>constructor<sp/>of<sp/>egg</highlight></codeline>
 <codeline lineno="13"><highlight class="comment"><sp/>*<sp/>@param<sp/>name</highlight></codeline>
 <codeline lineno="14"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal">Egg::Egg(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>name)<sp/>{</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>_name<sp/>=<sp/>name;</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>_currentAge<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><ref refid="class_egg_1a7bc49a621a55e7236415ad5da41d3b54" kindref="member">Egg::Egg</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>name)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_egg_1a57ca36eb21771f70b66b52f3273c1479" kindref="member">_name</ref><sp/>=<sp/>name;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_egg_1a5943a93f9bb3c8e785ae5ca491776440" kindref="member">_currentAge</ref><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="18"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
 <codeline lineno="21"><highlight class="comment"><sp/>*<sp/>@brief<sp/>default<sp/>destructor<sp/>of<sp/>egg</highlight></codeline>
 <codeline lineno="22"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal">Egg::~Egg()<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="class_egg_1a0eb6ce527494b7f97f362b6eb6b7f11d" kindref="member">Egg::~Egg</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="24"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
 <codeline lineno="27"><highlight class="comment"><sp/>*<sp/>@brief<sp/>method<sp/>used<sp/>by<sp/>anthill<sp/>to<sp/>increase<sp/>egg<sp/>age</highlight></codeline>
 <codeline lineno="28"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Egg::increaseAge()<sp/>{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>_currentAge++;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_egg_1a6d90db3b102903ce9e53f07a16c7403d" kindref="member">Egg::increaseAge</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_egg_1a5943a93f9bb3c8e785ae5ca491776440" kindref="member">_currentAge</ref>++;</highlight></codeline>
 <codeline lineno="31"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
 <codeline lineno="34"><highlight class="comment"><sp/>*<sp/>@brief<sp/>method<sp/>used<sp/>by<sp/>anthill<sp/>to<sp/>get<sp/>current<sp/>age<sp/>of<sp/>the<sp/>current<sp/>egg</highlight></codeline>
 <codeline lineno="35"><highlight class="comment"><sp/>*<sp/>@return</highlight></codeline>
 <codeline lineno="36"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Egg::getCurrentAge()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_currentAge;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_egg_1a56270a17b03c82f769bb97bbbabd91f5" kindref="member">Egg::getCurrentAge</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_egg_1a5943a93f9bb3c8e785ae5ca491776440" kindref="member">_currentAge</ref>;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/***</highlight></codeline>
 <codeline lineno="42"><highlight class="comment"><sp/>*<sp/>@brief<sp/>method<sp/>used<sp/>to<sp/>get<sp/>the<sp/>name<sp/>of<sp/>the<sp/>current<sp/>egg</highlight></codeline>
 <codeline lineno="43"><highlight class="comment"><sp/>*<sp/>@return</highlight></codeline>
 <codeline lineno="44"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>Egg::getName()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_name;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_egg_1ad6892cf4ac2739b9e8346db7a541ce1f" kindref="member">Egg::getName</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_egg_1a57ca36eb21771f70b66b52f3273c1479" kindref="member">_name</ref>;</highlight></codeline>
 <codeline lineno="47"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="egg.cpp"/>

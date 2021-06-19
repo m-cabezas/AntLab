@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="class_orchestrator" kind="class" language="C++" prot="public">
     <compoundname>Orchestrator</compoundname>
+    <includes refid="orchestrator_8h" local="no">orchestrator.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_orchestrator_1a965da4741bf99096a42d1a92b87bf83f" prot="private" static="no" mutable="no">
         <type><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref></type>
@@ -226,7 +227,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para></para>
+<simplesect kind="return"><para>1 if there is nothing, 2 if there is an obstacle, 3 if there is a foodSpawner, 4 if it is the anthill and 5 for a warrior </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -271,13 +272,13 @@
 <para><ref refid="class_orchestrator_1a5a614792639e1d837c393efe8a7c491d" kindref="member">Orchestrator::doRound</ref> the orchestrator do the round of the anthill and warriors. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>0 if ecerything is fine, 1 if the queen is dead </para>
+<para><simplesect kind="return"><para>0 if everything is fine, 1 if the queen is dead </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="orchestrator.h" line="34" column="9" bodyfile="orchestrator.cpp" bodystart="95" bodyend="164"/>
+        <location file="orchestrator.h" line="34" column="9" bodyfile="orchestrator.cpp" bodystart="95" bodyend="166"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -319,7 +320,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="orchestrator.h" line="50" column="10" bodyfile="orchestrator.cpp" bodystart="171" bodyend="180"/>
+        <location file="orchestrator.h" line="50" column="10" bodyfile="orchestrator.cpp" bodystart="173" bodyend="182"/>
       </memberdef>
       <memberdef kind="function" id="class_orchestrator_1a7635636d46b44e40fa200d53f9b971a0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -347,7 +348,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="orchestrator.h" line="52" column="10" bodyfile="orchestrator.cpp" bodystart="186" bodyend="192"/>
+        <location file="orchestrator.h" line="52" column="10" bodyfile="orchestrator.cpp" bodystart="188" bodyend="194"/>
       </memberdef>
       <memberdef kind="function" id="class_orchestrator_1a2dfa8c2b0162af323317599f49200a8f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -375,7 +376,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="orchestrator.h" line="54" column="10" bodyfile="orchestrator.cpp" bodystart="198" bodyend="207"/>
+        <location file="orchestrator.h" line="54" column="10" bodyfile="orchestrator.cpp" bodystart="200" bodyend="209"/>
       </memberdef>
       <memberdef kind="function" id="class_orchestrator_1a6e3a5a53780b02873be2da3f8ab2d711" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -403,7 +404,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="orchestrator.h" line="56" column="10" bodyfile="orchestrator.cpp" bodystart="213" bodyend="219"/>
+        <location file="orchestrator.h" line="56" column="10" bodyfile="orchestrator.cpp" bodystart="215" bodyend="221"/>
       </memberdef>
       <memberdef kind="function" id="class_orchestrator_1aff9557532543b014a8606170c4e856cf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -431,7 +432,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="orchestrator.h" line="58" column="10" bodyfile="orchestrator.cpp" bodystart="225" bodyend="234"/>
+        <location file="orchestrator.h" line="58" column="10" bodyfile="orchestrator.cpp" bodystart="227" bodyend="236"/>
       </memberdef>
       <memberdef kind="function" id="class_orchestrator_1ac0f805620a70d833aec829f6096f99e7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -471,7 +472,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="orchestrator.h" line="60" column="10" bodyfile="orchestrator.cpp" bodystart="259" bodyend="264"/>
+        <location file="orchestrator.h" line="60" column="10" bodyfile="orchestrator.cpp" bodystart="261" bodyend="266"/>
       </memberdef>
       <memberdef kind="function" id="class_orchestrator_1a30c5bdad20f3741126446716b7869359" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -511,7 +512,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="orchestrator.h" line="62" column="10" bodyfile="orchestrator.cpp" bodystart="241" bodyend="252"/>
+        <location file="orchestrator.h" line="62" column="10" bodyfile="orchestrator.cpp" bodystart="243" bodyend="254"/>
       </memberdef>
       <memberdef kind="function" id="class_orchestrator_1a534fcfe78c9b1370b81b8d24bb53cd98" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -563,7 +564,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="orchestrator.h" line="64" column="10" bodyfile="orchestrator.cpp" bodystart="349" bodyend="353"/>
+        <location file="orchestrator.h" line="64" column="10" bodyfile="orchestrator.cpp" bodystart="351" bodyend="355"/>
       </memberdef>
       <memberdef kind="function" id="class_orchestrator_1a3a81ec4039f8c4907619990044719161" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -605,7 +606,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="orchestrator.h" line="66" column="10" bodyfile="orchestrator.cpp" bodystart="334" bodyend="341"/>
+        <location file="orchestrator.h" line="66" column="10" bodyfile="orchestrator.cpp" bodystart="336" bodyend="343"/>
       </memberdef>
       <memberdef kind="function" id="class_orchestrator_1a1024f2cc58dce887df34f2a277fca64c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -671,7 +672,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="orchestrator.h" line="68" column="10" bodyfile="orchestrator.cpp" bodystart="363" bodyend="369"/>
+        <location file="orchestrator.h" line="68" column="10" bodyfile="orchestrator.cpp" bodystart="365" bodyend="371"/>
       </memberdef>
       <memberdef kind="function" id="class_orchestrator_1ade36383af2fa4ef4ec1c2dabaf5aa50c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>vector&lt; pair&lt; int, int &gt; &gt;</type>
@@ -688,7 +689,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="orchestrator.h" line="70" column="13" bodyfile="orchestrator.cpp" bodystart="270" bodyend="283"/>
+        <location file="orchestrator.h" line="70" column="13" bodyfile="orchestrator.cpp" bodystart="272" bodyend="285"/>
       </memberdef>
       <memberdef kind="function" id="class_orchestrator_1ac13a40be361212148a9bf26ded46b683" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>vector&lt; pair&lt; int, int &gt; &gt;</type>
@@ -730,7 +731,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="orchestrator.h" line="72" column="13" bodyfile="orchestrator.cpp" bodystart="291" bodyend="310"/>
+        <location file="orchestrator.h" line="72" column="13" bodyfile="orchestrator.cpp" bodystart="293" bodyend="312"/>
       </memberdef>
       <memberdef kind="function" id="class_orchestrator_1a9ecf235e2c706f78b7f9c004dfd28e61" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_food_spawner" kindref="compound">FoodSpawner</ref> *</type>
@@ -772,7 +773,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="orchestrator.h" line="74" column="17" bodyfile="orchestrator.cpp" bodystart="318" bodyend="326"/>
+        <location file="orchestrator.h" line="74" column="17" bodyfile="orchestrator.cpp" bodystart="320" bodyend="328"/>
       </memberdef>
       <memberdef kind="function" id="class_orchestrator_1a6d15cbca43cff0b32a8c54968b0c695c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -823,13 +824,26 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="orchestrator.h" line="78" column="13" bodyfile="orchestrator.cpp" bodystart="376" bodyend="398"/>
+        <location file="orchestrator.h" line="78" column="13" bodyfile="orchestrator.cpp" bodystart="378" bodyend="400"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>CONFIG</label>
+        <link refid="struct_c_o_n_f_i_g"/>
+      </node>
+      <node id="1">
+        <label>Orchestrator</label>
+        <link refid="class_orchestrator"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_config</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
     <location file="orchestrator.h" line="18" column="1" bodyfile="orchestrator.h" bodystart="18" bodyend="80"/>
     <listofallmembers>
       <member refid="class_orchestrator_1afa5440a71435ab53e096fa58ae724aca" prot="private" virt="non-virtual"><scope>Orchestrator</scope><name>_anthills</name></member>

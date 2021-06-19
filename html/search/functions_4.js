@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['initgame_49',['initGame',['../class_game.html#ab684b380c7d3f3577e2fb80006415297',1,'Game']]],
-  ['initializegrid_50',['initializeGrid',['../class_game.html#ac082f03dde132ecc22cc7b1bba81ce2d',1,'Game']]],
-  ['initorch_51',['initOrch',['../class_orchestrator.html#a8f4d36b247fe79935c10e695c873befc',1,'Orchestrator']]],
-  ['isqueenalive_52',['isQueenAlive',['../class_anthill.html#a0acbebd49855ce62b3f30218467338ea',1,'Anthill']]]
+  ['foodcons_216',['foodCons',['../class_anthill.html#a559f93071aa74542e86a8f891778eff0',1,'Anthill']]],
+  ['foodspawner_217',['FoodSpawner',['../class_food_spawner.html#a6e15c0426be75c74718d0b9aea4f418c',1,'FoodSpawner::FoodSpawner()'],['../class_food_spawner.html#aa2477bc549a8680fa37f4e92c7d542f5',1,'FoodSpawner::FoodSpawner(int maxQuantity, pair&lt; int, int &gt; position, int width, int height)']]]
 ];

@@ -65,40 +65,49 @@ $(function() {
 <div class="title">larva.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LARVA_H</span></div>
+<a href="larva_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LARVA_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LARVA_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;egg.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;util.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="egg_8h.html">egg.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="util_8h.html">util.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_larva.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_larva.html">Larva</a> : <span class="keyword">public</span> <a class="code" href="class_egg.html">Egg</a> {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment">//Methods</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_larva.html">Larva</a>();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_larva.html#a4b111b5a13f5d3b1fb7121ac79824fe4">Larva</a>();</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_larva.html">Larva</a>(<a class="code" href="struct_c_o_n_f_i_g.html">CONFIG</a> &amp;config, <span class="keywordtype">string</span> name);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_larva.html#a4b111b5a13f5d3b1fb7121ac79824fe4">Larva</a>(<a class="code" href="struct_c_o_n_f_i_g.html">CONFIG</a> &amp;config, <span class="keywordtype">string</span> name);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    ~<a class="code" href="class_larva.html">Larva</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_larva.html#a1f7555c8d84576eda0d3dbfc8bb88c2f">~Larva</a>();</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> heal(<span class="keywordtype">int</span> foodNumber);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_larva.html#adbe862633e03ac3ec06230353b222767">heal</a>(<span class="keywordtype">int</span> foodNumber);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_larva.html#aa98638a241743fe9b0eab9267593e143">starve</a>();</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> getCurrentHealth() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_larva.html#aa02ca1d9e4b69832742214094e48cbd0">getCurrentHealth</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">//Attributes</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> _foodCons;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">int</span> _currentHealth;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> _maxHealth;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_larva.html#aff0c81a8dda39bbb4ab10553d7c47c69">   24</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_larva.html#aff0c81a8dda39bbb4ab10553d7c47c69">_foodCons</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_larva.html#a6c110f254d97b23fface50ba929dc316">   25</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_larva.html#a6c110f254d97b23fface50ba929dc316">_currentHealth</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_larva.html#a8c51a31397bcc72b39b5b79e5d5dfc98">   26</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_larva.html#a8c51a31397bcc72b39b5b79e5d5dfc98">_maxHealth</a>;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// LARVA_H</span></div>
 <div class="ttc" id="aclass_egg_html"><div class="ttname"><a href="class_egg.html">Egg</a></div><div class="ttdef"><b>Definition:</b> egg.h:9</div></div>
 <div class="ttc" id="aclass_larva_html"><div class="ttname"><a href="class_larva.html">Larva</a></div><div class="ttdef"><b>Definition:</b> larva.h:7</div></div>
+<div class="ttc" id="aclass_larva_html_a1f7555c8d84576eda0d3dbfc8bb88c2f"><div class="ttname"><a href="class_larva.html#a1f7555c8d84576eda0d3dbfc8bb88c2f">Larva::~Larva</a></div><div class="ttdeci">~Larva()</div><div class="ttdef"><b>Definition:</b> larva.cpp:26</div></div>
+<div class="ttc" id="aclass_larva_html_a4b111b5a13f5d3b1fb7121ac79824fe4"><div class="ttname"><a href="class_larva.html#a4b111b5a13f5d3b1fb7121ac79824fe4">Larva::Larva</a></div><div class="ttdeci">Larva()</div><div class="ttdef"><b>Definition:</b> larva.cpp:6</div></div>
+<div class="ttc" id="aclass_larva_html_a6c110f254d97b23fface50ba929dc316"><div class="ttname"><a href="class_larva.html#a6c110f254d97b23fface50ba929dc316">Larva::_currentHealth</a></div><div class="ttdeci">int _currentHealth</div><div class="ttdef"><b>Definition:</b> larva.h:25</div></div>
+<div class="ttc" id="aclass_larva_html_a8c51a31397bcc72b39b5b79e5d5dfc98"><div class="ttname"><a href="class_larva.html#a8c51a31397bcc72b39b5b79e5d5dfc98">Larva::_maxHealth</a></div><div class="ttdeci">int _maxHealth</div><div class="ttdef"><b>Definition:</b> larva.h:26</div></div>
+<div class="ttc" id="aclass_larva_html_aa02ca1d9e4b69832742214094e48cbd0"><div class="ttname"><a href="class_larva.html#aa02ca1d9e4b69832742214094e48cbd0">Larva::getCurrentHealth</a></div><div class="ttdeci">int getCurrentHealth() const</div><div class="ttdef"><b>Definition:</b> larva.cpp:55</div></div>
 <div class="ttc" id="aclass_larva_html_aa98638a241743fe9b0eab9267593e143"><div class="ttname"><a href="class_larva.html#aa98638a241743fe9b0eab9267593e143">Larva::starve</a></div><div class="ttdeci">void starve()</div><div class="ttdoc">Larva::starve reduce the life of the ant according to its food consumption.</div><div class="ttdef"><b>Definition:</b> larva.cpp:43</div></div>
+<div class="ttc" id="aclass_larva_html_adbe862633e03ac3ec06230353b222767"><div class="ttname"><a href="class_larva.html#adbe862633e03ac3ec06230353b222767">Larva::heal</a></div><div class="ttdeci">void heal(int foodNumber)</div><div class="ttdef"><b>Definition:</b> larva.cpp:33</div></div>
+<div class="ttc" id="aclass_larva_html_aff0c81a8dda39bbb4ab10553d7c47c69"><div class="ttname"><a href="class_larva.html#aff0c81a8dda39bbb4ab10553d7c47c69">Larva::_foodCons</a></div><div class="ttdeci">int _foodCons</div><div class="ttdef"><b>Definition:</b> larva.h:24</div></div>
+<div class="ttc" id="aegg_8h_html"><div class="ttname"><a href="egg_8h.html">egg.h</a></div></div>
 <div class="ttc" id="astruct_c_o_n_f_i_g_html"><div class="ttname"><a href="struct_c_o_n_f_i_g.html">CONFIG</a></div><div class="ttdef"><b>Definition:</b> util.h:4</div></div>
+<div class="ttc" id="autil_8h_html"><div class="ttname"><a href="util_8h.html">util.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

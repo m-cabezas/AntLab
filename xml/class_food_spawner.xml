@@ -3,6 +3,7 @@
   <compounddef id="class_food_spawner" kind="class" language="C++" prot="public">
     <compoundname>FoodSpawner</compoundname>
     <basecompoundref refid="class_obstacle" prot="public" virt="non-virtual">Obstacle</basecompoundref>
+    <includes refid="foodspawner_8h" local="no">foodspawner.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_food_spawner_1a96e64dd82678a9015e0f471364a7bdfc" prot="private" static="no" mutable="no">
         <type>int</type>

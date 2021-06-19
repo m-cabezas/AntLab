@@ -16,7 +16,7 @@
     <incdepgraph>
       <node id="6">
         <label>foodspawner.h</label>
-        <link refid="foodspawner_8h_source"/>
+        <link refid="foodspawner_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
@@ -24,7 +24,7 @@
       </node>
       <node id="7">
         <label>obstacle.h</label>
-        <link refid="obstacle_8h_source"/>
+        <link refid="obstacle_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
@@ -32,7 +32,7 @@
       </node>
       <node id="10">
         <label>worker.h</label>
-        <link refid="worker_8h_source"/>
+        <link refid="worker_8h"/>
         <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
@@ -40,7 +40,7 @@
       </node>
       <node id="12">
         <label>egg.h</label>
-        <link refid="egg_8h_source"/>
+        <link refid="egg_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
@@ -70,7 +70,7 @@
       </node>
       <node id="9">
         <label>warrior.h</label>
-        <link refid="warrior_8h_source"/>
+        <link refid="warrior_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
@@ -82,14 +82,14 @@
       </node>
       <node id="13">
         <label>util.h</label>
-        <link refid="util_8h_source"/>
+        <link refid="util_8h"/>
       </node>
       <node id="4">
         <label>random</label>
       </node>
       <node id="15">
         <label>queen.h</label>
-        <link refid="queen_8h_source"/>
+        <link refid="queen_8h"/>
         <childnode refid="10" relation="include">
         </childnode>
       </node>
@@ -98,7 +98,7 @@
       </node>
       <node id="14">
         <label>anthill.h</label>
-        <link refid="anthill_8h_source"/>
+        <link refid="anthill_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
@@ -123,7 +123,7 @@
       </node>
       <node id="11">
         <label>larva.h</label>
-        <link refid="larva_8h_source"/>
+        <link refid="larva_8h"/>
         <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
@@ -137,15 +137,33 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="3">
+        <label>game.cpp</label>
+        <link refid="game_8cpp"/>
+      </node>
       <node id="1">
         <label>orchestrator.h</label>
         <link refid="orchestrator_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>game.h</label>
-        <link refid="game_8h_source"/>
+        <link refid="game_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="5">
+        <label>orchestrator.cpp</label>
+        <link refid="orchestrator_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_orchestrator" prot="public">Orchestrator</innerclass>
@@ -163,11 +181,11 @@
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;foodspawner.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;obstacle.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;warrior.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;util.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;anthill.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="foodspawner_8h" kindref="compound">foodspawner.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="obstacle_8h" kindref="compound">obstacle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="warrior_8h" kindref="compound">warrior.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="util_8h" kindref="compound">util.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="anthill_8h" kindref="compound">anthill.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
@@ -191,16 +209,16 @@
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Attributes</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref><sp/>_config;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>pair&lt;int,<sp/>int&gt;<sp/>_dimension;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>vector<sp/>&lt;vector&lt;bool&gt;&gt;<sp/>_grid;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>vector<sp/>&lt;vector&lt;bool&gt;&gt;<sp/>_obstaclesGrid;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>vector<sp/>&lt;vector&lt;bool&gt;&gt;<sp/>_foodSpawnersGrid;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>vector<sp/>&lt;vector&lt;bool&gt;&gt;<sp/>_anthillsGrid;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;Warrior<sp/>*&gt;<sp/>_warriors;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;Obstacle<sp/>*&gt;<sp/>_obstacles;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;FoodSpawner<sp/>*&gt;<sp/>_foodSpawners;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;Anthill<sp/>*&gt;<sp/>_anthills;</highlight></codeline>
+<codeline lineno="38" refid="class_orchestrator_1a965da4741bf99096a42d1a92b87bf83f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_o_n_f_i_g" kindref="compound">CONFIG</ref><sp/><ref refid="class_orchestrator_1a965da4741bf99096a42d1a92b87bf83f" kindref="member">_config</ref>;</highlight></codeline>
+<codeline lineno="39" refid="class_orchestrator_1a0ce7e3ef5d9a75129617b73bfdfecf57" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>pair&lt;int,<sp/>int&gt;<sp/><ref refid="class_orchestrator_1a0ce7e3ef5d9a75129617b73bfdfecf57" kindref="member">_dimension</ref>;</highlight></codeline>
+<codeline lineno="40" refid="class_orchestrator_1a0be9646a122a25fa69e7b1685ce5d045" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector<sp/>&lt;vector&lt;bool&gt;&gt;<sp/><ref refid="class_orchestrator_1a0be9646a122a25fa69e7b1685ce5d045" kindref="member">_grid</ref>;</highlight></codeline>
+<codeline lineno="41" refid="class_orchestrator_1a3de65a747f1c0cb041bca1d9efdab5bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector<sp/>&lt;vector&lt;bool&gt;&gt;<sp/><ref refid="class_orchestrator_1a3de65a747f1c0cb041bca1d9efdab5bb" kindref="member">_obstaclesGrid</ref>;</highlight></codeline>
+<codeline lineno="42" refid="class_orchestrator_1a2477aeaf7c2daaaa422ca10c361cacb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector<sp/>&lt;vector&lt;bool&gt;&gt;<sp/><ref refid="class_orchestrator_1a2477aeaf7c2daaaa422ca10c361cacb2" kindref="member">_foodSpawnersGrid</ref>;</highlight></codeline>
+<codeline lineno="43" refid="class_orchestrator_1ac3e2fa909f04ba0259aa8155d4ecf596" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector<sp/>&lt;vector&lt;bool&gt;&gt;<sp/><ref refid="class_orchestrator_1ac3e2fa909f04ba0259aa8155d4ecf596" kindref="member">_anthillsGrid</ref>;</highlight></codeline>
+<codeline lineno="44" refid="class_orchestrator_1a4df763ed3b1e4a88d30167db2b60bbae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;Warrior<sp/>*&gt;<sp/><ref refid="class_orchestrator_1a4df763ed3b1e4a88d30167db2b60bbae" kindref="member">_warriors</ref>;</highlight></codeline>
+<codeline lineno="45" refid="class_orchestrator_1aabb53161f65ca915ea3d80019b522904" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;Obstacle<sp/>*&gt;<sp/><ref refid="class_orchestrator_1aabb53161f65ca915ea3d80019b522904" kindref="member">_obstacles</ref>;</highlight></codeline>
+<codeline lineno="46" refid="class_orchestrator_1a464d27075256d666248977b473be3aa8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;FoodSpawner<sp/>*&gt;<sp/><ref refid="class_orchestrator_1a464d27075256d666248977b473be3aa8" kindref="member">_foodSpawners</ref>;</highlight></codeline>
+<codeline lineno="47" refid="class_orchestrator_1afa5440a71435ab53e096fa58ae724aca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;Anthill<sp/>*&gt;<sp/><ref refid="class_orchestrator_1afa5440a71435ab53e096fa58ae724aca" kindref="member">_anthills</ref>;</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Methods</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createAnthill(pair&lt;int,<sp/>int&gt;<sp/>position,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>init);</highlight></codeline>
@@ -229,7 +247,7 @@
 <codeline lineno="73"><highlight class="normal"></highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_food_spawner" kindref="compound">FoodSpawner</ref><sp/>*checkFoodNearby(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>checkPosition(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="76" refid="class_orchestrator_1a6d15cbca43cff0b32a8c54968b0c695c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_orchestrator_1a6d15cbca43cff0b32a8c54968b0c695c" kindref="member">checkPosition</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>vector<sp/>&lt;pair&lt;int,<sp/>int&gt;&gt;<sp/>getWarriorsFreePositions(<ref refid="class_anthill" kindref="compound">Anthill</ref><sp/>&amp;anthill);</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
